@@ -1,0 +1,53 @@
+---
+title: "Calculus and Linear Algebra"
+author: "A Workbook for Business and Analytics Majors"
+date: "Last Updated Fall 2025"
+site: bookdown::bookdown_site
+
+documentclass: book
+output: bookdown::gitbook
+description: "Course notes for MATH 114"
+---
+
+
+# Preface {-}
+
+Welcome to this workbook on **Linear Algebra**, **Differential Calculus**, and **Integral Calculus**—three foundational pillars of mathematics that power the modern world of **data science**, **statistics**, and **machine learning**.
+
+Whether you're building a recommendation engine, analyzing trends in large datasets, or training neural networks, a strong grasp of the mathematical tools in this book is essential. Linear algebra enables the representation and manipulation of high-dimensional data, while calculus allows us to model change, optimize systems, and understand continuous processes. These concepts form the theoretical backbone of algorithms, models, and methods you'll encounter in applied work.
+
+This book is structured to support **active learning**. Alongside explanations and examples, you'll find **practice problems** designed to build both conceptual understanding and procedural fluency. Some sections are accompanied by **videos**, but please note:
+
+> **Watching videos and reading the textbook is not enough.**  
+
+Mathematics is a discipline learned through *doing*.  To succeed, you must **engage actively** with the problems, **test your understanding**, and **reflect on your mistakes**.
+
+We also emphasize the importance of **classroom participation**. Showing up matters. So does coming prepared. Each lecture builds on the previous one, and your ability to follow along in class depends heavily on reviewing prior content and attempting the exercises. Think of the classroom as a lab: the place where ideas are tested, questions are raised, and insights are deepened—not a substitute for preparation.
+
+---
+
+## Why This Material Matters for Data Science and Machine Learning {-}
+
+- **Linear Algebra**: Vectors, matrices, and linear transformations are core to machine learning models (e.g., linear regression, support vector machines, neural networks). Understanding eigenvalues and singular value decomposition (SVD) helps in data compression and dimensionality reduction techniques like PCA.
+
+- **Differential Calculus**: Optimization is central to training machine learning models and relies on gradients and partial derivatives. Understanding how functions change and how to find their extrema is crucial in model tuning.
+
+- **Integral Calculus**: Integral concepts appear in probability theory (e.g., continuous distributions), computing expected values, and even in formulating loss functions. They also underpin techniques in signal processing and statistical mechanics used in advanced models.
+
+By grounding your study in these topics, you’ll develop the tools needed not only to *use* data science tools, but to *understand and innovate* with them.
+
+---
+
+## Disclaimers {-}
+
+While every effort has been made to ensure the accuracy of the material in this workbook, **no guarantee is offered regarding correctness or completeness**. Errors may exist in explanations, examples, or answers. Please be proactive in checking your work and consulting with instructors or peers when something seems unclear.
+
+Moreover, **this text is not a substitute for a college or university course**, a professor’s guidance, or your own discipline and initiative. It is a companion — a structured guide to help you on your learning journey.
+
+---
+
+## A Final Word {-}
+
+Mastery in mathematics comes not from memorizing formulas, but from **struggling productively** through problems, **asking good questions**, and **connecting concepts**. This workbook invites you to do all of those. 
+
+Let’s begin.

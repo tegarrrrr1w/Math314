@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 1 (PART) Linear Algebra | Calculus and Linear Algebra</title>
+  <meta name="description" content="Course notes for MATH 114" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 1 (PART) Linear Algebra | Calculus and Linear Algebra" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Course notes for MATH 114" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 1 (PART) Linear Algebra | Calculus and Linear Algebra" />
+  
+  <meta name="twitter:description" content="Course notes for MATH 114" />
+  
+
+<meta name="author" content="A Workbook for Business and Analytics Majors" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="lesson-1-functions-and-linear-equations.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<h2>&nbsp;&nbsp;Book Title </h2>    
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-this-material-matters-for-data-science-and-machine-learning"><i class="fa fa-check"></i>Why This Material Matters for Data Science and Machine Learning</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#disclaimers"><i class="fa fa-check"></i>Disclaimers</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#a-final-word"><i class="fa fa-check"></i>A Final Word</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="part-linear-algebra.html"><a href="part-linear-algebra.html"><i class="fa fa-check"></i><b>1</b> (PART) Linear Algebra</a></li>
+<li class="chapter" data-level="2" data-path="lesson-1-functions-and-linear-equations.html"><a href="lesson-1-functions-and-linear-equations.html"><i class="fa fa-check"></i><b>2</b> Lesson 1: Functions and Linear Equations</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="lesson-1-functions-and-linear-equations.html"><a href="lesson-1-functions-and-linear-equations.html#skills-check"><i class="fa fa-check"></i><b>2.1</b> Skills Check</a></li>
+<li class="chapter" data-level="2.2" data-path="lesson-1-functions-and-linear-equations.html"><a href="lesson-1-functions-and-linear-equations.html#new-skills-practice"><i class="fa fa-check"></i><b>2.2</b> New Skills Practice</a></li>
+<li class="chapter" data-level="2.3" data-path="lesson-1-functions-and-linear-equations.html"><a href="lesson-1-functions-and-linear-equations.html#self-assessment"><i class="fa fa-check"></i><b>2.3</b> Self-Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="lesson-2-introduction-to-matrices.html"><a href="lesson-2-introduction-to-matrices.html"><i class="fa fa-check"></i><b>3</b> Lesson 2: Introduction to Matrices</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="lesson-2-introduction-to-matrices.html"><a href="lesson-2-introduction-to-matrices.html#skills-check-1"><i class="fa fa-check"></i><b>3.1</b> Skills Check</a></li>
+<li class="chapter" data-level="3.2" data-path="lesson-2-introduction-to-matrices.html"><a href="lesson-2-introduction-to-matrices.html#new-skills-practice-1"><i class="fa fa-check"></i><b>3.2</b> New Skills Practice</a></li>
+<li class="chapter" data-level="3.3" data-path="lesson-2-introduction-to-matrices.html"><a href="lesson-2-introduction-to-matrices.html#self-assessment-1"><i class="fa fa-check"></i><b>3.3</b> Self-Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="lesson-3-matrix-operations.html"><a href="lesson-3-matrix-operations.html"><i class="fa fa-check"></i><b>4</b> Lesson 3: Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="lesson-3-matrix-operations.html"><a href="lesson-3-matrix-operations.html#skills-check-2"><i class="fa fa-check"></i><b>4.1</b> Skills Check</a></li>
+<li class="chapter" data-level="4.2" data-path="lesson-3-matrix-operations.html"><a href="lesson-3-matrix-operations.html#new-skills-practice-2"><i class="fa fa-check"></i><b>4.2</b> New Skills Practice</a></li>
+<li class="chapter" data-level="4.3" data-path="lesson-3-matrix-operations.html"><a href="lesson-3-matrix-operations.html#self-assessment-2"><i class="fa fa-check"></i><b>4.3</b> Self-Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="next-chapter.html"><a href="next-chapter.html"><i class="fa fa-check"></i><b>5</b> Next Chapter</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus and Linear Algebra</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="part-linear-algebra" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Chapter 1</span> (PART) Linear Algebra<a href="part-linear-algebra.html#part-linear-algebra" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="42%" />
+<col width="47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lesson</th>
+<th>Topic</th>
+<th>Homework</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Before the First Class</td>
+<td>Watch Chapter 0 Videos</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Functions and Linear Equations</td>
+<td>Chapter 1 Videos and Graded Work</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Introduction to Matrices</td>
+<td>Chapter 2 Videos and Graded Work</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Matrix Operations</td>
+<td>Chapter 3.1, 3.2 Videos and Graded Work</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Inverses and Determinants</td>
+<td>Chapter 3.3, Determinants Videos and Graded Work</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Vector Projections</td>
+<td>Chapter 3 Vectors Videos and Graded Work</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Basis</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Rotations</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Eigenvalues and Eigenvectors</td>
+<td>Chapter 3 Eigenvalues and Eigenvectors Videos and Graded Work</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="lesson-1-functions-and-linear-equations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["mybook.pdf", "mybook.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,1904 @@
+# (PART) Linear Algebra {-}
+
+
+
+# Functions and Linear Equations
+
+
+
+## Lecture Content
+
+[**Video:  Functions**](https://www.youtube.com/watch?v=F29ldGgKw5w&list=PLhMAuJ_imnt6AOxSIelCyZRe05Ua2DrDY)
+
+[**Video:  Common Functions**](https://www.youtube.com/watch?v=YvBfQ_VJAbo&list=PLhMAuJ_imnt6AOxSIelCyZRe05Ua2DrDY&index=2)
+
+
+
+### Common Functions and Their Graphs
+
+
+#### Horizontal Line {-}
+
+**Equation:**
+$$
+y = c
+$$
+
+**Graph:**  
+A flat, horizontal line that crosses the y-axis at \( y = c \).
+
+**Rule:**  
+The output is constant for every value of \( x \).
+
+---
+
+#### General Linear Equation {-}
+
+**Equation:**
+$$
+y = mx + b
+$$
+
+**Graph:**  
+A straight line with slope \( m \) and y-intercept \( b \).
+
+**Rule:**  
+Linear functions increase or decrease at a constant rate.
+
+---
+
+#### Quadratic Function (Parabola) {-}
+
+**Equation:**
+$$
+y = ax^2 + bx + c
+$$
+
+**Graph:**  
+A U-shaped curve:
+- Opens upward if \( a > 0 \)
+- Opens downward if \( a < 0 \)
+
+**Vertex:**  
+The turning point of the parabola.
+
+**Axis of Symmetry:**  
+A vertical line through the vertex.
+
+---
+
+#### Cubic Function {-}
+
+**Equation:**
+$$
+y = ax^3 + bx^2 + cx + d
+$$
+
+**Graph:**  
+An S-shaped curve that may have one or two turning points depending on coefficients.
+
+**Rule:**  
+Cubic functions change curvature and direction.
+
+---
+
+#### Reciprocal Function {-}
+
+**Equation:**
+$$
+y = \frac{1}{x}
+$$
+
+**Graph:**
+- Two curved branches.
+- Undefined at \( x = 0 \).
+
+**Asymptotes:**
+- Vertical: \( x = 0 \)
+- Horizontal: \( y = 0 \)
+
+---
+
+#### Absolute Value Function {-}
+
+**Equation:**
+$$
+y = |x|
+$$
+
+**Graph:**  
+A V-shaped graph with the vertex at the origin \( (0, 0) \).
+
+**Rule:**  
+Negative inputs are reflected to positive outputs.
+
+---
+
+### Finding the Domain of a Function
+
+#### Rational Functions {-}
+
+**Example:**
+$$
+f(x) = \frac{1}{x - 3}
+$$
+
+**Rule:**  
+Exclude any value of \( x \) that makes the denominator zero.
+
+**Domain:**  
+All real numbers except \( x = 3 \).
+
+---
+
+#### Square Root Functions {-}
+
+**Example:**
+$$
+f(x) = \sqrt{x - 2}
+$$
+
+**Rule:**  
+The expression under the square root must be non-negative.
+
+**Domain:**  
+All real numbers \( x \geq 2 \).
+
+---
+
+### Solving Systems Using the Elimination Method
+
+
+[**Two Equations in Two Unknowns**](https://www.youtube.com/watch?v=ZG_Wa-7jGcU&list=PLhMAuJ_imnt575FxvbQ3nE6ZxAKVbxsMx)
+
+**Steps:**
+
+1. Multiply one or both equations so that one variable has the same (or opposite) coefficient.
+2. Add or subtract the equations to eliminate one variable.
+3. Solve for the remaining variable.
+4. Substitute back to find the other variable.
+
+**Example:**
+$$
+\begin{align*}
+2x + 3y &= 12 \\
+4x - 3y &= 6
+\end{align*}
+$$
+
+Add the two equations:
+$$
+(2x + 3y) + (4x - 3y) = 12 + 6 \\
+6x = 18 \Rightarrow x = 3
+$$
+
+Substitute \( x = 3 \) into the first equation:
+$$
+2(3) + 3y = 12 \Rightarrow 6 + 3y = 12 \Rightarrow y = 2
+$$
+
+**Solution:**  
+\( x = 3, \quad y = 2 \)
+
+---
+
+### Revenue, Cost, and Profit Functions
+
+[**Video:  Supply and Demand Models**](https://www.youtube.com/watch?v=ou1Yq-w2gMQ&list=PLhMAuJ_imnt6AOxSIelCyZRe05Ua2DrDY&index=4)
+
+[**Video:  Linear Functions and Models**](https://www.youtube.com/watch?v=YvBfQ_VJAbo&list=PLhMAuJ_imnt6AOxSIelCyZRe05Ua2DrDY&index=5)
+
+
+
+#### Revenue Function {-}
+
+**Formula:**
+$$
+R(x) = p(x) \cdot x
+$$
+
+Where:
+- \( R(x) \): Revenue
+- \( p(x) \): Price per unit
+- \( x \): Quantity sold
+
+---
+
+#### Cost Function {-}
+
+**Formula:**
+$$
+C(x) = \text{Fixed Cost} + \text{Variable Cost} \cdot x
+$$
+
+- **Fixed Costs:** Constant (e.g., rent, salaries)
+- **Variable Costs:** Depend on production level
+
+---
+
+#### Profit Function {-}
+
+**Formula:**
+$$
+P(x) = R(x) - C(x)
+$$
+
+Profit is the difference between revenue and cost.
+
+---
+
+#### Demand Function {-}
+
+A typical linear demand function:
+$$
+p(x) = a - bx
+$$
+
+- As quantity \( x \) increases, price \( p \) usually decreases.
+- This represents an inverse relationship between price and demand.
+
+---
+
+##  Practice Problems
+
+
+1. Find the equation of the straight line through the points (3,4) and (5,2).
+2. Find the equation of the straight line through the point (3,4) and parallel to the line $2x - 3y = 4$.
+3. If $f(x) = -3x + 7$, evaluate $f(-3)$ and determine the domain of $1/f(x)$ using interval notation.
+
+<div style="page-break-after: always;"></div>
+
+4. Solve the system:  
+   \[
+   \begin{cases}
+   2x + y = 2 \\
+   -2x + y = 2
+   \end{cases}
+   \]
+
+5. Solve the system:  
+   \[
+   \begin{cases}
+   2x - 3y = 2 \\
+   6x - 9y = 3
+   \end{cases}
+   \]
+
+<div style="page-break-after: always;"></div>
+
+6. **(APPLIED)** A piano manufacturer has a daily fixed cost of \$1,200 and a marginal cost of \$1,500 per piano. Find the cost function \( C(x) \) for manufacturing \( x \) pianos in one day. Answer the following:  
+   a. What is the cost of manufacturing 3 pianos?  
+   b. What is the cost of manufacturing the 3rd piano that day?  
+   c. What is the cost of manufacturing the 11th piano that day?  
+   d. Graph \( C \) as a function of \( x \).
+
+7. **(APPLIED)** Anthony Altino is mixing food for his young daughter and wants the meal to supply 1 gram of protein and 5 milligrams of iron. He mixes cereal (0.5 g protein and 1 mg iron per ounce) and fruit (0.2 g protein and 2 mg iron per ounce). What mixture will provide the desired nutrition?
+
+<div style="page-break-after: always;"></div>
+
+##  Self-Assessment
+
+Time yourself and try to solve the following within 20 minutes:
+
+1. Find the equation of the straight line through (3,1) and parallel to \(6x - 2y = 11\).
+2. Solve:  
+   \[
+   \begin{cases}
+   \frac{-2x}{3} + \frac{y}{2} = \frac{-1}{6} \\
+   \frac{x}{4} - y = \frac{-3}{4}
+   \end{cases}
+   \]
+3. If the addition or subtraction of two linear equations results in \(0 = 3\), what does this say about their graphs?
+4. Determine the domain of \(f(x) = \sqrt{x-10}\). Express your answer in interval notation.
+5. In 2005, the Las Vegas monorail charged \$3 per ride with an average ridership of 28,000 per day. After raising the fare to \$5, ridership dropped to 19,000. Determine a linear function that relates ridership \(q\) to fare \(p\).
+
+---
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+| Skill                                             | D   | CON | COM |
+|---------------------------------------------------|-----|-----|-----|
+| Find the domain of a rational function in interval notation |     |     |     |
+| Find the domain of a square root function in interval notation |     |     |     |
+| Find the equation of a line given various information |     |     |     |
+| Use the elimination method to solve a 2x2 linear system |     |     |     |
+| Solve applied problems involving linear equations |     |     |     |
+
+---
+
+<div style="page-break-after: always;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Introduction to Matrices
+
+## Lecture Content
+
+
+[**Video:  Using Matrices to Solve Systems**](https://www.youtube.com/watch?v=G7bdACybx6Y&list=PLhMAuJ_imnt575FxvbQ3nE6ZxAKVbxsMx&index=2)
+
+[**Video:  Applications of Linear Systems**](https://www.youtube.com/watch?v=Blkr167IwOU&list=PLhMAuJ_imnt575FxvbQ3nE6ZxAKVbxsMx&index=3)
+
+
+### Augmented Matrix
+
+An **augmented matrix** is a compact representation of a system of linear equations, showing only the coefficients and constants. To create one:
+
+1. Write the coefficients of the variables from each equation into rows.
+2. Add a vertical line (conceptually) separating the coefficients from the constants on the right-hand side.
+   
+**Example:**
+
+For the system
+\begin{align*}x + 2y &= 5\\
+3x - y &= 4
+\end{align*}
+
+The augmented matrix is:
+
+\[
+\begin{bmatrix}
+1 & 2 & | & 5 \\
+3 & -1 & | & 4
+\end{bmatrix}
+\]
+
+---
+
+### Elementary Row Operations
+
+There are **three types of elementary row operations** used in row reduction:
+
+1. **Row Swapping (Ri ↔ Rj)**  
+   Swap two rows.
+
+2. **Row Scaling (k·Ri)**  
+   Multiply a row by a non-zero constant.
+
+3. **Row Replacement (Ri + k·Rj → Ri)**  
+   Add or subtract a multiple of one row to another row.
+
+These operations are used to transform a matrix into a simpler form without changing the solution to the system.
+
+---
+
+### Gauss-Jordan Elimination Steps
+
+**Gauss-Jordan Elimination** is a method to solve a system of linear equations by transforming the augmented matrix into **reduced row echelon form (RREF)**.
+
+#### Steps: {-}
+
+1. **Write the augmented matrix** for the system.
+2. Use **elementary row operations** to get a leading 1 (pivot) in the top-left corner.
+3. **Create zeros** below and above the pivot.
+4. Move to the next row and repeat the process for the next pivot (diagonal).
+5. Continue until you have 1s down the diagonal and 0s elsewhere in the coefficient part.
+6. Read the solution directly from the matrix.
+
+**Goal:**  
+Transform the matrix into:
+
+\[
+\begin{bmatrix}
+1 & 0 & \cdots & 0 & | & a \\
+0 & 1 & \cdots & 0 & | & b \\
+\vdots & \vdots & \ddots & \vdots & | & \vdots \\
+0 & 0 & \cdots & 1 & | & c
+\end{bmatrix}
+\]
+
+Which corresponds to the solution \( x = a \), \( y = b \), etc.
+
+---
+
+
+##  Practice Problems
+
+1. Use Gauss-Jordan to solve:  
+   \[
+   \begin{cases}
+   2x + y = 2 \\
+   -2x + y = 2
+   \end{cases}
+   \]
+2. Use Gauss-Jordan to solve:  
+   \[
+   \begin{cases}
+   2x - 3y = 1 \\
+   6x - 9y = 3
+   \end{cases}
+   \]
+3. Use Gauss-Jordan to solve:  
+   \[
+   \begin{cases}
+   x + y = 1 \\
+   3x - 2y = -1 \\
+   5x - y = \frac{1}{5}
+   \end{cases}
+   \]
+4. Use Gauss-Jordan to solve:  
+   \[
+   \begin{cases}
+   x - y + z - u + v = 1 \\
+   y + z + u + v = 2 \\
+   z - u + v = 1 \\
+   u + v = 1 \\
+   v = 1
+   \end{cases}
+   \]
+5. Use Gauss-Jordan to solve:  
+   \[
+   \begin{cases}
+   x + 2y + 3z + 4w + t = 6 \\
+   2x + 3y + 4z + 5w + t = 5 \\
+   3x + 4y + 5z + w + 2t = 4 \\
+   4x + 5y + z + 2w + 3t = 3 \\
+   5x + y + 2z + 3w + 4t = 2
+   \end{cases}
+   \]
+
+<div style="page-break-after: always;"></div>
+
+6. **(APPLIED)** You own a hamburger franchise and want to use leftover ingredients to make burgers.  
+   - Plain burgers: 1 beef patty, 1 bread roll  
+   - Double cheeseburgers: 2 beef patties, 1 bread roll, 2 cheese slices  
+   - Regular cheeseburgers: 1 beef patty, 1 bread roll, 1 cheese slice  
+You have 13 bread rolls, 19 beef patties, and 15 cheese slices. How many of each type can you make?
+
+<div style="page-break-after: always;"></div>
+
+##  Self-Assessment
+
+Time yourself and solve within 20 minutes:
+
+1. Use Gauss-Jordan to solve:  
+   \[
+   \begin{cases}
+   4x - 2y = 1 \\
+   -2x + y = 4
+   \end{cases}
+   \]
+2. Use Gauss-Jordan to solve:  
+   \[
+   \begin{cases}
+   \frac{-2x}{3} + \frac{y}{2} = \frac{-1}{6} \\
+   \frac{x}{4} - y = \frac{-3}{4}
+   \end{cases}
+   \]
+3. Explain why \(3R_3 - 2R_1 \to R_3\) is not an elementary row operation.
+4. In 2007, total revenues from sales of country music, children’s music, and soundtracks were \$1.5 billion. Country music brought in 12 times soundtracks, children’s music 3 times soundtracks. How much revenue for each?
+
+---
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+<div style="page-break-after: always;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Matrix Operations
+
+## Lecture Content
+
+[**Video:  Matrix Addition, Scalar Multiplication and Transpose**](https://www.youtube.com/watch?v=6N3etzk1Jm0&list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&index=1)
+
+[**Video:  Matrix Multiplication**](https://www.youtube.com/watch?v=Zsrhf3MEaFs&list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&index=2)
+
+
+
+### Matrix Notation: $A_{m \times n}$
+
+- A matrix is a rectangular array of numbers arranged in **rows** and **columns**.
+- The notation $A_{m \times n}$ refers to a matrix with:
+  - $m$ rows
+  - $n$ columns
+- Example:
+  $$
+  A_{2 \times 3} = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
+  $$
+
+###  Notation for Matrix Entries: $a_{ij}$ 
+
+- Each element in a matrix is denoted as $a_{ij}$:
+  - $i$ is the **row number**
+  - $j$ is the **column number**
+- Example:
+  $$
+  A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix},
+  $$
+  then
+  $$
+  a_{23} = 6 \;\;\;\;\; \text{and} a_{12} = 2.
+  $$
+  
+### Matrix Addition and Subtraction
+
+- Two matrices **can only be added or subtracted** if they have the **same dimensions**.
+- Add/subtract corresponding elements:
+  $$
+  A + B = \begin{bmatrix} a_{ij} + b_{ij} \end{bmatrix}
+  $$
+- Example:
+  $$
+  \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} +
+  \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} =
+  \begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix}
+  $$
+
+### Scalar Multiplication
+
+- Multiply each element of a matrix by a scalar value $c$:
+  $$
+  cA = \begin{bmatrix} c \cdot a_{ij} \end{bmatrix}
+  $$
+- Example:
+  $$
+  3 \cdot \begin{bmatrix} 2 & -1 \\ 0 & 4 \end{bmatrix} =
+  \begin{bmatrix} 6 & -3 \\ 0 & 12 \end{bmatrix}
+  $$
+
+### Matrix Multiplication
+
+- To multiply $A_{m \times n}$ by $B_{n \times p}$, the **number of columns of A** must equal the **number of rows of B**.
+- The result is a matrix $C_{m \times p}$.
+- Each element $c_{ij}$ is computed by the **dot product** of row $i$ of $A$ and column $j$ of $B$:
+  $$
+  c_{ij} = \sum_{k=1}^n a_{ik} b_{kj}
+  $$
+- Example:
+  $$
+  \begin{bmatrix} 2 & -1 \\ 0 & 4 \end{bmatrix} \cdot
+  \begin{bmatrix} 6 & -3 \\ 0 & 12 \end{bmatrix} =
+  \begin{bmatrix} 2 \cdot 6 + (-1) \cdot 0 & 2 \cdot (-3) + (-1) \cdot 12 \\ 0 \cdot 6 + 4 \cdot 0 & 0 \cdot (-3) + 4 \cdot 12 \end{bmatrix} =
+  \begin{bmatrix} 6 & -18 \\ 0 & 48 \end{bmatrix}
+  $$
+
+### Matrix Transpose
+
+- The **transpose** of a matrix $A$ is denoted $A^T$.
+- Rows become columns and columns become rows:
+  $$
+  A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \quad \Rightarrow \quad A^T = \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}
+  $$
+
+### $a_{ij}$ Notation for Operations
+
+- This is used to define operations element by element:
+  - Addition: $(A + B)_{ij} = a_{ij} + b_{ij}$
+  - Scalar multiplication: $(cA)_{ij} = c \cdot a_{ij}$
+  - Transpose: $(A^T)_{ij} = a_{ji}$
+
+
+
+##  Practice Problems
+
+1. Let  
+   \[
+   A = \begin{bmatrix} 0 & -1 \\ 1 & 0 \\ -1 & 2 \end{bmatrix}, \quad
+   B = \begin{bmatrix} 0.25 & -1 \\ 0 & 0.5 \\ -1 & 3 \end{bmatrix}, \quad
+   C = \begin{bmatrix} 1 & -1 \\ 1 & 1 \\ -1 & -1 \end{bmatrix}
+   \]
+   Calculate:  
+   a. \(A + B\)  
+   b. \(A - C\)  
+   c. \(3A\)  
+   d. \(2A + 0.5C\)  
+   e. \(C^T + B^T\)
+
+<div style="page-break-after: always;"></div>
+
+2. A matrix is symmetric if it equals its transpose. Give examples of nonzero symmetric \(2 \times 2\) and \(3 \times 3\) matrices.
+
+3. Compute (if possible):  
+   \[
+   \begin{bmatrix} 0 & 1 & -1 \\ 3 & 1 & -1 \end{bmatrix}
+   \times
+   \begin{bmatrix} 1 & 1 \\ 4 & 2 \\ 0 & 1 \end{bmatrix}
+   \]
+
+4. Compute (if possible):  
+   \[
+   \begin{bmatrix} 0 & 1 & -1 & 2 \end{bmatrix}
+   \times
+   \begin{bmatrix} 1 & -2 & 1 \\ 0 & 1 & 3 \\ 6 & 0 & 2 \\ -1 & -2 & 11 \end{bmatrix}
+   \]
+
+5. Let  
+   \[
+   A = \begin{bmatrix}
+   0 & 1 & 1 & 1 \\
+   0 & 0 & 1 & 1 \\
+   0 & 0 & 0 & 1 \\
+   0 & 0 & 0 & 0
+   \end{bmatrix}
+   \]  
+   Compute \(A^2\), \(A^3\), \(A^4\), and \(A^{100}\).
+
+<div style="page-break-after: always;"></div>
+
+6. **(Applied)** Left Coast Bookstore has two stores with inventory of hardcover, softcover, and plastic books. Given starting stock, sales, and restocking monthly amounts,  
+   a. Find total sales over 6 months by store and book type.  
+   b. Find inventory at the end of June.  
+   c. Compute total revenue if hardcover sells for \$30, softcover for \$10, plastic for \$15.
+
+<div style="page-break-after: always;"></div>
+
+##  Self-Assessment
+
+Time yourself and solve within 20 minutes:
+
+1. Given matrices \(A, B, C\) from earlier, calculate:  
+   a. \(A + B - C\)  
+   b. \(3B^T\)  
+   c. \(A^T + C^T\)  
+   d. \(3A^T - 2C^T\)  
+   e. \(2A + 3B\)
+
+2. A matrix is skew-symmetric if it equals the negative of its transpose. Give examples of nonzero skew-symmetric \(2 \times 2\) and \(3 \times 3\) matrices.
+
+3. Explain why this product is impossible:  
+   \[
+   \begin{bmatrix} 0 & 2 & -1 \end{bmatrix}
+   \times
+   \begin{bmatrix} 1 & -2 & 1 \\ -1 & -2 & 11 \end{bmatrix}
+   \]
+
+4. Compute the product:  
+   \[
+   \begin{bmatrix} 1 & 1 & -7 & 0 \\ -1 & 0 & -2 & 1 \\ 1 & -1 & 1 & 1 \end{bmatrix}
+   \times
+   \begin{bmatrix} 1 \\ -3 \\ 2 \\ 1 \end{bmatrix}
+   \]
+
+5. Karen Sandberg sold various T-shirts. Use matrix operations to compute her total revenue.
+
+---
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+
+| Skill                              | D   | CON | COM |
+|-----------------------------------|-----|-----|-----|
+| Addition, subtraction, scalar multiplication |     |     |     |
+| Matrix multiplication             |     |     |     |
+| Applied problems using matrices   |     |     |     |
+
+
+<div style="page-break-after: always;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Inverses and Determinants
+
+## Lecture Content
+
+[**Video:  Matrix Determinants**](https://www.youtube.com/watch?v=C_6u_WGPmkI&list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&index=5)
+
+[**Video:  Matrix Inversion**](https://www.youtube.com/watch?v=vNviujVzWk4&list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&index=3)
+
+
+
+### Determinant of a $2 \times 2$ Matrix
+
+- For a matrix:
+  $$
+  A = \begin{bmatrix}
+  a & b \\
+  c & d
+  \end{bmatrix}
+  $$
+- The determinant is:
+  $$
+  \text{det}(A) = ad - bc
+  $$
+
+### Determinant of a $3 \times 3$ Matrix
+
+- For a matrix:
+  $$
+  A = \begin{bmatrix}
+  a & b & c \\
+  d & e & f \\
+  g & h & i
+  \end{bmatrix}
+  $$
+- Use the **cofactor expansion** along the first row:
+  $$
+  \text{det}(A) = a(ei - fh) - b(di - fg) + c(dh - eg)
+  $$
+
+### Determinant of Higher-Order Matrices
+
+1. **Choose a row or column** (often the one with the most zeros).
+2. **Expand using cofactors**:
+   - For each element $a_{ij}$ in the row/column:
+     - Compute the **minor** (the determinant of the submatrix that remains when row $i$ and column $j$ are removed).
+     - Multiply by $(-1)^{i+j}$ (the sign factor).
+3. Sum all the signed minors:
+   $$
+   \text{det}(A) = \sum_{j=1}^n (-1)^{i+j} a_{ij} M_{ij}
+   $$
+
+### Inverse of a $2 \times 2$ Matrix
+
+- For:
+  $$
+  A = \begin{bmatrix}
+  a & b \\
+  c & d
+  \end{bmatrix}
+  $$
+- If $\text{det}(A) \neq 0$, the inverse is:
+  $$
+  A^{-1} = \frac{1}{ad - bc} \begin{bmatrix}
+  d & -b \\
+  -c & a
+  \end{bmatrix}
+  $$
+
+### Inverse of Higher-Order Matrices (Steps)
+
+1. **Check that $\text{det}(A) \neq 0$** (only non-singular matrices have inverses).
+2. **Augment the matrix** $A$ with the identity matrix $I$:
+   $$
+   [A | I]
+   $$
+3. **Use Gauss-Jordan elimination** to reduce $A$ to the identity matrix.
+4. When $A$ becomes $I$, the right-hand side becomes $A^{-1}$:
+   $$
+   [I | A^{-1}]
+   $$
+
+
+
+---
+
+## Practice Problems
+
+
+Practice the techniques discussed in class and in the online videos by solving the following examples.
+
+1. Calculate the determinant of $\begin{bmatrix} 1 & 3 \\ 0 & 2 \end{bmatrix}$
+2. Calculate the determinant of $\begin{bmatrix} 0 & 1 & 2 \\ 3 & 1 & 0 \\ 1 & 1 & -1 \end{bmatrix}$
+3. Find the determinant of $\begin{bmatrix} 1 & 2 & 3 & 16 \\ 0 & 2 & 6 & -7 \\ 0 & 0 & 3 & 33 \\ 0 & 0 & 0 & -1 \end{bmatrix}$
+4. If possible, find the inverses of the following matrices:
+    - $\begin{bmatrix} 2 & 4 \\ -1 & 6 \end{bmatrix}$
+    - $\begin{bmatrix} 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \\ 0 & 1 & 0 & 0 \\ 1 & 0 & 0 & 0 \end{bmatrix}$
+5. Determine if $A = \begin{bmatrix} 3 & 6 \\ 2 & 4 \end{bmatrix}$ and $B = \begin{bmatrix} 2 & 3 \\ 5 & 1 \end{bmatrix}$ are invertible, and find their inverses.
+6. Solve the following system using a matrix inverse:
+   $$
+   \begin{align*}
+   \frac{2}{3}x - \frac{1}{2}y &= \frac{1}{6} \\
+   \frac{1}{2}x - \frac{1}{2}y &= -1
+   \end{align*}
+   $$
+
+---
+
+## Self-Assessment
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. If $A(X + B) = C$, where $A$, $B$, $X$, and $C$ are all $2 \times 2$ invertible matrices, solve for $X$.
+2. Calculate the determinant of $\begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$
+3. Find the inverse of $\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$
+4. Find the inverse of $\begin{bmatrix} 1 & 1 & 1 \\ 0 & 1 & 1 \\ 0 & 0 & 1 \end{bmatrix}$
+5. Solve the system using a matrix inverse:
+   $$
+   \begin{align*}
+   2x + y &= 2 \\
+   2x - 3y &= 2
+   \end{align*}
+   $$
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+| Skill                                                 | D | CON | COM |
+|-------------------------------------------------------|---|-----|-----|
+| Find the determinant and inverse of a $2 \times 2$ matrix |   |     |     |
+| Find the determinant and inverse of a $3 \times 3$ matrix |   |     |     |
+| Find inverses and determinants for higher-order matrices |   |     |     |
+| Solve a linear system using a matrix inverse            |   |     |     |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Vector Projections
+
+## Lecture Content
+
+[**Video:  Vectors**](https://www.youtube.com/watch?v=k_hRTx4PEn0&list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&index=4)
+
+### Vector Operations
+
+#### Addition and Scalar Multiplication of Vectors {-}
+
+- **Vector Addition**: If **u** = ⟨u₁, u₂, ..., uₙ⟩ and **v** = ⟨v₁, v₂, ..., vₙ⟩, then  
+  **u** + **v** = ⟨u₁ + v₁, u₂ + v₂, ..., uₙ + vₙ⟩.
+
+- **Scalar Multiplication**: For scalar *c*,  
+  *c*·**v** = ⟨c·v₁, c·v₂, ..., c·vₙ⟩.
+
+- Example:  Let **u** = ⟨1, 2, 3⟩ and **v** = ⟨4, -1, 2⟩
+Then:
+\[
+\mathbf{u} + \mathbf{v} = \langle 1 + 4,\ 2 + (-1),\ 3 + 2 \rangle = \langle 5,\ 1,\ 5 \rangle
+\]
+- Example:  Let **v** = ⟨2, -3, 4> and and scalar *c* = 3.
+Then:
+\[
+3 \cdot \mathbf{v} = \langle 3 \cdot 2,\ 3 \cdot (-3),\ 3 \cdot 4 \rangle = \langle 6,\ -9,\ 12 \rangle
+\]
+
+These operations preserve vector direction (in the case of addition) or scale the magnitude (in scalar multiplication).
+
+---
+
+### Standard Inner Product (Dot Product)
+
+The **standard inner product** (dot product) of vectors **u** and **v** in ℝⁿ is:
+\[
+\mathbf{u} \cdot \mathbf{v} = u_1 v_1 + u_2 v_2 + \cdots + u_n v_n
+\]
+
+- Example: Let **u** = ⟨1, 2, 3⟩ and **v** = ⟨4, -1, 2⟩ Then:
+\[
+\mathbf{u} \cdot \mathbf{v} = 1 \cdot 4 + 2 \cdot (-1) + 3 \cdot 2 = 4 - 2 + 6 = 8
+\]
+- Returns a **scalar**.
+- Measures how much one vector goes in the direction of another.
+
+---
+
+### Euclidean Norm of a Vector
+
+The **Euclidean norm** (or magnitude/length) of a vector **v** is:
+
+\[
+\| \mathbf{v} \| = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2}
+\]
+
+- Example: Let **v** = ⟨2, -3, 6⟩. Then the **2-norm** is:
+\[
+\| \mathbf{v} \| = \sqrt{2^2 + (-3)^2 + 6^2} = \sqrt{4 + 9 + 36} = \sqrt{49} = 7
+\]
+- Denoted as \|**v**\|.
+- Also called the **2-norm**.
+
+---
+
+### Cosine of the Angle Between Two Vectors
+
+Given non-zero vectors **u** and **v**, the **cosine of the angle** θ between them is:
+
+\[
+\cos(\theta) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
+\]
+
+- Example: Let **u** = ⟨1, 2⟩ and  **v** = ⟨3, 4⟩
+   1. Compute dot product:  
+\[
+\mathbf{u} \cdot \mathbf{v} = 1 \cdot 3 + 2 \cdot 4 = 3 + 8 = 11
+\]
+   2. Compute norms:  
+\[
+\|\mathbf{u}\| = \sqrt{1^2 + 2^2} = \sqrt{5}, \quad \|\mathbf{v}\| = \sqrt{3^2 + 4^2} = \sqrt{25} = 5
+\]
+   3. Use the cosine formula:  
+\[
+\cos(\theta) = \frac{11}{\sqrt{5} \cdot 5} = \frac{11}{5\sqrt{5}} = \frac{\sqrt{5}}{5} \cdot \frac{11}{5}
+\]
+   4. Find angle:  
+\[
+\theta = \cos^{-1}\left( \frac{11}{5\sqrt{5}} \right) \approx 18.4^\circ
+\]
+
+- If **cos(θ) = 0**, the vectors are orthogonal (perpendicular).
+- If **cos(θ) > 0**, angle < 90° (acute).
+- If **cos(θ) < 0**, angle > 90° (obtuse).
+
+---
+
+### Vector Projection Formula
+
+The **projection** of vector **u** onto vector **v** is:
+
+\[
+\mathrm{proj}_{\mathbf{v}} \mathbf{u} = \left( \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{v}\|^2} \right) \mathbf{v}
+\]
+
+- Example:  Project **u** = ⟨2, 3⟩ onto **v** = ⟨1, 4⟩.
+   1. Dot product:  
+\[
+\mathbf{u} \cdot \mathbf{v} = 2 \cdot 1 + 3 \cdot 4 = 2 + 12 = 14
+\]
+   2. Norm squared:  
+\[
+\|\mathbf{v}\|^2 = 1^2 + 4^2 = 1 + 16 = 17
+\]
+   3. Projection:  
+\[
+\mathrm{proj}_{\mathbf{v}} \mathbf{u} = \left( \frac{14}{17} \right) \mathbf{v} = \left( \frac{14}{17} \right) \langle 1,\ 4 \rangle = \left\langle \frac{14}{17},\ \frac{56}{17} \right\rangle
+\]
+
+- Gives the component of **u** in the direction of **v**.
+
+---
+
+### Geometric Interpretations
+
+- **Addition**: Geometrically, vector addition corresponds to placing the tail of **v** at the head of **u** and drawing the resulting vector from the tail of **u** to the head of **v**.
+
+- **Dot Product**: Measures alignment. A large positive value means the vectors point in similar directions.
+
+- **Norm**: The "length" of the vector in Euclidean space.
+
+- **Projection**: Drops a perpendicular from **u** onto **v**; the projection lies along **v**.
+
+- **Angle and Cosine**: Relates direction and orthogonality.
+
+
+
+---
+
+## Practice Problems
+
+1. Draw the vectors $A = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$ and $B = \begin{bmatrix} -1 \\ -1 \end{bmatrix}$. Draw: 
+   - $A + B$, 
+   - $B + A$, 
+   - $A - B$, 
+   - $B - A$, 
+   - $2A$, and 
+   - $-4B$.
+2. Compute the standard inner products and norms of $A = \begin{bmatrix} -1 \\ 3 \end{bmatrix}$ and $B = \begin{bmatrix} 2 \\ 2 \end{bmatrix}$. What is the angle between them?
+3. Express $v = [5, -1]$ as a sum of orthogonal vectors such that one has the same direction as $u = [4, 2]$.
+4. Find the angle between:
+   - $x = \begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}$ and $y = \begin{bmatrix} 2 \\ 0 \\ -3 \end{bmatrix}$
+   - $x = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$ and $y = \begin{bmatrix} 3 \\ -2 \\ 1 \end{bmatrix}$
+5. Find the projection and orthogonal projection of $u$ onto $v$:
+   - $u = \begin{bmatrix} 4 \\ 3 \end{bmatrix}$, $v = \begin{bmatrix} 2 \\ 8 \end{bmatrix}$
+   - $u = \begin{bmatrix} 3 \\ 5 \end{bmatrix}$, $v = \begin{bmatrix} 6 \\ 2 \end{bmatrix}$
+
+---
+
+## Self-Assessment
+
+
+Try to solve the following within 20 minutes.
+
+1. Draw $A = \begin{bmatrix} -1 \\ 3 \end{bmatrix}$ and $B = \begin{bmatrix} 2 \\ 2 \end{bmatrix}$. Then draw: 
+   - $A + B$, 
+   - $A - B$, 
+   - $B - A$, 
+   - $3A$, 
+   - $-0.5B$
+2. Find the angle between: $x = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$ and $y = \begin{bmatrix} 2 \\ 1 \end{bmatrix}$
+3. Find the projection and orthogonal projection of $u$ onto $v$: $u = \begin{bmatrix} -2 \\ 5 \end{bmatrix}$, $v = \begin{bmatrix} 6 \\ 5 \end{bmatrix}$
+4. Express $v = [8, -3, -3]$ as a sum of orthogonal vectors with one in the direction of $u = [2, 3, 2]$
+
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+
+
+| Skill                                                 | D | CON | COM |
+|-------------------------------------------------------|---|-----|-----|
+| Determine the inner product of two vectors |   |     |     |
+| Determine the Euclidean norm of a vector |   |     |     |
+| Find the cosine of the angle between two vectors |   |     |     |
+| Find a vector projection and an orthogonal projection            |   |     |     |
+| Decompose a vector into orthogonal vectors            |   |     |     |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Basis and Orthonormal Basis
+
+
+
+
+##  Lecture Content
+
+
+### Linear Independence
+
+**Definition (Linear Independence):**  
+Vectors \(\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_k\) in \(\mathbb{R}^n\) are **linearly independent** if the equation  
+\[
+c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + \cdots + c_k\mathbf{v}_k = \mathbf{0}
+\]  
+has only the **trivial solution** \(c_1 = c_2 = \cdots = c_k = 0\).
+
+If nontrivial solutions exist, the vectors are **linearly dependent**.
+
+- Example:  Determine whether the following set of vectors in \(\mathbb{R}^3\) is linearly independent:
+\[
+\mathbf{v}_1 = \begin{bmatrix}1 \\ 0 \\ 2\end{bmatrix}, \quad 
+\mathbf{v}_2 = \begin{bmatrix}0 \\ 1 \\ -1\end{bmatrix}, \quad 
+\mathbf{v}_3 = \begin{bmatrix}2 \\ 1 \\ 3\end{bmatrix}
+\]
+We want to test whether the equation
+\[
+c_1\mathbf{v}_1 + c_2\mathbf{v}_2 + c_3\mathbf{v}_3 = \mathbf{0}
+\]
+has only the **trivial solution** \(c_1 = c_2 = c_3 = 0\).  
+Write the linear combination:
+\[
+c_1 \begin{bmatrix}1 \\ 0 \\ 2\end{bmatrix} + 
+c_2 \begin{bmatrix}0 \\ 1 \\ -1\end{bmatrix} + 
+c_3 \begin{bmatrix}2 \\ 1 \\ 3\end{bmatrix}
+=
+\begin{bmatrix}0 \\ 0 \\ 0\end{bmatrix}
+\]  
+Add the vectors:
+\[
+\begin{bmatrix}
+c_1 + 2c_3 \\
+c_2 + c_3 \\
+2c_1 - c_2 + 3c_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\
+0 \\
+0
+\end{bmatrix}
+\]  
+This gives a system of equations:
+\[
+\begin{aligned}
+&c_1 + 2c_3 = 0 \quad \text{(1)}\\
+&c_2 + c_3 = 0 \quad \text{(2)}\\
+&2c_1 - c_2 + 3c_3 = 0 \quad \text{(3)}
+\end{aligned}
+\]  
+**Solve the system:**
+From (1): \(c_1 = -2c_3\)  
+From (2): \(c_2 = -c_3\)
+Substitute into (3):
+\[
+2(-2c_3) - (-c_3) + 3c_3 = -4c_3 + c_3 + 3c_3 = 0
+\]  
+The equation is satisfied for **any value of** \(c_3\), so the original equation has **infinitely many solutions** (not just the trivial one).  Thus, these vectors are linearly dependent. 
+
+
+### Span
+
+The **span** of a set of vectors \(\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_k\}\) is the set of all linear combinations of those vectors:
+\[
+\text{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_k\} = \left\{ c_1\mathbf{v}_1 + \cdots + c_k\mathbf{v}_k \mid c_i \in \mathbb{R} \right\}
+\]
+
+
+- In \(\mathbb{R}^2\): Two vectors span the plane if they are linearly independent.
+- In \(\mathbb{R}^3\): Three vectors span the space if they are linearly independent.
+
+---
+
+### Standard Basis
+
+- In \(\mathbb{R}^2\), the standard basis is:
+\[
+\left\{ \begin{bmatrix}1 \\ 0\end{bmatrix}, \begin{bmatrix}0 \\ 1\end{bmatrix} \right\}
+\]
+- In \(\mathbb{R}^3\), the standard basis is:
+\[
+\left\{ \begin{bmatrix}1 \\ 0 \\ 0\end{bmatrix}, \begin{bmatrix}0 \\ 1 \\ 0\end{bmatrix}, \begin{bmatrix}0 \\ 0 \\ 1\end{bmatrix} \right\}
+\]
+
+---
+
+### Gram-Schmidt Orthonormalization
+
+**Goal:** Convert a linearly independent set \(\{\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_k\}\) into an orthonormal set \(\{\mathbf{u}_1, \mathbf{u}_2, \dots, \mathbf{u}_k\}\).
+
+**Steps:**
+
+1. Set \(\mathbf{u}_1 = \frac{\mathbf{v}_1}{\|\mathbf{v}_1\|}\)
+2. For \(j = 2\) to \(k\):
+   - Subtract projections of \(\mathbf{v}_j\) onto all previous \(\mathbf{u}_i\):
+\[
+\mathbf{w}_j = \mathbf{v}_j - \sum_{i=1}^{j-1} \text{proj}_{\mathbf{u}_i} \mathbf{v}_j
+\]
+   - Normalize:
+\[
+\mathbf{u}_j = \frac{\mathbf{w}_j}{\|\mathbf{w}_j\|}
+\]
+
+- Example:
+Given the linearly independent vectors:
+\[
+\mathbf{v}_1 = \begin{bmatrix}1 \\ 1\end{bmatrix}, \quad 
+\mathbf{v}_2 = \begin{bmatrix}1 \\ -1\end{bmatrix}
+\]
+Use the Gram-Schmidt process to find an orthonormal basis.  
+Step 1: Let \(\mathbf{u}_1 = \mathbf{v}_1\)
+\[
+\mathbf{u}_1 = \begin{bmatrix}1 \\ 1\end{bmatrix}
+\]
+Normalize it:
+\[
+\|\mathbf{u}_1\| = \sqrt{1^2 + 1^2} = \sqrt{2}, \quad 
+\mathbf{e}_1 = \frac{\mathbf{u}_1}{\|\mathbf{u}_1\|} = \frac{1}{\sqrt{2}}\begin{bmatrix}1 \\ 1\end{bmatrix}
+\]  
+Step 2: Subtract projection from \(\mathbf{v}_2\)
+\[
+\text{proj}_{\mathbf{u}_1} \mathbf{v}_2 
+= \frac{\mathbf{v}_2 \cdot \mathbf{u}_1}{\|\mathbf{u}_1\|^2} \mathbf{u}_1 
+= \frac{(1)(1) + (-1)(1)}{2} \begin{bmatrix}1 \\ 1\end{bmatrix} 
+= 0 \cdot \begin{bmatrix}1 \\ 1\end{bmatrix} = \begin{bmatrix}0 \\ 0\end{bmatrix}
+\]
+\[
+\mathbf{u}_2 = \mathbf{v}_2 - \text{proj}_{\mathbf{u}_1} \mathbf{v}_2 = \begin{bmatrix}1 \\ -1\end{bmatrix}
+\]
+Normalize:
+\[
+\|\mathbf{u}_2\| = \sqrt{1^2 + (-1)^2} = \sqrt{2}, \quad 
+\mathbf{e}_2 = \frac{1}{\sqrt{2}} \begin{bmatrix}1 \\ -1\end{bmatrix}
+\]
+The final 0rthonormal basis is
+\[
+\mathbf{e}_1 = \frac{1}{\sqrt{2}} \begin{bmatrix}1 \\ 1\end{bmatrix}, \quad 
+\mathbf{e}_2 = \frac{1}{\sqrt{2}} \begin{bmatrix}1 \\ -1\end{bmatrix}.
+\]
+
+---
+
+### Coordinates Relative to an Ordered Basis
+
+Given a basis \(\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}\) for \(\mathbb{R}^n\), any vector \(\mathbf{v}\) can be written as:
+\[
+\mathbf{v} = c_1\mathbf{b}_1 + \cdots + c_n\mathbf{b}_n
+\]
+
+The **coordinates** of \(\mathbf{v}\) with respect to \(\mathcal{B}\) are the scalars \((c_1, \dots, c_n)\).
+
+- Example: Let \(\mathbf{v} = \begin{bmatrix} 3 \\ 2 \end{bmatrix}\) be a vector in \(\mathbb{R}^2\).
+Let the **basis \(B\)** be:
+\[
+\mathbf{b}_1 = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
+\mathbf{b}_2 = \begin{bmatrix} 2 \\ 0 \end{bmatrix}
+\]
+Find the coordinates of \(\mathbf{v}\) **with respect to the basis \(B\)**.  
+Step 1: Set up the equation  
+We want to find scalars \(c_1\) and \(c_2\) such that:
+\[
+\mathbf{v} = c_1 \mathbf{b}_1 + c_2 \mathbf{b}_2
+= c_1 \begin{bmatrix}1 \\ 1\end{bmatrix} + c_2 \begin{bmatrix}2 \\ 0\end{bmatrix}
+\]  
+Add the vectors:
+\[
+\begin{bmatrix}3 \\ 2\end{bmatrix} = \begin{bmatrix}c_1 + 2c_2 \\ c_1\end{bmatrix}
+\]  
+Step 2: Solve the system  
+Equating components:  
+\[
+c_1 + 2c_2 = 3 \quad \text{(1)} \\
+c_1 = 2 \quad \text{(2)}
+\]  
+Substitute (2) into (1):  
+\[
+2 + 2c_2 = 3 \Rightarrow c_2 = \frac{1}{2}
+\]
+Final Answer  
+The coordinates of \(\mathbf{v}\) in basis \(B\) are:
+\[
+[\mathbf{v}]_B = \begin{bmatrix} 2 \\ \frac{1}{2} \end{bmatrix}
+\]
+
+---
+
+### Change of Basis Matrix in \(\mathbb{R}^2\)
+
+To convert coordinates from basis \(\mathcal{B}\) to basis \(\mathcal{C}\):
+
+1. Let \(\mathcal{B} = \{\mathbf{b}_1, \mathbf{b}_2\}\), \(\mathcal{C} = \{\mathbf{c}_1, \mathbf{c}_2\}\)
+2. Write the basis vectors as **columns** of matrices:
+   - \(P_{\mathcal{B}} = [\mathbf{b}_1 \ \mathbf{b}_2]\)
+   - \(P_{\mathcal{C}} = [\mathbf{c}_1 \ \mathbf{c}_2]\)
+
+3. Then the **change of basis matrix from \(\mathcal{B}\) to \(\mathcal{C}\)** is:
+\[
+P_{\mathcal{C} \leftarrow \mathcal{B}} = P_{\mathcal{C}}^{-1} P_{\mathcal{B}}
+\]
+
+To find the coordinates of \(\mathbf{v}\) in the new basis:
+\[
+[\mathbf{v}]_{\mathcal{C}} = P_{\mathcal{C} \leftarrow \mathcal{B}} \cdot [\mathbf{v}]_{\mathcal{B}}
+\]
+
+- Let the **standard basis** be:
+\[
+E = \left\{ \mathbf{e}_1 = \begin{bmatrix}1 \\ 0\end{bmatrix}, \mathbf{e}_2 = \begin{bmatrix}0 \\ 1\end{bmatrix} \right\}
+\]  
+Let a new basis \(B\) be:
+\[
+B = \left\{ \mathbf{b}_1 = \begin{bmatrix}1 \\ 1\end{bmatrix}, \mathbf{b}_2 = \begin{bmatrix}2 \\ -1\end{bmatrix} \right\}
+\]
+We want to **change coordinates from the \(B\)-basis to the standard basis \(E\)**.  
+Step 1: Construct the Change of Basis Matrix \(P_{B \to E}\)  
+The matrix \(P_{B \to E}\) is formed by placing the basis vectors of \(B\) as columns:  
+\[
+P_{B \to E} = \begin{bmatrix} \mathbf{b}_1 & \mathbf{b}_2 \end{bmatrix}
+= \begin{bmatrix}
+1 & 2 \\
+1 & -1
+\end{bmatrix}
+\]  
+Step 2: Change from \(B\)-coordinates to Standard Coordinates  
+Let a vector have \(B\)-coordinates:
+\[
+[\mathbf{v}]_B = \begin{bmatrix} 3 \\ 1 \end{bmatrix}
+\]  
+To convert to standard coordinates:
+\[
+[\mathbf{v}]_E = P_{B \to E} \cdot [\mathbf{v}]_B
+= \begin{bmatrix}
+1 & 2 \\
+1 & -1
+\end{bmatrix}
+\begin{bmatrix} 3 \\ 1 \end{bmatrix}
+= \begin{bmatrix} 1(3) + 2(1) \\ 1(3) + (-1)(1) \end{bmatrix}
+= \begin{bmatrix} 5 \\ 2 \end{bmatrix}
+\]  
+Final Answer  
+The vector \(\mathbf{v}\) in standard coordinates is:
+\[
+\mathbf{v} = \begin{bmatrix} 5 \\ 2 \end{bmatrix}
+\]
+
+
+
+---
+
+
+##  Practice Problems
+
+1. Show that  
+   \[
+   \begin{bmatrix} 1 \\ 1 \end{bmatrix} \quad \text{and} \quad \begin{bmatrix}1 \\ -1 \end{bmatrix}
+   \]  
+   is a basis for \(\mathbb{R}^2\). Find the coordinates of \((2,-3)\) with respect to the basis.
+2. Explain why  
+   \[
+   \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad \text{and} \quad \begin{bmatrix}0 \\ 2 \end{bmatrix}
+   \]  
+   is not a basis for \(\mathbb{R}^2\).
+3. Show that  
+   \[
+   \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}, \quad \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, \quad \text{and} \quad \begin{bmatrix}1 \\ 0 \\ 0 \end{bmatrix}
+   \]  
+   is a basis for \(\mathbb{R}^3\). Find the coordinates of \((4,-1,1)\) with respect to the basis.
+4. Use Gram Schmidt to find an orthonormal basis for  
+   \[
+   \begin{bmatrix} 1 \\ 1 \end{bmatrix} \quad \text{and} \quad \begin{bmatrix}2 \\ 1 \end{bmatrix}.
+   \]
+5. Use Gram Schmidt to find an orthonormal basis for  
+   \[
+   \begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}, \quad \begin{bmatrix} 0 \\ 1 \\ 1 \\ 1 \end{bmatrix}, \quad \text{and} \quad \begin{bmatrix}0 \\ 0 \\ 1 \\ 1 \end{bmatrix}.
+   \]
+6. Let  
+   \[
+   B = \left\{\begin{bmatrix} 0 \\ 1 \end{bmatrix}, \begin{bmatrix}1 \\ 0 \end{bmatrix}\right\}, \quad
+   C = \left\{\begin{bmatrix} 3 \\ 1 \end{bmatrix}, \begin{bmatrix}1 \\ 2 \end{bmatrix}\right\}.
+   \]  
+   Find the change of basis matrices from \(B\) to \(C\) and from \(C\) to \(B\) (be sure to label them correctly).
+7. *(Challenge)* Let  
+   \[
+   B = \left\{\begin{bmatrix} -5 \\ -3 \end{bmatrix}, \begin{bmatrix}4 \\ 28 \end{bmatrix}\right\}, \quad
+   C = \left\{\begin{bmatrix} 6 \\ 2 \end{bmatrix}, \begin{bmatrix}1 \\ -1 \end{bmatrix}\right\}.
+   \]  
+   Find the change of basis matrices from \(B\) to \(C\) and from \(C\) to \(B\) (be sure to label them correctly).
+
+---
+
+##  Self-Assessment
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. Let  
+   \[
+   B = \left\{\begin{bmatrix} 1 \\ 2 \end{bmatrix}, \begin{bmatrix}3 \\ 1 \end{bmatrix} \right\}, \quad
+   s = \begin{bmatrix} 1 \\ 7 \end{bmatrix}.
+   \]  
+   Express \(s\) in terms of basis \(B\).
+2. Show that  
+   \[
+   \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}, \quad \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}, \quad \text{and} \quad \begin{bmatrix}2 \\ 0 \\ 0 \end{bmatrix}
+   \]  
+   is a basis for \(\mathbb{R}^3\).
+3. Let  
+   \[
+   B = \left\{\begin{bmatrix} 0 \\ 1 \end{bmatrix}, \begin{bmatrix}1 \\ 0 \end{bmatrix}\right\}, \quad
+   C = \left\{\begin{bmatrix} 0 \\ 1 \end{bmatrix}, \begin{bmatrix}1 \\ 1 \end{bmatrix}\right\}.
+   \]  
+   Find the change of basis matrices from \(B\) to \(C\) and from \(C\) to \(B\) (be sure to label them correctly).
+4. Use Gram Schmidt to find an orthonormal basis for  
+   \[
+   \begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}, \quad \begin{bmatrix} 1 \\ 1 \\ 3 \end{bmatrix}, \quad \text{and} \quad \begin{bmatrix}2 \\ 1 \\ 1 \end{bmatrix}.
+   \]
+
+
+
+
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+| Skill                                    | D  | CON | COM |
+|------------------------------------------|----|-----|-----|
+| Find the coordinates of a vector, given a basis. |    |     |     |
+| Prove that a set of vectors is or is not a basis. |    |     |     |
+| Perform the Gram Schmidt process to get an orthonormal basis. |    |     |     |
+| Find a change of basis matrix.             |    |     |     |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# The Rotation Matrix
+
+
+
+##  Lecture Content
+
+### Rotation Matrix in \(\mathbb{R}^2\)
+
+The **rotation matrix** in \(\mathbb{R}^2\) for a counterclockwise rotation by an angle \(\theta\) is:
+
+\[
+R(\theta) = \begin{bmatrix}
+\cos\theta & -\sin\theta \\
+\sin\theta & \cos\theta
+\end{bmatrix}
+\]
+
+- When this matrix is applied to a vector \(\mathbf{v} \in \mathbb{R}^2\), it rotates \(\mathbf{v}\) counterclockwise by \(\theta\) radians about the origin.
+
+---
+
+### Geometric Interpretation: Left Multiplication as Rotation
+
+Multiplying a 2D vector \(\mathbf{v}\) on the left by \(R(\theta)\):
+
+\[
+R(\theta) \cdot \mathbf{v}
+\]
+
+geometrically **rotates the vector** \(\mathbf{v}\) in the plane, without changing its length (if \(\mathbf{v} \neq \mathbf{0}\)).
+
+- The direction changes, but the magnitude remains the same.
+- This is an **isometry**: a transformation that preserves distances and angles.
+
+---
+
+### Stretching and Compression
+
+A **diagonal matrix** can stretch or compress a vector along the coordinate axes.
+
+For example:
+
+\[
+S = \begin{bmatrix}
+2 & 0 \\
+0 & 1
+\end{bmatrix}
+\]
+
+- This stretches vectors by a factor of 2 in the \(x\)-direction and leaves the \(y\)-direction unchanged.
+
+---
+
+### Reflection Matrices
+
+Common reflection matrices in \(\mathbb{R}^2\):
+
+- Reflection across the \(x\)-axis:
+
+\[
+\begin{bmatrix}
+1 & 0 \\
+0 & -1
+\end{bmatrix}
+\]
+
+- Reflection across the \(y\)-axis:
+
+\[
+\begin{bmatrix}
+-1 & 0 \\
+0 & 1
+\end{bmatrix}
+\]
+
+- Reflection across the line \(y = x\):
+
+\[
+\begin{bmatrix}
+0 & 1 \\
+1 & 0
+\end{bmatrix}
+\]
+
+- These matrices **flip** vectors across the specified axis or line, changing direction while preserving length.
+
+---
+
+### Summary
+
+| Transformation Type | Matrix Form | Effect |
+|---------------------|-------------|--------|
+| Rotation            | \(R(\theta)\) | Turns a vector counterclockwise |
+| Stretch/Compression | Diagonal     | Scales components independently |
+| Reflection          | Specific matrices | Flips vectors across lines or axes |
+
+
+## Practice Problems
+
+1. Rotate  
+   \[
+   \begin{bmatrix}1 \\ -2 \end{bmatrix}
+   \]  
+   60 degrees counter clockwise.
+2. Rotate  
+   \[
+   \begin{bmatrix}1 \\ 1 \end{bmatrix}
+   \]  
+   90 degrees counter clockwise.
+3. Multiply, then plot the original vector and the rotated vector:  
+   \[
+   \begin{bmatrix} \frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix} \begin{bmatrix}1 \\ -2 \end{bmatrix}.
+   \]
+4. Plot the original vector. Then multiply the vector one matrix at a time, plotting all output vectors along the way. Describe what each matrix multiplication does to the vector:  
+   \[
+   \begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} \]
+5.   **Applied**: Let \( B = \left\{
+   \begin{bmatrix} 1 \\ 1 \end{bmatrix}, 
+   \begin{bmatrix} -1 \\ 1 \end{bmatrix} \right\} \).  Let \( s_B = \begin{bmatrix} 3 \\ -2 \end{bmatrix} \).  Express \( s_B \) in terms of the standard basis, rotate it 30 degrees counter clockwise, then express that vector in terms of basis \( B \).
+
+
+## Self-Assessment
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. Rotate \(\begin{bmatrix}-1 \\ -2 \end{bmatrix}\) 30 degrees clockwise.  
+2. Multiply, then plot the original vector and the rotated vector:
+
+   $$
+   \begin{bmatrix} -1 & 0 \\ 0 & -1 \end{bmatrix}
+   \begin{bmatrix}1 \\ -2 \end{bmatrix}
+   $$
+
+3. Explain what left-sided multiplication by  
+   \( A=\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix} \)  
+   would do to the vector \(\begin{bmatrix}x \\ y \end{bmatrix}\).  
+   Are there any vectors in \(\mathbb{R}^2\) that would not change after left-sided multiplication by \(A\)?
+
+4. Let \( B = \left\{
+   \begin{bmatrix} -1 \\ -1 \end{bmatrix}, 
+   \begin{bmatrix} 0 \\ 1 \end{bmatrix} \right\} \).  
+   Let \( s_B = \begin{bmatrix} -1 \\ -3 \end{bmatrix} \).  
+   Express \( s_B \) in terms of the standard basis, rotate it 60 degrees counter clockwise, then express that vector in terms of basis \( B \).
+
+---
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+| Skill | D | CON | COM |
+|------------------------------------------|----|-----|-----|
+| Find and simplify a rotation matrix. |     |      |      |
+| Plot results of a rotation geometrically. |     |      |      |
+| Solve an applied problem involving change of basis and rotations. |     |      |      |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Eigenvalues and Eigenvectors
+
+
+
+
+## Lecture Content
+
+[**Video:  Eigenvalues and Eigenvectors**](https://www.youtube.com/watch?v=4PJncWlZmQA&list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&index=6)
+
+### Eigenvalues and Eigenvectors
+
+
+Let \( A \) be a square matrix. A non-zero vector \(\vec{v}\) is an **eigenvector** of \( A \) if:
+\[
+A\vec{v} = \lambda \vec{v}
+\]
+for some scalar \(\lambda\). The scalar \(\lambda\) is called the **eigenvalue** corresponding to the eigenvector \(\vec{v}\).
+
+- An eigenvector for $A$ will have the same direction once it is multiplied by $A$.  
+- If the eigenvector changes length, it does so by a factor of the eigenvalue.
+
+---
+
+### Finding Eigenvalues (for \(2 \times 2\) or \(3 \times 3\) matrices)
+
+1. Start with the matrix equation \( A\vec{v} = \lambda\vec{v} \).
+2. Rearrange to \( (A - \lambda I)\vec{v} = 0 \).
+3. Compute the **characteristic polynomial** by solving:
+\[
+\det(A - \lambda I) = 0
+\]
+4. The roots \(\lambda\) of this polynomial are the eigenvalues of \( A \).
+
+---
+
+### Finding Eigenvectors
+
+Once you have the eigenvalues:
+
+   1. For each eigenvalue \(\lambda\), plug it into \( A - \lambda I \).
+   2. Solve the homogeneous system:
+\[
+(A - \lambda I)\vec{v} = 0
+\]
+   3. The **solution set** (null space) gives the eigenvectors.  
+   4. Any basis for this null space forms a **basis for the eigenspace** corresponding to \(\lambda\).
+
+---
+
+### Diagonalization (for \(2 \times 2\) matrices with two distinct eigenvalues)
+
+A matrix \( A \) is **diagonalizable** if there exists an invertible matrix \( P \) and a diagonal matrix \( D \) such that:
+\[
+A = PDP^{-1}
+\]
+
+To diagonalize: 
+
+   1. Find the eigenvalues \(\lambda_1, \lambda_2\).
+   2. For each \(\lambda\), find the corresponding eigenvectors.
+   3. Form matrix \( P \) using the eigenvectors as columns.
+   4. Construct diagonal matrix \( D \) with the eigenvalues on the diagonal.
+   5. Confirm that \( A = PDP^{-1} \).
+
+Diagonalization simplifies matrix powers and exponentials, as:
+\[
+A^n = P D^n P^{-1}
+\]
+when \( A \) is diagonalizable.
+
+
+##  Practice Problems
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+
+1. If 
+\[
+A = \begin{bmatrix}3&-2&2\\1&2&1\\0&2&1 \end{bmatrix}
+\]
+determine which of the following are eigenvectors of $A$ and what their associated eigenvalue is.
+   a. $\begin{bmatrix}2 \\ -1\\ -2 \end{bmatrix}$  
+   b. $\begin{bmatrix}0\\1\\1 \end{bmatrix}$  
+   c. $\begin{bmatrix} 1\\1\\1 \end{bmatrix}$  
+   d. $\begin{bmatrix}0\\0\\0 \end{bmatrix}$
+2. Find the eigenvalues of 
+\[
+A = \begin{bmatrix}-5 & 2  \\ -7 & 4 \end{bmatrix}.
+\]
+Sketch the eigenvectors before and after left-sided multiplication by $A$.
+3. Find the eigenvalues of 
+\[
+A = \begin{bmatrix}1&2&4\\0&4&7\\0&0&6 \end{bmatrix}.
+\]
+4. Find the eigenvalues of 
+\[
+A = \begin{bmatrix}2&2&-2\\1&3&-1\\-1&1&1 \end{bmatrix}.
+\]
+5. Show that the eigenvalues of 
+\[
+A = \begin{bmatrix}-5 & 2  \\ -7 & 4 \end{bmatrix}
+\]
+are $\lambda = \pm 2$, then determine a basis for each eigenspace of $A$. 
+6. (Applied) We can decompose a matrix $A$ into the form $A = PDP^{-1}$ where $D$ is a matrix of eigenvalues on the main diagonal and $P$ is a matrix of eigenvectors. Compute $P$ and $D$ for 
+\[
+A = \begin{bmatrix}3 & 0 \\ 0 & -2\end{bmatrix}.
+\] Compute $A^4$.
+7. (Applied) We can decompose a matrix $A$ into the form $A = PDP^{-1}$ where $D$ is a matrix of eigenvalues on the main diagonal and $P$ is a matrix of eigenvectors. Compute $P$ and $D$ for 
+\[
+A = \begin{bmatrix}-1 &4 \\ 0 & 3\end{bmatrix}.
+\] Compute $A^3$.
+
+
+##  Self-Assessment
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. Find the eigenvalues of 
+\[
+A = \begin{bmatrix}-3&0\\0&4 \end{bmatrix}.
+\]
+
+2. Find the eigenvalues of 
+\[
+A = \begin{bmatrix}1&4\\3&2 \end{bmatrix}.
+\]
+Sketch the eigenvectors before and after left-sided multiplication by $A$. 
+
+3. Find the eigenvalues of 
+\[
+A = \begin{bmatrix}5&-4&4\\2&-1&2\\0&0&2\end{bmatrix}.
+\]
+
+4. We can decompose a matrix $A$ into the form $A = PDP^{-1}$ where $D$ is a matrix of eigenvalues on the main diagonal and $P$ is a matrix of eigenvectors. Compute $P$ and $D$ for 
+\[
+A = \begin{bmatrix}2 &3\\3 & 2\end{bmatrix}.
+\] Compute $A^{10}$.
+
+---
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+| Skill                                   | D  | CON | COM |
+|----------------------------------------|----|-----|-----|
+| Find all eigenvalues of a $2 \times 2$ matrix. |    |     |     |
+| Find all eigenvalues of a $3 \times 3$ matrix. |    |     |     |
+| Find the eigenvectors of a $2 \times 2$ matrix. |    |     |     |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

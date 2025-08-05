@@ -1,0 +1,8 @@
+bookdown::gitbook:
+  css: style.css  # optional
+  config:
+    toc:
+      before: |
+        <h2>&nbsp;&nbsp; Calculus and  <br> &nbsp;&nbsp; Linear Algebra </h2>    
+      collapse: section
+    download: ["pdf", "epub"]

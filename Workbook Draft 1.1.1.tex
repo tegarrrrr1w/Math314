@@ -1,0 +1,3741 @@
+% ----------------------------------------------------------------
+% Book Class (This is a LaTeX2e document)  ***********************
+% ----------------------------------------------------------------
+\documentclass[10pt]{book}
+\usepackage[english]{babel}
+\usepackage{amsmath,amsthm}
+\usepackage{amsfonts}
+\usepackage{epsfig}
+\usepackage{eucal}
+\usepackage{amssymb,enumitem}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage[utf8]{inputenc}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{lipsum} % For filler text (optional)
+\usepackage[a4paper, margin=1cm]{geometry} % Adjust margins
+
+\renewcommand{\headrulewidth}{0pt}
+
+\oddsidemargin 0.0in \evensidemargin -0.0in \textwidth 6.75in
+\topmargin -0.0in \textheight 8.75in
+
+% THEOREMS -------------------------------------------------------
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+
+%\usepackage{setspace}
+\newcommand{\spone}{\def\baselinestretch{1} \large\normalsize}
+\newcommand{\sptwo}{\def\baselinestretch{2} \large\normalsize}
+\newcommand{\sphalf}{\def\baselinestretch{1.5} \large\normalsize}
+\newcommand{\nsp}{\def\baselinestretch{1.7} \large\normalsize}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\bbQ}{\mathbb{Q}}
+\newcommand{\bbC}{\mathbb{C}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\dx}{\textrm{dx}}
+\DeclareMathOperator{\Span}{span}
+
+\font\bbfont=msbm10 at 12pt
+\def\bbN{\mbox{\bbfont N}}
+\def\bbZ{\mbox{\bbfont Z}}
+\def\bbQ{\mbox{\bbfont Q}}
+\def\bbR{\mbox{\bbfont R}}
+\def\bbC{\mbox{\bbfont C}}
+\def\bbP{\mbox{\bbfont P}}
+\def\bbF{\mbox{\bbfont F}}
+\def\bbH{\mbox{\bbfont H}}
+
+\def\ba{\mbox{\textbf a}}
+\def\bb{\mbox{\textbf b}}
+\def\bc{\mbox{\textbf c}}
+\def\bd{\mbox{\textbf d}}
+\def\bf{\mbox{\textbf f}}
+\def\bu{\mbox{\textbf u}}
+\def\bv{\mbox{\textbf v}}
+\def\bx{\mbox{\textbf x}}
+\def\by{\mbox{\textbf y}}
+\def\bA{\mbox{\textbf A}}
+\def\bB{\mbox{\textbf B}}
+\def\bC{\mbox{\textbf C}}
+\def\bD{\mbox{\textbf D}}
+\def\bI{\mbox{\textbf I}}
+\def\bL{\mbox{\textbf L}}
+\def\bM{\mbox{\textbf M}}
+\def\bP{\mbox{\textbf P}}
+\def\bS{\mbox{\textbf S}}
+\def\bX{\mbox{\textbf X}}
+
+\def\sZ{\mathcal{Z}}
+\def\sF{\mathcal{F}}
+\def\sL{\mathcal{L}}
+\def\sA{\mathcal{A}}
+\def\sP{\mathcal{P}}
+
+\def\va{\overrightarrow{a}}
+\def\vb{\overrightarrow{b}}
+\def\vu{\overrightarrow{u}}
+\def\vv{\overrightarrow{v}}
+% ----------------------------------------------------------------
+
+\title{MATH 314 Workbook}
+\author{Joe Hobart \& Bryan Penfound}
+\date{}
+
+\begin{document}
+
+\maketitle
+\frontmatter
+%\chapter{Dedication}
+%\chapter{Copyright}
+%\chapter{Acknowledgements}
+\tableofcontents
+%\listoffigures
+%\listoftables
+\mainmatter
+
+
+\chapter{Linear Algebra}
+\begin{tabular}{cp{1.95in}p{3.25in}}
+Lesson & Topic & Homework\\
+\hline
+0	&	Before the First Class			&	Watch Chapter 0 Videos\\ \\
+1	&	Functions and Linear Equations	&	Chapter 1 Videos and Graded Work\\\\
+2	&	Introduction to Matrices			&	Chapter 2 Videos and Graded Work\\\\
+3	&	Matrix Operations				&	Chapter 3.1, 3.2 Videos and Graded Work\\\\
+4	&	Inverses and Determinants		&	Chapter 3.3, Determinants Videos and Graded Work\\\\
+5	&	Vector Projections				&	Chapter 3 Vectors Videos and Graded Work\\\\
+6	&	Basis						&	\\\\
+7	&	Rotations					&	\\\\
+8	&	Eigenvalues and Eigenvectors		&	Chapter 3 Eigenvalues and Eigenvectors Videos and Graded Work\\
+\end{tabular}
+\newpage
+
+%--------------------------------LESSON1-----------------------------------------------------------------
+\section{Functions and Linear Equations}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 1}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item What does \textit{PEMDAS} stand for? Use PEMDAS to simplify $(4+6)2+3$.\vfil \vfil \vfil
+\item Simplify: $(-3)^{-4}$.\vfil \vfil \vfil
+\item Simplify: $\sqrt[3]{-8}\sqrt{16}$.\vfil \vfil\vfil
+\item Write $-2 \leq x < 3$ in interval notation. \vfil \vfil \vfil
+\item Given $g(x) =x + \dfrac{1}{x}$, find $g(-1)$, $g(2)$ and $g(a+h)$.\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 1}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Draw the graphs and give the rules for: a horizontal line, a general linear equation, a parabola (quadratic), a cubic, the reciprocal function, the absolute value function.
+\item How to find the domain of a rational function or a function involving a square root. 
+\item The elimination method for solving a system. 
+\item The revenue, cost and profit functions, including fixed costs, variable costs and demand. 
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Find the equation of the straight line through the following points: (3,4) and (5,2). 
+\vfil \vfil \vfil
+
+\item Find the equation of the straight line through the point (3,4) and parallel to the line $2x-3y=4$.
+\vfil \vfil \vfil
+
+\item If $f(x) = -3x+7$, evaluate $f(-3)$ and determine the domain of $1/f(x)$ using interval notation. 
+\vfil \vfil \vfil
+\newpage
+
+\item Solve \begin{align*}   2x + y &= 2\\ -2x + y &= 2. \end{align*}\vfil\vfil
+\item Solve \begin{align*}   2x - 3y &= 2\\ 6x - 9y &= 3. \end{align*}\vfil
+\newpage
+
+\item (APPLIED) A piano manufacturer has a daily fixed cost of \$1,200 and a marginal cost of \$1,500 per piano. Find the cost $C(x)$ of
+manufacturing $x$ pianos in one day. Use your function to answer the following questions:
+	\begin{enumerate}
+		\item  On a given day, what is the cost of manufacturing 3 pianos?
+		\item  What is the cost of manufacturing the 3rd piano that day?
+		\item  What is the cost of manufacturing the 11th piano that day?
+		\item  Graph C as a function of $x$.
+	\end{enumerate}\vfil \vfil
+
+
+\item (APPLIED) Anthony Altino is mixing food for his young daughter and would like the meal to supply 1 gram of protein and 5 milligrams of iron. He is mixing together cereal, with 0.5 grams of protein and 1 milligram of iron per ounce, and fruit, with 0.2 grams of protein and 2 milligrams of iron per ounce. What mixture will provide the desired nutrition?\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 1}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Find the equation of the straight line through (3,1) and parallel to $6x - 2y = 11$.\vfil
+\item Solve \begin{align*}   \frac{-2x}{3} + \frac{y}{2} &= \frac{-1}{6}\\ \frac{x}{4}- y &= \frac{-3}{4}. \end{align*}\vfil
+\item If the addition or subtraction of two linear equations results in the equation 0 = 3, then the graphs of those equations are what?\vfil
+\item Determine the domain of $f(x) = \sqrt{x-10}$. Express your anwer in interval notation.\vfil
+\item In 2005, the Las Vegas monorail charged \$3 per ride and had an average ridership of about 28,000 per day. In December, 2005 the Las Vegas Monorail Company raised the fare to \$5 per ride, and average ridership in 2006 plunged to around 19,000 per day. Determine a linear function that represents the relationship between the average ridership $q$ and the fare $p$.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Find the domain of a rational function in interval notation.&&&\\
+\hline
+Find the domain of a square root function in interval notation.&&&\\
+\hline
+Find the equation of a line given various information.&&&\\
+\hline
+Use the elimination method to solve a 2x2 linear system.&&&\\
+\hline
+Solve applied problems involving linear equations.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+%--------------------------------LESSON2-----------------------------------------------------------------
+\section{Introduction to Matrices}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 2}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Show that $(4,2)$ is a solution to the linear equation $3x-y=10$.\vfil \vfil \vfil
+\item Explain why $(2,2)$ is not a solution to the linear equation $3x-y=10$.\vfil \vfil \vfil
+\item Multiply the equation $3x-y=10$ by $-2$.\vfil \vfil\vfil
+\item Add the equations: $3x-y=10$ and $3x+y=2$.\vfil \vfil \vfil
+\item Solve $-5y = -2$ for $y$.\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 2}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item How to create the augmented matrix. 
+\item The three types of elementary row operations. 
+\item Steps to perform Gauss-Jordan Elimination.
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Use Gauss-Jordan to solve \begin{align*}  2x + y &= 2\\ -2x + y &= 2. \end{align*}
+\vfil \vfil \vfil
+
+\item Use Gauss-Jordan to solve \begin{align*}  2x - 3y &= 1 \\ 6x - 9y &= 3. \end{align*}
+\vfil \vfil \vfil
+
+\item Use Gauss-Jordan to solve \begin{align*}  x + y &= 1\\ 3x - 2y &= -1\\ 5x - y &= 1/5. \end{align*}
+\vfil \vfil \vfil
+\newpage
+
+\item Use Gauss-Jordan to solve \begin{align*}  x - y + z - u + v &= 1\\y + z + u + v &= 2 \\ z - u + v &= 1\\ u + v &= 1\\ v &= 1. \end{align*} \vfil\vfil
+
+\newpage
+
+\item Use Gauss-Jordan to solve \begin{align*} x + 2y + 3z + 4w + t &= 6\\ 2x + 3y + 4z + 5w + t &= 5\\ 3x + 4y + 5z + w + 2t &= 4\\4x+5y + z + 2w + 3t &=3\\ 5x + y + 2z + 3w + 4t &=2. \end{align*} \vfil \vfil
+\newpage
+
+\item (APPLIED) You own a hamburger franchise and are planning to shut down operations for the day, but you are left with 13 bread rolls, 19 defrosted beef patties, and 15 opened cheese slices. Rather than throw them out, you decide to use them to make burgers that you will sell at a discount. Plain burgers each require 1 beef patty and 1 bread roll, double cheeseburgers each require 2 beef patties, 1 bread roll, and 2 slices of cheese, while regular cheeseburgers each require 1 beef patty, 1 bread roll, and 1 slice of cheese. How many of each should you make?\vfil\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 2}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Use Gauss-Jordan to solve \begin{align*}  4x - 2y &= 1 \\ -2x +y &= 4. \end{align*}\vfil
+\item Use Gauss-Jordan to solve: \begin{align*}   \frac{-2x}{3} + \frac{y}{2} &= \frac{-1}{6}\\ \frac{x}{4}- y &= \frac{-3}{4}. \end{align*}\vfil
+\item Explain why $3R_{3} - 2R_{1} \rightarrow R_{3}$ is not an elementary row operation.\vfil
+\item In 2007, combined revenues from sales of country music and children’s music amounted to \$1.5 billion.  Country music brought in 12 times as much revenue as soundtracks, and children’s music three times as much as soundtracks. How much revenue was earned in each of the three categories of recorded music?\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Converting a linear system to an augmented matrix.&&&\\
+\hline
+Finding RREF, given an augmented matrix.&&&\\
+\hline
+Recognize the solution type (unique, none, infinite).&&&\\
+\hline
+Solve applied problems involving linear systems.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+
+%--------------------------------LESSON3-----------------------------------------------------------------
+\section{Matrix Operations}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 3}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Simplify: $2(3) + (-3)(-2)$\vfil \vfil \vfil
+\item Simplify: $4(-2) + (-3)(-1) + 3(-2)$\vfil \vfil \vfil
+\item Simplify: $-3(4) + (-2)(-2) + (-4)(7) + (-5)(-1)$\vfil \vfil\vfil
+\item Suppose $\begin{bmatrix}  2 & 4 \\ -1 & 6 \end{bmatrix}$ is an Excel document consisting of two rows and two columns. Which number is in row $i=2$ and column $j=1$?\vfil \vfil \vfil
+\item Suppose $\begin{bmatrix}  0&1&2\\3&5&-2\\1&4&-1 \end{bmatrix}$ is an Excel document consisting of three rows and three columns. Which number is in row $i=3$ and column $j=2$?\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 3}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item The $A_{m\times n}$ notation for matrices. 
+\item Matrix addition/subtraction, scalar multiplication, matrix multiplication and transpose. 
+\item The $ij$ notation for addition, scalar multiplication and transpose. 
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Let \[A = \begin{bmatrix} 0 & -1 \\ 1 & 0 \\ -1 & 2 \end{bmatrix}, B = \begin{bmatrix} 0.25 & -1 \\ 0 & 0.5 \\ -1 & 3 \end{bmatrix}, \text{ and } C = \begin{bmatrix} 1 & -1 \\ 1 & 1 \\ -1 & -1 \end{bmatrix}.\]  Calculate the following:
+\begin{enumerate}
+	\item  $A + B$  \vfil
+	\item  $A - C$  \vfil
+	\item  $3A$  \vfil
+	\item  $2A +0.5C$  \vfil
+	\item  $C^T + B^T$  \vfil
+\end{enumerate}
+\newpage
+
+\item A matrix is symmetric if it is equal to its transpose. Give an example of a nonzero $2 \times 2$ symmetric matrix and a nonzero $3 \times 3$ symmetric matrix.\vfil \vfil \vfil
+
+\item Compute the product, if possible: \[ \begin{bmatrix} 0&1&-1 \\ 3 & 1 & -1 \end{bmatrix} \begin{bmatrix}1 & 1 \\ 4 & 2 \\ 0 & 1 \end{bmatrix}.\] \vfil \vfil \vfil
+\newpage
+
+\item Compute the product, if possible: \[ \begin{bmatrix} 0&1&-1&2 \end{bmatrix} \begin{bmatrix}1 & -2 & 1 \\ 0 & 1 & 3 \\6 & 0 & 2 \\ -1 & -2 & 11 \end{bmatrix}.\]\vfil\vfil
+
+\item Let $A = \begin{bmatrix}0&1&1&1\\0&0&1&1\\0&0&0&1\\0&0&0&0 \end{bmatrix}$.  Compute $A^2, A^3, A^4$ and $A^{100}$.\vfil\vfil
+\newpage
+
+\item (Applied) The Left Coast Bookstore chain has two stores, one in San Francisco and one in Los Angeles. It stocks three kinds of book: hardcover, softcover and plastic. At the beginning of January, the San Francisco location had 1000 hardcover, 2000 softcover and 5000 plastic books in stock. At the beginning of January, the Los Angeles location had 1000 hardcover, 5000 softcover and 2000 plastic books in stock. Assume that each month sales are 700 hardcover, 1300 softcover and 2000 plastic books in San Francisco; as well as 400 hardcover, 300 softcover and 500 plastic books in Los Angeles. Each month, the chain also restocks the stores from its warehouse by shipping 600 hardcover, 1,500 softcover, and 1,500 plastic books to San Francisco and 500 hardcover, 500 softcover, and 500 plastic books to Los Angeles. 
+\begin{enumerate}
+	\item  Use matrix operations to determine the total sales over the 6 months, broken down by store and type of book.
+	\item  Use matrix operations to determine the inventory in each store at the end of June. 
+	\item Determine the total revenue from the two stores over the 6 month period if a hardcover book sells for \$30, a softcover book sells for \$10 and a plastic book sells for \$15. 
+\end{enumerate}\vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 3}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Let \[A = \begin{bmatrix} 0 & -1 \\ 1 & 0 \\ -1 & 2 \end{bmatrix}, B = \begin{bmatrix} 0.25 & -1 \\ 0 & 0.5 \\ -1 & 3 \end{bmatrix}, \text{ and } C = \begin{bmatrix} 1 & -1 \\ 1 & 1 \\ -1 & -1 \end{bmatrix}.\]  Calculate the following:
+\begin{multicols}{2}
+\begin{enumerate}
+	\item  $A + B-C$ 
+	\item  $3B^T$ 
+	\item  $A^T + C^T$ 
+	\item  $3A^T - 2C^T$ 
+	\item  $2A + 3B$ 
+\end{enumerate}\end{multicols} \vfil
+\item A matrix is skew-symmetric (or anti-symmetric) if it is equal to the negative of its transpose. Give an example of a nonzero $2 \times 2$ skew-symmetric matrix and a nonzero $3 \times 3$ skew-symmetric matrix.\vfil
+\item Explain why the product is not possible: $\begin{bmatrix} 0&2&-1 \end{bmatrix} \begin{bmatrix}1 & -2 & 1\\ -1 & -2 & 11 \end{bmatrix}.$\vfil\vfil
+\item Compute the product: $\begin{bmatrix} 1 & 1 & -7 & 0 \\ -1 & 0& -2 & 1 \\1 & -1 & 1 & 1  \end{bmatrix} \begin{bmatrix}1 \\-3\\2\\1 \end{bmatrix}.$\vfil
+\item Karen Sandberg, your competitor in Suburban State U’s T-shirt market, has apparently been undercutting your prices and outperforming you in sales. Last week she sold 100 tie dye shirts for \$10 each, 50 (low quality) Crew shirts at \$5 apiece, and 70 Lacrosse T-shirts for \$8 each. Use matrix operations to calculate her total revenue for the week.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Addition, subtraction and scalar multiplication of matrices.&&&\\
+\hline
+Multiplication of matrices.&&&\\
+\hline
+Solve applied problems using matrices.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+
+%--------------------------------LESSON4-----------------------------------------------------------------
+\section{Inverses and Determinants}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 4}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Express as a fraction in simplest form: $1 \div (1 - (-3))$.\vfil \vfil \vfil
+\item Express as a fraction in simplest form: $1 \div (2(-3) - (-3)(5))$.\vfil \vfil \vfil
+\item Explain why the following expression is undefined: $1 \div (2(-4) - (-4)(2))$.\vfil \vfil \vfil
+\item Find RREF: $\begin{bmatrix} 2 & 4 &1&0\\ -1 & 6&0&1 \end{bmatrix}$\vfil \vfil\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 4}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item The formula for a $2 \times 2$ determinant.
+\item The formula for a $3 \times 3$ determinant.
+\item Steps for finding the determinant of higher order matrices.
+\item The formula to find a $2 \times 2$ inverse.
+\item Steps for finding an inverse for higher order matrices.
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Calculate the determinant of $\begin{bmatrix}  1 & 3 \\ 0 & 2 \end{bmatrix}$
+\vfil \vfil \vfil
+
+\item Calculate the determinant of $\begin{bmatrix}  0&1&2\\3&1&0\\1&1&-1 \end{bmatrix}$
+\vfil \vfil \vfil
+
+\item Find the determinant of $\begin{bmatrix}1&2&3&16\\0&2&6&-7\\0&0&3&33\\0&0&0&-1 \end{bmatrix}$.
+\vfil \vfil \vfil
+\newpage
+
+\item If possible, find the inverses of the following matrices:
+\begin{enumerate}
+\item $\begin{bmatrix}  2 & 4 \\ -1 & 6 \end{bmatrix}$
+\item $\begin{bmatrix}0&0&0&1\\0&0&1&0\\0&1&0&0\\1&0&0&0\end{bmatrix}$
+\end{enumerate}\vfil\vfil
+\newpage
+
+\item  Determine if $A = \begin{bmatrix} 3&6\\2&4 \end{bmatrix}$ and $B = \begin{bmatrix}2&3\\5&1 \end{bmatrix}$ are invertible and find their inverses.\vfil \vfil
+
+\item Solve the following system of equations using a matrix inverse: \begin{align*} \frac{2}{3}x - \frac{1}{2}y&=\frac{1}{6}\\\frac{1}{2}x-\frac{1}{2}y &=-1 \end{align*}\vfil\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 4}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item If $A(X+B)=C$, where $A$, $B$, $X$ and $C$ are all $2\times 2$ invertible matrices, solve for $X$. \vfil
+\item Calculate the determinant of $\begin{bmatrix}  1&2&3\\4&5&6\\7&8&9 \end{bmatrix}$\vfil
+\item Find the inverse $\begin{bmatrix} 1 & 1 \\ 1 & -1 \end{bmatrix}$\vfil
+\item Find the inverse of $\begin{bmatrix}1&1&1\\0&1&1\\0&0&1 \end{bmatrix}$.\vfil
+\item Solve the following system of equations using a matrix inverse: \begin{align*} 2x+y&=2\\2x-3y &=2 \end{align*}\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Find the determinant and inverse for a $2\times 2$ matrix.&&&\\
+\hline
+Find the determinant and inverse of a $3\times 3$ matrix. &&&\\
+\hline
+Find inverses and determinants for higher order matrices.&&&\\
+\hline
+Solve a linear system using a matrix inverse.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+
+%--------------------------------LESSON5-----------------------------------------------------------------
+\section{Vector Projections}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 5}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Perform the scalar multiplication: $-3\begin{bmatrix} 1 \\ 2 \end{bmatrix}$\vfil \vfil \vfil
+\item Add: $\begin{bmatrix} 1 \\ 2 \end{bmatrix} + \begin{bmatrix} -1 \\ 4 \end{bmatrix}$\vfil \vfil \vfil
+\item Simplify: $2\begin{bmatrix} 1 \\ 2 \end{bmatrix} -5 \begin{bmatrix} -1 \\ 4 \end{bmatrix}$\vfil \vfil\vfil
+\item Simplify: $\sqrt{3^{2}+(-4)^{2}}$\vfil \vfil \vfil
+\item Simplify: $\displaystyle \frac{2(-13) + (-1)(13)}{\sqrt{(-5)^{2}+12^{2}}}$\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 5}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Addition and scalar multiplication of vectors. 
+\item The formula for the standard inner product of vectors. 
+\item The formula to calculate the Euclidean norm of a vector. 
+\item The cosine of the angle between two vectors formula.
+\item The vector projection formula. 
+\item Geometric interpretations of the above.  
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Draw the vectors $A = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$ and $B = \begin{bmatrix}-1 \\ -1 \end{bmatrix}$. Draw $A + B$, $B + A$, $A - B$, $B - A$, $2A$ and $-4B$.
+\vfil \vfil \vfil
+\newpage
+
+\item Compute the standard inner products and Euclidean norms of $A = \begin{bmatrix} -1 \\ 3 \end{bmatrix}$ and $B = \begin{bmatrix} 2 \\ 2 \end{bmatrix}$. What is the angle between these vectors?
+\vfil \vfil \vfil
+
+\item Express $v = [5,-1]$ as a sum of orthogonal vectors such that one of the vectors has the same direction as $u = [4,2]$\vfil\vfil\vfil
+\newpage
+
+\item Find the angle between the following vectors:
+\begin{enumerate}
+\item $x = \begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}$ and $y=\begin{bmatrix}2 \\ 0 \\-3 \end{bmatrix}$\vfil\vfil
+\item $x = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$ and $y=\begin{bmatrix}3 \\ -2 \\1 \end{bmatrix}$\vfil
+\end{enumerate}
+\newpage
+
+\item  Find the following projections and orthogonal projections of $u$ onto $v$:
+\begin{enumerate}
+\item $u = \begin{bmatrix} 4 \\ 3  \end{bmatrix}$ and $v=\begin{bmatrix}2 \\ 8 \end{bmatrix}$\vfil\vfil   
+\item $u = \begin{bmatrix} 3 \\ 5 \end{bmatrix}$ and $v=\begin{bmatrix}6 \\2 \end{bmatrix}$ \vfil
+\end{enumerate}
+\newpage
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 5}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Draw the vectors $A = \begin{bmatrix} -1 \\ 3 \end{bmatrix}$ and $B = \begin{bmatrix} 2 \\ 2 \end{bmatrix}$.    Then, draw $A + B$, $A - B$, $B - A$, $3A$ and $-0.5B$.\vfil
+\item Find the angle between the vectors: $x = \begin{bmatrix} 1 \\ 2  \end{bmatrix}$ and $y=\begin{bmatrix}2 \\ 1 \end{bmatrix}$.\vfil
+\item Find the projection and orthogonal projection of $u$ onto $v$: $u= \begin{bmatrix} -2 \\ 5 \end{bmatrix}$ and $v=\begin{bmatrix} 6 \\5 \end{bmatrix}$.\vfil
+\item Express $v = [8,-3,-3]$ as a sum of orthogonal vectors such that one of the vectors has the same direction as $u = [2, 3, 2]$\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Determine the inner product of two vectors.&&&\\
+\hline
+Determine the Euclidean norm of a vector.&&&\\
+\hline
+Find the cosine of the angle between two vectors.&&&\\
+\hline
+Find a vector projection and an orthogonal projection.&&&\\
+\hline
+Decompose a vector into orthogonal vectors.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+
+%--------------------------------LESSON6-----------------------------------------------------------------
+\section{Basis and Orthonormal Basis}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 6}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item If $a(1,2) + b(-1,2) = (3,14)$, what are the values of $a$ and $b$?\vfil \vfil \vfil
+\item If $a(0,-3) + b(2,2) = (1,1)$, what are the values of $a$ and $b$?\vfil \vfil \vfil
+\item Find the Euclidean norm of the vector: $\begin{bmatrix}1 \\ 1 \\ 2 \end{bmatrix}$.\vfil \vfil\vfil
+\item Find a vector with length one that is parallel to $\begin{bmatrix}1 \\ 1 \\ 2 \end{bmatrix}$. \vfil \vfil \vfil
+\item Determine $\begin{bmatrix}1&2 \\ 2&-1 \end{bmatrix}^{-1}$ and $\left( \begin{bmatrix}1&2 \\ 2&-1 \end{bmatrix}^{-1}\right)^{-1}$. \vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 6}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item The definition of linear independence and span for $\bbR^{2}$ and $\bbR^{3}$.
+\item The standard basis for $\bbR^{2}$ and $\bbR^{3}$.
+\item Steps for the Gram Schmidt procedure for finding an orthonormal basis. 
+\item Coordinates of a vector, given an ordered basis. 
+\item Steps to finding the change of basis matrix in $\bbR^{2}$.
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Show that $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$ and $\begin{bmatrix}1 \\ -1 \end{bmatrix}$ is a basis for $\bbR^2$. Find the coordinates of $(2,-3)$ with respect to the basis.\vfil\vfil 
+\item Explain why $\begin{bmatrix} 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ and $\begin{bmatrix}0 \\ 2 \end{bmatrix}$ is not a basis for $\bbR^2$.\vfil
+\newpage 
+
+\item Show that $\begin{bmatrix} 1 \\ 1\\1 \end{bmatrix}$, $\begin{bmatrix} 1 \\ 1\\0 \end{bmatrix}$ and $\begin{bmatrix}1 \\ 0\\0 \end{bmatrix}$ is a basis for $\bbR^3$. Find the coordinates of $(4,-1,1)$ with respect to the basis.\vfil\vfil 
+\newpage
+
+\item Use Gram Schmidt to find an orthonormal basis for  $\begin{bmatrix} 1 \\ 1 \end{bmatrix}$ and $\begin{bmatrix}2 \\ 1 \end{bmatrix}$.\vfil\vfil
+\item Use Gram Schmidt to find an orthonormal basis for  $\begin{bmatrix} 1 \\ 1 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\1 \\ 1 \\ 1 \end{bmatrix}$ and $\begin{bmatrix}0 \\ 0 \\ 1 \\ 1 \end{bmatrix}$.\vfil
+\newpage
+
+\item Let $B = \left\{\begin{bmatrix} 0 \\ 1 \end{bmatrix}, \begin{bmatrix}1 \\ 0 \end{bmatrix}\right \}$\ and $C = \left\{\begin{bmatrix} 3 \\ 1 \end{bmatrix}, \begin{bmatrix}1 \\ 2 \end{bmatrix} \right\}$. Find the change of basis matrices from $B$ to $C$ and $C$ to $B$ (be sure to label them correctly). \vfil\vfil
+\item (Challenge) Let $B =\left \{\begin{bmatrix} -5 \\ -3 \end{bmatrix}, \begin{bmatrix}4 \\ 28 \end{bmatrix} \right\}$ and $C =\left \{\begin{bmatrix} 6 \\ 2\end{bmatrix}, \begin{bmatrix}1 \\ -1 \end{bmatrix} \right\}$. Find the change of basis matrices from $B$ to $C$ and $C$ to $B$ (be sure to label them correctly).\vfil
+
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 6}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Let $B = \left\{\begin{bmatrix} 1 \\ 2 \end{bmatrix}, \begin{bmatrix}3 \\ 1 \end{bmatrix} \right\}$\ and $s = \begin{bmatrix} 1 \\ 7 \end{bmatrix}$.  Express $s$ in terms of basis $B$.\vfil
+\item Show that $\begin{bmatrix} 1 \\ 0\\1 \end{bmatrix}$, $\begin{bmatrix} 0 \\ 1\\0 \end{bmatrix}$ and $\begin{bmatrix}2 \\ 0\\0 \end{bmatrix}$ is a basis for $\bbR^3$.\vfil
+\item Let $B = \left\{\begin{bmatrix} 0 \\ 1 \end{bmatrix}, \begin{bmatrix}1 \\ 0 \end{bmatrix}\right \}$\ and $C = \left\{\begin{bmatrix} 0 \\ 1 \end{bmatrix}, \begin{bmatrix}1 \\ 1 \end{bmatrix} \right\}$. Find the change of basis matrices from $B$ to $C$ and $C$ to $B$ (be sure to label them correctly).\vfil
+\item Use Gram Schmidt to find an orthonormal basis for  $\begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\ 1 \\ 3 \end{bmatrix}$ and $\begin{bmatrix}2 \\ 1 \\ 1 \end{bmatrix}$.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Find the coordinates of a vector, given a basis.&&&\\
+\hline
+Prove that a set of vectors is or is not a basis.&&&\\
+\hline
+Perform the Gram Schmidt process to get an orthonormal basis.&&&\\
+\hline
+Find a change of basis matrix.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+%--------------------------------LESSON7-----------------------------------------------------------------
+\section{The Rotation Matrix}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 7}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Evaluate: $\sin(60^{\circ})$ and $\cos(60^{\circ})$.\vfil \vfil \vfil
+\item Evaluate: $\sin(30^{\circ})$ and $\cos(30^{\circ})$.\vfil \vfil \vfil
+\item Simplify: $\begin{bmatrix} \cos(90^{\circ})&-\sin(90^{\circ}) \\ \sin(90^{\circ})&\cos(90^{\circ}) \end{bmatrix}$.\vfil \vfil \vfil
+\item Multiply: $\begin{bmatrix} \cos(45^{\circ})&-\sin(45^{\circ}) \\ \sin(45^{\circ})&\cos(45^{\circ}) \end{bmatrix}\begin{bmatrix} 2 \\ -2 \end{bmatrix}$\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 7}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Define the rotation matrix in $\bbR^{2}$.
+\item Geometrically, left-sided multiplication corresponds to vector rotation.
+\item Stretch/compression and reflection matrices. 
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Rotate $\begin{bmatrix}1 \\ -2 \end{bmatrix}$ 60 degrees counter clockwise.\vfil\vfil
+\item Rotate $\begin{bmatrix}1 \\ 1 \end{bmatrix}$ 90 degrees counter clockwise.\vfil
+\newpage
+
+\item Multiply, then plot the original vector and the rotated vector.
+$$\begin{bmatrix} \frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & \frac{1}{2} \end{bmatrix}\begin{bmatrix}1 \\ -2 \end{bmatrix}$$ \vfil\vfil
+
+\item Plot the original vector. Then multiply the vector, one matrix at a time, plotting all output vectors along the way. Describe what each matrix multiplication does to the vector. 
+$$\begin{bmatrix} 2 & 0 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix} \begin{bmatrix}1 \\ -2 \end{bmatrix}$$ \vfil
+\newpage
+
+\item (Applied) Let $B = \left\{\begin{bmatrix} 1 \\ 1 \end{bmatrix}, \begin{bmatrix}-1 \\ 1 \end{bmatrix}\right \}$.  Let $s_B = \begin{bmatrix} 3 \\ -2 \end{bmatrix}$.  Express $s_B$ in terms of the standard basis, rotate it 30 degrees counter clockwise, then express that vector in terms of basis $B$.\vfil\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 7}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Rotate $\begin{bmatrix}-1 \\ -2 \end{bmatrix}$ 30 degrees clockwise.\vfil
+\item Multiply, then plot the original vector and the rotated vector.
+$$\begin{bmatrix} -1 & 0 \\ 0 & -1 \end{bmatrix}\begin{bmatrix}1 \\ -2 \end{bmatrix}$$\vfil
+\item Explain what left-sided multiplication by $A=\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}$ would do to the vector $\begin{bmatrix}x \\ y \end{bmatrix}$. Are there any vectors in $\bbR^{2}$ that would not change after left-sided multiplication by $A$?
+\item Let $B = \left\{\begin{bmatrix} -1 \\ -1 \end{bmatrix}, \begin{bmatrix}0 \\ 1 \end{bmatrix}\right \}$.  Let $s_B = \begin{bmatrix} -1 \\ -3 \end{bmatrix}$.  Express $s_B$ in terms of the standard basis, rotate it 60 degrees counter clockwise, then express that vector in terms of basis $B$.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Find and simplify a rotation matrix.&&&\\
+\hline
+Plot results of a rotation geometrically.&&&\\
+\hline
+Solve an applied problem involving change of basis and rotations.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+%--------------------------------LESSON8-----------------------------------------------------------------
+\section{Eigenvalues and Eigenvectors}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 8}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Factor and solve: $\lambda^{2} + 6\lambda + 8=0$.\vfil \vfil \vfil
+\item Factor and solve: $\lambda^{2} - \lambda - 6=0$ \vfil \vfil \vfil
+\item Factor out the scalar $t$ from the vector: $\begin{bmatrix} -2t \\ 3t \\ t \end{bmatrix}$.\vfil \vfil \vfil
+\item Factor and solve: $(\lambda - 2)(\lambda + 3) + (\lambda - 2)(\lambda + 1)=0$\vfil \vfil\vfil
+\item Factor and solve: $(2-\lambda)(3-\lambda)(1-\lambda) + 3\lambda - 6 = 0$ \vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 8}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item The definition of an eigenvalue and eigenvector. 
+\item Steps to finding eigenvalues of a $2\times 2$ or $3 \times 3$ matrix. 
+\item Steps to finding eigenvectors and basis vectors for the eigenspaces of a $2\times 2$ matrix.
+\item Discuss the process of diagonalization for $2 \times 2$ matrices with $2$ distinct eigenvalues.
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item If $A = \begin{bmatrix}3&-2&2\\1&2&1\\0&2&1 \end{bmatrix}$, determine which of the following are eigenvectors of $A$ and what their associated eigenvalue is.
+\begin{enumerate}
+\item $\begin{bmatrix}2 \\ -1\\ -2 \end{bmatrix}$
+\item $\begin{bmatrix}0\\1\\1 \end{bmatrix}$
+\item $\begin{bmatrix} 1\\1\\1 \end{bmatrix}$ 
+\item $\begin{bmatrix}0\\0\\0 \end{bmatrix}$
+\end{enumerate}\vfil
+
+\item Find the eigenvalues of $A = \begin{bmatrix}-5 & 2  \\ -7 & 4 \end{bmatrix}$. Sketch the eigenvectors before and after left-sided multiplication by $A$.\vfil
+\newpage
+
+\item Find the eigenvalues of $A = \begin{bmatrix}1&2&4\\0&4&7\\0&0&6 \end{bmatrix}$.\vfil\vfil
+\item Find the eigenvalues of $A = \begin{bmatrix}2&2&-2\\1&3&-1\\-1&1&1 \end{bmatrix}$.\vfil
+\newpage
+
+\item Show that the eigenvalues of $A = \begin{bmatrix}-5 & 2  \\ -7 & 4 \end{bmatrix}$ are $\lambda = \pm 2$, then determine a basis for each eigenspace of $A$. 
+\newpage
+
+\item (Applied) We can decompose a matrix $A$ into the form $A = PDP^{-1}$ where $D$ is a  matrix of eigenvalues on the main diagonal and $P$ is a matrix of eigenvectors. Compute $P$ and $D$ for $A = \begin{bmatrix}3 & 0 \\ 0 & -2\end{bmatrix}$. Compute $A^4$.\vfil \vfil
+\item (Applied) We can decompose a matrix $A$ into the form $A = PDP^{-1}$ where $D$ is a  matrix of eigenvalues on the main diagonal and $P$ is a matrix of eigenvectors. Compute $P$ and $D$ for $A = \begin{bmatrix}-1 &4 \\ 0 & 3\end{bmatrix}$. Compute $A^3$.\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 8}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item  Find the eigenvalues of $A = \begin{bmatrix}-3&0\\0&4 \end{bmatrix}$.\vfil
+\item Find the eigenvalues of $A = \begin{bmatrix}1&4\\3&2 \end{bmatrix}$.   Sketch the eigenvectors before and after left-sided multiplication by $A$. \vfil
+\item Find the eigenvalues of $A = \begin{bmatrix}5&-4&4\\2&-1&2\\0&0&2\end{bmatrix}$.\vfil
+\item We can decompose a matrix $A$ into the form $A = PDP^{-1}$ where $D$ is a  matrix of eigenvalues on the main diagonal and $P$ is a matrix of eigenvectors. Compute $P$ and $D$ for $A = \begin{bmatrix}2 &3\\3 & 2\end{bmatrix}$. Compute $A^{10}$.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Find all eigenvalues of a $2 \times 2$ matrix.&&&\\
+\hline
+Find all eigenvalues of a $3\times 3$ matrix.&&&\\
+\hline
+Find the eigenvectors of a $2\times 2$ matrix.&&&\\
+\hline
+\end{tabular}
+\end{center}
+\vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+
+\chapter{Differential Calculus}
+
+\begin{tabular}{cp{2.15in}p{3.25in}}
+Lesson & Topic & Homework\\
+\hline
+9	&	Exponentials and	Logarithms		&	Chapter 9 Videos and Graded Work\\ \\
+10	&	Limits and Continuity			&	Chapter 10.1 -- 10.3 Videos and Graded Work\\\\
+11	&	Limit Definition of the Derivative	&	Chapter 10.4, 11.1, 11.2 Videos and Graded Work\\\\
+12	&	The Product and Quotient Rules	&	Chapter 11.3 Videos and Graded Work\\\\
+13	&	The Chain Rule/ L' Hospital's Rule	&	Chapter 11.4, 11.5 Videos and Graded Work\\\\
+14	&	Implicit Differentiation			&	Chapter 11.6 Videos and Graded Work\\\\
+15	&	Graphical Analysis				&	Chapter 12 Videos and Graded Work\\\\
+\end{tabular}
+\newpage
+
+
+%--------------------------------LESSON9-----------------------------------------------------------------
+\section{Exponential and Logarithmic Functions}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 9}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Simplify using laws of exponents: $\dfrac{x^6}{x^4}$.\vfil \vfil \vfil
+\item Simplify using laws of exponents: $x^{7}x^{-2}$.\vfil \vfil \vfil
+\item Simplify and express your answer using only positive powers of $y$: $(y^{2})^{-3}$.\vfil \vfil\vfil
+\item Simplify and express your answer using only positive powers of $y$: $\dfrac{y^{-3} y^{1/5}}{(y^{-1/2})^{3}}$.\vfil \vfil \vfil
+\item Determine the $x$-intercepts and vertex of $f(x) = x^{2}+5x+4$. \vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 9}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Review the rules for exponents and logarithms. Prove them, if needed. 
+\item Steps to find an equation of an exponential function of the form $C \cdot a^{x}$ through two points. 
+\item Steps to solve exponential and logarithmic equations. 
+\item Formulas for continuous compounding, and total revenue given the demand equation.
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Find the equation of the exponential function that passes through $(2,-4)$ and $(4,-16)$.\vfil\vfil
+\item Solve $4^x = 3$.\vfil
+\newpage
+
+\item Solve $4(1.5^{2x-1}) = 8$.\vfil\vfil
+\item Solve $e^{2x} - 9e^x + 20 = 0$.\vfil
+\newpage
+
+\item Why is the logarithm of a negative number not defined?\vfil
+\item Sketch $f(x) = \log_5 x$ and $g(x) = 5^x$.\vfil\vfil
+\item Suppose $\log(a) = 5$, $\log(b) = 3$ and $\log(c) = -2$.  What is $\log\left(\dfrac{ab^4}{c^7} \right)$?\vfil
+\newpage
+
+\item (Applied) How long will it take a \$500 investment to be worth \$700 if it is continuously compounded at 15\% per year? (Give the answer to two decimal places.)\vfil\vfil
+\item (Applied) The Better Baby Buggy Co. has just come out with a new model, the Turbo. The market research department  predicts that the demand equation for Turbos is given by \[q = -2p + 320,\] where $q$ is the number of buggies it can sell in a month if the price is \$p per buggy. At what price should it sell the buggies to get the largest revenue? What is the largest monthly revenue?\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 9}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Find the equation of the exponential function that passes through $(3,5)$ and $(4,25)$. \vfil
+\item Solve $6^{3x+1} = 30$.\vfil
+\item Suppose $\log(a) = 2$, $\log(b) = -7$ and $\log(c) = 3$.  What is $\log\left(\dfrac{a^2b^3}{c^5} \right)$?\vfil
+\item The median price of a home in the United States declined continuously over the period 2005–2008 at a rate of 5.5\% per year from around \$230 thousand in 2005.  Write down a formula that predicts the median price of a home $t$ years after 2005. Use your model to estimate the median home price in 2007 and 2010.\vfil
+\item In 2005, the Las Vegas monorail charged \$3 per ride and had an average ridership of about 28,000 per day. In December 2005 the Las Vegas Monorail Company raised the fare to \$5 per ride, and average ridership in 2006 plunged to around 19,000 per day.
+\begin{enumerate}
+	\item	Use the given information to find a linear demand equation.
+	\item  Find the price the company should have charged to maximize revenue from ridership. What is the corresponding daily revenue?
+	\item  The Las Vegas Monorail Company would have needed \$44.9 million in revenues from ridership to break even in 2006. Would it have been possible to break even in 2006 by charging a suitable price? 
+\end{enumerate}\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Simplify expressions involving exponents or logarithms.&&&\\
+\hline
+Find the equation of an exponential function through two points.&&&\\
+\hline
+Solve exponential or logarithmic functions.&&&\\
+\hline
+Maximize the total revenue function, given a linear demand curve.&&&\\
+\hline
+Solve problems involving the continuous compounding formula.&&&\\
+\hline
+Solve applied problems involving exponentials or logarithms.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+%--------------------------------LESSON10-----------------------------------------------------------------
+\section{Limits and Continuity}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 10}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Complete the table of values.
+\begin{tabular}{c|c}
+$x$ & $\displaystyle f(x)=1/x$\\
+\hline
+$-1$ & \\
+$-0.1$ & \\
+$-0.01$ & \\
+$-0.001$ & \\
+\end{tabular}\vfil \vfil \vfil
+\item Complete the table of values.
+\begin{tabular}{c|c}
+$x$ & $\displaystyle f(x)=(x-1)/(x^{2}-1)$\\
+\hline
+$0$ & \\
+$0.5$ & \\
+$0.9$ & \\
+$0.99$ & \\
+\end{tabular}\vfil \vfil \vfil
+\item Factor: $x^{2} - 8x + 12$.\vfil \vfil\vfil
+\item Factor: $x^{2} - 4$.\vfil \vfil\vfil
+\item Determine the highest power of $x$ in the numerator and denominator: $\displaystyle \frac{x^{2}+x-5}{x-6}$.\vfil \vfil \vfil
+\item Determine the highest power of $x$ in the numerator and denominator: $\displaystyle \frac{1-x^{3}+x^{2}}{2-x+x^{3}-x^{4}}$.\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 10}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Estimate a limit using a table of values. 
+\item Use factoring to evaluate limits. 
+\item One-sided limits, including limits around a vertical asymptote.
+\item Use dominant terms analysis to evaluate limits tending toward infinity.
+\item Steps for determining if a piecewise function is continuous. 
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Estimate $\displaystyle\lim_{x \rightarrow 2}e^{x-2}$.\vfil
+\item Estimate $\displaystyle\lim_{x \rightarrow 0^+} \dfrac{-2}{x^2}$.\vfil\vfil
+\item Evaluate $\displaystyle\lim_{x \rightarrow 0} \dfrac{x-3}{x-1}$. \vfil
+\newpage
+
+\item Evaluate $\displaystyle\lim_{x \rightarrow 2} \dfrac{x^{2} - 8x + 12}{x-2}$.\vfil\vfil
+\item Evaluate $\displaystyle\lim_{x \rightarrow -2} \dfrac{x+2}{x^{2} - 4}$.\vfil
+\newpage
+
+\item Evaluate $\displaystyle\lim_{x \rightarrow \infty} e^{-x}$.\vfil
+\item Evaluate $\displaystyle\lim_{x \rightarrow \infty} \dfrac{3x-x^6 + 2}{3x^3 + 2x}$.\vfil\vfil
+\item Evaluate $\displaystyle\lim_{x \rightarrow -\infty} \dfrac{1-3x}{2x^2 + 3}$.\vfil
+\newpage
+
+\item Find a number $b$ so that $f(x) = \begin{cases} 5x - 6 & x \leq 2 \\ -3x + b & x > 2 \end{cases}$ is continuous everywhere. \vfil\vfil
+\item Find a number $a$ so that $f(x) = \begin{cases} ax - 3 & x \leq 3 \\ x + a & x > 3 \end{cases}$ is continuous everywhere. \vfil
+\newpage
+
+\item (Applied) The percentage of movie advertising as a share of newspapers’ total advertising revenue from 1995 to 2004 can be approximated by \[p(t) = \begin{cases}-0.07t + 6 & t \leq 4\\ 0.3t + 17 & t>4 \end{cases}, \] where $t$ is the time since 1995.
+\begin{enumerate}
+	\item   Compute $\displaystyle\lim_{t \rightarrow 4^-} p(t)$ and $\displaystyle\lim_{t \rightarrow 4^+} p(t)$ and interpret each answer. 
+	\item  Is the function $p$ continuous at $t = 4$? What does the answer tell you about newspaper revenues?
+\end{enumerate} 
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 10}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Evaluate $\displaystyle\lim_{x \rightarrow -1} \dfrac{4x^2 + 1}{x}$.\vfil
+\item Evaluate $\displaystyle\lim_{x \rightarrow -4} \dfrac{x+4}{x^{2} - 16}$.\vfil
+\item Evaluate $\displaystyle\lim_{x \rightarrow \infty} \dfrac{60+e^{-x}}{2-e^{-x}}$ \vfil
+\item Your friend Fiona claims that the study of limits is silly; all you ever need to do to find the limit as $x$ approaches $a$ is substitute $x = a$. Give two examples that show she is wrong.\vfil
+\item Find a number $b$ so that $f(x) = \begin{cases} 2x +1 & x \leq -3 \\ -x + b & x > -3 \end{cases}$ is continuous everywhere.
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Estimate a limit using a table of values or by direct substitution.&&&\\
+\hline
+Use factoring to evaluate a limit.&&&\\
+\hline
+Use dominant terms analysis to evaluate limits approaching infinity.&&&\\
+\hline
+Find a parameter to make a piecewise function continuous.&&&\\
+\hline
+Solve applied problems involving limits.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+
+%--------------------------------LESSON11-----------------------------------------------------------------
+\section{The Limit Definition of the Derivative}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 11}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item If $f(x)=x^{2}$, determine $f(x+h)$.\vfil \vfil \vfil
+\item If $f(x)=\sqrt{x}$, determine $f(x+h)$.\vfil \vfil \vfil
+\item If $f(x)=\dfrac{1}{x}$, determine $f(x+h)$.\vfil \vfil\vfil
+\item A line with slope $m=3$ passes through the point $(1,1)$. Determine its equation.\vfil \vfil \vfil
+\item A line with slope $m=-2$ passes through the point $(-3,-5)$. Determine its equation.\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 11}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Define the limit definition of the derivative. 
+\item Give the rules for differentiating polynomials, as well as logarithmic, exponential and trigonometric functions. 
+\item Give the rules for sums, differences and constant multiplies of functions. 
+\item Steps for finding the equation of the tangent line to a function at a given point. 
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Use the limit definition of a derivative to find the derivative of $f (x) = x^2 - 3$.\vfil\vfil
+\item Use the limit definition of a derivative to find the derivative of $f (x) =\dfrac{2}{x^2}$.\vfil
+\newpage
+
+\item Differentiate the following functions:
+\begin{enumerate}
+\item  $f (x) = x^5 +2x-2$. \bigskip \bigskip\bigskip \bigskip
+\item  $f (x) = |x| +\dfrac{1}{x} + \ln(x)$. \vfill
+\item  $f \left(x\right) = \log_3 x$. \vfill
+\item  $g\left(x\right) = 5^x + e^x$. \vfill
+\item  $y = 4x^{-1} - 2|x| - 10 + \sin(x)$. \vfill
+\item  $f (x) = 3x^3 - 2x^2 + \sqrt{x}$. \vfill
+\item  $f (x) = 5\sin(x) + \ln(x)$. \vfill
+\item  $f (x) = \cos(x) - 3\sin(x) + e^x$. \vfill
+\end{enumerate}
+\newpage
+
+\item Find the equation of the tangent line to the equation below at the indicated point:
+\begin{enumerate}
+    \item  $f (x) = x + \dfrac{1}{x}$ at $x = 2$.\vfill 
+    \item  $f (x) = \dfrac{1}{x^2}$ at $x = 1$.\vfill \vfil
+    \item  $f (x) = \sqrt{x}$ at $x = 4$.\vfill
+\end{enumerate}
+\newpage
+
+\item (Applied) Company C’s profits are given by $P(0) = \$1$ million and $P'(0) = \$0.5$ million/month. Company D’s profits are given by $P(0) = \$0.5$ million and $P'(0) =    \$1$ million/month. In which company would you rather invest? Why? \vfil
+\item (Applied) The cost of producing x teddy bears per day at the Cuddly Companion Co. is calculated by their marketing staff to be given by the formula \[C(x) = 100 + 40x - 0.001x^2.\]
+\begin{enumerate}
+	\item   Find the marginal cost function and use it to estimate how fast the cost is going up at a production level of 100 teddy bears. Compare this with the exact cost of producing the 101st teddy bear.
+	\item  Find the average cost function $\overline{C}$, and evaluate $\overline{C}(100)$.  What does the answer tell you? 
+\end{enumerate}
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 11}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Use the limit definition of a derivative to find the derivative of $f (x) = x - 2x^3$.\vfil
+\item Differentiate the following functions:
+\begin{enumerate}
+    \item  $f (x) = 2x^4 + 3x^3 -1$. 
+    \item  $y = x^2 + 3|x| -\cos(x)$.
+    \item  $f (x) = x^2 - 3\sqrt{x} + 5$.
+    \item  $f (x) = 5\sin(x) + \ln(x)$.
+    \item  $f (x) = \cos(x) - 3\sin(x) + e^x$.
+\end{enumerate}\vfil
+\item Find the equation of the tangent line to $f(x)=x^{2}+\cos(x)$ at $x=0$.\vfil
+\item Daily oil production by Pemex, Mexico’s national oil company, can be approximated by \[P(t) = -0.022t^2 + 0.2t + 2.9 \text{ million barrels } (1 \leq t \leq 9),\] where $t$ is time in years since the start of 2000. Find the derivative function  $dP/dt$ . At what rate was oil production changing at the start of 2004 ($t = 4$)?\vfil
+\item A car wash firm calculates that its daily profit (in dollars) depends on the number n of workers it employs according to the formula \[P = 400n - 0.5n^2.\]  Calculate the marginal product at an employment level of 50 workers, and interpret the result.
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Use the limit definition to find the derivative of a function.&&&\\
+\hline
+Find the derivatives of polynomial and absolute value functions.&&&\\
+\hline
+Find the derivatives of exponential and logarithmic functions.&&&\\
+\hline
+Find the derivative of trigonometric functions.&&&\\
+\hline
+Determine the equation of a tangent line at a given point.&&&\\
+\hline
+Solve applied problems involving derivatives.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+
+%--------------------------------LESSON12-----------------------------------------------------------------
+\section{The Product and Quotient Rules}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 12}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Expand: $x^{2}(x+1)$.\vfil \vfil \vfil
+\item Expand: $x \left( \dfrac{2}{x}  + \dfrac{1}{x^{2}} - 3x\right)$.\vfil \vfil \vfil
+\item Divide: $\dfrac{2x^{2} - 3x}{x}$.\vfil \vfil\vfil
+\item Expand, then find the derivative: $x^{2}(3x^{2} - 4x + 7)$.\vfil \vfil \vfil
+\item Divide, then find the derivative: $\dfrac{x^{2.2} - 3x^{0.2}}{x^{1.2}}$.\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 12}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item The formula for differentiating the product $fg$.
+\item The formula for differentiating the product $fgh$.
+\item The formula for differentiating the quotient $f/g$.
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Differentiate: 
+\begin{enumerate} 
+\item $y =x^2\left( 4x^3 + \dfrac{2}{x} - 1\right)$.\vfil
+\item $f \left(x\right) = x \ln x $.\vfil
+\item $f\left(x\right) = \left(2x^{0.5} - x^2\right)^2$.\vfil
+\end{enumerate}
+\newpage
+
+\item Differentiate: 
+\begin{enumerate} 
+\item $y = \sqrt{x}\left(4x^{-1} - 2|x| - 10\right)$.\vfil
+\item $f\left(x\right) = x\left(x^2 - 3\right)\left(2x^2 + 1\right)$.\vfil
+\item $y = \left(\dfrac{x^{1.2}}{7} + \dfrac{2}{x^{2.1}} \right)\cos(x)$.\vfil
+\end{enumerate}
+\newpage
+
+\item Differentiate: 
+\begin{enumerate} 
+\item $f\left(x\right) =\dfrac{2x+4}{3x-1}$.\vfil
+\item $y =\tan(x) = \dfrac{\sin(x)}{\cos(x)}$.\vfil
+\item $f(x) = \dfrac{e^{2x}}{\ln(2x)+2x}$.\vfil
+\end{enumerate}
+\newpage
+
+\item Differentiate: 
+\begin{enumerate} 
+\item $f\left(x\right) = \dfrac{\left(x-3\right)\left(x-2\right)\left(x-1\right)}{x+5}$.\vfil
+\item $y =\dfrac{\sqrt{x}-1}{\sqrt{x} + 1}$.\vfil
+\item $y = \dfrac{\left(x+1\right)\left(x+2\right)}{\left(x-3\right)\left(x-2\right)\left(x-1\right)}$.\vfil
+\end{enumerate}
+\newpage
+
+\item (Applied) The monthly sales of Sunny Electronics’ new iSun walkman is given by $q(t) = 2,000t - 100t^2$ units per month, $t$ months after its introduction. The price Sunny charges is $p(t) = 100 - t^2$ dollars per iSun, t months after introduction.  Find the rate of change of monthly sales, the rate of change of the price, and the rate of change of monthly revenue six months after the introduction of the iSun. Interpret your answers. 
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 12}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Differentiate: $f\left(x\right) = x^2\left(2x + 3\right)\left(7x + 2\right)$\vfil
+\item Differentiate: $y =\sin(x)\left(x^2 - 1\right)$\vfil
+\item Differentiate: $y =\dfrac{x}{\sqrt{x} + |x|}$\vfil
+\item Differentiate: $y =\dfrac{\frac{1}{x}-1}{\sin(x)}$\vfil
+\item Thoroughbred Bus Company finds that its monthly costs for one particular year were given by $C(t) = 100 + t^2$ dollars after $t$ months. After $ t$ months, the company had $P(t) = 1,000 + t^2$ passengers per month. How fast is its cost per passenger changing after 6 months? \vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Find the derivative using the product rule.&&&\\
+\hline
+Find the derivative using the quotient rule.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+
+%--------------------------------LESSON13-----------------------------------------------------------------
+\section{The Chain Rule and L'Hopital's Rule}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 13}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item If $f(x)= 3x^{2}$ and $g(x)=e^{x}$, find $f(g(x))$.\vfil \vfil \vfil
+\item If $f(x)= \sin(x)$ and $g(x)=\cos(x)$, find $f(g(x))$.\vfil \vfil \vfil
+\item If $h(x) = \ln(x^{2})$, find two functions $f(x)$ and $g(x)$ satisfying $f(g(x))=h(x)$.\vfil \vfil \vfil
+\item If $h(x) = (2x+5)^{10}$, find two functions $f(x)$ and $g(x)$ satisfying $f(g(x))=h(x)$.\vfil \vfil \vfil
+\item Use dominant terms analysis to determine the limit: $\displaystyle\lim_{x \rightarrow \infty} \dfrac{6x^2 - 5x + 1}{3x^2 - 9}$.\vfil \vfil 
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 13}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item The formula for finding the derivative of a composition of functions. 
+\item The statement of L'Hopital's Rule for indeterminate forms $0/0$ and $\infty / \infty$.
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Differentiate: 
+\begin{enumerate} 
+\item $f\left(x\right) = \left(3x-1\right)^{10}$.\vfil\vfil
+\item $y = \left(1-x \right)^{-1}$.\vfil\vfil
+\item $v\left(x\right) = 3^{2x+1} + e^{3x+1}$.\vfil
+\end{enumerate}
+\newpage
+
+\item Differentiate: 
+\begin{enumerate} 
+\item $f \left(x\right) = \left(x^2 + 1\right)^5 \ln x $.\vfil\vfil
+\item $f \left(x\right) = \dfrac{1}{\left(x + 1\right)^2}$.\vfil\vfil
+\item $g\left(x\right) = \ln(x^2 + 3)$.\vfil
+\end{enumerate}
+\newpage
+
+\item Differentiate: 
+\begin{enumerate} 
+\item $h\left(x\right) = \ln \left(\dfrac{9x}{4x - 2} \right)$.\vfil\vfil
+\item $h\left(x\right) = 2[\left(x + 1\right)\left(x^2 - 1\right)]^{-1/2}$.\vfil\vfil
+\item $h\left(x\right) = 3^{x^2-x}$.\vfil
+\end{enumerate}
+\newpage
+
+\item Verify L'Hopital's Rule can be applied, and the use it to evaluate the limit. Sometimes you may have to apply the rule more than once.
+\begin{enumerate} 
+\item $\displaystyle\lim_{x \rightarrow 1} \dfrac{x^2 - 2x + 1}{x^2 - x}$.\vfil\vfil
+\item $\displaystyle\lim_{x \rightarrow -2} \dfrac{x^3 + 8}{x^2 + 3x + 2}$.\vfil\vfil
+\item $\displaystyle\lim_{x \rightarrow \infty} \dfrac{6x^2 - 5x + 1}{3x^2 - 9}$.\vfil\vfil
+\item $\displaystyle\lim_{x \rightarrow \infty} \dfrac{x^{2}}{\textrm{e}^{x}}$.\vfil
+\end{enumerate}
+\newpage
+
+\item (Applied) The average price of a two-bedroom apartment in downtown New York City during the real estate boom from 1994 to 2004 can be approximated by 
+\[p(t) = 0.33e^{0.16t} \text{  million dollars }  (0 \leq t \leq 10).\] where $t$ is time in years ($t = 0$ represents 1994). What was the average price of a two-bedroom apartment in downtown New York City in 2003, and how fast was it increasing?\vfil\vfil
+
+\item Find the equation of the tangent line to $y = \ln \sqrt{2x^2 + 1}$ at $x=1$.\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 13}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Differentiate: $r\left(x\right) = \left(\sqrt{x+1} + \sqrt{x} \right)^3$\vfil
+\item Differentiate: $r\left(x\right) = \left(e^{2x^2}\right)^3$.\vfil
+\item Determine the limit: $\displaystyle\lim_{x \rightarrow -\infty} \dfrac{4x^3 +x^2 -2x}{x^2 - 7}$.\vfil
+\item Determine the limit: $\displaystyle\lim_{x \rightarrow 1/2} \dfrac{\sin(2x-1)}{2x-1}$.\vfil
+\item The total spent on research and development by the federal government in the United States during 1995–2007 can be approximated by \[S(t) = 7.4 \ln t + 3\] billion dollars $(5 \leq t \leq 19)$ where $t$ is the year since 1990. What was the total spent in 2005 $(t = 15)$ and how fast was it increasing?\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Find the derivative using the chain rule.&&&\\
+\hline
+Apply L'Hopital's Rule to an indeterminate limit.&&&\\
+\hline
+Solve applied problems using advanced derivative rules.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+
+%--------------------------------LESSON14-----------------------------------------------------------------
+\section{Implicit Differentiation}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 14}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item If $f(x)=4x^{3}$ find the derivative of the derivative. \vfil \vfil \vfil
+\item Expand using logarithm laws: $\log_{2}\left( \dfrac{(x+1)(x+3)}{x-2} \right)$.\vfil \vfil \vfil
+\item Expand using logarithm laws: $\log\left( \dfrac{x^{2}}{(x-1)(x+2)} \right)$.\vfil \vfil\vfil
+\item Expand using logarithm laws: $\ln\left( \dfrac{x(x+1)(x+2)}{(x-1)(x-2)} \right)$.\vfil \vfil \vfil
+\item Find the equation of a line with slope $m=-1$ passing through the point $(-3,3)$.\vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 14}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Finding higher order derivatives. 
+\item Steps to find the derivative using implicit differentiation. 
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Find the first $n$ derivatives of $f(x) = -3x^3+4x$.\vfil\vfil
+\item Find $dy/dx$ given $x^2y - y^2 = 4$.\vfil\vfil
+\item Find $dy/dx$ given $ 3xy - \dfrac{y}{x} = 2$.\vfil
+\newpage
+
+\item Find $dy/dx$ given $ y \ln x + y = 2$\vfil\vfil
+\item Find $dy/dx$ given $ xe^y = ye^x$.\vfil\vfil
+\item Differentiate $y = \dfrac{(x+1)(x+2)(x+3)(x+4)}{x(x-1)(x-2)(x-3)}$.\vfil
+\newpage
+
+\item Find the tangent line to $e^{-xy} + 2x = 1$ at $x=-1$.\vfil\vfil
+\item (Applied) An employment research company estimates that the value of a recent MBA graduate to an accounting company is \[V = 3e^2 + 5g^3,\] where $V$ is the value of the graduate, $e$ is the number of years of prior business experience, and $g$ is the graduate school grade point average. If V is fixed at 200, find $de/dg$ when $g = 3.0$ and interpret the result.\vfil\vfil
+\item (Applied) Use logarithmic differentiation to give a proof of the quotient rule.\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 14}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Find the first $n$ derivatives of $f(x) = (-2x+1)^3$.\vfil
+\item Find $dy/dx$ given $\ln(y^2 - y) + x = y$.\vfil
+\item Find $dy/dx$ given $e^xy = 1$.\vfil
+\item Differentiate $y = \dfrac{(3x+1)^2}{4x(2x-1)^3}$\vfil
+\item Find the tangent line to $4x^2 + 2y^2 = 12$ at $(1,-2)$.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Find higher order derivatives of a function.&&&\\
+\hline
+Use implicit differentiation to find the derivative.&&&\\
+\hline
+Use logarithmic differentiation to find the derivative.&&&\\
+\hline
+\end{tabular}
+\end{center}
+ \vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+%--------------------------------LESSON15-----------------------------------------------------------------
+\section{Graphical Analysis}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 15}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Solve for $x$: $x^{2}-3x-4=0$.\vfil \vfil \vfil
+\item Determine the zeroes and vertical asymptotes of $f(x)=\dfrac{x^{2}-5x+4}{x^{2}-4}$.\vfil \vfil\vfil
+\item Find the $x$ and $y$ intercepts of $g(x)=\textrm{e}^{x}(x+1)-\textrm{e}^{x}(2x+2)$.\vfil \vfil \vfil
+\item Find the $x$ and $y$ intercepts of $f(x)=(x+1)^{2/5}$.\vfil \vfil \vfil
+\item Sketch the graph of $ f (x) = -x^2 - 2x - 1$.\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 15}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Steps to determine critical numbers of the first and second derivatives. 
+\item Classifying maximums, minimums and inflection points. 
+\item How to use the Extreme Value Theorem to find absolute extrema.
+\item How to find intervals of increase, decrease and concavity. 
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Find the location of all relative and absolute extrema for $f(x) = 2x^2-2x+3$ on $[0,3]$.\vfil\vfil
+\item Find the location of all relative and absolute extrema for $f(x) = \sqrt{x}(x+1)$ on $[0,\infty)$.\vfil
+\newpage
+
+\item Find the location of all relative and absolute extrema for $f(x) = \dfrac{x^2+1}{x^2-1}$ on $[-2,2]$ with $x \not = \pm 1$.\vfil\vfil
+\item Find the location of all relative and absolute extrema for $f(x) = (x+1)^{2/5}$ on $[-2,0]$.\vfil
+\newpage
+
+\item Find and classify the critical points and locate all inflection points for $f(x) = 2x^2-2x+3$. \vfil\vfil
+\item Find and classify the critical points and locate all inflection points for $f(x) = -x^3 + 3x$.\vfil
+\newpage
+
+\item Sketch the graph of $h(x) = -2x^3 - 3x^2 + 36x$.\vfil\vfil
+\item Sketch the graph of $f(t) = \dfrac{t^2 - 1}{t^2 + 1}$.\vfil
+\newpage
+
+\item (Applied) Maximize $P = xy$ with $x + 2y = 40$. \vfil
+\item (Applied) The cost of controlling emissions at a firm rises rapidly as the amount of emissions reduced increases. Here is a possible model: \[C(q) = 4,000 + 100q^2\] where $q$ is the reduction in emissions (in pounds of pollutant per day) and $C$ is the daily cost to the firm (in dollars) of this reduction. What level of reduction corresponds to the lowest average cost per pound of pollutant, and what would be the resulting average cost to the nearest dollar?\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 15}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Find the location of all relative and absolute extrema for $f(x) = 2x^3 +3x^2$ on $[-2,\infty)$.\vfil
+\item Find and classify the critical points and locate all inflection points for $f(x) = xe^{-x^2}$.\vfil
+\item Sketch the graph of $g(x) = \dfrac{x^3}{x^2 - 3}$.\vfil
+\item Hercules Films is also deciding on the price of the video release of its film Bride of the Son of Frankenstein. Again, marketing estimates that at a price of $p$ dollars, it can sell \[q = 200,000 - 10,000p\] copies, but each copy costs \$4 to make. What price will give the greatest profit?\vfil
+\item Let $f (x) = \dfrac{N}{1 + Ae^{-kx}}$ for constants $N$, $A$, and $k$ ($A$ and $k$ positive). Show that $f$ has a single point of inflection at $x =\ln A/k$.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Find and classify critical numbers of the first derivative.&&&\\
+\hline
+Find and classify critical numbers of the second derivative.&&&\\
+\hline
+Find intervals of increase, decrease and concavity.&&&\\
+\hline
+Determine the absolute extrema of a function on an interval.&&&\\
+\hline
+Provide a rough sketch of a function.&&&\\
+\hline
+Solve applied problems involving maximization or minimization.&&&\\
+\hline
+\end{tabular}
+\end{center}
+\vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+\chapter{Integration}
+
+\begin{tabular}{cp{1.95in}p{3.25in}}
+Lecture & Topic & Homework\\
+\hline
+16	&	Antiderivatives				&	Chapter 13.1, 13.2, 14.1 Videos and Graded Work\\ \\
+17	&	Riemann Sums				&	Chapter 13.3 Videos and Graded Work\\\\
+18	&	FTC 1 and FTC 2				&	Chapter 13.4 Videos and Graded Work\\\\
+19	&	Areas Between Curves			&	Chapter 14.1 Videos and Graded Work\\\\
+20	&	Constrained Optimization		&	\\\\
+21	&	Partial Derivatives				&	Chapter 15 Vectors Videos and Graded Work\\\\
+\end{tabular}
+\newpage
+
+%--------------------------------LESSON16-----------------------------------------------------------------
+\section{Antiderivatives}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 16}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Write down the rule for taking the derivative of a sum of functions. \vfil \vfil \vfil
+\item Write down the rule for taking the derivative of a constant multiple of a function.\vfil \vfil\vfil
+\item Write down the formula for the product rule. \vfil \vfil \vfil
+\item Write down the formula for the chain rule.\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 16}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Review basic antiderivatives and antiderivative rules. 
+\item Steps to solving an integral requiring substitution.
+\item Steps to solving an integral using integration by parts. 
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Evaluate the following integrals:
+\begin{enumerate}
+	\item $\displaystyle \int \left(x + x^3\right) dx$ \vfil
+	\item $\displaystyle \int \left(\sin u + \cos u\right) du$ \vfil
+	\item $\displaystyle \int \sqrt[4]{x}  + \sin x dx$ \vfil\vfil
+	\item $\displaystyle \int \dfrac{1}{x} + \dfrac{2}{x^2} dx$ \vfil
+\end{enumerate}
+\newpage
+
+\item    Evaluate the following integrals using the substitution method:
+\begin{enumerate}
+	\item    $\displaystyle \int \left(2x+5\right)^{-3} dx$ \vfil\vfil
+	\item    $\displaystyle \int \sqrt{4x-5} dx$ \vfil\vfil
+	\item    $\displaystyle \int \left(\sin(4u+6) \right) du$ \vfil\vfil
+	\item    $\displaystyle \int \left( xe^{-x^2+1}\right) dx$ \vfil
+\end{enumerate}
+\newpage
+
+\item Evaluate the following integrals using integration by parts:
+\begin{enumerate}
+	\item    $\displaystyle \int \left(2xe^{x}  \right) dx$ \vfil\vfil
+	\item    $\displaystyle \int \left( x^2 - 1\right) 3^{-x} dx$ \vfil\vfil
+	\item    $\displaystyle \int x^2 \ln x dx$ \vfil\vfil
+	\item    $\displaystyle \int x^3(x+1)^{10} dx$ \vfil
+\end{enumerate}   
+\newpage
+
+\item (Applied) The marginal cost of producing the xth box of CDs is given by $10 - \dfrac{x}{(x^2 + 1)^2}$. The total cost to produce 2 boxes is \$1,000. Find the total cost function $C(x)$.
+\vfil\vfil
+
+\item (Applied) The number of housing starts in the United States can be approximated by \[n(t) = \dfrac{1}{12} \left(1.1 + 1.2e^{-0.08t} \right) \text{ million homes per month }(t \geq 0)\] where $t$ is time in months from the start of 2006. Find an expression for the total number $N(t)$ of housing starts in the US from January 2006 to time $t$.\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 16}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Evaluate the following integrals:
+\begin{enumerate}
+	\item $\displaystyle \int \left(1/v^2 + 2/v\right) dv$     \vfil
+	\item $\displaystyle \int \dfrac{|u|}{u} + \sec^2 u du$   \vfil  
+\end{enumerate}
+\item Evaluate the following integrals using the substitution method: $\displaystyle \int \left(2xe^{x^2 + 4} + \dfrac{5}{2x+8}  \right) dx$\vfil
+\item Evaluate the following integrals using integration by parts: $\displaystyle \int x\ln(2x) dx$\vfil
+\item The marginal cost of producing the xth box of Zip disks is $10 + \dfrac{x^2}{100,000}$ and the fixed cost is \$100,000. Find the cost function $C(x)$.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Evaluate an integral using basic techniques.&&&\\
+\hline
+Evaluate an integral using the substitution method.&&&\\
+\hline
+Evaluate an integral using integration by parts.&&&\\
+\hline
+Solve applied problems using antiderivatives.&&&\\
+\hline
+\end{tabular}
+\end{center}
+\vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+%--------------------------------LESSON17-----------------------------------------------------------------
+\section{Riemann Sums}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 17}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item If $f(x)=x^{2}$, evaluate $f(1)+f(1.5)+f(2)+f(2.5)+f(3)$.\vfil \vfil \vfil
+\item If $f(x)=\ln(x)$, evaluate $f(1)+f(1.5)+f(2)+f(2.5)+f(3)$ correctly to two decimal places.\vfil \vfil\vfil
+\item Evaluate $\dfrac{1}{5} \left( f(3)+f(3.25)+f(3.5)+f(3.75)+f(4) \right)$ if $f(x)=2+x$.\vfil \vfil \vfil
+\item Evaluate the limit: $\lim\limits_{n \rightarrow \infty} \dfrac{n(n+1)}{2n^{2}}$.\vfil \vfil \vfil
+\item Evaluate the limit: $\lim\limits_{n \rightarrow \infty} \dfrac{n(n+1)(2n+1)}{4n^{3}}$.\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 17}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Steps to estimate the area under a curve using $n$ approximating rectangles and left (or right) endpoints. 
+\item Properties of summation notation. 
+\item Formulas for $\sum 1$, $\sum i$, $\sum i^{2}$ and $\sum i^{3}$.
+\item The limit definition of the integral. 
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Use a Riemann sum to estimate the area under $f(x) = x^2$ on [1,5] using $n = 4$.\vfil\vfil
+\item Use a Riemann sum to estimate the area under $f(x) = 2x+3$ on [-2,3] using $n=5$.\vfil\vfil
+\item Use a Riemann sum to estimate the area under $f(x) = \dfrac{1}{1+x}$ on [0,1] using $n=4$.\vfil
+\newpage
+
+\item Express in terms of $n$: $\sum_{i=1}^{n}(i + i^{2})$.\vfil\vfil
+\item Express in terms of $n$: $\sum_{i=1}^{n}(3i - 5 + i^{3})$.\vfil\vfil
+\item Express in terms of $n$: $\dfrac{1}{n} \sum_{i=1}^{n} \left( \dfrac{2i}{3n} + \dfrac{3i^{3}}{2n^{3}} - \dfrac{4i^{2}}{7n^{2}} \right)$.\vfil
+\newpage
+
+\item Use the limit definition of the integral to evaluate $\displaystyle \int_{1}^{3}  (2x+3)dx$.\vfil\vfil
+\item Use the limit definition of the integral to evaluate $\displaystyle \int_{0}^{3} \left(x + x^2\right) dx$\vfil
+\newpage
+
+\item (Applied) A race car has a velocity of $v(t) = 600(1 - e^{-0.5t})$ ft/s, $t$ seconds after starting. Use a Riemann sum with $n = 10$ to estimate how far the car has traveled in the first 4 seconds.\vfil\vfil
+\item (Applied) The velocity of a stone moving under gravity t seconds after being thrown up at 4 m/s is given by $v(t) = -9.8t + 4$ m/s. Use a Riemann sum with 5 subdivisions to estimate$\int_{0}^1 v(t) dt$. \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 17}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Use a Riemann sum to estimate the area under $f(x) = 4-x^{2}$ on $[0,2]$ using $n=4$.\vfil
+\item Express in terms of $n$: $\dfrac{2}{n}\sum_{i=1}^{\infty}(2-3i^{2})$.\vfil
+\item Evaluate: $\lim\limits_{n \rightarrow \infty} \sum_{i=1}^{\infty} \left( \dfrac{i}{2n^{2}} - \dfrac{i^{2}}{3n^{3}} + \dfrac{4i^{3}}{n^{4}}\right)$.\vfil
+\item Use the limit definition of the integral to evaluate $\displaystyle \int_{0}^{2} (4-x^{2})dx$\vfil
+\item The rate of U.S. per capita sales of bottled water for the period 2000–2008 can be approximated by \[s(t) = 0.04t^2 + 1.5t + 17 \text{ gallons per year } (0 \leq t \leq 8)\] where $t$ is the time in years since the start of 2000. Use a Riemann sum with n = 5 to estimate the total U.S. per capita sales of bottled water from the start of 2003 to the start of 2008.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Estimate areas using approximating rectangles.&&&\\
+\hline
+Manipulate expressions involving summation notation.&&&\\
+\hline
+Use the limit definition of the integral.&&&\\
+\hline
+Solve applied problems using Riemann sums.&&&\\
+\hline
+\end{tabular}
+\end{center}
+\vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+%--------------------------------LESSON18-----------------------------------------------------------------
+\section{The Fundamental Theorem of Calculus}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 18}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Find the derivative and an antiderivative of $f(x)=x^{2}$.\vfil \vfil \vfil
+\item Find the derivative and an antiderivative of $f(x)=\textrm{e}^{-2x}$.\vfil \vfil\vfil
+\item Find the derivative and an antiderivative of $f(x)=\cos(x)$.\vfil \vfil \vfil
+\item What is the relationship between the cost function and the marginal cost function?\vfil \vfil \vfil
+\item What does it mean when we say ``The marginal revenue at $x=10$ items is $\$5$"?\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 18}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item The Fundamental Theorem of Calculus, Part I.
+\item The Fundamental Theorem of Calculus, Part II.
+\item Properties of integrals. 
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Evaluate the following integrals:
+\begin{enumerate}
+	\item    $\displaystyle \int_{-3}^{3} \left(x + x^3\right) dx$ \vfil\vfil
+	\item    $\displaystyle \int_{0}^{\pi} \left(\sin u + \cos u\right) du$ \vfil\vfil
+	\item    $\displaystyle \int_{-1}^{1} \left(3x^4 - 2x^{-2} + x^{-5} + 4\right) dx$ \vfil\vfil
+	\item    $\displaystyle \int_{2}^{3} \left(2xe^{x^2 + 4} + \dfrac{5}{2x+8}  \right) dx$ \vfil\vfil
+	\item    $\displaystyle \int_{0}^{1} \frac{e^x + e^{-x}}{2} dx$ \vfil
+\end{enumerate} 
+\newpage
+
+Find the derivative of:
+\begin{enumerate}
+	\item    $g(x) = \displaystyle \int_{0}^{x} \left(u +u^3\right) du$    \vfil\vfil
+	\item    $g(x) = \displaystyle \int_{-5}^{x^2} \sqrt{1 + u^3} du$    \vfil\vfil
+	\item    $g(x) = \displaystyle \int_{\ln(x)}^{e^x} \left(u^6 - 1/u^2\right) du$    \vfil
+\end{enumerate}
+\newpage
+
+\item (Applied) The marginal revenue of the xth box of flash cards sold is $100e^{-0.001x}$ dollars. Find the revenue generated by selling items 101 through 1,000.\vfil\vfil
+\item (Challenge) Differentiate \[\int_{g(x)}^{h(x)} f(t) dt.\]\vfil\vfil
+\item (Challenge) Show that \[2 \leq \int_{0}^2 \sqrt{1 + x^3} dx \leq 6.\]\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 18}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Evaluate: $\displaystyle \int_{0}^{\pi/2} \left(1 + x + \cos x\right) dx$.\vfil
+\item Evaluate: $\displaystyle \int_{-1}^{1} x(x^2+1)^{10} dx$.\vfil
+\item Find the derivative: $g(x) = \displaystyle \int_{x^3}^{\pi} \left(e^{u^3 + 4u} \right) du$. \vfil
+\item Find the derivative: $g(x) = \displaystyle \int_{x}^{\pi/2} \left(1 + u + \cos u\right) du$.\vfil
+\item The total cost of producing x items is given by \[C(x) = 246.76 + \int_{0}^x 5t dt.\]  Find the fixed cost and the marginal cost of producing the 10th item.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Apply the FTCI to integrals. &&&\\
+\hline
+Apply the FTCII to integrals. &&&\\
+\hline
+Solve applied problems using the FTC. &&&\\
+\hline
+\end{tabular}
+\end{center}
+\vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+%--------------------------------LESSON19-----------------------------------------------------------------
+\section{Area between Curves}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 19}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Sketch the curves $f(x) = \ln(x)$ and $g(x) = \textrm{e}^{-x}$ on the same axes..\vfil \vfil \vfil
+\item Sketch the curves $f(x) = -|x|$ and $g(x) = x^{2}-2$ on the same axes. \vfil \vfil\vfil
+\item Determine the intersection points of $y=2x^{2}$ and $y=x^{2}+5x-4$.\vfil \vfil \vfil
+\item Determine the intersection points of $y=x^{2}$ and $y=x^{4}$.\vfil \vfil \vfil
+\item Determine the intersection points of $y=-|x|$ and $y=x^{2}-2x$.\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 19}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Interpretation of definite integrals as the net area under a curve. 
+\item Evaluation of simple improper integrals.
+\item The steps to determining the area bounded by two positive curves. 
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Find the area under $y = e^x$ on $[1,4]$. \vfil\vfil
+\item Find the area under $y = \sin(x)$ on $[0,\pi]$. What is the net area on $[0,2\pi]$? The true area on $[0,2\pi]$? \vfil
+\newpage
+
+\item Find the area under $y = \dfrac{1}{x^2}$ on $[1,\infty]$.\vfil\vfil
+\item Explain why the integral $\displaystyle \int_{1}^{\infty} \frac{dx}{x}$ does not exist.\vfil\vfil
+\item (Challenge) Try to determine the values of $p$ such that the integral $\displaystyle \int_{1}^{\infty} \frac{dx}{x^{p}}$ converges to a finite value.\vfil
+\newpage
+
+\item Find the area bounded between $y = x^2$ and $y =x^4$.\vfil\vfil
+\item Find the area bounded between $y = -|x|$ and $y = x^2-2$.\vfil\vfil
+\item (Challenge) Determine the net area and the true area bounded by $y=-x^2+4$ and $y=x^2-2x$.\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 19}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Find the area under $y = \ln(x)$ on $[2,8]$.\vfil
+\item Determine the true area bounded by $y=x^3$, as well as the $x$ and $y$-axes, in the fourth quadrant.\vfil
+\item Find the area under $y = \textrm{e}^{-x}$ on $[0,\infty]$.\vfil
+\item Find the area bounded between $y = -|x|$ and $y = x^2-2x$.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Determine net and true area bounded by a curve and the $x$-axis.&&&\\
+\hline
+Determine the net and true area bounded by two curves.&&&\\
+\hline
+Evaluate a simple improper integral.&&&\\
+\hline
+\end{tabular}
+\end{center}
+\vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+%--------------------------------LESSON20-----------------------------------------------------------------
+\section{Constrained Optimization}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 20}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Plot the lines $3x+2y=14$ and $-x+2y=4$ on the same axes. Determine their intercepts and intersection points. \vfil \vfil \vfil
+\item Plot the lines $x+y=4$ and $x-y=2$ on the same axes. Determine their intercepts and intersection points.\vfil \vfil\vfil
+\item Plot the lines $x+y=40$, $x+y=12$ and $4x+2y=32$ on the same axes. Determine their intercepts and intersection points.\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 20}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Steps to determining/sketching the feasible region for a maximization problem. 
+\item Evaluating the objective function at the desired corner points to attain a maximum.
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item $\begin{array}{ll} 
+\textbf { Maximize } & Z=40 x_{1}+30 x_{2} \\ 
+\textbf { Subject to: } & x_{1}+x_{2} \leq 12 \\ 
+& 2 x_{1}+x_{2} \leq 16 \\ 
+& x_{1} \geq 0 ; x_{2} \geq 0 
+\end{array}\nonumber$
+\newpage
+
+\item $\begin{array}{ll} 
+\textbf { Maximize } & Z=3x_{1}+2x_{2} \\ 
+\textbf { Subject to: } &3 x_{1}+2x_{2} \leq 14 \\ 
+& - x_{1}+2x_{2} \leq 4 \\ 
+&  x_{1}-x_{2} \leq 3\\ 
+& x_{1} \geq 0 ; x_{2} \geq 0 
+\end{array}\nonumber$
+\newpage
+
+\item $\begin{array}{ll} 
+\textbf { Maximize } & Z=3x_{1}+2x_{2} \\ 
+\textbf { Subject to: } &  x_{1}+x_{2} \leq 4 \\ 
+&  x_{1}-x_{2} \leq 2\\ 
+& x_{1} \leq 4 ; x_{2} \leq 4 \\ 
+& x_{1} \geq 0 ; x_{2} \geq 0 
+\end{array}\nonumber$
+\newpage
+
+\item $\begin{array}{ll} 
+\textbf { Maximize } & Z=5x_{1}+4x_{2} \\ 
+\textbf { Subject to: } &  x_{1}+3x_{2} \leq 18 \\ 
+&  x_{1}+x_{2} \leq 8\\ 
+&  2x_{1}+x_{2} \leq 14\\ 
+& x_{1} \geq 0 ; x_{2} \geq 0 
+\end{array}\nonumber$
+\newpage
+
+\item $\begin{array}{ll} 
+\textbf { Maximize } & Z=5x_{1}+2x_{2} \\ 
+\textbf { Subject to: } &  x_{1}+x_{2} \leq 40 \\ 
+&  4x_{1}+2x_{2} \leq 32\\ 
+&  x_{1}+x_{2} \leq 12\\ 
+&  x_{1}+4x_{2} \leq 36\\ 
+& x_{1} \geq 0 ; x_{2} \geq 0 
+\end{array}\nonumber$
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 20}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item $\begin{array}{ll} 
+\textbf { Maximize } & Z=2x_{1}+x_{2} \\ 
+\textbf { Subject to: } &  x_{1}+x_{2} \leq 40 \\ 
+&  3x_{1}+x_{2} \leq 90\\ 
+&  x_{1}+2x_{2} \leq 60\\ 
+& x_{1} \geq 0 ; x_{2} \geq 0 
+\end{array}\nonumber$
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Sketch the feasible region of a linear programming problem.&&&\\
+\hline
+Maximize a given objective function using appropriate corner points.&&&\\
+\hline
+\end{tabular}
+\end{center}
+\vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+%--------------------------------LESSON21-----------------------------------------------------------------
+\section{Partial Derivatives}
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 21}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textcolor{purple}{Skills Check}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Solve the following problems to refresh the skills you have learned previously.
+\begin{enumerate}
+\item Find the derivative of $f(x) = A\textrm{e}^{-Ax}$, where $A$ is constant.\vfil \vfil \vfil
+\item Find the derivative of $g(x) = \ln(Ax^{2} -x)$, where $A$ is constant.\vfil \vfil\vfil
+\item Find the derivative of $h(x) = \dfrac{1}{2Ax} - \dfrac{3}{4Bx^{2}}$, where $A$ and $B$ are constant.\vfil \vfil \vfil
+\item Solve the system of equations: \begin{align*} 2x+y+3&=0 \\ x-2y-1&=0 \end{align*}\vfil \vfil \vfil
+\item Solve the system of equations: \begin{align*} 2x^{3}y^{2}-2y&=0 \\ 2x^{2}y^{3}-2x&=0 \end{align*}\vfil \vfil \vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 21}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{New Skills Practice}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Topics to discuss:
+\begin{itemize}
+\item Evaluation of functions of two variables. 
+\item Finding all partial derivatives of a function of two variables. 
+\item Statement of Clairaut's Theorem.
+\item The D-test for classifying critical points of a two-variable function.
+\end{itemize}
+\newpage
+
+\noindent
+Practice the techniques discussed in class and in the online videos by solving the following examples. 
+\begin{enumerate}
+\item Verify Clairaut's Theorem for the following functions:
+\begin{enumerate}
+	\item  $f(x,y) = 1000 + 5x -4y -3xy$ \vfill
+	\item  $f(x,y) =x^2 + y^2$ \vfill
+	\item  $f(x,y) = \dfrac{e^{0.2x}}{1 + e^{-0.1y}}$ \vfill
+\end{enumerate} 
+\newpage
+
+\item Find and classify all critical points of \[f(x,y) = x^2 + y^2 + 1.\]\vfil\vfil
+\item Find and classify all critical points of \[f(x,y) = x^2 + xy - y^2 + 3x - y.\]\vfil\vfil
+\item Find and classify all critical points of \[f(x,y) = x^2 + y^2 + \dfrac{2}{xy}.\]  \vfil          
+\newpage
+
+\item (Applied) Your sales of online video and audio clips are booming. Your Internet provider, Moneydrain.com, wants to get in on the action and has offered you unlimited technical assistance and consulting if you agree to pay Moneydrain 3 cents for every video clip and 4 cents for every audio clip you sell on the site. Further, Moneydrain agrees to charge you only \$10 per month to host your site. Set up a (monthly) cost function for the scenario, and describe each variable. If Moneydrain typically charges you \$40 a month for technical assistance plus a \$15 website hosting fee, should you take their offer if you expect to sell $400$ video clips and $600$ audio clips this month?\vfil\vfil 
+\item (Applied) Your weekly cost (in dollars) to manufacture x bicycles and y tricycles is \[C(x, y) = 24,000 + 60x + 20y + 0.3xy.\]  Compute the marginal cost of manufacturing tricycles at a production level of 10 bicycles and 20 tricycles.\vfil
+\end{enumerate}
+\end{large}
+\newpage
+
+
+% Define the header design
+\begin{tcolorbox}[
+  width=\textwidth,
+  colback=gray!10, % Background color
+  colframe=white, % No frame
+  boxrule=0pt,    % No border
+  left=1cm,       % Left padding
+  right=1cm,      % Right padding
+  sharp corners  % No rounded corners
+]
+
+% Main content
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge \textbf{Lesson 21}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+  \Huge\textcolor{purple}{Self-Assessment}
+\end{minipage}
+\end{tcolorbox}
+
+\begin{large}
+\noindent
+Time yourself and try to solve the following questions within twenty minutes. 
+\begin{enumerate}
+\item Verify Clairaut's Theorem for the following functions:
+\begin{enumerate}
+	\item  $f(x,y) = x^4y^2 - x$
+	\item  $f(x,y) =xe^{xy}$ 
+\end{enumerate}
+\item Find and classify all critical points of \[f(x,y) = x^2 + x + y^2 - y - 1.\]\vfil
+\item Find and classify all critical points of \[f(x,y) = e^{x^2+y^2}.\]\vfil
+\item Your weekly cost (in dollars) to manufacture $x$ bicycles and $y$ tricycles is \[C(x, y) = 24,000 + 60x + 20y.\]  Calculate and interpret  $\partial C/\partial x$ and $\partial C/\partial y$.\vfil
+\end{enumerate}
+
+\noindent
+\textbf{Lesson Checklist}
+\bigskip
+
+\noindent
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+\vfil
+
+\begin{center}
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Skill} & \textbf{~~D~~} & \textbf{CON} & \textbf{COM} \\
+\hline
+Calculate partial derivatives of a two-variable function.&&&\\
+\hline
+Find and classify critical points of a two-variable function.&&&\\
+\hline
+Solve applied problems involving two-variable functions.&&&\\
+\hline
+\end{tabular}
+\end{center}
+\vfil
+
+\noindent
+\textbf{Notes}
+\end{large} \vfil
+\newpage
+
+\end{document}

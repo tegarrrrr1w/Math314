@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Linear Algebra | Calculus and Linear Algebra</title>
+  <meta name="description" content="Course notes for MATH 114" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Linear Algebra | Calculus and Linear Algebra" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Course notes for MATH 114" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Linear Algebra | Calculus and Linear Algebra" />
+  
+  <meta name="twitter:description" content="Course notes for MATH 114" />
+  
+
+<meta name="author" content="A Workbook for Business and Analytics Majors" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="next-chapter.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<h2>&nbsp;&nbsp;Book Title </h2>    
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-this-material-matters-for-data-science-and-machine-learning"><i class="fa fa-check"></i>Why This Material Matters for Data Science and Machine Learning</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#disclaimers"><i class="fa fa-check"></i>Disclaimers</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#a-final-word"><i class="fa fa-check"></i>A Final Word</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="linear-algebra.html"><a href="linear-algebra.html"><i class="fa fa-check"></i>Linear Algebra</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="linear-algebra.html"><a href="linear-algebra.html#lesson-1-functions-and-linear-equations"><i class="fa fa-check"></i><b>0.1</b> Lesson 1: Functions and Linear Equations</a>
+<ul>
+<li class="chapter" data-level="0.1.1" data-path="linear-algebra.html"><a href="linear-algebra.html#skills-check"><i class="fa fa-check"></i><b>0.1.1</b> Skills Check</a></li>
+<li class="chapter" data-level="0.1.2" data-path="linear-algebra.html"><a href="linear-algebra.html#new-skills-practice"><i class="fa fa-check"></i><b>0.1.2</b> New Skills Practice</a></li>
+<li class="chapter" data-level="0.1.3" data-path="linear-algebra.html"><a href="linear-algebra.html#self-assessment"><i class="fa fa-check"></i><b>0.1.3</b> Self-Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="0.2" data-path="linear-algebra.html"><a href="linear-algebra.html#lesson-2-introduction-to-matrices"><i class="fa fa-check"></i><b>0.2</b> Lesson 2: Introduction to Matrices</a>
+<ul>
+<li class="chapter" data-level="0.2.1" data-path="linear-algebra.html"><a href="linear-algebra.html#skills-check-1"><i class="fa fa-check"></i><b>0.2.1</b> Skills Check</a></li>
+<li class="chapter" data-level="0.2.2" data-path="linear-algebra.html"><a href="linear-algebra.html#new-skills-practice-1"><i class="fa fa-check"></i><b>0.2.2</b> New Skills Practice</a></li>
+<li class="chapter" data-level="0.2.3" data-path="linear-algebra.html"><a href="linear-algebra.html#self-assessment-1"><i class="fa fa-check"></i><b>0.2.3</b> Self-Assessment</a></li>
+</ul></li>
+<li class="chapter" data-level="0.3" data-path="linear-algebra.html"><a href="linear-algebra.html#lesson-3-matrix-operations"><i class="fa fa-check"></i><b>0.3</b> Lesson 3: Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="0.3.1" data-path="linear-algebra.html"><a href="linear-algebra.html#skills-check-2"><i class="fa fa-check"></i><b>0.3.1</b> Skills Check</a></li>
+<li class="chapter" data-level="0.3.2" data-path="linear-algebra.html"><a href="linear-algebra.html#new-skills-practice-2"><i class="fa fa-check"></i><b>0.3.2</b> New Skills Practice</a></li>
+<li class="chapter" data-level="0.3.3" data-path="linear-algebra.html"><a href="linear-algebra.html#self-assessment-2"><i class="fa fa-check"></i><b>0.3.3</b> Self-Assessment</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="next-chapter.html"><a href="next-chapter.html"><i class="fa fa-check"></i><b>1</b> Next Chapter</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Calculus and Linear Algebra</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="linear-algebra" class="section level1 unnumbered hasAnchor">
+<h1>Linear Algebra<a href="linear-algebra.html#linear-algebra" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="42%" />
+<col width="47%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lesson</th>
+<th>Topic</th>
+<th>Homework</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Before the First Class</td>
+<td>Watch Chapter 0 Videos</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Functions and Linear Equations</td>
+<td>Chapter 1 Videos and Graded Work</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Introduction to Matrices</td>
+<td>Chapter 2 Videos and Graded Work</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Matrix Operations</td>
+<td>Chapter 3.1, 3.2 Videos and Graded Work</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Inverses and Determinants</td>
+<td>Chapter 3.3, Determinants Videos and Graded Work</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Vector Projections</td>
+<td>Chapter 3 Vectors Videos and Graded Work</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Basis</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Rotations</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Eigenvalues and Eigenvectors</td>
+<td>Chapter 3 Eigenvalues and Eigenvectors Videos and Graded Work</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;">
+
+</div>
+<div id="lesson-1-functions-and-linear-equations" class="section level2 hasAnchor" number="0.1">
+<h2><span class="header-section-number">0.1</span> Lesson 1: Functions and Linear Equations<a href="linear-algebra.html#lesson-1-functions-and-linear-equations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="skills-check" class="section level3 hasAnchor" number="0.1.1">
+<h3><span class="header-section-number">0.1.1</span> Skills Check<a href="linear-algebra.html#skills-check" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Solve the following problems to refresh the skills you have learned previously.</p>
+<ol style="list-style-type: decimal">
+<li>What does <em>PEMDAS</em> stand for? Use PEMDAS to simplify <code>(4+6)*2 + 3</code>.</li>
+<li>Simplify: <code>(-3)^(-4)</code>.</li>
+<li>Simplify: <code>\sqrt[3]{-8} \times \sqrt{16}</code>.</li>
+<li>Write the inequality <code>-2 ≤ x &lt; 3</code> in interval notation.</li>
+<li>Given <code>g(x) = x + \frac{1}{x}</code>, find <code>g(-1)</code>, <code>g(2)</code>, and <code>g(a+h)</code>.</li>
+</ol>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+<div id="new-skills-practice" class="section level3 hasAnchor" number="0.1.2">
+<h3><span class="header-section-number">0.1.2</span> New Skills Practice<a href="linear-algebra.html#new-skills-practice" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Topics to discuss:</strong></p>
+<ul>
+<li>Draw the graphs and give the rules for: a horizontal line, a general linear equation, a parabola (quadratic), a cubic, the reciprocal function, and the absolute value function.</li>
+<li>How to find the domain of a rational function or a function involving a square root.</li>
+<li>The elimination method for solving a system.</li>
+<li>The revenue, cost and profit functions, including fixed costs, variable costs, and demand.</li>
+</ul>
+<p>Practice the techniques discussed in class and in the online videos by solving the following examples:</p>
+<ol style="list-style-type: decimal">
+<li>Find the equation of the straight line through the points (3,4) and (5,2).</li>
+<li>Find the equation of the straight line through the point (3,4) and parallel to the line <code>2x - 3y = 4</code>.</li>
+<li>If <code>f(x) = -3x + 7</code>, evaluate <code>f(-3)</code> and determine the domain of <code>1/f(x)</code> using interval notation.</li>
+</ol>
+<div style="page-break-after: always;">
+
+</div>
+<ol start="4" style="list-style-type: decimal">
+<li><p>Solve the system:<br />
+<span class="math display">\[
+\begin{cases}
+2x + y = 2 \\
+-2x + y = 2
+\end{cases}
+\]</span></p></li>
+<li><p>Solve the system:<br />
+<span class="math display">\[
+\begin{cases}
+2x - 3y = 2 \\
+6x - 9y = 3
+\end{cases}
+\]</span></p></li>
+</ol>
+<div style="page-break-after: always;">
+
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>(APPLIED)</strong> A piano manufacturer has a daily fixed cost of $1,200 and a marginal cost of $1,500 per piano. Find the cost function <span class="math inline">\(C(x)\)</span> for manufacturing <span class="math inline">\(x\)</span> pianos in one day. Answer the following:
+<ol style="list-style-type: lower-alpha">
+<li>What is the cost of manufacturing 3 pianos?<br />
+</li>
+<li>What is the cost of manufacturing the 3rd piano that day?<br />
+</li>
+<li>What is the cost of manufacturing the 11th piano that day?<br />
+</li>
+<li>Graph <span class="math inline">\(C\)</span> as a function of <span class="math inline">\(x\)</span>.</li>
+</ol></li>
+<li><strong>(APPLIED)</strong> Anthony Altino is mixing food for his young daughter and wants the meal to supply 1 gram of protein and 5 milligrams of iron. He mixes cereal (0.5 g protein and 1 mg iron per ounce) and fruit (0.2 g protein and 2 mg iron per ounce). What mixture will provide the desired nutrition?</li>
+</ol>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+<div id="self-assessment" class="section level3 hasAnchor" number="0.1.3">
+<h3><span class="header-section-number">0.1.3</span> Self-Assessment<a href="linear-algebra.html#self-assessment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Time yourself and try to solve the following within 20 minutes:</p>
+<ol style="list-style-type: decimal">
+<li>Find the equation of the straight line through (3,1) and parallel to <span class="math inline">\(6x - 2y = 11\)</span>.</li>
+<li>Solve:<br />
+<span class="math display">\[
+\begin{cases}
+\frac{-2x}{3} + \frac{y}{2} = \frac{-1}{6} \\
+\frac{x}{4} - y = \frac{-3}{4}
+\end{cases}
+\]</span></li>
+<li>If the addition or subtraction of two linear equations results in <span class="math inline">\(0 = 3\)</span>, what does this say about their graphs?</li>
+<li>Determine the domain of <span class="math inline">\(f(x) = \sqrt{x-10}\)</span>. Express your answer in interval notation.</li>
+<li>In 2005, the Las Vegas monorail charged $3 per ride with an average ridership of 28,000 per day. After raising the fare to $5, ridership dropped to 19,000. Determine a linear function that relates ridership <span class="math inline">\(q\)</span> to fare <span class="math inline">\(p\)</span>.</li>
+</ol>
+<hr />
+<p><strong>Lesson Checklist</strong></p>
+<table>
+<colgroup>
+<col width="77%" />
+<col width="7%" />
+<col width="7%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>D</th>
+<th>CON</th>
+<th>COM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Find the domain of a rational function in interval notation</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Find the domain of a square root function in interval notation</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Find the equation of a line given various information</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Use the elimination method to solve a 2x2 linear system</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Solve applied problems involving linear equations</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Notes</strong></p>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+</div>
+<div id="lesson-2-introduction-to-matrices" class="section level2 hasAnchor" number="0.2">
+<h2><span class="header-section-number">0.2</span> Lesson 2: Introduction to Matrices<a href="linear-algebra.html#lesson-2-introduction-to-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="skills-check-1" class="section level3 hasAnchor" number="0.2.1">
+<h3><span class="header-section-number">0.2.1</span> Skills Check<a href="linear-algebra.html#skills-check-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Solve the following problems to refresh your skills:</p>
+<ol style="list-style-type: decimal">
+<li>Show that (4,2) is a solution to the linear equation <span class="math inline">\(3x - y = 10\)</span>.</li>
+<li>Explain why (2,2) is not a solution to <span class="math inline">\(3x - y = 10\)</span>.</li>
+<li>Multiply the equation <span class="math inline">\(3x - y = 10\)</span> by <span class="math inline">\(-2\)</span>.</li>
+<li>Add the equations <span class="math inline">\(3x - y = 10\)</span> and <span class="math inline">\(3x + y = 2\)</span>.</li>
+<li>Solve for <span class="math inline">\(y\)</span>: <span class="math inline">\(-5y = -2\)</span>.</li>
+</ol>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+<div id="new-skills-practice-1" class="section level3 hasAnchor" number="0.2.2">
+<h3><span class="header-section-number">0.2.2</span> New Skills Practice<a href="linear-algebra.html#new-skills-practice-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Topics to discuss:</strong></p>
+<ul>
+<li>How to create the augmented matrix.</li>
+<li>The three types of elementary row operations.</li>
+<li>Steps to perform Gauss-Jordan elimination.</li>
+</ul>
+<p>Practice:</p>
+<ol style="list-style-type: decimal">
+<li>Use Gauss-Jordan to solve:<br />
+<span class="math display">\[
+\begin{cases}
+2x + y = 2 \\
+-2x + y = 2
+\end{cases}
+\]</span></li>
+<li>Use Gauss-Jordan to solve:<br />
+<span class="math display">\[
+\begin{cases}
+2x - 3y = 1 \\
+6x - 9y = 3
+\end{cases}
+\]</span></li>
+<li>Use Gauss-Jordan to solve:<br />
+<span class="math display">\[
+\begin{cases}
+x + y = 1 \\
+3x - 2y = -1 \\
+5x - y = \frac{1}{5}
+\end{cases}
+\]</span></li>
+<li>Use Gauss-Jordan to solve:<br />
+<span class="math display">\[
+\begin{cases}
+x - y + z - u + v = 1 \\
+y + z + u + v = 2 \\
+z - u + v = 1 \\
+u + v = 1 \\
+v = 1
+\end{cases}
+\]</span></li>
+<li>Use Gauss-Jordan to solve:<br />
+<span class="math display">\[
+\begin{cases}
+x + 2y + 3z + 4w + t = 6 \\
+2x + 3y + 4z + 5w + t = 5 \\
+3x + 4y + 5z + w + 2t = 4 \\
+4x + 5y + z + 2w + 3t = 3 \\
+5x + y + 2z + 3w + 4t = 2
+\end{cases}
+\]</span></li>
+</ol>
+<div style="page-break-after: always;">
+
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>(APPLIED)</strong> You own a hamburger franchise and want to use leftover ingredients to make burgers.<br />
+</li>
+</ol>
+<ul>
+<li>Plain burgers: 1 beef patty, 1 bread roll<br />
+</li>
+<li>Double cheeseburgers: 2 beef patties, 1 bread roll, 2 cheese slices<br />
+</li>
+<li>Regular cheeseburgers: 1 beef patty, 1 bread roll, 1 cheese slice<br />
+You have 13 bread rolls, 19 beef patties, and 15 cheese slices. How many of each type can you make?</li>
+</ul>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+<div id="self-assessment-1" class="section level3 hasAnchor" number="0.2.3">
+<h3><span class="header-section-number">0.2.3</span> Self-Assessment<a href="linear-algebra.html#self-assessment-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Time yourself and solve within 20 minutes:</p>
+<ol style="list-style-type: decimal">
+<li>Use Gauss-Jordan to solve:<br />
+<span class="math display">\[
+\begin{cases}
+4x - 2y = 1 \\
+-2x + y = 4
+\end{cases}
+\]</span></li>
+<li>Use Gauss-Jordan to solve:<br />
+<span class="math display">\[
+\begin{cases}
+\frac{-2x}{3} + \frac{y}{2} = \frac{-1}{6} \\
+\frac{x}{4} - y = \frac{-3}{4}
+\end{cases}
+\]</span></li>
+<li>Explain why <span class="math inline">\(3R_3 - 2R_1 \to R_3\)</span> is not an elementary row operation.</li>
+<li>In 2007, total revenues from sales of country music, children’s music, and soundtracks were $1.5 billion. Country music brought in 12 times soundtracks, children’s music 3 times soundtracks. How much revenue for each?</li>
+</ol>
+<hr />
+<p><strong>Lesson Checklist</strong></p>
+<table style="width:100%;">
+<colgroup>
+<col width="75%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>D</th>
+<th>CON</th>
+<th>COM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Converting a linear system to augmented matrix</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Finding RREF given augmented matrix</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Recognizing solution types (unique, none, infinite)</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Solving applied problems involving linear systems</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Notes</strong></p>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+</div>
+<div id="lesson-3-matrix-operations" class="section level2 hasAnchor" number="0.3">
+<h2><span class="header-section-number">0.3</span> Lesson 3: Matrix Operations<a href="linear-algebra.html#lesson-3-matrix-operations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="skills-check-2" class="section level3 hasAnchor" number="0.3.1">
+<h3><span class="header-section-number">0.3.1</span> Skills Check<a href="linear-algebra.html#skills-check-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Solve the following:</p>
+<ol style="list-style-type: decimal">
+<li>Simplify: <span class="math inline">\(2 \times 3 + (-3) \times (-2)\)</span></li>
+<li>Simplify: <span class="math inline">\(4 \times (-2) + (-3) \times (-1) + 3 \times (-2)\)</span></li>
+<li>Simplify: <span class="math inline">\(-3 \times 4 + (-2) \times (-2) + (-4) \times 7 + (-5) \times (-1)\)</span></li>
+<li>For matrix<br />
+<span class="math display">\[
+\begin{bmatrix}
+2 &amp; 4 \\
+-1 &amp; 6
+\end{bmatrix}
+\]</span><br />
+which number is at row <span class="math inline">\(i=2\)</span>, column <span class="math inline">\(j=1\)</span>?</li>
+<li>For matrix<br />
+<span class="math display">\[
+\begin{bmatrix}
+0 &amp; 1 &amp; 2 \\
+3 &amp; 5 &amp; -2 \\
+1 &amp; 4 &amp; -1
+\end{bmatrix}
+\]</span><br />
+which number is at row <span class="math inline">\(i=3\)</span>, column <span class="math inline">\(j=2\)</span>?</li>
+</ol>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+<div id="new-skills-practice-2" class="section level3 hasAnchor" number="0.3.2">
+<h3><span class="header-section-number">0.3.2</span> New Skills Practice<a href="linear-algebra.html#new-skills-practice-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Topics to discuss:</strong></p>
+<ul>
+<li>The <span class="math inline">\(A_{m \times n}\)</span> notation for matrices.</li>
+<li>Matrix addition/subtraction, scalar multiplication, matrix multiplication, and transpose.</li>
+<li>The <span class="math inline">\(ij\)</span> notation for addition, scalar multiplication, and transpose.</li>
+</ul>
+<p>Practice:</p>
+<ol style="list-style-type: decimal">
+<li>Let<br />
+<span class="math display">\[
+A = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \\ -1 &amp; 2 \end{bmatrix}, \quad
+B = \begin{bmatrix} 0.25 &amp; -1 \\ 0 &amp; 0.5 \\ -1 &amp; 3 \end{bmatrix}, \quad
+C = \begin{bmatrix} 1 &amp; -1 \\ 1 &amp; 1 \\ -1 &amp; -1 \end{bmatrix}
+\]</span>
+Calculate:
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(A + B\)</span><br />
+</li>
+<li><span class="math inline">\(A - C\)</span><br />
+</li>
+<li><span class="math inline">\(3A\)</span><br />
+</li>
+<li><span class="math inline">\(2A + 0.5C\)</span><br />
+</li>
+<li><span class="math inline">\(C^T + B^T\)</span></li>
+</ol></li>
+</ol>
+<div style="page-break-after: always;">
+
+</div>
+<ol start="2" style="list-style-type: decimal">
+<li><p>A matrix is symmetric if it equals its transpose. Give examples of nonzero symmetric <span class="math inline">\(2 \times 2\)</span> and <span class="math inline">\(3 \times 3\)</span> matrices.</p></li>
+<li><p>Compute (if possible):<br />
+<span class="math display">\[
+\begin{bmatrix} 0 &amp; 1 &amp; -1 \\ 3 &amp; 1 &amp; -1 \end{bmatrix}
+\times
+\begin{bmatrix} 1 &amp; 1 \\ 4 &amp; 2 \\ 0 &amp; 1 \end{bmatrix}
+\]</span></p></li>
+<li><p>Compute (if possible):<br />
+<span class="math display">\[
+\begin{bmatrix} 0 &amp; 1 &amp; -1 &amp; 2 \end{bmatrix}
+\times
+\begin{bmatrix} 1 &amp; -2 &amp; 1 \\ 0 &amp; 1 &amp; 3 \\ 6 &amp; 0 &amp; 2 \\ -1 &amp; -2 &amp; 11 \end{bmatrix}
+\]</span></p></li>
+<li><p>Let<br />
+<span class="math display">\[
+A = \begin{bmatrix}
+0 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{bmatrix}
+\]</span><br />
+Compute <span class="math inline">\(A^2\)</span>, <span class="math inline">\(A^3\)</span>, <span class="math inline">\(A^4\)</span>, and <span class="math inline">\(A^{100}\)</span>.</p></li>
+</ol>
+<div style="page-break-after: always;">
+
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>(Applied)</strong> Left Coast Bookstore has two stores with inventory of hardcover, softcover, and plastic books. Given starting stock, sales, and restocking monthly amounts,
+<ol style="list-style-type: lower-alpha">
+<li>Find total sales over 6 months by store and book type.<br />
+</li>
+<li>Find inventory at the end of June.<br />
+</li>
+<li>Compute total revenue if hardcover sells for $30, softcover for $10, plastic for $15.</li>
+</ol></li>
+</ol>
+<div style="page-break-after: always;">
+
+</div>
+</div>
+<div id="self-assessment-2" class="section level3 hasAnchor" number="0.3.3">
+<h3><span class="header-section-number">0.3.3</span> Self-Assessment<a href="linear-algebra.html#self-assessment-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Time yourself and solve within 20 minutes:</p>
+<ol style="list-style-type: decimal">
+<li><p>Given matrices <span class="math inline">\(A, B, C\)</span> from earlier, calculate:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(A + B - C\)</span><br />
+</li>
+<li><span class="math inline">\(3B^T\)</span><br />
+</li>
+<li><span class="math inline">\(A^T + C^T\)</span><br />
+</li>
+<li><span class="math inline">\(3A^T - 2C^T\)</span><br />
+</li>
+<li><span class="math inline">\(2A + 3B\)</span></li>
+</ol></li>
+<li><p>A matrix is skew-symmetric if it equals the negative of its transpose. Give examples of nonzero skew-symmetric <span class="math inline">\(2 \times 2\)</span> and <span class="math inline">\(3 \times 3\)</span> matrices.</p></li>
+<li><p>Explain why this product is impossible:<br />
+<span class="math display">\[
+\begin{bmatrix} 0 &amp; 2 &amp; -1 \end{bmatrix}
+\times
+\begin{bmatrix} 1 &amp; -2 &amp; 1 \\ -1 &amp; -2 &amp; 11 \end{bmatrix}
+\]</span></p></li>
+<li><p>Compute the product:<br />
+<span class="math display">\[
+\begin{bmatrix} 1 &amp; 1 &amp; -7 &amp; 0 \\ -1 &amp; 0 &amp; -2 &amp; 1 \\ 1 &amp; -1 &amp; 1 &amp; 1 \end{bmatrix}
+\times
+\begin{bmatrix} 1 \\ -3 \\ 2 \\ 1 \end{bmatrix}
+\]</span></p></li>
+<li><p>Karen Sandberg sold various T-shirts. Use matrix operations to compute her total revenue.</p></li>
+</ol>
+<hr />
+<p><strong>Lesson Checklist</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>D</th>
+<th>CON</th>
+<th>COM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Addition, subtraction, scalar multiplication</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Matrix multiplication</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Applied problems using matrices</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Notes</strong></p>
+<div style="page-break-after: always;">
+
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="next-chapter.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": null,
+    "text": null
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["mybook.pdf", "mybook.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "section"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
