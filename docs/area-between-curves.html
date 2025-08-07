@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 5 Vector Projections | Calculus and Linear Algebra</title>
+  <title>Lesson 19 Area between Curves | Calculus and Linear Algebra</title>
   <meta name="description" content="Course notes for MATH 114" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 5 Vector Projections | Calculus and Linear Algebra" />
+  <meta property="og:title" content="Lesson 19 Area between Curves | Calculus and Linear Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Course notes for MATH 114" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 5 Vector Projections | Calculus and Linear Algebra" />
+  <meta name="twitter:title" content="Lesson 19 Area between Curves | Calculus and Linear Algebra" />
   
   <meta name="twitter:description" content="Course notes for MATH 114" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="inverses-and-determinants.html"/>
-<link rel="next" href="basis-and-orthonormal-basis.html"/>
+<link rel="prev" href="the-fundamental-theorem-of-calculus.html"/>
+<link rel="next" href="constrained-optimization.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -374,183 +374,114 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="vector-projections" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Lesson 5</span> Vector Projections<a href="vector-projections.html#vector-projections" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="lecture-content-4" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Lecture Content<a href="vector-projections.html#lecture-content-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><a href="https://www.youtube.com/watch?v=k_hRTx4PEn0&amp;list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&amp;index=4"><strong>Video: Vectors</strong></a></p>
-<div id="vector-operations" class="section level3 hasAnchor" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> Vector Operations<a href="vector-projections.html#vector-operations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="addition-and-scalar-multiplication-of-vectors" class="section level4 unnumbered hasAnchor">
-<h4>Addition and Scalar Multiplication of Vectors<a href="vector-projections.html#addition-and-scalar-multiplication-of-vectors" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="area-between-curves" class="section level1 hasAnchor" number="19">
+<h1><span class="header-section-number">Lesson 19</span> Area between Curves<a href="area-between-curves.html#area-between-curves" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="lecture-content-18" class="section level2 hasAnchor" number="19.1">
+<h2><span class="header-section-number">19.1</span> Lecture Content<a href="area-between-curves.html#lecture-content-18" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://youtu.be/PfYcOdCgygk"><strong>Video: Area Between Curves</strong></a></p>
+<div id="definite-integrals-as-net-area" class="section level3 hasAnchor" number="19.1.1">
+<h3><span class="header-section-number">19.1.1</span> Definite Integrals as Net Area<a href="area-between-curves.html#definite-integrals-as-net-area" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The definite integral <span class="math inline">\(\int_a^b f(x) \, dx\)</span> represents the <strong>net area</strong> between the graph of <span class="math inline">\(f(x)\)</span> and the <span class="math inline">\(x\)</span>-axis over the interval <span class="math inline">\([a, b]\)</span>:</p>
 <ul>
-<li><p><strong>Vector Addition</strong>: If <strong>u</strong> = ⟨u₁, u₂, …, uₙ⟩ and <strong>v</strong> = ⟨v₁, v₂, …, vₙ⟩, then<br />
-<strong>u</strong> + <strong>v</strong> = ⟨u₁ + v₁, u₂ + v₂, …, uₙ + vₙ⟩.</p></li>
-<li><p><strong>Scalar Multiplication</strong>: For scalar <em>c</em>,<br />
-<em>c</em>·<strong>v</strong> = ⟨c·v₁, c·v₂, …, c·vₙ⟩.</p></li>
-<li><p>Example: Let <strong>u</strong> = ⟨1, 2, 3⟩ and <strong>v</strong> = ⟨4, -1, 2⟩
-Then:
-<span class="math display">\[
-\mathbf{u} + \mathbf{v} = \langle 1 + 4,\ 2 + (-1),\ 3 + 2 \rangle = \langle 5,\ 1,\ 5 \rangle
-\]</span></p></li>
-<li><p>Example: Let <strong>v</strong> = ⟨2, -3, 4&gt; and and scalar <em>c</em> = 3.
-Then:
-<span class="math display">\[
-3 \cdot \mathbf{v} = \langle 3 \cdot 2,\ 3 \cdot (-3),\ 3 \cdot 4 \rangle = \langle 6,\ -9,\ 12 \rangle
-\]</span></p></li>
+<li>If <span class="math inline">\(f(x) \ge 0\)</span> on <span class="math inline">\([a, b]\)</span>, the integral gives the total area above the <span class="math inline">\(x\)</span>-axis.</li>
+<li>If <span class="math inline">\(f(x) \le 0\)</span> on <span class="math inline">\([a, b]\)</span>, the integral gives the negative of the area below the <span class="math inline">\(x\)</span>-axis.</li>
+<li>If <span class="math inline">\(f(x)\)</span> changes sign on <span class="math inline">\([a, b]\)</span>, the integral gives the <strong>net area</strong>: area above minus area below.</li>
 </ul>
-<p>These operations preserve vector direction (in the case of addition) or scale the magnitude (in scalar multiplication).</p>
-<hr />
-</div>
-</div>
-<div id="standard-inner-product-dot-product" class="section level3 hasAnchor" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> Standard Inner Product (Dot Product)<a href="vector-projections.html#standard-inner-product-dot-product" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <strong>standard inner product</strong> (dot product) of vectors <strong>u</strong> and <strong>v</strong> in ℝⁿ is:
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = u_1 v_1 + u_2 v_2 + \cdots + u_n v_n
-\]</span></p>
-<ul>
-<li>Example: Let <strong>u</strong> = ⟨1, 2, 3⟩ and <strong>v</strong> = ⟨4, -1, 2⟩ Then:
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = 1 \cdot 4 + 2 \cdot (-1) + 3 \cdot 2 = 4 - 2 + 6 = 8
-\]</span></li>
-<li>Returns a <strong>scalar</strong>.</li>
-<li>Measures how much one vector goes in the direction of another.</li>
-</ul>
-<hr />
-</div>
-<div id="euclidean-norm-of-a-vector" class="section level3 hasAnchor" number="5.1.3">
-<h3><span class="header-section-number">5.1.3</span> Euclidean Norm of a Vector<a href="vector-projections.html#euclidean-norm-of-a-vector" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <strong>Euclidean norm</strong> (or magnitude/length) of a vector <strong>v</strong> is:</p>
+<p><strong>Note:</strong> To find the <strong>total area</strong>, regardless of sign, use:</p>
 <p><span class="math display">\[
-\| \mathbf{v} \| = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2}
+\text{Total area} = \int_a^b |f(x)| \, dx
 \]</span></p>
-<ul>
-<li>Example: Let <strong>v</strong> = ⟨2, -3, 6⟩. Then the <strong>2-norm</strong> is:
-<span class="math display">\[
-\| \mathbf{v} \| = \sqrt{2^2 + (-3)^2 + 6^2} = \sqrt{4 + 9 + 36} = \sqrt{49} = 7
-\]</span></li>
-<li>Denoted as |<strong>v</strong>|.</li>
-<li>Also called the <strong>2-norm</strong>.</li>
-</ul>
 <hr />
 </div>
-<div id="cosine-of-the-angle-between-two-vectors" class="section level3 hasAnchor" number="5.1.4">
-<h3><span class="header-section-number">5.1.4</span> Cosine of the Angle Between Two Vectors<a href="vector-projections.html#cosine-of-the-angle-between-two-vectors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Given non-zero vectors <strong>u</strong> and <strong>v</strong>, the <strong>cosine of the angle</strong> θ between them is:</p>
+<div id="simple-improper-integrals" class="section level3 hasAnchor" number="19.1.2">
+<h3><span class="header-section-number">19.1.2</span> Simple Improper Integrals<a href="area-between-curves.html#simple-improper-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>An <strong>improper integral</strong> arises when:</p>
+<ol style="list-style-type: decimal">
+<li>The interval is <strong>infinite</strong>, e.g., <span class="math inline">\(\int_1^\infty \frac{1}{x^2} \, dx\)</span></li>
+<li>The integrand is <strong>unbounded</strong> at a point in the interval, e.g., <span class="math inline">\(\int_0^1 \frac{1}{\sqrt{x}} \, dx\)</span></li>
+</ol>
+<div id="infinite-interval-example" class="section level4 hasAnchor" number="19.1.2.1">
+<h4><span class="header-section-number">19.1.2.1</span> Infinite Interval Example:<a href="area-between-curves.html#infinite-interval-example" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><span class="math display">\[
-\cos(\theta) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
+\int_1^\infty \frac{1}{x^2} \, dx = \lim_{b \to \infty} \int_1^b \frac{1}{x^2} \, dx = \lim_{b \to \infty} \left( -\frac{1}{x} \Big|_1^b \right) = 1
 \]</span></p>
-<ul>
-<li>Example: Let <strong>u</strong> = ⟨1, 2⟩ and <strong>v</strong> = ⟨3, 4⟩
-<ol style="list-style-type: decimal">
-<li>Compute dot product:<br />
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = 1 \cdot 3 + 2 \cdot 4 = 3 + 8 = 11
-\]</span></li>
-<li>Compute norms:<br />
-<span class="math display">\[
-\|\mathbf{u}\| = \sqrt{1^2 + 2^2} = \sqrt{5}, \quad \|\mathbf{v}\| = \sqrt{3^2 + 4^2} = \sqrt{25} = 5
-\]</span></li>
-<li>Use the cosine formula:<br />
-<span class="math display">\[
-\cos(\theta) = \frac{11}{\sqrt{5} \cdot 5} = \frac{11}{5\sqrt{5}} = \frac{\sqrt{5}}{5} \cdot \frac{11}{5}
-\]</span></li>
-<li>Find angle:<br />
-<span class="math display">\[
-\theta = \cos^{-1}\left( \frac{11}{5\sqrt{5}} \right) \approx 18.4^\circ
-\]</span></li>
-</ol></li>
-<li>If <strong>cos(θ) = 0</strong>, the vectors are orthogonal (perpendicular).</li>
-<li>If <strong>cos(θ) &gt; 0</strong>, angle &lt; 90° (acute).</li>
-<li>If <strong>cos(θ) &lt; 0</strong>, angle &gt; 90° (obtuse).</li>
-</ul>
-<hr />
 </div>
-<div id="vector-projection-formula" class="section level3 hasAnchor" number="5.1.5">
-<h3><span class="header-section-number">5.1.5</span> Vector Projection Formula<a href="vector-projections.html#vector-projection-formula" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <strong>projection</strong> of vector <strong>u</strong> onto vector <strong>v</strong> is:</p>
+<div id="unbounded-function-example" class="section level4 hasAnchor" number="19.1.2.2">
+<h4><span class="header-section-number">19.1.2.2</span> Unbounded Function Example:<a href="area-between-curves.html#unbounded-function-example" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p><span class="math display">\[
-\mathrm{proj}_{\mathbf{v}} \mathbf{u} = \left( \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{v}\|^2} \right) \mathbf{v}
+\int_0^1 \frac{1}{\sqrt{x}} \, dx = \lim_{a \to 0^+} \int_a^1 \frac{1}{\sqrt{x}} \, dx = \lim_{a \to 0^+} (2\sqrt{x} \big|_a^1) = 2
 \]</span></p>
-<ul>
-<li>Example: Project <strong>u</strong> = ⟨2, 3⟩ onto <strong>v</strong> = ⟨1, 4⟩.
-<ol style="list-style-type: decimal">
-<li>Dot product:<br />
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = 2 \cdot 1 + 3 \cdot 4 = 2 + 12 = 14
-\]</span></li>
-<li>Norm squared:<br />
-<span class="math display">\[
-\|\mathbf{v}\|^2 = 1^2 + 4^2 = 1 + 16 = 17
-\]</span></li>
-<li>Projection:<br />
-<span class="math display">\[
-\mathrm{proj}_{\mathbf{v}} \mathbf{u} = \left( \frac{14}{17} \right) \mathbf{v} = \left( \frac{14}{17} \right) \langle 1,\ 4 \rangle = \left\langle \frac{14}{17},\ \frac{56}{17} \right\rangle
-\]</span></li>
-</ol></li>
-<li>Gives the component of <strong>u</strong> in the direction of <strong>v</strong>.</li>
-</ul>
-<hr />
-</div>
-<div id="geometric-interpretations" class="section level3 hasAnchor" number="5.1.6">
-<h3><span class="header-section-number">5.1.6</span> Geometric Interpretations<a href="vector-projections.html#geometric-interpretations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><p><strong>Addition</strong>: Geometrically, vector addition corresponds to placing the tail of <strong>v</strong> at the head of <strong>u</strong> and drawing the resulting vector from the tail of <strong>u</strong> to the head of <strong>v</strong>.</p></li>
-<li><p><strong>Dot Product</strong>: Measures alignment. A large positive value means the vectors point in similar directions.</p></li>
-<li><p><strong>Norm</strong>: The “length” of the vector in Euclidean space.</p></li>
-<li><p><strong>Projection</strong>: Drops a perpendicular from <strong>u</strong> onto <strong>v</strong>; the projection lies along <strong>v</strong>.</p></li>
-<li><p><strong>Angle and Cosine</strong>: Relates direction and orthogonality.</p></li>
-</ul>
+<p>An improper integral <strong>converges</strong> if the limit exists, and <strong>diverges</strong> if the limit does not exist.</p>
 <hr />
 </div>
 </div>
-<div id="practice-problems-4" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Practice Problems<a href="vector-projections.html#practice-problems-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="area-between-two-curves" class="section level3 hasAnchor" number="19.1.3">
+<h3><span class="header-section-number">19.1.3</span> Area Between Two Curves<a href="area-between-curves.html#area-between-two-curves" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To find the area between two curves <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> on <span class="math inline">\([a, b]\)</span>, where <span class="math inline">\(f(x) \ge g(x)\)</span>:</p>
+<p><span class="math display">\[
+\text{Area} = \int_a^b [f(x) - g(x)] \, dx
+\]</span></p>
+<p><strong>Steps:</strong></p>
 <ol style="list-style-type: decimal">
-<li>Draw the vectors <span class="math inline">\(A = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> and <span class="math inline">\(B = \begin{bmatrix} -1 \\ -1 \end{bmatrix}\)</span>. Draw:
+<li><strong>Find points of intersection:</strong> Solve <span class="math inline">\(f(x) = g(x)\)</span> to find the limits of integration.</li>
+<li><strong>Identify top and bottom functions</strong> on the interval.</li>
+<li><strong>Set up and evaluate the integral:</strong>
 <ul>
-<li><span class="math inline">\(A + B\)</span>,</li>
-<li><span class="math inline">\(B + A\)</span>,</li>
-<li><span class="math inline">\(A - B\)</span>,</li>
-<li><span class="math inline">\(B - A\)</span>,</li>
-<li><span class="math inline">\(2A\)</span>, and</li>
-<li><span class="math inline">\(-4B\)</span>.</li>
+<li>If necessary, split the interval where the curves switch order.</li>
 </ul></li>
-<li>Compute the standard inner products and norms of <span class="math inline">\(A = \begin{bmatrix} -1 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(B = \begin{bmatrix} 2 \\ 2 \end{bmatrix}\)</span>. What is the angle between them?</li>
-<li>Express <span class="math inline">\(v = [5, -1]\)</span> as a sum of orthogonal vectors such that one has the same direction as <span class="math inline">\(u = [4, 2]\)</span>.</li>
-<li>Find the angle between:
-<ul>
-<li><span class="math inline">\(x = \begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}\)</span> and <span class="math inline">\(y = \begin{bmatrix} 2 \\ 0 \\ -3 \end{bmatrix}\)</span></li>
-<li><span class="math inline">\(x = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(y = \begin{bmatrix} 3 \\ -2 \\ 1 \end{bmatrix}\)</span></li>
-</ul></li>
-<li>Find the projection and orthogonal projection of <span class="math inline">\(u\)</span> onto <span class="math inline">\(v\)</span>:
-<ul>
-<li><span class="math inline">\(u = \begin{bmatrix} 4 \\ 3 \end{bmatrix}\)</span>, <span class="math inline">\(v = \begin{bmatrix} 2 \\ 8 \end{bmatrix}\)</span></li>
-<li><span class="math inline">\(u = \begin{bmatrix} 3 \\ 5 \end{bmatrix}\)</span>, <span class="math inline">\(v = \begin{bmatrix} 6 \\ 2 \end{bmatrix}\)</span></li>
-</ul></li>
+<li>For vertical slices (functions of <span class="math inline">\(y\)</span>), use:
+<span class="math display">\[
+\int_{c}^{d} [f(y) - g(y)] \, dy
+\]</span></li>
+</ol>
+<p><strong>Example:</strong></p>
+<p>Find the area between <span class="math inline">\(y = x^2\)</span> and <span class="math inline">\(y = x\)</span>:</p>
+<ol style="list-style-type: decimal">
+<li>Intersection points: <span class="math inline">\(x = 0\)</span>, <span class="math inline">\(x = 1\)</span></li>
+<li><span class="math inline">\(x \ge 0 \Rightarrow x \ge x^2\)</span></li>
+<li>Area:
+<span class="math display">\[
+\int_0^1 (x - x^2) \, dx = \left[ \frac{x^2}{2} - \frac{x^3}{3} \right]_0^1 = \frac{1}{2} - \frac{1}{3} = \frac{1}{6}
+\]</span></li>
 </ol>
 <hr />
 </div>
-<div id="self-assessment-4" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Self-Assessment<a href="vector-projections.html#self-assessment-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Try to solve the following within 20 minutes.</p>
+</div>
+<div id="practice-problems-18" class="section level2 hasAnchor" number="19.2">
+<h2><span class="header-section-number">19.2</span> Practice Problems<a href="area-between-curves.html#practice-problems-18" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li>Draw <span class="math inline">\(A = \begin{bmatrix} -1 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(B = \begin{bmatrix} 2 \\ 2 \end{bmatrix}\)</span>. Then draw:
-<ul>
-<li><span class="math inline">\(A + B\)</span>,</li>
-<li><span class="math inline">\(A - B\)</span>,</li>
-<li><span class="math inline">\(B - A\)</span>,</li>
-<li><span class="math inline">\(3A\)</span>,</li>
-<li><span class="math inline">\(-0.5B\)</span></li>
-</ul></li>
-<li>Find the angle between: <span class="math inline">\(x = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> and <span class="math inline">\(y = \begin{bmatrix} 2 \\ 1 \end{bmatrix}\)</span></li>
-<li>Find the projection and orthogonal projection of <span class="math inline">\(u\)</span> onto <span class="math inline">\(v\)</span>: <span class="math inline">\(u = \begin{bmatrix} -2 \\ 5 \end{bmatrix}\)</span>, <span class="math inline">\(v = \begin{bmatrix} 6 \\ 5 \end{bmatrix}\)</span></li>
-<li>Express <span class="math inline">\(v = [8, -3, -3]\)</span> as a sum of orthogonal vectors with one in the direction of <span class="math inline">\(u = [2, 3, 2]\)</span></li>
+<li>Find area under <span class="math inline">\(y = e^x\)</span> on <span class="math inline">\([1,4]\)</span><br />
+</li>
+<li>Find area under <span class="math inline">\(y = \sin(x)\)</span> on <span class="math inline">\([0, \pi]\)</span>; net vs true area on <span class="math inline">\([0, 2\pi]\)</span><br />
+</li>
+<li>Area under <span class="math inline">\(y = 1/x^2\)</span> on <span class="math inline">\([1, \infty]\)</span><br />
+</li>
+<li>Why does <span class="math inline">\(\int_1^\infty 1/x dx\)</span> not converge?<br />
+</li>
+<li><strong>(Challenge)</strong> For what <span class="math inline">\(p\)</span> does <span class="math inline">\(\int_1^\infty \frac{1}{x^p} dx\)</span> converge?<br />
+</li>
+<li>Find area between <span class="math inline">\(y = x^2\)</span> and <span class="math inline">\(y = x^4\)</span><br />
+</li>
+<li>Find area between <span class="math inline">\(y = -|x|\)</span> and <span class="math inline">\(y = x^2 - 2\)</span><br />
+</li>
+<li><strong>(Challenge)</strong> Find net and true area between <span class="math inline">\(y = -x^2 + 4\)</span> and <span class="math inline">\(y = x^2 - 2x\)</span></li>
 </ol>
 </div>
-<div id="lesson-checklist-4" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Lesson Checklist<a href="vector-projections.html#lesson-checklist-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="self-assessment-18" class="section level2 hasAnchor" number="19.3">
+<h2><span class="header-section-number">19.3</span> Self Assessment<a href="area-between-curves.html#self-assessment-18" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Try to solve these in 20 minutes:</p>
+<ol style="list-style-type: decimal">
+<li>Area under <span class="math inline">\(y = \ln(x)\)</span> on <span class="math inline">\([2,8]\)</span><br />
+</li>
+<li>Area bounded by <span class="math inline">\(y = x^3\)</span> and the axes in the 4th quadrant<br />
+</li>
+<li>Area under <span class="math inline">\(y = e^{-x}\)</span> on <span class="math inline">\([0,\infty]\)</span><br />
+</li>
+<li>Area between <span class="math inline">\(y = -|x|\)</span> and <span class="math inline">\(y = x^2 - 2x\)</span></li>
+</ol>
+</div>
+<div id="lesson-checklist-18" class="section level2 hasAnchor" number="19.4">
+<h2><span class="header-section-number">19.4</span> Lesson Checklist<a href="area-between-curves.html#lesson-checklist-18" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an <span class="math inline">\(X\)</span> in the appropriate box beside the skill below.
 </p>
 <p>
@@ -559,13 +490,7 @@ Then:
 &amp;\textbf{Consistent (CON):} &amp;&amp;\textrm{You use the skill correctly most of the time.}\\
 &amp;\textbf{Competent (COM):} &amp;&amp;\textrm{You show mastery of the skill.}
 \end{align*}\]</span></p>
-<table style="width:100%;">
-<colgroup>
-<col width="80%" />
-<col width="4%" />
-<col width="7%" />
-<col width="7%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
 <th>Skill</th>
@@ -576,31 +501,19 @@ Then:
 </thead>
 <tbody>
 <tr class="odd">
-<td>Determine the inner product of two vectors</td>
+<td>Determine net and true area with <span class="math inline">\(x\)</span>-axis.</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Determine the Euclidean norm of a vector</td>
+<td>Determine net and true area between curves.</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Find the cosine of the angle between two vectors</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Find a vector projection and an orthogonal projection</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Decompose a vector into orthogonal vectors</td>
+<td>Evaluate simple improper integrals.</td>
 <td></td>
 <td></td>
 <td></td>
@@ -614,8 +527,8 @@ Then:
           </div>
         </div>
       </div>
-<a href="inverses-and-determinants.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="basis-and-orthonormal-basis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="the-fundamental-theorem-of-calculus.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="constrained-optimization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

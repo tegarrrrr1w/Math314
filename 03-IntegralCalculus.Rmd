@@ -1,0 +1,1141 @@
+# (PART)  Integral Calculus {-}
+
+# Antiderivatives 
+
+
+## Lecture Content
+
+[**Video:  The Indefinite Integral**](https://youtu.be/noxadE3ZoJY)
+
+[**Video:  Integration by Parts**](https://youtu.be/Ovl4B0bYA5A)
+
+[**Video:  Integration by Substitution**](https://youtu.be/mUOC5tahsaA)
+
+
+
+### Basic Antiderivatives and Rules
+
+Antiderivatives are the reverse of derivatives. The antiderivative of a function \( f(x) \) is a function \( F(x) \) such that:
+
+\[
+F'(x) = f(x)
+\]
+
+The indefinite integral of \( f(x) \) is:
+
+\[
+\int f(x) \, dx = F(x) + C
+\]
+
+Where \( C \) is the constant of integration.
+
+
+#### Rules of Antidifferentiation
+
+- **Sum Rule:**  
+  \[
+  \int (f(x) + g(x))\,dx = \int f(x)\,dx + \int g(x)\,dx
+  \]
+
+- **Constant Multiple Rule:**  
+  \[
+  \int c \cdot f(x)\,dx = c \cdot \int f(x)\,dx
+  \]
+
+- **Power Rule:**
+  \[
+  \int x^n\,dx =   \frac{x^{n+1}}{n+1} + C  \text{ for } n \ne -1 
+  \]
+
+- **Exponential Rule:**
+  \[
+  \int e^x \,dx = e^x + C
+  \]
+
+- **Reciprocal Rule:**
+  \[
+  \int \frac{1}{x} \,dx =  \ln|x| + C
+  \]
+
+#### Common Antiderivatives
+
+| Function \( f(x) \)           | Antiderivative \( \int f(x)\,dx \)       |
+|------------------------------|-------------------------------------------|
+| \( x^n \) (for \( n \ne -1 \)) | \( \frac{x^{n+1}}{n+1} + C \)             |
+| \( \frac{1}{x} \)             | \( \ln|x| + C \)                          |
+| \( e^x \)                     | \( e^x + C \)                             |
+| \( a^x \)                     | \( \frac{a^x}{\ln a} + C \)               |
+| \( \sin x \)                  | \( -\cos x + C \)                         |
+| \( \cos x \)                  | \( \sin x + C \)                          |
+| \( \sec^2 x \)                | \( \tan x + C \)                          |
+| \( \sec x \tan x \)           | \( \sec x + C \)                          |
+
+---
+
+### Integration by Substitution
+
+Substitution is used when the integrand contains a composite function.
+
+#### Steps:
+
+1. **Choose a substitution:**  
+   Let \( u = g(x) \), where \( g(x) \) is an inner function.
+
+2. **Differentiate \( u \):**  
+   Compute \( du = g'(x)\,dx \).
+
+3. **Rewrite the integral:**  
+   Replace all \( x \)-terms with \( u \)-terms.
+
+4. **Integrate in terms of \( u \).**
+
+5. **Substitute back:**  
+   Replace \( u \) with the original expression.
+
+**Example:**
+
+\[
+\int 2x \cos(x^2) \, dx
+\]
+
+Let \( u = x^2 \), then \( du = 2x \, dx \).  
+So the integral becomes:
+
+\[
+\int \cos(u) \, du = \sin(u) + C = \sin(x^2) + C
+\]
+
+---
+
+### Integration by Parts
+
+Use this method when the integrand is a product of two functions.
+
+#### Formula:
+
+\[
+\int u\,dv = uv - \int v\,du
+\]
+
+#### Steps:
+
+1. **Choose \( u \)** and **\( dv \)** from the integrand.
+   - Use **LIPET** (Logarithmic, Inverse trig, Polynomial, Exponential, Trig) as a guide for choosing \( u \).
+
+2. **Differentiate \( u \)** to get \( du \), and **integrate \( dv \)** to get \( v \).
+
+3. **Apply the formula:**  
+   \[
+   \int u\,dv = uv - \int v\,du
+   \]
+
+4. **Simplify and integrate again if necessary.**
+
+**Example:**
+
+\[
+\int x e^x \, dx
+\]
+
+Let \( u = x \), \( dv = e^x dx \)  
+Then \( du = dx \), \( v = e^x \)
+
+\[
+\int x e^x \, dx = x e^x - \int e^x \, dx = x e^x - e^x + C
+\]
+
+---
+
+
+
+## Practice Problems
+
+
+Practice the techniques discussed in class and in the online videos by solving the following examples.
+
+1. Evaluate the following integrals:  
+   a. $$\int (x + x^3) \, dx$$  
+   b. $$\int (\sin u + \cos u) \, du$$  
+   c. $$\int \sqrt[4]{x} + \sin x \, dx$$  
+   d. $$\int \frac{1}{x} + \frac{2}{x^2} \, dx$$
+
+2. Evaluate the following integrals using the substitution method:  
+   a. $$\int (2x+5)^{-3} \, dx$$ 
+   b. $$\int \sqrt{4x-5} \, dx$$  
+   c. $$\int \sin(4u+6) \, du$$  
+   d. $$\int x e^{-x^2+1} \, dx$$  
+
+3. Evaluate the following integrals using integration by parts:  
+   a. $$\int 2x e^{x} \, dx$$  
+   b. $$\int (x^2 - 1) 3^{-x} \, dx$$ 
+   c. $$\int x^{2} \ln x \, dx$$  
+   d. $$\int x^{3} (x+1)^{10} \, dx$$ 
+
+4. (Applied) The marginal cost of producing the $x$th box of CDs is given by  
+$$10 - \frac{x}{(x^{2} + 1)^{2}}.$$  
+The total cost to produce 2 boxes is \$1,000. Find the total cost function $C(x)$.  
+
+5. (Applied) The number of housing starts in the United States can be approximated by  
+$$n(t) = \frac{1}{12} \left(1.1 + 1.2 e^{-0.08 t} \right) \text{ million homes per month } (t \geq 0)$$  
+where $t$ is time in months from the start of 2006. Find an expression for the total number $N(t)$ of housing starts in the US from January 2006 to time $t$.  
+
+
+## Self Assessment
+
+
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. Evaluate the following integrals:  
+   a. $$\int \left(\frac{1}{v^2} + \frac{2}{v}\right) dv$$ 
+   b. $$\int \frac{|u|}{u} + \sec^{2} u \, du$$  
+
+2. Evaluate the following integrals using the substitution method:  
+$$\int \left( 2x e^{x^{2} + 4} + \frac{5}{2x + 8} \right) dx$$  
+
+3. Evaluate the following integrals using integration by parts:  
+$$\int x \ln(2x) \, dx$$  
+
+4. The marginal cost of producing the $x$th box of Zip disks is  
+$$10 + \frac{x^{2}}{100,000}$$  
+and the fixed cost is \$100,000. Find the cost function $C(x)$.  
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+| Skill                                    | D | CON | COM |
+|------------------------------------------|---|-----|-----|
+| Evaluate an integral using basic techniques.          |   |     |     |
+| Evaluate an integral using the substitution method.   |   |     |     |
+| Evaluate an integral using integration by parts.      |   |     |     |
+| Solve applied problems using antiderivatives.          |   |     |     |
+
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Riemann Sums
+
+
+## Lecture Content
+
+[**Video:  Riemann Sums and the Definite Integral**](https://youtu.be/zPqfFEdDXFQ)
+
+
+### Estimating Area Using \( n \) Rectangles
+
+To estimate the area under a curve \( f(x) \) on an interval \([a, b]\), divide the interval into \( n \) subintervals of equal width:
+
+\[
+\Delta x = \frac{b - a}{n}
+\]
+
+Choose either **left endpoints** or **right endpoints** to evaluate the function:
+
+- **Left Endpoint Approximation (LRAM):**
+
+\[
+A \approx \sum_{i=1}^{n} f(x_{i-1}) \Delta x
+\]
+
+- **Right Endpoint Approximation (RRAM):**
+
+\[
+A \approx \sum_{i=1}^{n} f(x_i) \Delta x
+\]
+
+Where:
+
+\[
+x_i = a + i\Delta x, \quad x_{i-1} = a + (i-1)\Delta x
+\]
+
+These methods give a numerical estimate of the area under the curve.
+
+---
+
+### Properties of Summation Notation
+
+For any constants \( c \), and functions \( f(i) \), \( g(i) \):
+
+1. **Linearity:**
+
+\[
+\sum_{i=1}^{n} [f(i) + g(i)] = \sum_{i=1}^{n} f(i) + \sum_{i=1}^{n} g(i)
+\]
+
+\[
+\sum_{i=1}^{n} c \cdot f(i) = c \cdot \sum_{i=1}^{n} f(i)
+\]
+
+2. **Additive Indexing:**
+
+\[
+\sum_{i=m}^{n} f(i) = f(m) + f(m+1) + \dots + f(n)
+\]
+
+---
+
+### Summation Formulas
+
+These formulas are useful for simplifying Riemann sum expressions:
+
+\[
+\sum_{i=1}^{n} 1 = n
+\]
+
+\[
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+\]
+
+\[
+\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}
+\]
+
+\[
+\sum_{i=1}^{n} i^3 = \left( \frac{n(n+1)}{2} \right)^2
+\]
+
+---
+
+### Limit Definition of the Definite Integral
+
+The definite integral of \( f(x) \) from \( a \) to \( b \) is defined as the limit of Riemann sums:
+
+\[
+\int_a^b f(x) \, dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^*) \Delta x
+\]
+
+Where:
+- \( \Delta x = \frac{b - a}{n} \) is the width of each subinterval,
+- \( x_i^* \) is any sample point in the \( i \)th subinterval \([x_{i-1}, x_i]\).
+
+This definition captures the **exact area under the curve** as the number of rectangles \( n \) increases without bound and their width approaches zero.
+
+---
+
+
+
+## Practice Problems
+
+
+
+Practice the techniques discussed in class and in the online videos by solving the following examples.
+
+1. Use a Riemann sum to estimate the area under $f(x) = x^2$ on [1,5] using $n = 4$.  
+
+2. Use a Riemann sum to estimate the area under $f(x) = 2x+3$ on [-2,3] using $n=5$.  
+
+3. Use a Riemann sum to estimate the area under $f(x) = \frac{1}{1+x}$ on [0,1] using $n=4$.  
+
+4. Express in terms of $n$:  
+$$\sum_{i=1}^{n}(i + i^{2})$$  
+
+5. Express in terms of $n$:  
+$$\sum_{i=1}^{n}(3i - 5 + i^{3})$$  
+
+6. Express in terms of $n$:  
+$$\frac{1}{n} \sum_{i=1}^{n} \left( \frac{2i}{3n} + \frac{3i^{3}}{2n^{3}} - \frac{4i^{2}}{7n^{2}} \right)$$  
+
+7. Use the limit definition of the integral to evaluate  
+$$\int_{1}^{3} (2x+3) \, dx$$  
+
+8. Use the limit definition of the integral to evaluate  
+$$\int_{0}^{3} (x + x^2) \, dx$$  
+
+9. (Applied) A race car has a velocity of  
+$$v(t) = 600(1 - e^{-0.5t})$$  
+ft/s, $t$ seconds after starting. Use a Riemann sum with $n = 10$ to estimate how far the car has traveled in the first 4 seconds.  
+
+10. (Applied) The velocity of a stone moving under gravity $t$ seconds after being thrown up at 4 m/s is given by  
+$$v(t) = -9.8t + 4$$  
+m/s. Use a Riemann sum with 5 subdivisions to estimate  
+$$\int_0^1 v(t) \, dt.$$  
+</div>
+
+## Self Assessment
+
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. Use a Riemann sum to estimate the area under $f(x) = 4-x^{2}$ on $[0,2]$ using $n=4$.  
+
+2. Express in terms of $n$:  
+$$\frac{2}{n}\sum_{i=1}^{\infty}(2-3i^{2})$$  
+
+3. Evaluate:  
+$$\lim_{n \to \infty} \sum_{i=1}^{\infty} \left( \frac{i}{2n^{2}} - \frac{i^{2}}{3n^{3}} + \frac{4i^{3}}{n^{4}} \right)$$  
+
+4. Use the limit definition of the integral to evaluate  
+$$\int_0^2 (4-x^{2}) \, dx$$  
+
+5. The rate of U.S. per capita sales of bottled water for the period 2000–2008 can be approximated by  
+$$s(t) = 0.04 t^2 + 1.5 t + 17 \quad (0 \leq t \leq 8)$$  
+where $t$ is the time in years since the start of 2000. Use a Riemann sum with $n = 5$ to estimate the total U.S. per capita sales of bottled water from the start of 2003 to the start of 2008.  
+
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+
+
+| Skill                                   | D | CON | COM |
+|-----------------------------------------|---|-----|-----|
+| Estimate areas using approximating rectangles. |   |     |     |
+| Manipulate expressions involving summation notation. |   |     |     |
+| Use the limit definition of the integral. |   |     |     |
+| Solve applied problems using Riemann sums. |   |     |     |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# The Fundamental Theorem of Calculus
+
+
+
+## Lecture Content
+
+[**Video:  The Fundamental Theorem of Calculus**](https://youtu.be/BVOSn1Gwqhs)
+
+
+### Fundamental Theorem of Calculus – Part I
+
+Let \( f \) be a continuous function on the interval \([a, b]\), and define a function:
+
+\[
+F(x) = \int_a^x f(t)\,dt
+\]
+
+Then \( F \) is continuous on \([a, b] \), differentiable on \( (a, b) \), and:
+
+\[
+F'(x) = f(x)
+\]
+
+**Interpretation:**
+
+The derivative of the area function \( F(x) \) gives back the original function \( f(x) \). This connects **differentiation** and **integration**.
+
+---
+
+### Fundamental Theorem of Calculus – Part II
+
+Let \( f \) be continuous on \([a, b]\), and let \( F \) be any antiderivative of \( f \) on that interval. Then:
+
+\[
+\int_a^b f(x)\,dx = F(b) - F(a)
+\]
+
+**Interpretation:**
+
+To evaluate a definite integral, find **any** antiderivative \( F \), and compute the difference \( F(b) - F(a) \). This allows us to compute exact areas without using limits or Riemann sums.
+
+---
+
+### Properties of Definite Integrals
+
+Let \( f(x) \), \( g(x) \) be continuous on \([a, b]\), and let \( c \) be a constant. The following properties hold:
+
+1. **Linearity:**
+
+\[
+\int_a^b [f(x) \pm g(x)]\,dx = \int_a^b f(x)\,dx \pm \int_a^b g(x)\,dx
+\]
+
+\[
+\int_a^b c \cdot f(x)\,dx = c \cdot \int_a^b f(x)\,dx
+\]
+
+2. **Additivity over Intervals:**
+
+\[
+\int_a^b f(x)\,dx + \int_b^c f(x)\,dx = \int_a^c f(x)\,dx
+\]
+
+3. **Reversing Limits:**
+
+\[
+\int_a^b f(x)\,dx = -\int_b^a f(x)\,dx
+\]
+
+4. **Zero-Width Interval:**
+
+\[
+\int_a^a f(x)\,dx = 0
+\]
+
+5. **Comparison Property (if \( f(x) \ge g(x) \)):**
+
+\[
+\int_a^b f(x)\,dx \ge \int_a^b g(x)\,dx
+\]
+
+6. **Absolute Value Inequality:**
+
+\[
+\left| \int_a^b f(x)\,dx \right| \le \int_a^b |f(x)|\,dx
+\]
+
+---
+
+
+
+
+## Practice Problems
+
+1. Evaluate the following integrals:
+
+   a. $\displaystyle \int_{-3}^{3} \left(x + x^3\right) dx$  
+   b. $\displaystyle \int_{0}^{\pi} \left(\sin u + \cos u\right) du$  
+   c. $\displaystyle \int_{-1}^{1} \left(3x^4 - 2x^{-2} + x^{-5} + 4\right) dx$  
+   d. $\displaystyle \int_{2}^{3} \left(2xe^{x^2 + 4} + \dfrac{5}{2x+8}  \right) dx$  
+   e. $\displaystyle \int_{0}^{1} \frac{e^x + e^{-x}}{2} dx$  
+
+2. Find the derivative of:
+
+   a. $g(x) = \displaystyle \int_{0}^{x} \left(u +u^3\right) du$  
+   b. $g(x) = \displaystyle \int_{-5}^{x^2} \sqrt{1 + u^3} du$  
+   c. $g(x) = \displaystyle \int_{\ln(x)}^{e^x} \left(u^6 - 1/u^2\right) du$  
+
+3. **(Applied)** The marginal revenue of the xth box of flash cards sold is $100e^{-0.001x}$. Find the revenue from items 101 through 1,000.  
+
+4. **(Challenge)** Differentiate  
+   $$\int_{g(x)}^{h(x)} f(t) dt.$$
+
+5. **(Challenge)** Show that  
+   $$2 \leq \int_{0}^2 \sqrt{1 + x^3} dx \leq 6.$$
+
+
+
+
+## Self Assessment
+
+Time yourself and try to solve the following within 20 minutes:
+
+1. $\displaystyle \int_{0}^{\pi/2} \left(1 + x + \cos x\right) dx$  
+2. $\displaystyle \int_{-1}^{1} x(x^2+1)^{10} dx$  
+3. $g(x) = \displaystyle \int_{x^3}^{\pi} e^{u^3 + 4u} du$  
+4. $g(x) = \displaystyle \int_{x}^{\pi/2} (1 + u + \cos u) du$  
+5. Given $C(x) = 246.76 + \int_{0}^x 5t dt$, find the fixed cost and marginal cost at $x=10$.  
+
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+
+| Skill | D | CON | COM |
+|-----------------------------------------|---|-----|-----|
+| Apply the FTCI to integrals. |   |     |     |
+| Apply the FTCII to integrals. |   |     |     |
+| Solve applied problems using the FTC. |   |     |     |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Area between Curves
+
+
+
+## Lecture Content
+
+[**Video:  Area Between Curves**](https://youtu.be/PfYcOdCgygk)
+
+
+
+### Definite Integrals as Net Area
+
+The definite integral \( \int_a^b f(x) \, dx \) represents the **net area** between the graph of \( f(x) \) and the \( x \)-axis over the interval \([a, b]\):
+
+- If \( f(x) \ge 0 \) on \([a, b]\), the integral gives the total area above the \( x \)-axis.
+- If \( f(x) \le 0 \) on \([a, b]\), the integral gives the negative of the area below the \( x \)-axis.
+- If \( f(x) \) changes sign on \([a, b] \), the integral gives the **net area**: area above minus area below.
+
+**Note:** To find the **total area**, regardless of sign, use:
+
+\[
+\text{Total area} = \int_a^b |f(x)| \, dx
+\]
+
+---
+
+### Simple Improper Integrals
+
+An **improper integral** arises when:
+
+1. The interval is **infinite**, e.g., \( \int_1^\infty \frac{1}{x^2} \, dx \)
+2. The integrand is **unbounded** at a point in the interval, e.g., \( \int_0^1 \frac{1}{\sqrt{x}} \, dx \)
+
+#### Infinite Interval Example:
+
+\[
+\int_1^\infty \frac{1}{x^2} \, dx = \lim_{b \to \infty} \int_1^b \frac{1}{x^2} \, dx = \lim_{b \to \infty} \left( -\frac{1}{x} \Big|_1^b \right) = 1
+\]
+
+#### Unbounded Function Example:
+
+\[
+\int_0^1 \frac{1}{\sqrt{x}} \, dx = \lim_{a \to 0^+} \int_a^1 \frac{1}{\sqrt{x}} \, dx = \lim_{a \to 0^+} (2\sqrt{x} \big|_a^1) = 2
+\]
+
+An improper integral **converges** if the limit exists, and **diverges** if the limit does not exist.
+
+---
+
+### Area Between Two Curves
+
+To find the area between two curves \( f(x) \) and \( g(x) \) on \([a, b]\), where \( f(x) \ge g(x) \):
+
+\[
+\text{Area} = \int_a^b [f(x) - g(x)] \, dx
+\]
+
+**Steps:**
+
+1. **Find points of intersection:** Solve \( f(x) = g(x) \) to find the limits of integration.
+2. **Identify top and bottom functions** on the interval.
+3. **Set up and evaluate the integral:**  
+   - If necessary, split the interval where the curves switch order.
+4. For vertical slices (functions of \( y \)), use:
+   \[
+   \int_{c}^{d} [f(y) - g(y)] \, dy
+   \]
+
+**Example:**
+
+Find the area between \( y = x^2 \) and \( y = x \):
+
+1. Intersection points: \( x = 0 \), \( x = 1 \)
+2. \( x \ge 0 \Rightarrow x \ge x^2 \)
+3. Area:
+   \[
+   \int_0^1 (x - x^2) \, dx = \left[ \frac{x^2}{2} - \frac{x^3}{3} \right]_0^1 = \frac{1}{2} - \frac{1}{3} = \frac{1}{6}
+   \]
+
+---
+
+
+
+## Practice Problems
+
+
+
+1. Find area under $y = e^x$ on $[1,4]$  
+2. Find area under $y = \sin(x)$ on $[0, \pi]$; net vs true area on $[0, 2\pi]$  
+3. Area under $y = 1/x^2$ on $[1, \infty]$  
+4. Why does $\int_1^\infty 1/x dx$ not converge?  
+5. **(Challenge)** For what $p$ does $\int_1^\infty \frac{1}{x^p} dx$ converge?  
+6. Find area between $y = x^2$ and $y = x^4$  
+7. Find area between $y = -|x|$ and $y = x^2 - 2$  
+8. **(Challenge)** Find net and true area between $y = -x^2 + 4$ and $y = x^2 - 2x$
+
+
+## Self Assessment
+
+Try to solve these in 20 minutes:
+
+1. Area under $y = \ln(x)$ on $[2,8]$  
+2. Area bounded by $y = x^3$ and the axes in the 4th quadrant  
+3. Area under $y = e^{-x}$ on $[0,\infty]$  
+4. Area between $y = -|x|$ and $y = x^2 - 2x$  
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+
+| Skill | D | CON | COM |
+|-----------------------------------------|---|-----|-----|
+| Determine net and true area with $x$-axis. |   |     |     |
+| Determine net and true area between curves. |   |     |     |
+| Evaluate simple improper integrals. |   |     |     |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Constrained Optimization
+
+
+
+
+
+## Lecture Content
+
+[**Video:  None???**]( )
+
+
+### Sketching the Feasible Region
+
+To solve a linear programming problem involving maximization, start by identifying the feasible region — the set of all possible solutions that satisfy the constraints.
+
+#### Steps:
+
+1. **Define the variables.**  
+   - Assign \( x \), \( y \), etc., to represent the quantities in the problem.
+
+2. **Write the system of inequalities.**  
+   - These represent the constraints.
+
+3. **Graph each inequality:**
+   - Convert to an equation to graph the boundary.
+   - Use a solid line for \( \leq \) or \( \geq \), dashed for \( < \) or \( > \).
+   - Shade the correct side of each line.
+
+4. **Identify the feasible region:**
+   - The region where all shaded areas **overlap**.
+   - It must also satisfy non-negativity constraints (e.g., \( x \ge 0 \), \( y \ge 0 \)).
+
+5. **Label the corner (vertex) points** of the feasible region.  
+   - These are typically found at the intersections of constraint lines.
+
+---
+
+### Maximizing the Objective Function
+
+Once the feasible region is identified and corner points are known, the objective function can be evaluated.
+
+#### Steps:
+
+1. **Write the objective function:**  
+   - Usually in the form \( P = ax + by \), where \( a \), \( b \) are constants.
+
+2. **Plug each corner point** into the objective function to calculate \( P \).
+
+3. **Compare the results:**
+   - The **largest value** is the **maximum**.
+   - The **smallest value** is the **minimum**, if needed.
+
+4. **State the optimal solution:**
+   - Report both the point \( (x, y) \) and the maximum value \( P \).
+
+---
+
+**Example:**
+
+Maximize \( P = 3x + 5y \), subject to:
+
+\[
+\begin{align*}
+x + y &\le 4 \\
+x &\le 2 \\
+y &\le 3 \\
+x, y &\ge 0
+\end{align*}
+\]
+
+**Feasible Region:**  
+- Graph constraints and find the overlapping area.
+
+**Corner Points:**  
+- \( (0,0), (0,3), (1,3), (2,2), (2,0) \)
+
+**Evaluate \( P \):**
+- \( P(0,0) = 0 \)
+- \( P(0,3) = 15 \)
+- \( P(1,3) = 18 \)
+- \( P(2,2) = 16 \)
+- \( P(2,0) = 6 \)
+
+**Maximum:**  
+- At \( (1,3) \), maximum \( P = 18 \)
+
+---
+
+
+
+
+## Practice Problems
+
+Practice the techniques discussed in class and in the online videos by solving the following examples.
+
+1. Maximize:
+   $$
+   \begin{aligned}
+   \text{Maximize} \quad & Z = 40x_1 + 30x_2 \\
+   \text{Subject to:} \quad & x_1 + x_2 \leq 12 \\
+   & 2x_1 + x_2 \leq 16 \\
+   & x_1 \geq 0, \quad x_2 \geq 0
+   \end{aligned}
+   $$
+
+2. Maximize:
+   $$
+   \begin{aligned}
+   Z &= 3x_1 + 2x_2 \\
+   \text{s.t.} \quad & 3x_1 + 2x_2 \leq 14 \\
+   & -x_1 + 2x_2 \leq 4 \\
+   & x_1 - x_2 \leq 3 \\
+   & x_1, x_2 \geq 0
+   \end{aligned}
+   $$
+
+3. Maximize:
+   $$
+   \begin{aligned}
+   Z &= 3x_1 + 2x_2 \\
+   \text{s.t.} \quad & x_1 + x_2 \leq 4 \\
+   & x_1 - x_2 \leq 2 \\
+   & x_1 \leq 4,\quad x_2 \leq 4 \\
+   & x_1, x_2 \geq 0
+   \end{aligned}
+   $$
+
+4. Maximize:
+   $$
+   \begin{aligned}
+   Z &= 5x_1 + 4x_2 \\
+   \text{s.t.} \quad & x_1 + 3x_2 \leq 18 \\
+   & x_1 + x_2 \leq 8 \\
+   & 2x_1 + x_2 \leq 14 \\
+   & x_1, x_2 \geq 0
+   \end{aligned}
+   $$
+
+5. Maximize:
+   $$
+   \begin{aligned}
+   Z &= 5x_1 + 2x_2 \\
+   \text{s.t.} \quad & x_1 + x_2 \leq 40 \\
+   & 4x_1 + 2x_2 \leq 32 \\
+   & x_1 + x_2 \leq 12 \\
+   & x_1 + 4x_2 \leq 36 \\
+   & x_1, x_2 \geq 0
+   \end{aligned}
+   $$
+
+## Self Assessment
+
+Time yourself and try to solve the following within 20 minutes:
+
+1. Maximize:
+   $$
+   \begin{aligned}
+   Z &= 2x_1 + x_2 \\
+   \text{s.t.} \quad & x_1 + x_2 \leq 40 \\
+   & 3x_1 + x_2 \leq 90 \\
+   & x_1 + 2x_2 \leq 60 \\
+   & x_1, x_2 \geq 0
+   \end{aligned}
+   $$
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+| Skill | D | CON | COM |
+|-----------------------------------------|---|-----|-----|
+| Sketch the feasible region of a linear programming problem. |   |     |     |
+| Maximize a given objective function using appropriate corner points. |   |     |     |
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Partial Derivatives
+
+
+
+
+
+## Lecture Content
+
+
+[**Video:  Functions of Several Variables**](https://youtu.be/sDJihRvuLgA)
+
+[**Video:  Partial Derivatives**](https://youtu.be/IoupLctbm_I)
+
+[**Video:  Maximums and Minimums**](https://youtu.be/OOubzDzJ2Po)
+
+
+
+### Evaluation of Functions of Two Variables
+
+A function of two variables has the form:
+\[
+f(x, y)
+\]
+To evaluate the function, simply substitute values for both \( x \) and \( y \).
+
+**Example:**
+
+If \( f(x, y) = x^2 + y^2 \), then:
+\[
+f(2, 3) = 2^2 + 3^2 = 4 + 9 = 13
+\]
+Functions of two variables are often visualized as surfaces in 3D space.
+
+---
+
+### Finding Partial Derivatives
+
+A **partial derivative** measures the rate of change of a function with respect to one variable while keeping the other constant.
+
+#### Notation:
+
+- Partial derivative with respect to \( x \):  
+  \[
+  f_x(x, y) = \frac{\partial f}{\partial x}
+  \]
+
+- Partial derivative with respect to \( y \):  
+  \[
+  f_y(x, y) = \frac{\partial f}{\partial y}
+  \]
+
+**Example:**
+
+For \( f(x, y) = x^2y + y^3 \):
+
+- \( f_x = 2xy \)
+- \( f_y = x^2 + 3y^2 \)
+
+Higher-order partial derivatives include:
+
+- \( f_{xx}, f_{yy}, f_{xy}, f_{yx} \)
+
+---
+
+### Clairaut’s Theorem (Equality of Mixed Partials)
+
+Clairaut’s Theorem states that if the mixed partial derivatives \( f_{xy} \) and \( f_{yx} \) are **continuous** near a point, then:
+
+\[
+f_{xy} = f_{yx}
+\]
+
+This means the order of differentiation does **not** matter under reasonable conditions (i.e., if the function is sufficiently smooth).
+
+---
+
+### D-Test for Classifying Critical Points
+
+To classify critical points of a function \( f(x, y) \), use the **Second Derivative Test (D-test)**.
+
+#### Steps:
+
+1. **Find critical points** by solving:
+
+\[
+f_x = 0 \quad \text{and} \quad f_y = 0
+\]
+
+2. **Compute second-order partial derivatives:**
+
+\[
+f_{xx}, f_{yy}, f_{xy}
+\]
+
+3. **Calculate the discriminant:**
+
+\[
+D = f_{xx} f_{yy} - (f_{xy})^2
+\]
+
+4. **Classify the critical point:**
+
+- If \( D > 0 \) and \( f_{xx} > 0 \): **Local minimum**
+- If \( D > 0 \) and \( f_{xx} < 0 \): **Local maximum**
+- If \( D < 0 \): **Saddle point**
+- If \( D = 0 \): **Inconclusive**
+
+---
+
+**Example:**
+
+Let \( f(x, y) = x^2 + y^2 \)
+
+- \( f_x = 2x, f_y = 2y \Rightarrow \text{critical point at } (0, 0) \)
+- \( f_{xx} = 2, f_{yy} = 2, f_{xy} = 0 \)
+- \( D = (2)(2) - 0 = 4 > 0 \), and \( f_{xx} = 2 > 0 \)
+
+→ **Local minimum at (0, 0)**
+
+---
+
+
+## Practice Problems
+
+
+1. Verify Clairaut’s Theorem:
+   - \( f(x,y) = 1000 + 5x - 4y - 3xy \)
+   - \( f(x,y) = x^2 + y^2 \)
+   - \( f(x,y) = \dfrac{e^{0.2x}}{1 + e^{-0.1y}} \)
+
+2. Classify critical points of \( f(x,y) = x^2 + y^2 + 1 \)
+
+3. Classify critical points of \( f(x,y) = x^2 + xy - y^2 + 3x - y \)
+
+4. Classify critical points of \( f(x,y) = x^2 + y^2 + \dfrac{2}{xy} \)
+
+5. *(Applied)* You’re charged \$0.03/video and \$0.04/audio clip sold by Moneydrain.com. Should you accept their offer of \$10/month plus those per-unit costs, or stick with your current \$40/month support + \$15 hosting, given 400 videos and 600 audios expected?
+
+6. *(Applied)* Weekly cost is \( C(x,y) = 24000 + 60x + 20y + 0.3xy \). Find marginal cost of tricycles when producing 10 bikes and 20 trikes.
+
+
+## Self Assessment
+
+
+
+1. Verify Clairaut’s Theorem:
+   - \( f(x,y) = x^4y^2 - x \)
+   - \( f(x,y) = x e^{xy} \)
+
+2. Classify critical points of \( f(x,y) = x^2 + x + y^2 - y - 1 \)
+
+3. Classify critical points of \( f(x,y) = e^{x^2 + y^2} \)
+
+4. For \( C(x,y) = 24000 + 60x + 20y \), calculate and interpret \( \frac{\partial C}{\partial x} \) and \( \frac{\partial C}{\partial y} \)
+
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+| Skill | D | CON | COM |
+|-----------------------------------------|---|-----|-----|
+| Calculate partial derivatives of two-variable functions |   |     |     |
+| Find and classify critical points |   |     |     |
+| Solve applied problems involving two-variable functions |   |     |     |
+

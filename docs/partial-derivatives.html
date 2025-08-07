@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 5 Vector Projections | Calculus and Linear Algebra</title>
+  <title>Lesson 21 Partial Derivatives | Calculus and Linear Algebra</title>
   <meta name="description" content="Course notes for MATH 114" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 5 Vector Projections | Calculus and Linear Algebra" />
+  <meta property="og:title" content="Lesson 21 Partial Derivatives | Calculus and Linear Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Course notes for MATH 114" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 5 Vector Projections | Calculus and Linear Algebra" />
+  <meta name="twitter:title" content="Lesson 21 Partial Derivatives | Calculus and Linear Algebra" />
   
   <meta name="twitter:description" content="Course notes for MATH 114" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="inverses-and-determinants.html"/>
-<link rel="next" href="basis-and-orthonormal-basis.html"/>
+<link rel="prev" href="constrained-optimization.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -374,183 +374,141 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="vector-projections" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Lesson 5</span> Vector Projections<a href="vector-projections.html#vector-projections" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="lecture-content-4" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Lecture Content<a href="vector-projections.html#lecture-content-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><a href="https://www.youtube.com/watch?v=k_hRTx4PEn0&amp;list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&amp;index=4"><strong>Video: Vectors</strong></a></p>
-<div id="vector-operations" class="section level3 hasAnchor" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> Vector Operations<a href="vector-projections.html#vector-operations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="addition-and-scalar-multiplication-of-vectors" class="section level4 unnumbered hasAnchor">
-<h4>Addition and Scalar Multiplication of Vectors<a href="vector-projections.html#addition-and-scalar-multiplication-of-vectors" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li><p><strong>Vector Addition</strong>: If <strong>u</strong> = ⟨u₁, u₂, …, uₙ⟩ and <strong>v</strong> = ⟨v₁, v₂, …, vₙ⟩, then<br />
-<strong>u</strong> + <strong>v</strong> = ⟨u₁ + v₁, u₂ + v₂, …, uₙ + vₙ⟩.</p></li>
-<li><p><strong>Scalar Multiplication</strong>: For scalar <em>c</em>,<br />
-<em>c</em>·<strong>v</strong> = ⟨c·v₁, c·v₂, …, c·vₙ⟩.</p></li>
-<li><p>Example: Let <strong>u</strong> = ⟨1, 2, 3⟩ and <strong>v</strong> = ⟨4, -1, 2⟩
-Then:
+<div id="partial-derivatives" class="section level1 hasAnchor" number="21">
+<h1><span class="header-section-number">Lesson 21</span> Partial Derivatives<a href="partial-derivatives.html#partial-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="lecture-content-20" class="section level2 hasAnchor" number="21.1">
+<h2><span class="header-section-number">21.1</span> Lecture Content<a href="partial-derivatives.html#lecture-content-20" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://youtu.be/sDJihRvuLgA"><strong>Video: Functions of Several Variables</strong></a></p>
+<p><a href="https://youtu.be/IoupLctbm_I"><strong>Video: Partial Derivatives</strong></a></p>
+<p><a href="https://youtu.be/OOubzDzJ2Po"><strong>Video: Maximums and Minimums</strong></a></p>
+<div id="evaluation-of-functions-of-two-variables" class="section level3 hasAnchor" number="21.1.1">
+<h3><span class="header-section-number">21.1.1</span> Evaluation of Functions of Two Variables<a href="partial-derivatives.html#evaluation-of-functions-of-two-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A function of two variables has the form:
 <span class="math display">\[
-\mathbf{u} + \mathbf{v} = \langle 1 + 4,\ 2 + (-1),\ 3 + 2 \rangle = \langle 5,\ 1,\ 5 \rangle
+f(x, y)
+\]</span>
+To evaluate the function, simply substitute values for both <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
+<p><strong>Example:</strong></p>
+<p>If <span class="math inline">\(f(x, y) = x^2 + y^2\)</span>, then:
+<span class="math display">\[
+f(2, 3) = 2^2 + 3^2 = 4 + 9 = 13
+\]</span>
+Functions of two variables are often visualized as surfaces in 3D space.</p>
+<hr />
+</div>
+<div id="finding-partial-derivatives" class="section level3 hasAnchor" number="21.1.2">
+<h3><span class="header-section-number">21.1.2</span> Finding Partial Derivatives<a href="partial-derivatives.html#finding-partial-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A <strong>partial derivative</strong> measures the rate of change of a function with respect to one variable while keeping the other constant.</p>
+<div id="notation" class="section level4 hasAnchor" number="21.1.2.1">
+<h4><span class="header-section-number">21.1.2.1</span> Notation:<a href="partial-derivatives.html#notation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>Partial derivative with respect to <span class="math inline">\(x\)</span>:<br />
+<span class="math display">\[
+f_x(x, y) = \frac{\partial f}{\partial x}
 \]</span></p></li>
-<li><p>Example: Let <strong>v</strong> = ⟨2, -3, 4&gt; and and scalar <em>c</em> = 3.
-Then:
+<li><p>Partial derivative with respect to <span class="math inline">\(y\)</span>:<br />
 <span class="math display">\[
-3 \cdot \mathbf{v} = \langle 3 \cdot 2,\ 3 \cdot (-3),\ 3 \cdot 4 \rangle = \langle 6,\ -9,\ 12 \rangle
+f_y(x, y) = \frac{\partial f}{\partial y}
 \]</span></p></li>
 </ul>
-<p>These operations preserve vector direction (in the case of addition) or scale the magnitude (in scalar multiplication).</p>
-<hr />
-</div>
-</div>
-<div id="standard-inner-product-dot-product" class="section level3 hasAnchor" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> Standard Inner Product (Dot Product)<a href="vector-projections.html#standard-inner-product-dot-product" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <strong>standard inner product</strong> (dot product) of vectors <strong>u</strong> and <strong>v</strong> in ℝⁿ is:
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = u_1 v_1 + u_2 v_2 + \cdots + u_n v_n
-\]</span></p>
+<p><strong>Example:</strong></p>
+<p>For <span class="math inline">\(f(x, y) = x^2y + y^3\)</span>:</p>
 <ul>
-<li>Example: Let <strong>u</strong> = ⟨1, 2, 3⟩ and <strong>v</strong> = ⟨4, -1, 2⟩ Then:
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = 1 \cdot 4 + 2 \cdot (-1) + 3 \cdot 2 = 4 - 2 + 6 = 8
-\]</span></li>
-<li>Returns a <strong>scalar</strong>.</li>
-<li>Measures how much one vector goes in the direction of another.</li>
+<li><span class="math inline">\(f_x = 2xy\)</span></li>
+<li><span class="math inline">\(f_y = x^2 + 3y^2\)</span></li>
+</ul>
+<p>Higher-order partial derivatives include:</p>
+<ul>
+<li><span class="math inline">\(f_{xx}, f_{yy}, f_{xy}, f_{yx}\)</span></li>
 </ul>
 <hr />
 </div>
-<div id="euclidean-norm-of-a-vector" class="section level3 hasAnchor" number="5.1.3">
-<h3><span class="header-section-number">5.1.3</span> Euclidean Norm of a Vector<a href="vector-projections.html#euclidean-norm-of-a-vector" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <strong>Euclidean norm</strong> (or magnitude/length) of a vector <strong>v</strong> is:</p>
+</div>
+<div id="clairauts-theorem-equality-of-mixed-partials" class="section level3 hasAnchor" number="21.1.3">
+<h3><span class="header-section-number">21.1.3</span> Clairaut’s Theorem (Equality of Mixed Partials)<a href="partial-derivatives.html#clairauts-theorem-equality-of-mixed-partials" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Clairaut’s Theorem states that if the mixed partial derivatives <span class="math inline">\(f_{xy}\)</span> and <span class="math inline">\(f_{yx}\)</span> are <strong>continuous</strong> near a point, then:</p>
 <p><span class="math display">\[
-\| \mathbf{v} \| = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2}
+f_{xy} = f_{yx}
 \]</span></p>
-<ul>
-<li>Example: Let <strong>v</strong> = ⟨2, -3, 6⟩. Then the <strong>2-norm</strong> is:
-<span class="math display">\[
-\| \mathbf{v} \| = \sqrt{2^2 + (-3)^2 + 6^2} = \sqrt{4 + 9 + 36} = \sqrt{49} = 7
-\]</span></li>
-<li>Denoted as |<strong>v</strong>|.</li>
-<li>Also called the <strong>2-norm</strong>.</li>
-</ul>
+<p>This means the order of differentiation does <strong>not</strong> matter under reasonable conditions (i.e., if the function is sufficiently smooth).</p>
 <hr />
 </div>
-<div id="cosine-of-the-angle-between-two-vectors" class="section level3 hasAnchor" number="5.1.4">
-<h3><span class="header-section-number">5.1.4</span> Cosine of the Angle Between Two Vectors<a href="vector-projections.html#cosine-of-the-angle-between-two-vectors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Given non-zero vectors <strong>u</strong> and <strong>v</strong>, the <strong>cosine of the angle</strong> θ between them is:</p>
-<p><span class="math display">\[
-\cos(\theta) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
-\]</span></p>
-<ul>
-<li>Example: Let <strong>u</strong> = ⟨1, 2⟩ and <strong>v</strong> = ⟨3, 4⟩
+<div id="d-test-for-classifying-critical-points" class="section level3 hasAnchor" number="21.1.4">
+<h3><span class="header-section-number">21.1.4</span> D-Test for Classifying Critical Points<a href="partial-derivatives.html#d-test-for-classifying-critical-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To classify critical points of a function <span class="math inline">\(f(x, y)\)</span>, use the <strong>Second Derivative Test (D-test)</strong>.</p>
+<div id="steps-6" class="section level4 hasAnchor" number="21.1.4.1">
+<h4><span class="header-section-number">21.1.4.1</span> Steps:<a href="partial-derivatives.html#steps-6" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
-<li>Compute dot product:<br />
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = 1 \cdot 3 + 2 \cdot 4 = 3 + 8 = 11
-\]</span></li>
-<li>Compute norms:<br />
-<span class="math display">\[
-\|\mathbf{u}\| = \sqrt{1^2 + 2^2} = \sqrt{5}, \quad \|\mathbf{v}\| = \sqrt{3^2 + 4^2} = \sqrt{25} = 5
-\]</span></li>
-<li>Use the cosine formula:<br />
-<span class="math display">\[
-\cos(\theta) = \frac{11}{\sqrt{5} \cdot 5} = \frac{11}{5\sqrt{5}} = \frac{\sqrt{5}}{5} \cdot \frac{11}{5}
-\]</span></li>
-<li>Find angle:<br />
-<span class="math display">\[
-\theta = \cos^{-1}\left( \frac{11}{5\sqrt{5}} \right) \approx 18.4^\circ
-\]</span></li>
-</ol></li>
-<li>If <strong>cos(θ) = 0</strong>, the vectors are orthogonal (perpendicular).</li>
-<li>If <strong>cos(θ) &gt; 0</strong>, angle &lt; 90° (acute).</li>
-<li>If <strong>cos(θ) &lt; 0</strong>, angle &gt; 90° (obtuse).</li>
-</ul>
-<hr />
-</div>
-<div id="vector-projection-formula" class="section level3 hasAnchor" number="5.1.5">
-<h3><span class="header-section-number">5.1.5</span> Vector Projection Formula<a href="vector-projections.html#vector-projection-formula" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <strong>projection</strong> of vector <strong>u</strong> onto vector <strong>v</strong> is:</p>
-<p><span class="math display">\[
-\mathrm{proj}_{\mathbf{v}} \mathbf{u} = \left( \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{v}\|^2} \right) \mathbf{v}
-\]</span></p>
-<ul>
-<li>Example: Project <strong>u</strong> = ⟨2, 3⟩ onto <strong>v</strong> = ⟨1, 4⟩.
-<ol style="list-style-type: decimal">
-<li>Dot product:<br />
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = 2 \cdot 1 + 3 \cdot 4 = 2 + 12 = 14
-\]</span></li>
-<li>Norm squared:<br />
-<span class="math display">\[
-\|\mathbf{v}\|^2 = 1^2 + 4^2 = 1 + 16 = 17
-\]</span></li>
-<li>Projection:<br />
-<span class="math display">\[
-\mathrm{proj}_{\mathbf{v}} \mathbf{u} = \left( \frac{14}{17} \right) \mathbf{v} = \left( \frac{14}{17} \right) \langle 1,\ 4 \rangle = \left\langle \frac{14}{17},\ \frac{56}{17} \right\rangle
-\]</span></li>
-</ol></li>
-<li>Gives the component of <strong>u</strong> in the direction of <strong>v</strong>.</li>
-</ul>
-<hr />
-</div>
-<div id="geometric-interpretations" class="section level3 hasAnchor" number="5.1.6">
-<h3><span class="header-section-number">5.1.6</span> Geometric Interpretations<a href="vector-projections.html#geometric-interpretations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><p><strong>Addition</strong>: Geometrically, vector addition corresponds to placing the tail of <strong>v</strong> at the head of <strong>u</strong> and drawing the resulting vector from the tail of <strong>u</strong> to the head of <strong>v</strong>.</p></li>
-<li><p><strong>Dot Product</strong>: Measures alignment. A large positive value means the vectors point in similar directions.</p></li>
-<li><p><strong>Norm</strong>: The “length” of the vector in Euclidean space.</p></li>
-<li><p><strong>Projection</strong>: Drops a perpendicular from <strong>u</strong> onto <strong>v</strong>; the projection lies along <strong>v</strong>.</p></li>
-<li><p><strong>Angle and Cosine</strong>: Relates direction and orthogonality.</p></li>
-</ul>
-<hr />
-</div>
-</div>
-<div id="practice-problems-4" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Practice Problems<a href="vector-projections.html#practice-problems-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ol style="list-style-type: decimal">
-<li>Draw the vectors <span class="math inline">\(A = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> and <span class="math inline">\(B = \begin{bmatrix} -1 \\ -1 \end{bmatrix}\)</span>. Draw:
-<ul>
-<li><span class="math inline">\(A + B\)</span>,</li>
-<li><span class="math inline">\(B + A\)</span>,</li>
-<li><span class="math inline">\(A - B\)</span>,</li>
-<li><span class="math inline">\(B - A\)</span>,</li>
-<li><span class="math inline">\(2A\)</span>, and</li>
-<li><span class="math inline">\(-4B\)</span>.</li>
-</ul></li>
-<li>Compute the standard inner products and norms of <span class="math inline">\(A = \begin{bmatrix} -1 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(B = \begin{bmatrix} 2 \\ 2 \end{bmatrix}\)</span>. What is the angle between them?</li>
-<li>Express <span class="math inline">\(v = [5, -1]\)</span> as a sum of orthogonal vectors such that one has the same direction as <span class="math inline">\(u = [4, 2]\)</span>.</li>
-<li>Find the angle between:
-<ul>
-<li><span class="math inline">\(x = \begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}\)</span> and <span class="math inline">\(y = \begin{bmatrix} 2 \\ 0 \\ -3 \end{bmatrix}\)</span></li>
-<li><span class="math inline">\(x = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(y = \begin{bmatrix} 3 \\ -2 \\ 1 \end{bmatrix}\)</span></li>
-</ul></li>
-<li>Find the projection and orthogonal projection of <span class="math inline">\(u\)</span> onto <span class="math inline">\(v\)</span>:
-<ul>
-<li><span class="math inline">\(u = \begin{bmatrix} 4 \\ 3 \end{bmatrix}\)</span>, <span class="math inline">\(v = \begin{bmatrix} 2 \\ 8 \end{bmatrix}\)</span></li>
-<li><span class="math inline">\(u = \begin{bmatrix} 3 \\ 5 \end{bmatrix}\)</span>, <span class="math inline">\(v = \begin{bmatrix} 6 \\ 2 \end{bmatrix}\)</span></li>
-</ul></li>
+<li><strong>Find critical points</strong> by solving:</li>
 </ol>
+<p><span class="math display">\[
+f_x = 0 \quad \text{and} \quad f_y = 0
+\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Compute second-order partial derivatives:</strong></li>
+</ol>
+<p><span class="math display">\[
+f_{xx}, f_{yy}, f_{xy}
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Calculate the discriminant:</strong></li>
+</ol>
+<p><span class="math display">\[
+D = f_{xx} f_{yy} - (f_{xy})^2
+\]</span></p>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Classify the critical point:</strong></li>
+</ol>
+<ul>
+<li>If <span class="math inline">\(D &gt; 0\)</span> and <span class="math inline">\(f_{xx} &gt; 0\)</span>: <strong>Local minimum</strong></li>
+<li>If <span class="math inline">\(D &gt; 0\)</span> and <span class="math inline">\(f_{xx} &lt; 0\)</span>: <strong>Local maximum</strong></li>
+<li>If <span class="math inline">\(D &lt; 0\)</span>: <strong>Saddle point</strong></li>
+<li>If <span class="math inline">\(D = 0\)</span>: <strong>Inconclusive</strong></li>
+</ul>
+<hr />
+<p><strong>Example:</strong></p>
+<p>Let <span class="math inline">\(f(x, y) = x^2 + y^2\)</span></p>
+<ul>
+<li><span class="math inline">\(f_x = 2x, f_y = 2y \Rightarrow \text{critical point at } (0, 0)\)</span></li>
+<li><span class="math inline">\(f_{xx} = 2, f_{yy} = 2, f_{xy} = 0\)</span></li>
+<li><span class="math inline">\(D = (2)(2) - 0 = 4 &gt; 0\)</span>, and <span class="math inline">\(f_{xx} = 2 &gt; 0\)</span></li>
+</ul>
+<p>→ <strong>Local minimum at (0, 0)</strong></p>
 <hr />
 </div>
-<div id="self-assessment-4" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Self-Assessment<a href="vector-projections.html#self-assessment-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Try to solve the following within 20 minutes.</p>
+</div>
+</div>
+<div id="practice-problems-20" class="section level2 hasAnchor" number="21.2">
+<h2><span class="header-section-number">21.2</span> Practice Problems<a href="partial-derivatives.html#practice-problems-20" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li>Draw <span class="math inline">\(A = \begin{bmatrix} -1 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(B = \begin{bmatrix} 2 \\ 2 \end{bmatrix}\)</span>. Then draw:
+<li><p>Verify Clairaut’s Theorem:</p>
 <ul>
-<li><span class="math inline">\(A + B\)</span>,</li>
-<li><span class="math inline">\(A - B\)</span>,</li>
-<li><span class="math inline">\(B - A\)</span>,</li>
-<li><span class="math inline">\(3A\)</span>,</li>
-<li><span class="math inline">\(-0.5B\)</span></li>
+<li><span class="math inline">\(f(x,y) = 1000 + 5x - 4y - 3xy\)</span></li>
+<li><span class="math inline">\(f(x,y) = x^2 + y^2\)</span></li>
+<li><span class="math inline">\(f(x,y) = \dfrac{e^{0.2x}}{1 + e^{-0.1y}}\)</span></li>
 </ul></li>
-<li>Find the angle between: <span class="math inline">\(x = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> and <span class="math inline">\(y = \begin{bmatrix} 2 \\ 1 \end{bmatrix}\)</span></li>
-<li>Find the projection and orthogonal projection of <span class="math inline">\(u\)</span> onto <span class="math inline">\(v\)</span>: <span class="math inline">\(u = \begin{bmatrix} -2 \\ 5 \end{bmatrix}\)</span>, <span class="math inline">\(v = \begin{bmatrix} 6 \\ 5 \end{bmatrix}\)</span></li>
-<li>Express <span class="math inline">\(v = [8, -3, -3]\)</span> as a sum of orthogonal vectors with one in the direction of <span class="math inline">\(u = [2, 3, 2]\)</span></li>
+<li><p>Classify critical points of <span class="math inline">\(f(x,y) = x^2 + y^2 + 1\)</span></p></li>
+<li><p>Classify critical points of <span class="math inline">\(f(x,y) = x^2 + xy - y^2 + 3x - y\)</span></p></li>
+<li><p>Classify critical points of <span class="math inline">\(f(x,y) = x^2 + y^2 + \dfrac{2}{xy}\)</span></p></li>
+<li><p><em>(Applied)</em> You’re charged $0.03/video and $0.04/audio clip sold by Moneydrain.com. Should you accept their offer of $10/month plus those per-unit costs, or stick with your current $40/month support + $15 hosting, given 400 videos and 600 audios expected?</p></li>
+<li><p><em>(Applied)</em> Weekly cost is <span class="math inline">\(C(x,y) = 24000 + 60x + 20y + 0.3xy\)</span>. Find marginal cost of tricycles when producing 10 bikes and 20 trikes.</p></li>
 </ol>
 </div>
-<div id="lesson-checklist-4" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Lesson Checklist<a href="vector-projections.html#lesson-checklist-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="self-assessment-20" class="section level2 hasAnchor" number="21.3">
+<h2><span class="header-section-number">21.3</span> Self Assessment<a href="partial-derivatives.html#self-assessment-20" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Verify Clairaut’s Theorem:</p>
+<ul>
+<li><span class="math inline">\(f(x,y) = x^4y^2 - x\)</span></li>
+<li><span class="math inline">\(f(x,y) = x e^{xy}\)</span></li>
+</ul></li>
+<li><p>Classify critical points of <span class="math inline">\(f(x,y) = x^2 + x + y^2 - y - 1\)</span></p></li>
+<li><p>Classify critical points of <span class="math inline">\(f(x,y) = e^{x^2 + y^2}\)</span></p></li>
+<li><p>For <span class="math inline">\(C(x,y) = 24000 + 60x + 20y\)</span>, calculate and interpret <span class="math inline">\(\frac{\partial C}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial C}{\partial y}\)</span></p></li>
+</ol>
+</div>
+<div id="lesson-checklist-20" class="section level2 hasAnchor" number="21.4">
+<h2><span class="header-section-number">21.4</span> Lesson Checklist<a href="partial-derivatives.html#lesson-checklist-20" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an <span class="math inline">\(X\)</span> in the appropriate box beside the skill below.
 </p>
 <p>
@@ -559,12 +517,12 @@ Then:
 &amp;\textbf{Consistent (CON):} &amp;&amp;\textrm{You use the skill correctly most of the time.}\\
 &amp;\textbf{Competent (COM):} &amp;&amp;\textrm{You show mastery of the skill.}
 \end{align*}\]</span></p>
-<table style="width:100%;">
+<table>
 <colgroup>
-<col width="80%" />
-<col width="4%" />
-<col width="7%" />
-<col width="7%" />
+<col width="75%" />
+<col width="5%" />
+<col width="9%" />
+<col width="9%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -576,37 +534,26 @@ Then:
 </thead>
 <tbody>
 <tr class="odd">
-<td>Determine the inner product of two vectors</td>
+<td>Calculate partial derivatives of two-variable functions</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Determine the Euclidean norm of a vector</td>
+<td>Find and classify critical points</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Find the cosine of the angle between two vectors</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Find a vector projection and an orthogonal projection</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Decompose a vector into orthogonal vectors</td>
+<td>Solve applied problems involving two-variable functions</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
+
 </div>
 </div>
             </section>
@@ -614,8 +561,8 @@ Then:
           </div>
         </div>
       </div>
-<a href="inverses-and-determinants.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="basis-and-orthonormal-basis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="constrained-optimization.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

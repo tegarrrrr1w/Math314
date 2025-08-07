@@ -1,0 +1,1282 @@
+# (PART)  Differential Calculus {-}
+
+
+# Exponential and Logarithmic Functions 
+
+
+
+## Lecture Content
+
+[**Video:  Logarithms**](https://youtu.be/PCHQAFFvGLc)
+
+[**Video:  Quadratic Functions and Models**](https://youtu.be/frWepga5lgc)
+
+[**Video:  Exponential Functions and Models**](https://youtu.be/qV-HYR-iBSs)
+
+[**Video:  Logarithmic Functions and Models**](https://youtu.be/nBoc5u7ucFU)
+
+
+### Rules for Exponents
+
+Let \( a > 0 \), and \( m, n \in \mathbb{R} \):
+
+- \( a^m \cdot a^n = a^{m+n} \)
+- \( \frac{a^m}{a^n} = a^{m-n} \)
+- \( (a^m)^n = a^{mn} \)
+- \( (ab)^n = a^n b^n \)
+- \( a^0 = 1 \)
+- \( a^{-n} = \frac{1}{a^n} \)
+
+### Rules for Logarithms
+
+Let \( a > 0 \), \( a \neq 1 \), and \( x, y > 0 \):
+
+- \( \log_a(xy) = \log_a(x) + \log_a(y) \)
+- \( \log_a\left(\frac{x}{y}\right) = \log_a(x) - \log_a(y) \)
+- \( \log_a(x^n) = n \cdot \log_a(x) \)
+- \( \log_a(a) = 1 \)
+- \( \log_a(1) = 0 \)
+
+---
+
+### Finding an Exponential Equation from Two Points
+
+To find \( f(x) = C \cdot a^x \) that passes through points \( (x_1, y_1) \) and \( (x_2, y_2) \):
+
+1. Set up the system:
+   \[
+   y_1 = C \cdot a^{x_1} \\
+   y_2 = C \cdot a^{x_2}
+   \]
+
+2. Divide the two equations to eliminate \( C \):
+   \[
+   \frac{y_2}{y_1} = \frac{a^{x_2}}{a^{x_1}} = a^{x_2 - x_1}
+   \]
+
+3. Solve for \( a \):
+   \[
+   a = \left( \frac{y_2}{y_1} \right)^{\frac{1}{x_2 - x_1}}
+   \]
+
+4. Plug back into one equation to solve for \( C \).
+
+---
+
+### Solving Exponential and Logarithmic Equations
+
+#### Exponential Equations{-}
+
+To solve \( a^{f(x)} = b \):
+
+1. Take logarithms of both sides:
+   \[
+   \log(a^{f(x)}) = \log(b)
+   \]
+
+2. Use the power rule:
+   \[
+   f(x) \cdot \log(a) = \log(b)
+   \]
+
+3. Solve for \( x \).
+
+---
+
+#### Logarithmic Equations {-}
+
+To solve \( \log_a(f(x)) = b \):
+
+1. Rewrite in exponential form:
+   \[
+   f(x) = a^b
+   \]
+
+2. Solve the resulting algebraic equation for \( x \).
+
+---
+
+### Applications and Formulas
+
+#### Continuous Compounding {-}
+
+If interest is compounded continuously:
+
+\[
+A = Pe^{rt}
+\]
+
+Where:
+- \( A \) = final amount
+- \( P \) = principal
+- \( r \) = annual interest rate
+- \( t \) = time in years
+- \( e \approx 2.718 \)
+
+---
+
+#### Total Revenue from Demand Function {-}
+
+If price \( p(x) \) depends on demand \( x \) (e.g. \( p(x) = 120 - 3x \)), then:
+
+\[
+R(x) = x \cdot p(x)
+\]
+
+Where:
+- \( R(x) \) = total revenue
+- \( x \) = quantity sold
+- \( p(x) \) = price per unit as a function of demand
+
+You can expand and simplify to analyze maximum revenue using calculus or vertex form (if quadratic).
+
+---
+
+
+## Practice Problems
+
+
+
+1. Find the equation of the exponential function that passes through $(2,-4)$ and $(4,-16)$.
+
+2. Solve $4^x = 3$.
+
+3. Solve $4(1.5^{2x-1}) = 8$.
+
+4. Solve $e^{2x} - 9e^x + 20 = 0$.
+
+5. Why is the logarithm of a negative number not defined?
+
+6. Sketch $f(x) = \log_5 x$ and $g(x) = 5^x$.
+
+7. Suppose $\log(a) = 5$, $\log(b) = 3$ and $\log(c) = -2$. What is $\log\left(\dfrac{ab^4}{c^7} \right)$?
+
+8. (Applied) How long will it take a \$500 investment to be worth \$700 if it is continuously compounded at 15\% per year? (Give the answer to two decimal places.)
+
+9. (Applied) The Better Baby Buggy Co. has just come out with a new model, the Turbo. The market research department predicts that the demand equation for Turbos is given by
+\[
+q = -2p + 320,
+\]
+
+where $q$ is the number of buggies it can sell in a month if the price is \$p per buggy. At what price should it sell the buggies to get the largest revenue? What is the largest monthly revenue?
+
+
+##  Self Assessment
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. Find the equation of the exponential function that passes through $(3,5)$ and $(4,25)$.
+
+2. Solve $6^{3x+1} = 30$.
+
+3. Suppose $\log(a) = 2$, $\log(b) = -7$ and $\log(c) = 3$. What is $\log\left(\dfrac{a^2b^3}{c^5} \right)$?
+
+4. The median price of a home in the United States declined continuously over the period 2005–2008 at a rate of 5.5\% per year from around \$230 thousand in 2005. Write down a formula that predicts the median price of a home $t$ years after 2005. Use your model to estimate the median home price in 2007 and 2010.
+
+5. In 2005, the Las Vegas monorail charged \$3 per ride and had an average ridership of about 28,000 per day. In December 2005 the Las Vegas Monorail Company raised the fare to \$5 per ride, and average ridership in 2006 plunged to around 19,000 per day.
+
+   a. Use the given information to find a linear demand equation.  
+   b. Find the price the company should have charged to maximize revenue from ridership. What is the corresponding daily revenue?  
+   c. The Las Vegas Monorail Company would have needed \$44.9 million in revenues from ridership to break even in 2006. Would it have been possible to break even in 2006 by charging a suitable price?
+
+---
+
+
+
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+| Skill                                                         | D  | CON | COM |
+|---------------------------------------------------------------|----|-----|-----|
+| Simplify expressions involving exponents or logarithms.       |    |     |     |
+| Find the equation of an exponential function through two points.|    |     |     |
+| Solve exponential or logarithmic functions.                   |    |     |     |
+| Maximize the total revenue function, given a linear demand curve.|    |     |     |
+| Solve problems involving the continuous compounding formula.  |    |     |     |
+| Solve applied problems involving exponentials or logarithms.  |    |     |     |
+
+
+
+
+
+
+
+
+
+
+
+# Limits and Continuity
+
+
+
+
+## Lecture Content
+
+[**Video:  Numerical and Graphical Approaches to Limits**](https://youtu.be/FPlR88H9_A0)
+
+[**Video:  Limits and Continuity**](https://youtu.be/eloHCkPZwos)
+
+
+
+### Estimate a Limit Using a Table of Values
+
+To estimate a limit using a table:
+
+- Choose values of \( x \) that get closer to the target from both sides (left and right).
+- Observe how the function values \( f(x) \) behave.
+- If the values approach a single number, that is the estimated limit.
+
+**Example:**
+If \( f(x) = \frac{x^2 - 1}{x - 1} \), use values close to 1 (e.g., 0.9, 0.99, 1.01, 1.1) to estimate \( \lim_{x \to 1} f(x) \).
+
+### Use Factoring to Evaluate Limits
+
+Factoring helps eliminate indeterminate forms like \( \frac{0}{0} \).
+
+**Steps:**
+
+1. Factor the numerator and denominator.
+2. Cancel common factors.
+3. Substitute the limit value.
+
+**Example:**
+Evaluate \( \lim_{x \to 2} \frac{x^2 - 4}{x - 2} \):
+\[
+\frac{(x - 2)(x + 2)}{x - 2} = x + 2 \Rightarrow \lim_{x \to 2} = 4
+\]
+
+### One-Sided Limits and Vertical Asymptotes
+
+- **Left-hand limit:** \( \lim_{x \to a^-} f(x) \)
+- **Right-hand limit:** \( \lim_{x \to a^+} f(x) \)
+
+If the function approaches infinity or negative infinity near a point, it may indicate a vertical asymptote.
+
+**Example:**
+\[
+\lim_{x \to 0^-} \frac{1}{x} = -\infty,\quad
+\lim_{x \to 0^+} \frac{1}{x} = \infty
+\]
+
+### Dominant Term Analysis for Limits at Infinity
+
+To evaluate limits as \( x \to \infty \), focus on the **dominant (highest degree)** terms.
+
+**Steps:**
+
+1. Identify the highest power term in the numerator and denominator.
+2. Divide all terms by the dominant power of \( x \).
+3. Simplify and take the limit.
+
+**Example:**
+\[
+\lim_{x \to \infty} \frac{3x^2 + 5}{x^2 - 2x} = \lim_{x \to \infty} \frac{3 + 5/x^2}{1 - 2/x} = \frac{3}{1} = 3
+\]
+
+### Continuity of Piecewise Functions
+
+To determine if a piecewise function is continuous at a point:
+
+1. **Check function is defined:** \( f(a) \) exists.
+2. **Evaluate both one-sided limits:** \( \lim_{x \to a^-} f(x) \) and \( \lim_{x \to a^+} f(x) \).
+3. **Check limit equals value:** \( \lim_{x \to a} f(x) = f(a) \)
+
+If all three conditions are met, the function is continuous at \( x = a \).
+
+**Example:**
+
+\[
+f(x) =
+\begin{cases}
+x^2, & x < 2 \\
+4x - 4, & x \geq 2
+\end{cases}
+\]
+
+Check continuity at \( x = 2 \):
+- \( f(2) = 4 \)
+- \( \lim_{x \to 2^-} = 4 \), \( \lim_{x \to 2^+} = 4 \)
+- Since limits and value agree: **continuous**
+
+
+
+## Practice Problems
+
+
+Practice the techniques discussed in class and in the online videos by solving the following examples.
+
+1. Estimate $\lim_{x \to 2} e^{x-2}$.
+
+2. Estimate $\lim_{x \to 0^+} \frac{-2}{x^2}$.
+
+3. Evaluate $\lim_{x \to 0} \frac{x-3}{x-1}$.
+
+4. Evaluate $\lim_{x \to 2} \frac{x^{2} - 8x + 12}{x-2}$.
+
+5. Evaluate $\lim_{x \to -2} \frac{x+2}{x^{2} - 4}$.
+
+6. Evaluate $\lim_{x \to \infty} e^{-x}$.
+
+7. Evaluate $\lim_{x \to \infty} \frac{3x - x^{6} + 2}{3x^{3} + 2x}$.
+
+8. Evaluate $\lim_{x \to -\infty} \frac{1 - 3x}{2x^{2} + 3}$.
+
+9. Find a number $b$ so that 
+$$
+f(x) = \begin{cases} 
+5x - 6 & x \leq 2 \\
+-3x + b & x > 2
+\end{cases}
+$$
+is continuous everywhere.
+
+10. Find a number $a$ so that 
+$$
+f(x) = \begin{cases}
+ax - 3 & x \leq 3 \\
+x + a & x > 3
+\end{cases}
+$$
+is continuous everywhere.
+
+11. (Applied) The percentage of movie advertising as a share of newspapers’ total advertising revenue from 1995 to 2004 can be approximated by
+$$
+p(t) = \begin{cases}
+-0.07t + 6 & t \leq 4 \\
+0.3t + 17 & t > 4
+\end{cases}
+$$
+where $t$ is the time since 1995.
+
+   a. Compute $\lim_{t \to 4^-} p(t)$ and $\lim_{t \to 4^+} p(t)$ and interpret each answer.
+
+   b. Is the function $p$ continuous at $t = 4$? What does the answer tell you about newspaper revenues?
+</span>
+
+---
+
+
+
+
+
+## Self Assessment
+
+
+
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. Evaluate $\lim_{x \to -1} \frac{4x^2 + 1}{x}$.
+
+2. Evaluate $\lim_{x \to -4} \frac{x + 4}{x^{2} - 16}$.
+
+3. Evaluate $\lim_{x \to \infty} \frac{60 + e^{-x}}{2 - e^{-x}}$.
+
+4. Your friend Fiona claims that the study of limits is silly; all you ever need to do to find the limit as $x$ approaches $a$ is substitute $x = a$. Give two examples that show she is wrong.
+
+5. Find a number $b$ so that 
+$$
+f(x) = \begin{cases}
+2x + 1 & x \leq -3 \\
+-x + b & x > -3
+\end{cases}
+$$
+is continuous everywhere.
+
+
+
+
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+| Skill                                                          | D  | CON | COM |
+|----------------------------------------------------------------|----|-----|-----|
+| Estimate a limit using a table of values or by direct substitution. |    |     |     |
+| Use factoring to evaluate a limit.                             |    |     |     |
+| Use dominant terms analysis to evaluate limits approaching infinity. |    |     |     |
+| Find a parameter to make a piecewise function continuous.      |    |     |     |
+| Solve applied problems involving limits.                       |    |     |     |
+
+**Notes**
+</span>
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# The Limit Definition of the Derivative
+
+
+
+
+
+
+## Lecture Content
+
+[**Video:  Average Rate of Change**](https://youtu.be/0lMCRhUcCtA)
+
+[**Video:  Introduction to the Derivative**](https://youtu.be/yuNhYRZREwI)
+
+[**Video:  Powers, Sums and Constant Multiples**](https://youtu.be/cfP_04TuJc8)
+
+
+
+### Limit Definition of the Derivative
+
+The derivative of a function \( f(x) \) at a point \( x = a \) is defined as:
+
+\[
+f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h}
+\]
+
+Alternatively, using \( x \):
+
+\[
+f'(x) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}
+\]
+
+This represents the **instantaneous rate of change** or the **slope of the tangent line** to the curve at \( x = a \).
+
+### Derivative Rules for Common Functions
+
+#### Polynomials
+\[
+\frac{d}{dx}(x^n) = nx^{n-1}
+\]
+
+#### Exponential Functions
+\[
+\frac{d}{dx}(e^x) = e^x, \quad \frac{d}{dx}(a^x) = a^x \ln a
+\]
+
+#### Logarithmic Functions
+\[
+\frac{d}{dx}(\ln x) = \frac{1}{x}, \quad \frac{d}{dx}(\log_a x) = \frac{1}{x \ln a}
+\]
+
+#### Trigonometric Functions
+\[
+\frac{d}{dx}(\sin x) = \cos x, \quad \frac{d}{dx}(\cos x) = -\sin x
+\]
+\[
+\frac{d}{dx}(\tan x) = \sec^2 x
+\]
+
+### Sum, Difference, and Constant Multiple Rules
+
+- **Sum Rule:**  
+\[
+\frac{d}{dx}[f(x) + g(x)] = f'(x) + g'(x)
+\]
+
+- **Difference Rule:**  
+\[
+\frac{d}{dx}[f(x) - g(x)] = f'(x) - g'(x)
+\]
+
+- **Constant Multiple Rule:**  
+\[
+\frac{d}{dx}[c \cdot f(x)] = c \cdot f'(x)
+\]
+
+These rules allow for simple combination and manipulation of derivative calculations.
+
+### Tangent Line to a Function at a Point
+
+To find the equation of the tangent line to \( f(x) \) at \( x = a \):
+
+1. **Find \( f(a) \)** – the point of tangency: \( (a, f(a)) \).
+2. **Compute \( f'(a) \)** – the slope of the tangent line.
+3. **Use point-slope form:**
+
+\[
+y - f(a) = f'(a)(x - a)
+\]
+
+This gives the linear approximation of the function near \( x = a \).
+
+**Example:**
+
+Find the tangent line to \( f(x) = x^2 \) at \( x = 3 \):
+
+- \( f(3) = 9 \)
+- \( f'(x) = 2x \Rightarrow f'(3) = 6 \)
+- Equation: \( y - 9 = 6(x - 3) \Rightarrow y = 6x - 9 \)
+
+
+
+## Practice Problems
+
+
+
+Practice the techniques discussed in class and in the online videos by solving the following examples.
+
+1. Use the limit definition of a derivative to find the derivative of $f(x) = x^{2} - 3$.
+
+2. Use the limit definition of a derivative to find the derivative of $f(x) = \frac{2}{x^{2}}$.
+
+3. Differentiate the following functions:
+
+   a. $f(x) = x^{5} + 2x - 2$.
+
+   b. $f(x) = |x| + \frac{1}{x} + \ln(x)$.
+
+   c. $f(x) = \log_{3} x$.
+
+   d. $g(x) = 5^{x} + e^{x}$.
+
+   e. $y = 4x^{-1} - 2|x| - 10 + \sin(x)$.
+
+   f. $f(x) = 3x^{3} - 2x^{2} + \sqrt{x}$.
+
+   g. $f(x) = 5 \sin(x) + \ln(x)$.
+
+   h. $f(x) = \cos(x) - 3 \sin(x) + e^{x}$.
+
+4. Find the equation of the tangent line to the equation below at the indicated point:
+
+   a. $f(x) = x + \frac{1}{x}$ at $x=2$.
+
+   b. $f(x) = \frac{1}{x^{2}}$ at $x=1$.
+
+   c. $f(x) = \sqrt{x}$ at $x=4$.
+
+5. (Applied) Company C’s profits are given by $P(0) = \$1$ million and $P'(0) = \$0.5$ million/month. Company D’s profits are given by $P(0) = \$0.5$ million and $P'(0) = \$1$ million/month. In which company would you rather invest? Why?
+
+6. (Applied) The cost of producing $x$ teddy bears per day at the Cuddly Companion Co. is calculated by their marketing staff to be given by the formula
+$$
+C(x) = 100 + 40x - 0.001 x^{2}.
+$$
+
+   a. Find the marginal cost function and use it to estimate how fast the cost is going up at a production level of 100 teddy bears. Compare this with the exact cost of producing the 101st teddy bear.
+
+   b. Find the average cost function $\overline{C}$, and evaluate $\overline{C}(100)$. What does the answer tell you?
+</span>
+
+---
+
+## Self Assessment
+
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. Use the limit definition of a derivative to find the derivative of $f(x) = x - 2x^{3}$.
+
+2. Differentiate the following functions:
+
+   a. $f(x) = 2x^{4} + 3x^{3} - 1$.
+
+   b. $y = x^{2} + 3|x| - \cos(x)$.
+
+   c. $f(x) = x^{2} - 3\sqrt{x} + 5$.
+
+   d. $f(x) = 5 \sin(x) + \ln(x)$.
+
+   e. $f(x) = \cos(x) - 3 \sin(x) + e^{x}$.
+
+3. Find the equation of the tangent line to $f(x) = x^{2} + \cos(x)$ at $x=0$.
+
+4. Daily oil production by Pemex, Mexico’s national oil company, can be approximated by
+$$
+P(t) = -0.022 t^{2} + 0.2 t + 2.9 \text{ million barrels } \quad (1 \leq t \leq 9),
+$$
+where $t$ is time in years since the start of 2000. Find the derivative function $dP/dt$. At what rate was oil production changing at the start of 2004 ($t=4$)?
+
+5. A car wash firm calculates that its daily profit (in dollars) depends on the number $n$ of workers it employs according to the formula
+$$
+P = 400 n - 0.5 n^{2}.
+$$
+Calculate the marginal product at an employment level of 50 workers, and interpret the result.
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+
+| Skill                                                        | D  | CON | COM |
+|--------------------------------------------------------------|----|-----|-----|
+| Use the limit definition to find the derivative of a function.|    |     |     |
+| Find the derivatives of polynomial and absolute value functions.|    |     |     |
+| Find the derivatives of exponential and logarithmic functions.|    |     |     |
+| Find the derivative of trigonometric functions.               |    |     |     |
+| Determine the equation of a tangent line at a given point.    |    |     |     |
+| Solve applied problems involving derivatives.                 |    |     |     |
+
+**Notes**
+</span>
+
+---
+
+
+
+
+
+# The Product and Quotient Rules
+
+
+
+## Lecture Content
+
+[**Video:  The Product and Quotient Rules**](https://youtu.be/hyq3m2K10fI)
+
+
+
+### Product Rule for Two Functions
+
+If \( f(x) \) and \( g(x) \) are differentiable, then the derivative of their product is:
+
+\[
+\frac{d}{dx}[f(x)g(x)] = f'(x)g(x) + f(x)g'(x)
+\]
+
+**Mnemonic:** "First times the derivative of the second, plus second times the derivative of the first."
+
+---
+
+### Product Rule for Three Functions
+
+If \( f(x), g(x), h(x) \) are differentiable, then the derivative of their product is:
+
+\[
+\frac{d}{dx}[f(x)g(x)h(x)] = f'(x)g(x)h(x) + f(x)g'(x)h(x) + f(x)g(x)h'(x)
+\]
+
+**Tip:** Differentiate one function at a time, keeping the other two unchanged, and sum the results.
+
+---
+
+### Quotient Rule
+
+If \( f(x) \) and \( g(x) \) are differentiable and \( g(x) \ne 0 \), then:
+
+\[
+\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}
+\]
+
+**Mnemonic:** "Low D high minus high D low, over low squared."
+
+---
+
+
+## Practice Problems
+
+
+Practice the techniques discussed in class and in the online videos by solving the following examples.
+
+1. Differentiate:
+
+   a. $y = x^{2} \left( 4x^{3} + \frac{2}{x} - 1 \right)$.
+
+   b. $f(x) = x \ln x$.
+
+   c. $f(x) = (2x^{0.5} - x^{2})^{2}$.
+
+2. Differentiate:
+
+   a. $y = \sqrt{x} \left( 4x^{-1} - 2|x| - 10 \right)$.
+
+   b. $f(x) = x (x^{2} - 3)(2x^{2} + 1)$.
+
+   c. $y = \left( \frac{x^{1.2}}{7} + \frac{2}{x^{2.1}} \right) \cos(x)$.
+
+3. Differentiate:
+
+   a. $f(x) = \frac{2x + 4}{3x - 1}$.
+
+   b. $y = \tan(x) = \frac{\sin(x)}{\cos(x)}$.
+
+   c. $f(x) = \frac{e^{2x}}{\ln(2x) + 2x}$.
+
+4. Differentiate:
+
+   a. $f(x) = \frac{(x-3)(x-2)(x-1)}{x+5}$.
+
+   b. $y = \frac{\sqrt{x} - 1}{\sqrt{x} + 1}$.
+
+   c. $y = \frac{(x+1)(x+2)}{(x-3)(x-2)(x-1)}$.
+
+5. (Applied) The monthly sales of Sunny Electronics’ new iSun walkman is given by
+$$
+q(t) = 2000 t - 100 t^{2}
+$$
+units per month, $t$ months after its introduction. The price Sunny charges is
+$$
+p(t) = 100 - t^{2}
+$$
+dollars per iSun, $t$ months after introduction. Find the rate of change of monthly sales, the rate of change of the price, and the rate of change of monthly revenue six months after the introduction of the iSun. Interpret your answers.
+
+## Self Assessment
+
+Time yourself and try to solve the following questions within twenty minutes. 
+
+1. Differentiate: $f\left(x\right) = x^2\left(2x + 3\right)\left(7x + 2\right)$
+2. Differentiate: $y =\sin(x)\left(x^2 - 1\right)$
+3. Differentiate: $y =\dfrac{x}{\sqrt{x} + |x|}$
+4. Differentiate: $y =\dfrac{\frac{1}{x}-1}{\sin(x)}$
+5. Thoroughbred Bus Company finds that its monthly costs for one particular year were given by $C(t) = 100 + t^2$ dollars after $t$ months. After $ t$ months, the company had $P(t) = 1,000 + t^2$ passengers per month. How fast is its cost per passenger changing after 6 months? 
+
+
+
+
+## Lesson Checklist 
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+
+| Skill                                                        | D  | CON | COM |
+|--------------------------------------------------------------|----|-----|-----|
+| Find the derivatives using the product rule.|    |     |     |
+| Find the derivatives using the quotient rule.|    |     |     |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# The Chain Rule and L'Hopital's Rule
+
+
+
+
+
+## Lecture Content
+
+[**Video:  The Chain Rule**](https://youtu.be/nU0kXDFSt_A)
+
+[**Video:  L'Hospital's Rule**](https://youtu.be/sZv3uLLOwFc)
+
+### Derivative of a Composition of Functions (Chain Rule)
+
+If a function is defined as a composition \( y = f(g(x)) \), then the derivative is given by the **chain rule**:
+
+\[
+\frac{dy}{dx} = f'(g(x)) \cdot g'(x)
+\]
+
+**In Leibniz notation:**
+If \( y = f(u) \) and \( u = g(x) \), then:
+
+\[
+\frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}
+\]
+
+**Example:**
+\[
+\text{If } y = \sin(x^2), \text{ then } \frac{dy}{dx} = \cos(x^2) \cdot 2x
+\]
+
+---
+
+### L'Hôpital's Rule
+
+L’Hôpital’s Rule provides a method to evaluate limits of indeterminate forms \( \frac{0}{0} \) or \( \frac{\infty}{\infty} \).
+
+#### Statement of the Rule
+
+Let \( f(x) \) and \( g(x) \) be differentiable near \( a \), and suppose:
+
+- \( \lim_{x \to a} f(x) = \lim_{x \to a} g(x) = 0 \), or
+- \( \lim_{x \to a} f(x) = \lim_{x \to a} g(x) = \infty \)
+
+and
+
+- \( g'(x) \ne 0 \) near \( a \), and
+- \( \lim_{x \to a} \frac{f'(x)}{g'(x)} \) exists (or is \( \pm\infty \)),
+
+then:
+
+\[
+\lim_{x \to a} \frac{f(x)}{g(x)} = \lim_{x \to a} \frac{f'(x)}{g'(x)}
+\]
+
+**Note:** The rule also applies as \( x \to \infty \) or \( x \to -\infty \).
+
+---
+
+**Example:**
+\[
+\lim_{x \to 0} \frac{\sin x}{x} = \frac{0}{0} \Rightarrow \text{Apply L'Hôpital's Rule:} \quad \lim_{x \to 0} \frac{\cos x}{1} = 1
+\]
+
+## Practice Problems
+
+
+Practice the techniques discussed in class and in the online videos by solving the following examples.
+
+1. Differentiate:
+   a. $f(x) = (3x - 1)^{10}$
+   
+   b. $y = (1 - x)^{-1}$
+   
+   c. $v(x) = 3^{2x + 1} + e^{3x + 1}$
+
+2. Differentiate:
+   a. $f(x) = (x^2 + 1)^5 \ln x$
+   
+   b. $f(x) = \frac{1}{(x + 1)^2}$
+   
+   c. $g(x) = \ln(x^2 + 3)$
+
+3. Differentiate:
+   a. $h(x) = \ln \left(\frac{9x}{4x - 2}\right)$
+   
+   b. $h(x) = 2[(x + 1)(x^2 - 1)]^{-1/2}$
+   
+   c. $h(x) = 3^{x^2 - x}$
+
+
+4. Verify L'Hopital's Rule can be applied, and then use it to evaluate the limit. Sometimes you may have to apply the rule more than once.
+
+   a. $$\lim_{x \to 1} \frac{x^2 - 2x + 1}{x^2 - x}$$
+   
+   b. $$\lim_{x \to -2} \frac{x^3 + 8}{x^2 + 3x + 2}$$
+   
+   c. $$\lim_{x \to \infty} \frac{6x^2 - 5x + 1}{3x^2 - 9}$$
+   
+   d. $$\lim_{x \to \infty} \frac{x^2}{e^x}$$
+
+
+5. (Applied) The average price of a two-bedroom apartment in downtown New York City during the real estate boom from 1994 to 2004 can be approximated by
+
+$$
+p(t) = 0.33 e^{0.16 t} \text{ million dollars } \quad (0 \leq t \leq 10),
+$$
+
+where $t$ is time in years ($t = 0$ represents 1994). What was the average price of a two-bedroom apartment in downtown New York City in 2003, and how fast was it increasing?
+
+6. Find the equation of the tangent line to $$y = \ln \sqrt{2x^2 + 1}$$ at $x=1$.
+
+
+## Self Assessment
+
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. Differentiate: $$r(x) = \left(\sqrt{x+1} + \sqrt{x}\right)^3$$
+
+2. Differentiate: $$r(x) = \left(e^{2x^2}\right)^3$$
+
+3. Determine the limit: $$\lim_{x \to -\infty} \frac{4x^3 + x^2 - 2x}{x^2 - 7}$$
+
+4. Determine the limit: $$\lim_{x \to \frac{1}{2}} \frac{\sin(2x - 1)}{2x - 1}$$
+
+5. The total spent on research and development by the federal government in the United States during 1995–2007 can be approximated by
+
+$$
+S(t) = 7.4 \ln t + 3 \text{ billion dollars} \quad (5 \leq t \leq 19)
+$$
+
+where $t$ is the year since 1990. What was the total spent in 2005 $(t = 15)$ and how fast was it increasing?
+
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+
+| Skill                                      | D  | CON | COM |
+|--------------------------------------------|----|-----|-----|
+| Find the derivative using the chain rule. |    |     |     |
+| Apply L'Hopital's Rule to an indeterminate limit. |    |     |     |
+| Solve applied problems using advanced derivative rules. |    |     |     |
+
+
+
+
+
+
+
+
+
+
+
+# Implicit Differentiation
+
+
+
+
+
+
+## Lecture Content
+
+
+[**Video:  Higher Order Derivatives**](https://youtu.be/wgX5LHbb6pE)
+
+[**Video:  Derivatives of Logarithmic and Exponential Functions**](https://youtu.be/UeazZ3n_n20)
+
+[**Video:  Implicit Differentiation**](https://youtu.be/s6_iOkjPnD4)
+
+
+### Higher-Order Derivatives
+
+Higher-order derivatives are the successive derivatives of a function.
+
+- **First derivative:** \( f'(x) \) — represents the rate of change or slope.
+- **Second derivative:** \( f''(x) \) — measures the rate of change of the first derivative (i.e., concavity or acceleration).
+- **Third and beyond:** \( f^{(3)}(x), f^{(4)}(x), \ldots \) are called third, fourth, etc., derivatives.
+
+**Notation:**
+
+- \( f^{(n)}(x) \) is the \( n \)th derivative.
+- In physics, these can represent velocity, acceleration, jerk, etc.
+
+**Example:**
+If \( f(x) = x^3 \):
+
+- \( f'(x) = 3x^2 \)
+- \( f''(x) = 6x \)
+- \( f^{(3)}(x) = 6 \)
+
+---
+
+### Implicit Differentiation
+
+Implicit differentiation is used when a function is not given in the form \( y = f(x) \), but instead in an implicit form, like an equation involving both \( x \) and \( y \).
+
+#### Steps:
+
+1. **Differentiate both sides** of the equation with respect to \( x \).  
+   - Treat \( y \) as a function of \( x \) (i.e., apply the chain rule to any term involving \( y \)).
+2. **Apply the chain rule:**  
+   - When differentiating terms with \( y \), include \( \frac{dy}{dx} \) (or \( y' \)).
+3. **Solve for \( \frac{dy}{dx} \)** (i.e., isolate the derivative on one side).
+
+---
+
+**Example:**
+Given \( x^2 + y^2 = 25 \), find \( \frac{dy}{dx} \):
+
+1. Differentiate both sides:
+\[
+\frac{d}{dx}(x^2) + \frac{d}{dx}(y^2) = \frac{d}{dx}(25)
+\Rightarrow 2x + 2y \frac{dy}{dx} = 0
+\]
+
+2. Solve for \( \frac{dy}{dx} \):
+\[
+2y \frac{dy}{dx} = -2x \Rightarrow \frac{dy}{dx} = -\frac{x}{y}
+\]
+
+---
+
+
+
+
+## Practice Problems
+
+Practice the techniques discussed in class and in the online videos by solving the following examples.
+
+1. Find the first $n$ derivatives of $$f(x) = -3x^3 + 4x.$$
+
+2. Find $dy/dx$ given $$x^2 y - y^2 = 4.$$
+
+3. Find $dy/dx$ given $$3xy - \frac{y}{x} = 2.$$
+
+4. Find $dy/dx$ given $$y \ln x + y = 2.$$
+
+5. Find $dy/dx$ given $$x e^y = y e^x.$$
+
+6. Differentiate $$y = \frac{(x+1)(x+2)(x+3)(x+4)}{x(x-1)(x-2)(x-3)}.$$
+
+7. Find the tangent line to $$e^{-xy} + 2x = 1$$ at $x = -1$.
+
+8. (Applied) An employment research company estimates that the value of a recent MBA graduate to an accounting company is 
+$$
+V = 3e^2 + 5g^3,
+$$
+where $V$ is the value of the graduate, $e$ is the number of years of prior business experience, and $g$ is the graduate school grade point average. If $V$ is fixed at 200, find $de/dg$ when $g = 3.0$ and interpret the result.
+
+9. (Applied) Use logarithmic differentiation to give a proof of the quotient rule.
+
+
+
+
+## Self Assessment
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. Find the first $n$ derivatives of $$f(x) = (-2x + 1)^3.$$
+
+2. Find $dy/dx$ given $$\ln(y^2 - y) + x = y.$$
+
+3. Find $dy/dx$ given $$e^x y = 1.$$
+
+4. Differentiate $$y = \frac{(3x + 1)^2}{4x(2x - 1)^3}.$$
+
+5. Find the tangent line to $$4x^2 + 2y^2 = 12$$ at $(1, -2)$.
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+
+| Skill                                      | D  | CON | COM |
+|--------------------------------------------|----|-----|-----|
+| Find higher order derivatives of a function. |    |     |     |
+| Use implicit differentiation to find the derivative. |    |     |     |
+| Use logarithmic differentiation to find the derivative. |    |     |     |
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Graphical Analysis
+
+
+
+## Lecture Content
+
+[**Video:  Analyzing Graphs**](https://youtu.be/f30X6LIzYpM)
+
+[**Video:  Maxima and Minima**](https://youtu.be/mM0A9Kv_wYw)
+
+
+### Finding Critical Numbers
+
+Critical numbers occur where the first or second derivative is zero or undefined.
+
+#### Steps for the First Derivative \( f'(x) \):
+
+1. Find \( f'(x) \).
+2. Solve \( f'(x) = 0 \) or where \( f'(x) \) is undefined.
+3. The values of \( x \) where this occurs are **critical numbers** (provided \( x \) is in the domain of \( f \)).
+
+#### Steps for the Second Derivative \( f''(x) \):
+
+1. Find \( f''(x) \).
+2. Solve \( f''(x) = 0 \) or where \( f''(x) \) is undefined.
+3. These are **possible inflection points** (to be confirmed by a sign change).
+
+---
+
+### Classifying Maximums, Minimums, and Inflection Points
+
+#### First Derivative Test (for relative extrema):
+
+- If \( f'(x) \) changes from positive to negative at \( x = c \), then \( f(c) \) is a **local maximum**.
+- If \( f'(x) \) changes from negative to positive at \( x = c \), then \( f(c) \) is a **local minimum**.
+
+#### Second Derivative Test (for local extrema):
+
+- If \( f'(c) = 0 \) and \( f''(c) > 0 \), then \( f(c) \) is a **local minimum**.
+- If \( f'(c) = 0 \) and \( f''(c) < 0 \), then \( f(c) \) is a **local maximum**.
+- If \( f''(c) = 0 \), the test is inconclusive.
+
+#### Inflection Points:
+
+- A point \( x = c \) is an **inflection point** if:
+  - \( f''(x) \) changes sign at \( x = c \), and
+  - \( f \) is continuous at \( x = c \)
+
+---
+
+### Extreme Value Theorem (EVT)
+
+The **Extreme Value Theorem** states:
+
+> If a function \( f(x) \) is continuous on a closed interval \([a, b]\), then \( f(x) \) has both an absolute maximum and an absolute minimum on that interval.
+
+#### To find the absolute extrema:
+
+1. Find critical numbers of \( f(x) \) in the interval \([a, b]\).
+2. Evaluate \( f(x) \) at:
+   - Each critical number in \([a, b]\)
+   - The endpoints \( a \) and \( b \)
+3. Compare all function values. The largest is the **absolute maximum**, and the smallest is the **absolute minimum**.
+
+---
+
+### Intervals of Increase, Decrease, and Concavity
+
+#### Increasing/Decreasing Intervals:
+
+1. Find \( f'(x) \) and critical points.
+2. Make a sign chart for \( f'(x) \).
+3. If \( f'(x) > 0 \) on an interval, then \( f(x) \) is **increasing** there.
+4. If \( f'(x) < 0 \) on an interval, then \( f(x) \) is **decreasing** there.
+
+#### Concavity and Inflection Points:
+
+1. Find \( f''(x) \) and solve \( f''(x) = 0 \).
+2. Make a sign chart for \( f''(x) \).
+3. If \( f''(x) > 0 \), then \( f(x) \) is **concave up**.
+4. If \( f''(x) < 0 \), then \( f(x) \) is **concave down**.
+5. Points where concavity changes are **inflection points**.
+
+---
+
+
+
+## Practice Problems
+
+
+Practice the techniques discussed in class and in the online videos by solving the following examples.
+
+1. Find the location of all relative and absolute extrema for $$f(x) = 2x^2 - 2x + 3$$ on $[0, 3]$.
+
+2. Find the location of all relative and absolute extrema for $$f(x) = \sqrt{x}(x+1)$$ on $[0, \infty)$.
+
+3. Find the location of all relative and absolute extrema for $$f(x) = \frac{x^2 + 1}{x^2 - 1}$$ on $[-2, 2]$ with $x \neq \pm 1$.
+
+4. Find the location of all relative and absolute extrema for $$f(x) = (x+1)^{2/5}$$ on $[-2, 0]$.
+
+5. Find and classify the critical points and locate all inflection points for $$f(x) = 2x^2 - 2x + 3.$$
+
+6. Find and classify the critical points and locate all inflection points for $$f(x) = -x^3 + 3x.$$
+
+7. Sketch the graph of $$h(x) = -2x^3 - 3x^2 + 36x.$$
+
+8. Sketch the graph of $$f(t) = \frac{t^2 - 1}{t^2 + 1}.$$
+
+9. (Applied) Maximize $$P = xy$$ with $$x + 2y = 40.$$
+
+10. (Applied) The cost of controlling emissions at a firm rises rapidly as the amount of emissions reduced increases. Here is a possible model: 
+
+$$
+C(q) = 4,000 + 100 q^2
+$$
+
+where $q$ is the reduction in emissions (in pounds of pollutant per day) and $C$ is the daily cost to the firm (in dollars) of this reduction. What level of reduction corresponds to the lowest average cost per pound of pollutant, and what would be the resulting average cost to the nearest dollar?
+
+
+## Self Assessment
+
+Time yourself and try to solve the following questions within twenty minutes.
+
+1. Find the location of all relative and absolute extrema for $$f(x) = 2x^3 + 3x^2$$ on $[-2, \infty)$.
+
+2. Find and classify the critical points and locate all inflection points for $$f(x) = x e^{-x^2}.$$
+
+3. Sketch the graph of $$g(x) = \frac{x^3}{x^2 - 3}.$$
+
+4. Hercules Films is also deciding on the price of the video release of its film *Bride of the Son of Frankenstein*. Again, marketing estimates that at a price of $p$ dollars, it can sell 
+$$
+q = 200,000 - 10,000 p
+$$
+copies, but each copy costs \$4 to make. What price will give the greatest profit?
+
+5. Let 
+$$
+f(x) = \frac{N}{1 + A e^{-k x}}
+$$
+for constants $N$, $A$, and $k$ ($A$ and $k$ positive). Show that $f$ has a single point of inflection at $$x = \frac{\ln A}{k}.$$
+
+
+## Lesson Checklist 
+
+
+This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an $X$ in the appropriate box beside the skill below. 
+\bigskip
+
+\noindent
+\begin{align*}
+&\textbf{Developing (D):} &&\textrm{You still need to work on this skill.}\\
+&\textbf{Consistent (CON):} &&\textrm{You use the skill correctly most of the time.}\\
+&\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
+\end{align*}
+
+
+
+
+| Skill                                                        | D  | CON | COM |
+|--------------------------------------------------------------|----|-----|-----|
+| Find and classify critical numbers of the first derivative.  |    |    
+
+
+

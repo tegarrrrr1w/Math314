@@ -6,6 +6,7 @@ language:
     chapter_name: "Lesson "
 rmd_files:
   - index.Rmd
-  - 01-intro.Rmd
-  - 02-chapter.Rmd
+  - 01-LinearAlgebra.Rmd
+  - 02-DifferentialCalculus.Rmd
+  - 03-IntegralCalculus.Rmd
 output_dir: "docs"

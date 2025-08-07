@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 5 Vector Projections | Calculus and Linear Algebra</title>
+  <title>Lesson 18 The Fundamental Theorem of Calculus | Calculus and Linear Algebra</title>
   <meta name="description" content="Course notes for MATH 114" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 5 Vector Projections | Calculus and Linear Algebra" />
+  <meta property="og:title" content="Lesson 18 The Fundamental Theorem of Calculus | Calculus and Linear Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Course notes for MATH 114" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 5 Vector Projections | Calculus and Linear Algebra" />
+  <meta name="twitter:title" content="Lesson 18 The Fundamental Theorem of Calculus | Calculus and Linear Algebra" />
   
   <meta name="twitter:description" content="Course notes for MATH 114" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="inverses-and-determinants.html"/>
-<link rel="next" href="basis-and-orthonormal-basis.html"/>
+<link rel="prev" href="riemann-sums.html"/>
+<link rel="next" href="area-between-curves.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -374,183 +374,127 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="vector-projections" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Lesson 5</span> Vector Projections<a href="vector-projections.html#vector-projections" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="lecture-content-4" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Lecture Content<a href="vector-projections.html#lecture-content-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><a href="https://www.youtube.com/watch?v=k_hRTx4PEn0&amp;list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&amp;index=4"><strong>Video: Vectors</strong></a></p>
-<div id="vector-operations" class="section level3 hasAnchor" number="5.1.1">
-<h3><span class="header-section-number">5.1.1</span> Vector Operations<a href="vector-projections.html#vector-operations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="addition-and-scalar-multiplication-of-vectors" class="section level4 unnumbered hasAnchor">
-<h4>Addition and Scalar Multiplication of Vectors<a href="vector-projections.html#addition-and-scalar-multiplication-of-vectors" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<ul>
-<li><p><strong>Vector Addition</strong>: If <strong>u</strong> = ⟨u₁, u₂, …, uₙ⟩ and <strong>v</strong> = ⟨v₁, v₂, …, vₙ⟩, then<br />
-<strong>u</strong> + <strong>v</strong> = ⟨u₁ + v₁, u₂ + v₂, …, uₙ + vₙ⟩.</p></li>
-<li><p><strong>Scalar Multiplication</strong>: For scalar <em>c</em>,<br />
-<em>c</em>·<strong>v</strong> = ⟨c·v₁, c·v₂, …, c·vₙ⟩.</p></li>
-<li><p>Example: Let <strong>u</strong> = ⟨1, 2, 3⟩ and <strong>v</strong> = ⟨4, -1, 2⟩
-Then:
-<span class="math display">\[
-\mathbf{u} + \mathbf{v} = \langle 1 + 4,\ 2 + (-1),\ 3 + 2 \rangle = \langle 5,\ 1,\ 5 \rangle
-\]</span></p></li>
-<li><p>Example: Let <strong>v</strong> = ⟨2, -3, 4&gt; and and scalar <em>c</em> = 3.
-Then:
-<span class="math display">\[
-3 \cdot \mathbf{v} = \langle 3 \cdot 2,\ 3 \cdot (-3),\ 3 \cdot 4 \rangle = \langle 6,\ -9,\ 12 \rangle
-\]</span></p></li>
-</ul>
-<p>These operations preserve vector direction (in the case of addition) or scale the magnitude (in scalar multiplication).</p>
-<hr />
-</div>
-</div>
-<div id="standard-inner-product-dot-product" class="section level3 hasAnchor" number="5.1.2">
-<h3><span class="header-section-number">5.1.2</span> Standard Inner Product (Dot Product)<a href="vector-projections.html#standard-inner-product-dot-product" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <strong>standard inner product</strong> (dot product) of vectors <strong>u</strong> and <strong>v</strong> in ℝⁿ is:
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = u_1 v_1 + u_2 v_2 + \cdots + u_n v_n
-\]</span></p>
-<ul>
-<li>Example: Let <strong>u</strong> = ⟨1, 2, 3⟩ and <strong>v</strong> = ⟨4, -1, 2⟩ Then:
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = 1 \cdot 4 + 2 \cdot (-1) + 3 \cdot 2 = 4 - 2 + 6 = 8
-\]</span></li>
-<li>Returns a <strong>scalar</strong>.</li>
-<li>Measures how much one vector goes in the direction of another.</li>
-</ul>
-<hr />
-</div>
-<div id="euclidean-norm-of-a-vector" class="section level3 hasAnchor" number="5.1.3">
-<h3><span class="header-section-number">5.1.3</span> Euclidean Norm of a Vector<a href="vector-projections.html#euclidean-norm-of-a-vector" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <strong>Euclidean norm</strong> (or magnitude/length) of a vector <strong>v</strong> is:</p>
+<div id="the-fundamental-theorem-of-calculus" class="section level1 hasAnchor" number="18">
+<h1><span class="header-section-number">Lesson 18</span> The Fundamental Theorem of Calculus<a href="the-fundamental-theorem-of-calculus.html#the-fundamental-theorem-of-calculus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="lecture-content-17" class="section level2 hasAnchor" number="18.1">
+<h2><span class="header-section-number">18.1</span> Lecture Content<a href="the-fundamental-theorem-of-calculus.html#lecture-content-17" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://youtu.be/BVOSn1Gwqhs"><strong>Video: The Fundamental Theorem of Calculus</strong></a></p>
+<div id="fundamental-theorem-of-calculus-part-i" class="section level3 hasAnchor" number="18.1.1">
+<h3><span class="header-section-number">18.1.1</span> Fundamental Theorem of Calculus – Part I<a href="the-fundamental-theorem-of-calculus.html#fundamental-theorem-of-calculus-part-i" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let <span class="math inline">\(f\)</span> be a continuous function on the interval <span class="math inline">\([a, b]\)</span>, and define a function:</p>
 <p><span class="math display">\[
-\| \mathbf{v} \| = \sqrt{v_1^2 + v_2^2 + \cdots + v_n^2}
+F(x) = \int_a^x f(t)\,dt
 \]</span></p>
-<ul>
-<li>Example: Let <strong>v</strong> = ⟨2, -3, 6⟩. Then the <strong>2-norm</strong> is:
-<span class="math display">\[
-\| \mathbf{v} \| = \sqrt{2^2 + (-3)^2 + 6^2} = \sqrt{4 + 9 + 36} = \sqrt{49} = 7
-\]</span></li>
-<li>Denoted as |<strong>v</strong>|.</li>
-<li>Also called the <strong>2-norm</strong>.</li>
-</ul>
-<hr />
-</div>
-<div id="cosine-of-the-angle-between-two-vectors" class="section level3 hasAnchor" number="5.1.4">
-<h3><span class="header-section-number">5.1.4</span> Cosine of the Angle Between Two Vectors<a href="vector-projections.html#cosine-of-the-angle-between-two-vectors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Given non-zero vectors <strong>u</strong> and <strong>v</strong>, the <strong>cosine of the angle</strong> θ between them is:</p>
+<p>Then <span class="math inline">\(F\)</span> is continuous on <span class="math inline">\([a, b]\)</span>, differentiable on <span class="math inline">\((a, b)\)</span>, and:</p>
 <p><span class="math display">\[
-\cos(\theta) = \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{u}\| \|\mathbf{v}\|}
+F&#39;(x) = f(x)
 \]</span></p>
-<ul>
-<li>Example: Let <strong>u</strong> = ⟨1, 2⟩ and <strong>v</strong> = ⟨3, 4⟩
-<ol style="list-style-type: decimal">
-<li>Compute dot product:<br />
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = 1 \cdot 3 + 2 \cdot 4 = 3 + 8 = 11
-\]</span></li>
-<li>Compute norms:<br />
-<span class="math display">\[
-\|\mathbf{u}\| = \sqrt{1^2 + 2^2} = \sqrt{5}, \quad \|\mathbf{v}\| = \sqrt{3^2 + 4^2} = \sqrt{25} = 5
-\]</span></li>
-<li>Use the cosine formula:<br />
-<span class="math display">\[
-\cos(\theta) = \frac{11}{\sqrt{5} \cdot 5} = \frac{11}{5\sqrt{5}} = \frac{\sqrt{5}}{5} \cdot \frac{11}{5}
-\]</span></li>
-<li>Find angle:<br />
-<span class="math display">\[
-\theta = \cos^{-1}\left( \frac{11}{5\sqrt{5}} \right) \approx 18.4^\circ
-\]</span></li>
-</ol></li>
-<li>If <strong>cos(θ) = 0</strong>, the vectors are orthogonal (perpendicular).</li>
-<li>If <strong>cos(θ) &gt; 0</strong>, angle &lt; 90° (acute).</li>
-<li>If <strong>cos(θ) &lt; 0</strong>, angle &gt; 90° (obtuse).</li>
-</ul>
+<p><strong>Interpretation:</strong></p>
+<p>The derivative of the area function <span class="math inline">\(F(x)\)</span> gives back the original function <span class="math inline">\(f(x)\)</span>. This connects <strong>differentiation</strong> and <strong>integration</strong>.</p>
 <hr />
 </div>
-<div id="vector-projection-formula" class="section level3 hasAnchor" number="5.1.5">
-<h3><span class="header-section-number">5.1.5</span> Vector Projection Formula<a href="vector-projections.html#vector-projection-formula" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The <strong>projection</strong> of vector <strong>u</strong> onto vector <strong>v</strong> is:</p>
+<div id="fundamental-theorem-of-calculus-part-ii" class="section level3 hasAnchor" number="18.1.2">
+<h3><span class="header-section-number">18.1.2</span> Fundamental Theorem of Calculus – Part II<a href="the-fundamental-theorem-of-calculus.html#fundamental-theorem-of-calculus-part-ii" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let <span class="math inline">\(f\)</span> be continuous on <span class="math inline">\([a, b]\)</span>, and let <span class="math inline">\(F\)</span> be any antiderivative of <span class="math inline">\(f\)</span> on that interval. Then:</p>
 <p><span class="math display">\[
-\mathrm{proj}_{\mathbf{v}} \mathbf{u} = \left( \frac{\mathbf{u} \cdot \mathbf{v}}{\|\mathbf{v}\|^2} \right) \mathbf{v}
+\int_a^b f(x)\,dx = F(b) - F(a)
 \]</span></p>
-<ul>
-<li>Example: Project <strong>u</strong> = ⟨2, 3⟩ onto <strong>v</strong> = ⟨1, 4⟩.
-<ol style="list-style-type: decimal">
-<li>Dot product:<br />
-<span class="math display">\[
-\mathbf{u} \cdot \mathbf{v} = 2 \cdot 1 + 3 \cdot 4 = 2 + 12 = 14
-\]</span></li>
-<li>Norm squared:<br />
-<span class="math display">\[
-\|\mathbf{v}\|^2 = 1^2 + 4^2 = 1 + 16 = 17
-\]</span></li>
-<li>Projection:<br />
-<span class="math display">\[
-\mathrm{proj}_{\mathbf{v}} \mathbf{u} = \left( \frac{14}{17} \right) \mathbf{v} = \left( \frac{14}{17} \right) \langle 1,\ 4 \rangle = \left\langle \frac{14}{17},\ \frac{56}{17} \right\rangle
-\]</span></li>
-</ol></li>
-<li>Gives the component of <strong>u</strong> in the direction of <strong>v</strong>.</li>
-</ul>
+<p><strong>Interpretation:</strong></p>
+<p>To evaluate a definite integral, find <strong>any</strong> antiderivative <span class="math inline">\(F\)</span>, and compute the difference <span class="math inline">\(F(b) - F(a)\)</span>. This allows us to compute exact areas without using limits or Riemann sums.</p>
 <hr />
 </div>
-<div id="geometric-interpretations" class="section level3 hasAnchor" number="5.1.6">
-<h3><span class="header-section-number">5.1.6</span> Geometric Interpretations<a href="vector-projections.html#geometric-interpretations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><p><strong>Addition</strong>: Geometrically, vector addition corresponds to placing the tail of <strong>v</strong> at the head of <strong>u</strong> and drawing the resulting vector from the tail of <strong>u</strong> to the head of <strong>v</strong>.</p></li>
-<li><p><strong>Dot Product</strong>: Measures alignment. A large positive value means the vectors point in similar directions.</p></li>
-<li><p><strong>Norm</strong>: The “length” of the vector in Euclidean space.</p></li>
-<li><p><strong>Projection</strong>: Drops a perpendicular from <strong>u</strong> onto <strong>v</strong>; the projection lies along <strong>v</strong>.</p></li>
-<li><p><strong>Angle and Cosine</strong>: Relates direction and orthogonality.</p></li>
-</ul>
-<hr />
-</div>
-</div>
-<div id="practice-problems-4" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Practice Problems<a href="vector-projections.html#practice-problems-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="properties-of-definite-integrals" class="section level3 hasAnchor" number="18.1.3">
+<h3><span class="header-section-number">18.1.3</span> Properties of Definite Integrals<a href="the-fundamental-theorem-of-calculus.html#properties-of-definite-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let <span class="math inline">\(f(x)\)</span>, <span class="math inline">\(g(x)\)</span> be continuous on <span class="math inline">\([a, b]\)</span>, and let <span class="math inline">\(c\)</span> be a constant. The following properties hold:</p>
 <ol style="list-style-type: decimal">
-<li>Draw the vectors <span class="math inline">\(A = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> and <span class="math inline">\(B = \begin{bmatrix} -1 \\ -1 \end{bmatrix}\)</span>. Draw:
-<ul>
-<li><span class="math inline">\(A + B\)</span>,</li>
-<li><span class="math inline">\(B + A\)</span>,</li>
-<li><span class="math inline">\(A - B\)</span>,</li>
-<li><span class="math inline">\(B - A\)</span>,</li>
-<li><span class="math inline">\(2A\)</span>, and</li>
-<li><span class="math inline">\(-4B\)</span>.</li>
-</ul></li>
-<li>Compute the standard inner products and norms of <span class="math inline">\(A = \begin{bmatrix} -1 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(B = \begin{bmatrix} 2 \\ 2 \end{bmatrix}\)</span>. What is the angle between them?</li>
-<li>Express <span class="math inline">\(v = [5, -1]\)</span> as a sum of orthogonal vectors such that one has the same direction as <span class="math inline">\(u = [4, 2]\)</span>.</li>
-<li>Find the angle between:
-<ul>
-<li><span class="math inline">\(x = \begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}\)</span> and <span class="math inline">\(y = \begin{bmatrix} 2 \\ 0 \\ -3 \end{bmatrix}\)</span></li>
-<li><span class="math inline">\(x = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(y = \begin{bmatrix} 3 \\ -2 \\ 1 \end{bmatrix}\)</span></li>
-</ul></li>
-<li>Find the projection and orthogonal projection of <span class="math inline">\(u\)</span> onto <span class="math inline">\(v\)</span>:
-<ul>
-<li><span class="math inline">\(u = \begin{bmatrix} 4 \\ 3 \end{bmatrix}\)</span>, <span class="math inline">\(v = \begin{bmatrix} 2 \\ 8 \end{bmatrix}\)</span></li>
-<li><span class="math inline">\(u = \begin{bmatrix} 3 \\ 5 \end{bmatrix}\)</span>, <span class="math inline">\(v = \begin{bmatrix} 6 \\ 2 \end{bmatrix}\)</span></li>
-</ul></li>
+<li><strong>Linearity:</strong></li>
 </ol>
+<p><span class="math display">\[
+\int_a^b [f(x) \pm g(x)]\,dx = \int_a^b f(x)\,dx \pm \int_a^b g(x)\,dx
+\]</span></p>
+<p><span class="math display">\[
+\int_a^b c \cdot f(x)\,dx = c \cdot \int_a^b f(x)\,dx
+\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Additivity over Intervals:</strong></li>
+</ol>
+<p><span class="math display">\[
+\int_a^b f(x)\,dx + \int_b^c f(x)\,dx = \int_a^c f(x)\,dx
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Reversing Limits:</strong></li>
+</ol>
+<p><span class="math display">\[
+\int_a^b f(x)\,dx = -\int_b^a f(x)\,dx
+\]</span></p>
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Zero-Width Interval:</strong></li>
+</ol>
+<p><span class="math display">\[
+\int_a^a f(x)\,dx = 0
+\]</span></p>
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Comparison Property (if <span class="math inline">\(f(x) \ge g(x)\)</span>):</strong></li>
+</ol>
+<p><span class="math display">\[
+\int_a^b f(x)\,dx \ge \int_a^b g(x)\,dx
+\]</span></p>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>Absolute Value Inequality:</strong></li>
+</ol>
+<p><span class="math display">\[
+\left| \int_a^b f(x)\,dx \right| \le \int_a^b |f(x)|\,dx
+\]</span></p>
 <hr />
 </div>
-<div id="self-assessment-4" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Self-Assessment<a href="vector-projections.html#self-assessment-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Try to solve the following within 20 minutes.</p>
+</div>
+<div id="practice-problems-17" class="section level2 hasAnchor" number="18.2">
+<h2><span class="header-section-number">18.2</span> Practice Problems<a href="the-fundamental-theorem-of-calculus.html#practice-problems-17" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ol style="list-style-type: decimal">
-<li>Draw <span class="math inline">\(A = \begin{bmatrix} -1 \\ 3 \end{bmatrix}\)</span> and <span class="math inline">\(B = \begin{bmatrix} 2 \\ 2 \end{bmatrix}\)</span>. Then draw:
-<ul>
-<li><span class="math inline">\(A + B\)</span>,</li>
-<li><span class="math inline">\(A - B\)</span>,</li>
-<li><span class="math inline">\(B - A\)</span>,</li>
-<li><span class="math inline">\(3A\)</span>,</li>
-<li><span class="math inline">\(-0.5B\)</span></li>
-</ul></li>
-<li>Find the angle between: <span class="math inline">\(x = \begin{bmatrix} 1 \\ 2 \end{bmatrix}\)</span> and <span class="math inline">\(y = \begin{bmatrix} 2 \\ 1 \end{bmatrix}\)</span></li>
-<li>Find the projection and orthogonal projection of <span class="math inline">\(u\)</span> onto <span class="math inline">\(v\)</span>: <span class="math inline">\(u = \begin{bmatrix} -2 \\ 5 \end{bmatrix}\)</span>, <span class="math inline">\(v = \begin{bmatrix} 6 \\ 5 \end{bmatrix}\)</span></li>
-<li>Express <span class="math inline">\(v = [8, -3, -3]\)</span> as a sum of orthogonal vectors with one in the direction of <span class="math inline">\(u = [2, 3, 2]\)</span></li>
+<li><p>Evaluate the following integrals:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(\displaystyle \int_{-3}^{3} \left(x + x^3\right) dx\)</span><br />
+</li>
+<li><span class="math inline">\(\displaystyle \int_{0}^{\pi} \left(\sin u + \cos u\right) du\)</span><br />
+</li>
+<li><span class="math inline">\(\displaystyle \int_{-1}^{1} \left(3x^4 - 2x^{-2} + x^{-5} + 4\right) dx\)</span><br />
+</li>
+<li><span class="math inline">\(\displaystyle \int_{2}^{3} \left(2xe^{x^2 + 4} + \dfrac{5}{2x+8}  \right) dx\)</span><br />
+</li>
+<li><span class="math inline">\(\displaystyle \int_{0}^{1} \frac{e^x + e^{-x}}{2} dx\)</span></li>
+</ol></li>
+<li><p>Find the derivative of:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(g(x) = \displaystyle \int_{0}^{x} \left(u +u^3\right) du\)</span><br />
+</li>
+<li><span class="math inline">\(g(x) = \displaystyle \int_{-5}^{x^2} \sqrt{1 + u^3} du\)</span><br />
+</li>
+<li><span class="math inline">\(g(x) = \displaystyle \int_{\ln(x)}^{e^x} \left(u^6 - 1/u^2\right) du\)</span></li>
+</ol></li>
+<li><p><strong>(Applied)</strong> The marginal revenue of the xth box of flash cards sold is <span class="math inline">\(100e^{-0.001x}\)</span>. Find the revenue from items 101 through 1,000.</p></li>
+<li><p><strong>(Challenge)</strong> Differentiate<br />
+<span class="math display">\[\int_{g(x)}^{h(x)} f(t) dt.\]</span></p></li>
+<li><p><strong>(Challenge)</strong> Show that<br />
+<span class="math display">\[2 \leq \int_{0}^2 \sqrt{1 + x^3} dx \leq 6.\]</span></p></li>
 </ol>
 </div>
-<div id="lesson-checklist-4" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Lesson Checklist<a href="vector-projections.html#lesson-checklist-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="self-assessment-17" class="section level2 hasAnchor" number="18.3">
+<h2><span class="header-section-number">18.3</span> Self Assessment<a href="the-fundamental-theorem-of-calculus.html#self-assessment-17" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Time yourself and try to solve the following within 20 minutes:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\displaystyle \int_{0}^{\pi/2} \left(1 + x + \cos x\right) dx\)</span><br />
+</li>
+<li><span class="math inline">\(\displaystyle \int_{-1}^{1} x(x^2+1)^{10} dx\)</span><br />
+</li>
+<li><span class="math inline">\(g(x) = \displaystyle \int_{x^3}^{\pi} e^{u^3 + 4u} du\)</span><br />
+</li>
+<li><span class="math inline">\(g(x) = \displaystyle \int_{x}^{\pi/2} (1 + u + \cos u) du\)</span><br />
+</li>
+<li>Given <span class="math inline">\(C(x) = 246.76 + \int_{0}^x 5t dt\)</span>, find the fixed cost and marginal cost at <span class="math inline">\(x=10\)</span>.</li>
+</ol>
+</div>
+<div id="lesson-checklist-17" class="section level2 hasAnchor" number="18.4">
+<h2><span class="header-section-number">18.4</span> Lesson Checklist<a href="the-fundamental-theorem-of-calculus.html#lesson-checklist-17" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an <span class="math inline">\(X\)</span> in the appropriate box beside the skill below.
 </p>
 <p>
@@ -559,13 +503,7 @@ Then:
 &amp;\textbf{Consistent (CON):} &amp;&amp;\textrm{You use the skill correctly most of the time.}\\
 &amp;\textbf{Competent (COM):} &amp;&amp;\textrm{You show mastery of the skill.}
 \end{align*}\]</span></p>
-<table style="width:100%;">
-<colgroup>
-<col width="80%" />
-<col width="4%" />
-<col width="7%" />
-<col width="7%" />
-</colgroup>
+<table>
 <thead>
 <tr class="header">
 <th>Skill</th>
@@ -576,31 +514,19 @@ Then:
 </thead>
 <tbody>
 <tr class="odd">
-<td>Determine the inner product of two vectors</td>
+<td>Apply the FTCI to integrals.</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Determine the Euclidean norm of a vector</td>
+<td>Apply the FTCII to integrals.</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td>Find the cosine of the angle between two vectors</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Find a vector projection and an orthogonal projection</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Decompose a vector into orthogonal vectors</td>
+<td>Solve applied problems using the FTC.</td>
 <td></td>
 <td></td>
 <td></td>
@@ -614,8 +540,8 @@ Then:
           </div>
         </div>
       </div>
-<a href="inverses-and-determinants.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="basis-and-orthonormal-basis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="riemann-sums.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="area-between-curves.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
