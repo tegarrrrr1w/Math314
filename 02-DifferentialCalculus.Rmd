@@ -16,6 +16,12 @@
 [**Video:  Logarithmic Functions and Models**](https://youtu.be/nBoc5u7ucFU)
 
 
+
+---
+
+
+## Lecture Notes
+
 ### Rules for Exponents
 
 Let \( a > 0 \), and \( m, n \in \mathbb{R} \):
@@ -26,6 +32,10 @@ Let \( a > 0 \), and \( m, n \in \mathbb{R} \):
 - \( (ab)^n = a^n b^n \)
 - \( a^0 = 1 \)
 - \( a^{-n} = \frac{1}{a^n} \)
+
+
+---
+
 
 ### Rules for Logarithms
 
@@ -133,6 +143,193 @@ You can expand and simplify to analyze maximum revenue using calculus or vertex 
 ---
 
 
+##  Examples
+
+
+### Quadratic Functions
+
+[**Video:  Solutions **](https://www.youtube.com/watch?v=dsS6JHuwyzA)
+
+
+1. Identify \(a\), \(b\), and \(c\) in the equation below, then solve using the Quadratic Formula.
+\[
+x^2 + 18x + 80 = 0
+\]
+
+2. Determine the number and type of solutions for the equation:
+\[
+-2x^2 -9x -9 = 0
+\]
+
+3. The equation
+\[
+5x^2 +15x +4 = 0
+\]
+has two solutions.  Find them.
+
+4. Consider the quadratic function:
+\[
+f(x) = 9x^2 - 1
+\]  Find the:
+   - Vertex
+   - Largest \(x\)-intercept
+   - \(y\)-intercept
+
+5. Consider the parabola given by:
+\[
+f(x) = -4x^2 -8x +14
+\]
+Answer the following:
+   a. The graph of this function opens: ☐ Up ☐ Down  
+   b. Domain (interval notation):  
+   c. Range (interval notation):
+   
+
+6. The Acme Widget Company has found that if widgets are priced at \$218, then \(14,000\) will be sold. For every increase of \$13, there will be 300 fewer widgets sold.  The marginal cost is \$130.80 per widget. Fixed costs are \$12,000. If \(x\) represents the price of a widget, find:
+
+   a. Number of widgets sold
+   b. Revenue
+   c. Cost of production
+   d. Profit
+   e. Price that maximizes profit
+   
+   
+
+---
+
+
+
+### Exponent Rules
+
+[**Video:  Solutions **](https://www.youtube.com/watch?v=V3n2uVAkdn4)
+
+
+1. Simplify the expression completely:  
+
+\[
+\frac{x^{22} \cdot y^{79}}{x^{16} \cdot y^{20}}
+\]
+
+2. Simplify the given expression:  
+
+\[
+\frac{(a^4 z^2)^4 \cdot (-a^2 z^2)^6}{\left( -a z^3 a^5\right)^2}
+\]
+
+
+
+3.  Sketch each of the following:
+
+   a. \(4(0.65)^x\)  
+   b. \(3(1.17)^x\)  
+   c. \(4(1.17)^x\)  
+   d. \(4(1.52)^x\)  
+   e. \(4(0.88)^x\)  
+   
+
+4. Use the like-bases property and exponents to solve:  
+
+\[
+\left( \frac{1}{5} \right)^{x+7} = 5^{7x+4}
+\]
+
+
+5. The population of the world in 1987 was 5 billion and the annual growth rate was estimated at 2% per year. Assuming an exponential growth model, find the projected world population in 1992.
+
+
+
+
+---
+
+
+
+
+### Logarithm Rules
+
+[**Video:  Solutions **](https://www.youtube.com/watch?v=c5rwovJLt24)
+
+
+1. Express the equation in exponential form.
+
+  a.  
+\[
+\log_{2} 8 = 3
+\]  
+That is, write your answer in the form \( 2^A = B \).  
+
+   b.  
+\[
+\log_{5} 3125 = 5
+\]  
+That is, write your answer in the form \( 5^C = D \).  
+
+
+2. Simplify:  
+\[
+\log_{z} \left( \left( \frac{1}{z} \right)^{6} \right)
+\]
+
+3. If \(\ln(a) = 2\), \(\ln(b) = 3\), and \(\ln(c) = 5\), evaluate the following:
+
+   a. 
+\[
+\ln\left( a^{a} b^{-2} c^{-2} \right)
+\]
+
+   b.  
+\[
+\ln\left( \sqrt{b^1 c^{-2}a^{-4}} \right)
+\]
+
+   c. 
+\[
+\frac{\ln\left( a^{-4} b^{4} \right)}{\ln\left( \frac{b}{c} \right)^{2}}
+\]
+
+   d.
+\[
+\left( \ln c^{-2}\right) \left( \ln \frac{a}{b^3}\right)^{4}
+\]
+
+
+4. Find the domain of:
+\[
+y = \log(5 - 6x)
+\]  
+
+5. If \( e^{7x} = 27 \), then $x$ is what?
+
+
+6. Solve for \( m \) in the equation below. 
+\[
+2 \log_{8}(m) + 4 = 8
+\]  
+
+
+7. Solve for \( x \):
+
+\[
+\log(x+5) - \log(x+3) = 1
+\]  
+
+
+8. A culture of bacteria grows according to the continuous growth model:
+\[
+B = f(t) = 500 e^{0.073t}
+\]  
+where \(B\) is the number of bacteria and \(t\) is in hours.
+
+   a. Find \(f(0)\)  
+   b. To the nearest whole number, find the number of bacteria after 5 hours.
+   c. To the nearest tenth of an hour, determine how long it will take for the population to grow to 1100 bacteria.
+
+
+
+---
+
+
+
+
 ## Practice Problems
 
 
@@ -159,6 +356,10 @@ q = -2p + 320,
 \]
 
 where $q$ is the number of buggies it can sell in a month if the price is \$p per buggy. At what price should it sell the buggies to get the largest revenue? What is the largest monthly revenue?
+
+
+
+---
 
 
 ##  Self Assessment
@@ -229,6 +430,11 @@ This checklist is designed to help you keep track of what you need to work on. T
 [**Video:  Limits and Continuity**](https://youtu.be/eloHCkPZwos)
 
 
+---
+
+
+
+## Lecture Notes
 
 ### Estimate a Limit Using a Table of Values
 
@@ -240,6 +446,10 @@ To estimate a limit using a table:
 
 **Example:**
 If \( f(x) = \frac{x^2 - 1}{x - 1} \), use values close to 1 (e.g., 0.9, 0.99, 1.01, 1.1) to estimate \( \lim_{x \to 1} f(x) \).
+
+
+---
+
 
 ### Use Factoring to Evaluate Limits
 
@@ -257,6 +467,10 @@ Evaluate \( \lim_{x \to 2} \frac{x^2 - 4}{x - 2} \):
 \frac{(x - 2)(x + 2)}{x - 2} = x + 2 \Rightarrow \lim_{x \to 2} = 4
 \]
 
+
+---
+
+
 ### One-Sided Limits and Vertical Asymptotes
 
 - **Left-hand limit:** \( \lim_{x \to a^-} f(x) \)
@@ -269,6 +483,10 @@ If the function approaches infinity or negative infinity near a point, it may in
 \lim_{x \to 0^-} \frac{1}{x} = -\infty,\quad
 \lim_{x \to 0^+} \frac{1}{x} = \infty
 \]
+
+
+---
+
 
 ### Dominant Term Analysis for Limits at Infinity
 
@@ -284,6 +502,10 @@ To evaluate limits as \( x \to \infty \), focus on the **dominant (highest degre
 \[
 \lim_{x \to \infty} \frac{3x^2 + 5}{x^2 - 2x} = \lim_{x \to \infty} \frac{3 + 5/x^2}{1 - 2/x} = \frac{3}{1} = 3
 \]
+
+
+---
+
 
 ### Continuity of Piecewise Functions
 
@@ -309,6 +531,181 @@ Check continuity at \( x = 2 \):
 - \( f(2) = 4 \)
 - \( \lim_{x \to 2^-} = 4 \), \( \lim_{x \to 2^+} = 4 \)
 - Since limits and value agree: **continuous**
+
+
+
+---
+
+
+## Examples
+
+
+### Limits
+
+[**Video:  Solutions **](https://youtu.be/QiA2DBzh0YU?si=agk2U7DCaVmjMCPm&t=143)
+
+
+1. Find the following limit:
+
+$$
+\lim_{x \to 7} \frac{x^3 -3x^2 - 29x +7}{x - 7}
+$$
+
+
+2. Estimate the limit numerically or state that the limit does not exist:
+
+$$
+\lim_{x \to 121} \frac{\sqrt{x} - 11}{x - 121}
+$$
+
+3. Use numerical or graphical evidence to determine the left and right-hand limits of the function.
+
+$$
+\lim_{x \to 4^-} \frac{|5x - 20|}{x-4}
+$$
+
+$$
+\lim_{x \to 4^+} \frac{|5x - 20|}{x-4}
+$$
+
+
+
+
+
+---
+
+
+
+### One Sided Limits
+
+[**Video:  Solutions **](https://youtu.be/oDrHcYTWgqI?si=6cGoUKOEi0Z1i-Hb&t=100)
+
+
+1. A function \( f(x) \) is said to have a **jump discontinuity** at \( x = a \) if:  
+
+   a. \( \displaystyle \lim_{x \to a^-} f(x) \) exists.  
+   b. \( \displaystyle \lim_{x \to a^+} f(x) \) exists.  
+   c. The left and right limits are **not equal**.
+
+Let  
+
+\[
+f(x) =
+\begin{cases}
+6x-6, & \text{if } x < 8, \\
+\frac{2}{x+6}, & \text{if } x \ge 8
+\end{cases}
+\]
+
+Show that \( f(x) \) has a jump discontinuity at \( x = 8 \).
+
+2. For what value of the constant \( c \) is the function \( f \) continuous on \( (-\infty, \infty) \) where  
+
+\[
+f(x) =
+\begin{cases}
+x^2 - c & \text{if } t < 6, \\
+cx + 9, & \text{if } t \ge 6
+\end{cases}
+\]
+
+Find \( c \).
+
+
+3. Given the function below, determine if the function is continuous at the point \( x = -4 \). If not, indicate why.
+
+\[
+f(x) =
+\begin{cases}
+2x+9, & \text{if } x < -4, \\
+-2x - 7, & \text{if } x > -4
+\end{cases}
+\]
+
+4. Given the function below, determine if the function is continuous at the point \( x = -1\). If not, indicate why.
+
+\[
+f(x) = \ln \|x+1\|
+\]
+
+
+
+---
+
+
+
+
+### One Sided Limits
+
+[**Video:  Solutions **](https://www.youtube.com/watch?v=PNcd55vzKcI)
+
+
+1. Let  
+
+$$
+f(x) =
+\begin{cases}
+-\frac{12}{x+6}, & \text{if } x \le 0 \\
+\frac{14}{x-7}, & \text{if } x > 0
+\end{cases}
+$$
+
+Compute the quantities below. 
+   a. 
+$$
+\lim_{x \to -3^-} f(x) = \quad
+$$
+   b. 
+$$
+\lim_{x \to -3^+} f(x) = \quad
+$$
+   c.   
+$$
+f(-3) = \quad
+$$
+
+
+2. Evaluate the limit:
+$$
+\lim_{x \to \infty} \frac{5 + 5x}{8 - 4x}
+$$
+
+
+3. Evaluate the limit:
+
+$$
+\lim_{x \to \infty} \frac{8x + 7}{6x^2 - 7x + 7}
+$$
+
+4. Evaluate the limit:
+
+$$
+\lim_{x \to \infty} \frac{\sqrt{9 + 2x^2}}{7 + 6x}
+$$
+
+5. Evaluate:
+
+$$
+\lim_{t \to \infty} \frac{-3t - 9}{\sqrt{t^2 -4t + 5}}
+$$
+
+6. Evaluate the following limits:
+
+   a.  
+$$
+\lim_{x \to \infty}\frac{8}{e^x - 9}
+$$
+
+   b.  
+$$
+\lim_{x \to -\infty} \frac{8}{e^x - 9}
+$$
+
+
+
+
+
+---
 
 
 
@@ -371,6 +768,10 @@ where $t$ is the time since 1995.
 
 
 
+---
+
+
+
 ## Self Assessment
 
 
@@ -398,6 +799,10 @@ is continuous everywhere.
 
 
 
+---
+
+
+
 
 ## Lesson Checklist 
 
@@ -421,8 +826,6 @@ This checklist is designed to help you keep track of what you need to work on. T
 | Find a parameter to make a piecewise function continuous.      |    |     |     |
 | Solve applied problems involving limits.                       |    |     |     |
 
-**Notes**
-</span>
 
 ---
 
@@ -461,6 +864,12 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
+---
+
+
+
+## Lecture Notes
+
 ### Limit Definition of the Derivative
 
 The derivative of a function \( f(x) \) at a point \( x = a \) is defined as:
@@ -477,6 +886,10 @@ f'(x) = \lim_{x \to a} \frac{f(x) - f(a)}{x - a}
 
 This represents the **instantaneous rate of change** or the **slope of the tangent line** to the curve at \( x = a \).
 
+
+---
+
+
 ### Derivative Rules for Common Functions
 
 #### Polynomials
@@ -484,15 +897,27 @@ This represents the **instantaneous rate of change** or the **slope of the tange
 \frac{d}{dx}(x^n) = nx^{n-1}
 \]
 
+
+---
+
+
 #### Exponential Functions
 \[
 \frac{d}{dx}(e^x) = e^x, \quad \frac{d}{dx}(a^x) = a^x \ln a
 \]
 
+
+---
+
+
 #### Logarithmic Functions
 \[
 \frac{d}{dx}(\ln x) = \frac{1}{x}, \quad \frac{d}{dx}(\log_a x) = \frac{1}{x \ln a}
 \]
+
+
+---
+
 
 #### Trigonometric Functions
 \[
@@ -501,6 +926,10 @@ This represents the **instantaneous rate of change** or the **slope of the tange
 \[
 \frac{d}{dx}(\tan x) = \sec^2 x
 \]
+
+
+---
+
 
 ### Sum, Difference, and Constant Multiple Rules
 
@@ -520,6 +949,10 @@ This represents the **instantaneous rate of change** or the **slope of the tange
 \]
 
 These rules allow for simple combination and manipulation of derivative calculations.
+
+
+---
+
 
 ### Tangent Line to a Function at a Point
 
@@ -542,6 +975,167 @@ Find the tangent line to \( f(x) = x^2 \) at \( x = 3 \):
 - \( f(3) = 9 \)
 - \( f'(x) = 2x \Rightarrow f'(3) = 6 \)
 - Equation: \( y - 9 = 6(x - 3) \Rightarrow y = 6x - 9 \)
+
+
+
+
+---
+
+
+
+## Examples
+
+### Average ROC
+
+[**Video:  Solutions **](https://www.youtube.com/watch?v=KeHgAUW8RpE)
+
+
+1. The following chart shows *"living wage"* jobs in Rochester per 1000 working-age adults over a 5-year period.
+
+| Year | 1997 | 1998 | 1999 | 2000 | 2001 |
+|------|------|------|------|------|------|
+| Jobs | 660  | 735  | 795  | 840  | 870  |
+
+   a. What is the average rate of change in the number of living wage jobs from **1997** to **1999**? 
+
+   b. What is the average rate of change in the number of living wage jobs from **1999** to **2001**? 
+   
+
+2. Find the slope of the line through the points $(-3,0)$ and $(1,3)$.
+
+3. An object is moving along a vertical line. Its vertical position is given by:
+$$
+L(t) = t^3  -4t^2 - 4t + 10
+$$
+where distance is measured in meters and time in seconds.  Find the approximate average velocity (accurate to at least 3 decimal places) in each time interval:
+
+   a.Between $t_1 = 2 \ \text{s}$ and $t_2 = 7 \ \text{s}$
+   
+   b. Between $t_1 = 1 \ \text{s}$ and $t_2 = 7 \ \text{s}$
+   
+   c. Between $t_1 = 4 \ \text{s}$ and $t_2 = 5 \ \text{s}$
+   
+4. Let $f(x) = 3 \ln(x)$.  Using the formula: 
+$$
+m = \frac{f(x_2) - f(x_1)}{x_2 - x_1}
+$$
+with $x_1 = 7$, find the slope of the secant line for each $x_2$ value listed below:
+
+| $x_2$  | $m$ (slope) |
+|--------|------------|
+| 12      | $\_\_\_\_\_\_$ |
+| 9      | $\_\_\_\_\_\_$ |
+| 8      | $\_\_\_\_\_\_$ |
+| 7.1    | $\_\_\_\_\_\_$ |
+| 7.01   | $\_\_\_\_\_\_$ |
+
+
+
+---
+
+
+
+### Average ROC
+
+[**Video:  Solutions **](https://www.youtube.com/watch?v=MirSdnrFyao)
+
+
+1. Suppose that  
+\( f(x) = -2x^2 - 2x -4 \). Find the derivative of $f$.
+
+2. Let \( f(x) = 12x^2 - 7x + 3 \).  Simplify the difference quotient:
+\[
+\frac{f(3 + h) - f(3)}{h}
+\]
+
+
+3. If \( f(x) = -3x^2 + 7x + 7 \), find the instantaneous rate of change of \( f(x) \) at \( x = -3 \).
+
+
+4. If \( f(x) = \frac{4}{x^2} \), find \( f'(3) \).
+
+
+
+
+---
+
+
+
+
+
+### Derivatives using Limits
+
+[**Video:  Derivatives **](hhttps://youtu.be/ebtvadojDKc?si=Gzk1ZKkwJS-RmFwL&t=33)
+
+
+1. Given \(f(x)=5 x^{2}+ 12x+7\), find \(f'(x)\) using the limit definition of the derivative.
+
+
+2. Let
+\[
+f(x)=3x^{3} + 7x - 4.
+\]
+Use the limit definition of the derivative to calculate the derivative and second derivative of \(f\).
+
+
+3. For what values of \(A\) and \(B\) is the function \(f(x)\) differentiable at \(x=-2\)?
+
+\[
+f(x)=
+\begin{cases}
+Ax+B, & x< 2,\\[6pt]
+x^{2}+x, & x\ge 2.
+\end{cases}
+\]
+
+
+4. Use the limit definition to find the derivative of
+\[
+f(x)=\sqrt{x+5}.
+\]
+
+
+
+---
+
+
+
+
+### Basic Derivative Rules
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=491OOM9Bgxc)
+
+
+1. Find the derivative of the function $f(x) = 7x^{3} - 10x^{7}$.
+
+2. If \(f(x) = \frac{4}{x^2\), find the value of the derivative at \(x=1\):
+
+3. Find the derivative of the function: $f(x) = 2\sqrt{x} - \frac{9}{x^9}$.
+
+4.Given $f(x) = 4x\sqrt{x} + \frac{5}{5x^{2}\sqrt{x}}$, find $f'(x)$ and then compute $f'(1) =$
+
+5. Let $h(t) = 5t^{3.2} - 8t^{-3.2}$. Find $h'(t)$, $h'(4)$, $h''(t)$, and $h''(4)$
+
+6. If
+\[
+g(t) = -2t^{4} + 5t^{2} + 5,
+\]
+find the following values:
+\[
+\begin{aligned}
+g(0) &= \underline{\qquad\qquad} \\
+g'(0) &= \underline{\qquad\qquad} \\
+g''(0) &= \underline{\qquad\qquad} \\
+g'''(0) &= \underline{\qquad\qquad} \\
+g^{(4)}(0) &= \underline{\qquad\qquad} \\
+g^{(5)}(0) &= \underline{\qquad\qquad}
+\end{aligned}
+\]
+
+
+
+
+---
 
 
 
@@ -628,6 +1222,10 @@ P = 400 n - 0.5 n^{2}.
 $$
 Calculate the marginal product at an employment level of 50 workers, and interpret the result.
 
+
+---
+
+
 ## Lesson Checklist 
 
 
@@ -652,11 +1250,13 @@ This checklist is designed to help you keep track of what you need to work on. T
 | Determine the equation of a tangent line at a given point.    |    |     |     |
 | Solve applied problems involving derivatives.                 |    |     |     |
 
-**Notes**
-</span>
+
 
 ---
 
+
+
+# (PART) Derivative Formulas and Applications {-}
 
 
 
@@ -668,6 +1268,13 @@ This checklist is designed to help you keep track of what you need to work on. T
 ## Lecture Content
 
 [**Video:  The Product and Quotient Rules**](https://youtu.be/hyq3m2K10fI)
+
+
+
+---
+
+
+## Lecture Notes
 
 
 
@@ -706,6 +1313,84 @@ If \( f(x) \) and \( g(x) \) are differentiable and \( g(x) \ne 0 \), then:
 **Mnemonic:** "Low D high minus high D low, over low squared."
 
 ---
+
+
+## Exercises
+
+
+
+### Applications of Differentiation
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=7XOzaaMWwbM)
+
+
+1. Suppose a product's revenue function is given by
+\[
+R(q) = -3q^{2} + 800q.
+\]
+Find an expression for the marginal revenue function and simplify it.
+
+2. The R.C. Helliot Advertising Company finds that its profits on day \(t\) of an advertising campaign is given by
+\[
+P(t) = -2.53t^{2} + 65t + 37,000,
+\]
+where \(P(t)\) is the profit in dollars for day \(t\).
+
+   a. Find a simplified expression for the marginal profit function. Use the proper variable \(t\).
+   b. What is the exact rate of change of profits when 44 days have passed in the campaign? 
+   c. What are the total profits on day 44 of the campaign?
+
+3. A simple item to be sold at a small specialty store has \$200 in fixed costs and \$8 per item in variable costs. The owners assume they can sell 8 items if they charge \$28 each, and 5 items at a price of \$55 each. (Assume that demand is a linear function.)
+
+For how many units sold/produced is the marginal profit -124 dollars per item? (Use derivatives to find your answer.)
+
+4. In 1997, researchers at Texas A&M University estimated the operating costs of cotton gin plants of various sizes. A quadratic model of cost (in thousands of dollars) for the largest plants was found to be
+\[
+C(q) = 0.021q^{2} + 21.2q + 387,
+\]
+where \(q\) is the annual quantity of bales (in thousands) produced by the plant. Revenue was estimated at \$68 per bale of cotton.
+
+Find the following:
+
+   a. $MC(q)$
+   b. The Marginal Revenue function
+   c. The Marginal Profit function
+   d. The Marginal Profit for \(q = 262\) thousand units
+   e. What are the proper units for the answer to Part D?
+
+
+
+
+---
+
+
+
+
+### The Product and Quotient Rules
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=g9knx4EPqEc)
+
+
+1. If $f(t) = (t^2 + 2t + 5)(6t^2 + 5)$, find \(f'(t)\) and \(f'(4)\).
+
+2. Find the derivative of $\cot(x) \cdot \frac{1}{x^3} (5x + 2)$.
+
+3. Find the derivative of $f(x) = 16 \sqrt{x} \left(3x^4 - 3\right) \left(6x^8 + 7x\right)$.
+
+4. If $f(x) = (3x^2 + 6x -5) \tan(x)$, find $f'(x)$.
+
+5. If $f(x) = \frac{\sqrt{x} - 4}{\sqrt{x} + 4}$, find $f'(x)$ and $f'(3)$.
+
+6. If $f(x) = \frac{7x + 4}{7x + 5}$, find $f'(x)$ and $f'(5)$.
+
+7. If $f(x) = \frac{7 - x^2}{2 + x^2}$, find $f'(x)$
+
+8. Find the first and second derivatives of $f(x) = \frac{\sin(x)}{x^2}$.
+
+
+
+---
+
 
 
 ## Practice Problems
@@ -755,6 +1440,10 @@ p(t) = 100 - t^{2}
 $$
 dollars per iSun, $t$ months after introduction. Find the rate of change of monthly sales, the rate of change of the price, and the rate of change of monthly revenue six months after the introduction of the iSun. Interpret your answers.
 
+
+---
+
+
 ## Self Assessment
 
 Time yourself and try to solve the following questions within twenty minutes. 
@@ -765,6 +1454,10 @@ Time yourself and try to solve the following questions within twenty minutes.
 4. Differentiate: $y =\dfrac{\frac{1}{x}-1}{\sin(x)}$
 5. Thoroughbred Bus Company finds that its monthly costs for one particular year were given by $C(t) = 100 + t^2$ dollars after $t$ months. After $ t$ months, the company had $P(t) = 1,000 + t^2$ passengers per month. How fast is its cost per passenger changing after 6 months? 
 
+
+
+
+---
 
 
 
@@ -797,6 +1490,10 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
+---
+
+
+
 
 
 
@@ -812,6 +1509,13 @@ This checklist is designed to help you keep track of what you need to work on. T
 [**Video:  The Chain Rule**](https://youtu.be/nU0kXDFSt_A)
 
 [**Video:  L'Hospital's Rule**](https://youtu.be/sZv3uLLOwFc)
+
+
+---
+
+
+
+## Lecture Notes
 
 ### Derivative of a Composition of Functions (Chain Rule)
 
@@ -866,6 +1570,65 @@ then:
 \lim_{x \to 0} \frac{\sin x}{x} = \frac{0}{0} \Rightarrow \text{Apply L'Hôpital's Rule:} \quad \lim_{x \to 0} \frac{\cos x}{1} = 1
 \]
 
+
+---
+
+
+## Examples
+
+### The Chain Rule
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=IseqLbi29q0)
+
+
+1. Use the chain rule to find the derivative of $10 \sqrt{10x^9 + 3x^5}$.
+
+2. Use the chain rule to find the derivative of $\left(2(10x^6 - 9x^{4})\right)^{16}$.
+
+3. If $f(x) = \cos(4x + 6)$, find $f'(x)$ and f'(5)$.
+
+4. Find the derivative of $-7 \sin^2(-6x^9)$.
+
+5. Let $f(x) = 5 \cos(\cos x)$. Find $f'(x)$
+
+6. Let $f(x) = (7x^2 - 4)^4 (-9x^2 + 4)^{14}$. Find $f'(x)$.
+
+7. Let $g(s) = (4s - 4)^8$. Find $g'(s)$, $g'(5)$, $g''(s)$ and $g''(5)$.
+
+
+---
+
+
+
+### Derivatives of Logs and Exponentials
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=LU037z7puWw)
+
+
+1. Let $f(t) = 7t^4 - 7t + 6e^t$.  Find $f'(t)$.
+
+2. Find the derivative of $f(x) = x^5 e^{6x}$. Find $f'(x)$.
+
+3. Let $f(x) = 5x^7 \ln(x) - \frac{4}{3}x^3$.  Find $f'(x)$.
+
+4. Let $f(x) = -4x^2 \ln x$.  Find $f'(x)$ and $f'(e^2)
+
+5. Differentiate $g(x) = \frac{e^{8x}}{x^2}$.
+
+6. If $f(y) = e^{7y} - e^{-7y}$, find $f'(y)$.
+
+7. Let $f(x) = \ln(x^2 + 10x + 29)$.  Find $f'(x)$.
+
+8. Let $f(x) = 4 \ln(\sin x)$. Find $f''(x)$.
+
+
+
+
+---
+
+
+
+
 ## Practice Problems
 
 
@@ -915,6 +1678,10 @@ where $t$ is time in years ($t = 0$ represents 1994). What was the average price
 6. Find the equation of the tangent line to $$y = \ln \sqrt{2x^2 + 1}$$ at $x=1$.
 
 
+---
+
+
+
 ## Self Assessment
 
 
@@ -935,6 +1702,10 @@ S(t) = 7.4 \ln t + 3 \text{ billion dollars} \quad (5 \leq t \leq 19)
 $$
 
 where $t$ is the year since 1990. What was the total spent in 2005 $(t = 15)$ and how fast was it increasing?
+
+
+---
+
 
 
 ## Lesson Checklist 
@@ -965,6 +1736,10 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
+---
+
+
+
 
 
 
@@ -984,6 +1759,12 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 [**Video:  Implicit Differentiation**](https://youtu.be/s6_iOkjPnD4)
 
+
+---
+
+
+
+## Lecture Notes
 
 ### Higher-Order Derivatives
 
@@ -1039,6 +1820,22 @@ Given \( x^2 + y^2 = 25 \), find \( \frac{dy}{dx} \):
 
 
 
+## Examples
+
+
+[**Video:  Solutions**](https://www.youtube.com/watch?v=bEevIpR4W1I)
+
+1. Use implicit differentiation to determine \(\frac{dy}{dx}\) given the equation $x^5 + y^6 = -7$.
+
+2. Given $4x^2 + 2x + xy = 2$, and \(y(2) = -9\), find \(y'(2)\) by implicit differentiation.
+
+3. Find the slope of the tangent line to the curve $4x^2 + 2xy - 4y^3 = 6$ at the point \((1, -1)\).
+
+
+
+---
+
+
 
 ## Practice Problems
 
@@ -1069,6 +1866,10 @@ where $V$ is the value of the graduate, $e$ is the number of years of prior busi
 
 
 
+---
+
+
+
 ## Self Assessment
 
 Time yourself and try to solve the following questions within twenty minutes.
@@ -1082,6 +1883,10 @@ Time yourself and try to solve the following questions within twenty minutes.
 4. Differentiate $$y = \frac{(3x + 1)^2}{4x(2x - 1)^3}.$$
 
 5. Find the tangent line to $$4x^2 + 2y^2 = 12$$ at $(1, -2)$.
+
+
+---
+
 
 ## Lesson Checklist 
 
@@ -1113,6 +1918,10 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
+---
+
+
+
 
 
 
@@ -1125,6 +1934,13 @@ This checklist is designed to help you keep track of what you need to work on. T
 [**Video:  Analyzing Graphs**](https://youtu.be/f30X6LIzYpM)
 
 [**Video:  Maxima and Minima**](https://youtu.be/mM0A9Kv_wYw)
+
+
+
+---
+
+
+## Lecture Notes
 
 
 ### Finding Critical Numbers
@@ -1201,6 +2017,142 @@ The **Extreme Value Theorem** states:
 
 ---
 
+## Examples
+
+### Maximum and Minimum Values
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=ItWO-kYqMdE)
+
+1. Given the function $g(x) = 8x^3 + 72x^2 + 192$, find the first derivative, \(g'(x)\).  Notice that \(g'(x) = 0\) when \(x = -2\), i.e., $g'(-2) = 0$.  Use the second derivative test to determine whether there is a local minimum or maximum at \(x = -2\).  Find the second derivative, \(g''(x)\).  Evaluate \(g''(-2)\).  Based on the sign of this number, is the graph of \(g(x)\) concave up or down at \(x = -2\)?  
+
+2. The function $f(x) = 2x^3 - 36x^2 + 210x + 5$ has one local minimum and one local maximum.
+
+3. Consider the function $f(x) = 5 - 7x^2,$ with $-5 \leq x \leq 1$.  Find the absolute maximum and minimum.
+
+4. Consider the function $f(x) = 2x^3 + 12x^2 - 192x + 8$, with $ -12 \leq x \leq 5$.  Find the absolute maximum and minimum.
+
+
+
+---
+
+
+
+### Applied Problems
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=dwxsl2lewT8)
+
+1. A rectangular storage area is to be constructed along a side of a building. A security fence is required along the remaining three sides of the area. You have 865 ft of fencing available.  What is the maximum storage area?
+
+2. A rancher wants to fence in an area of 1,000,000 square feet in a rectangular field and then divide it in half with a fence down the middle parallel to one side. Find the shortest length of fence that the rancher can use.
+
+3. A box with a square base and open top must have a volume of 143748 $cm^3$. We want to find the dimensions of the box that minimize the amount of material used.
+
+4. A small object is moving along a vertical line. Its location function is $t^3 - 24t^2 + 45t + 3$ with $0 \leq t \leq 11$.
+   - At what time(s) is the object's velocity greatest?
+   - At what time(s) is the object's speed greatest?
+
+5. A ball is tossed into the air on the planet Bellona. The height of the ball in meters above the ground \(t\) seconds after being thrown is:
+\[
+s(t) = \frac{7}{2}t^2 - t^3.
+\]
+   a. Find the velocity and acceleration functions.
+   b. Over what interval(s) of time is the ball moving upward? (Give interval notation)
+   c. After initially being thrown, when does the ball return to the ground?
+   d. What is the velocity of the ball when it returns to the ground?
+
+
+
+
+---
+
+
+
+
+### Increasing and Decreasing
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=kuR_W7wo0ps)
+
+1. Let $f(x) = x^3 + 3x^2 - 240x + 18$.
+   a. Find the first derivative \( f'(x) \).
+   b. Find the second derivative \( f''(x) \).
+   c. Find the interval(s) where \( f \) is increasing (include endpoints).
+   d. Find the interval(s) where \( f \) is decreasing (include endpoints).
+   e. Find the interval(s) where \( f \) is concave downward (include endpoints).
+   f. Find the interval(s) where \( f \) is concave upward (include endpoints).
+   
+2. Let $f(x) = \frac{x^4 - 32x^2}{7}$.
+   a. Find the first derivative \( f'(x) \).
+   b. Find the second derivative \( f''(x) \).
+   c. Find the interval(s) where \( f \) is increasing (include endpoints).
+   d. Find the interval(s) where \( f \) is decreasing (include endpoints).
+   e. Find the interval(s) where \( f \) is concave downward (include endpoints).
+   f. Find the interval(s) where \( f \) is concave upward (include endpoints).
+   
+
+3. Consider the function $f(x) = 5(x-2)^{2/3}$.
+   - Find the critical number \( A \).
+   - On each interval below, state if \( f(x) \) is increasing or decreasing.
+   - On each interval below, state if \( f(x) \) is concave up (type "CU") or concave down (type "CD").
+
+4. Consider the function $f(x) = x^2 e^{9x}$.
+   - Find the critical numbers.
+   - Determine the intervals of increasing and decreasing.
+   
+
+5. Consider the function $f(x) = x^2 e^{8x}$. Find the intervals of concavity.
+
+
+
+---
+
+
+
+### Curve Sketching
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=SqaIfGD0soU)
+
+
+1. Consider the function $f(x) = 2x^3 + 6x^2 - 18x - 54.  Find 
+   - the first derivative, 
+   - all critical values,
+   - intervals of increasing and decreasing,
+   - maximum and minimum values,
+   - the second derivative,
+   - inflection points,
+   - intervals of concavity.
+   
+2. Consider the function $f(x) = \frac{x^2 - 1}{x -3}$.  Find
+   - the first derivative, 
+   - all critical values,
+   - intervals of increasing and decreasing,
+   - maximum and minimum values,
+   - the second derivative,
+   - inflection points,
+   - intervals of concavity.
+
+3. Let $f(x) = x^3 -6x^2 - 1$.  Find
+   - the first derivative, 
+   - all critical values,
+   - intervals of increasing and decreasing,
+   - maximum and minimum values,
+   - the second derivative,
+   - inflection points,
+   - intervals of concavity.
+
+4. Let $f(x) = x^3 + 9x^2 + 27x + 4$.  Find
+   - the first derivative, 
+   - all critical values,
+   - intervals of increasing and decreasing,
+   - maximum and minimum values,
+   - the second derivative,
+   - inflection points,
+   - intervals of concavity.
+
+
+
+---
+
+
 
 
 ## Practice Problems
@@ -1235,6 +2187,10 @@ $$
 where $q$ is the reduction in emissions (in pounds of pollutant per day) and $C$ is the daily cost to the firm (in dollars) of this reduction. What level of reduction corresponds to the lowest average cost per pound of pollutant, and what would be the resulting average cost to the nearest dollar?
 
 
+---
+
+
+
 ## Self Assessment
 
 Time yourself and try to solve the following questions within twenty minutes.
@@ -1256,6 +2212,10 @@ $$
 f(x) = \frac{N}{1 + A e^{-k x}}
 $$
 for constants $N$, $A$, and $k$ ($A$ and $k$ positive). Show that $f$ has a single point of inflection at $$x = \frac{\ln A}{k}.$$
+
+
+
+---
 
 
 ## Lesson Checklist 

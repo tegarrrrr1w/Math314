@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 12 The Product and Quotient Rules | Calculus and Linear Algebra</title>
+  <title>Lesson 23 Lecture Notes | Calculus and Linear Algebra</title>
   <meta name="description" content="Course notes for MATH 114" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 12 The Product and Quotient Rules | Calculus and Linear Algebra" />
+  <meta property="og:title" content="Lesson 23 Lecture Notes | Calculus and Linear Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Course notes for MATH 114" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 12 The Product and Quotient Rules | Calculus and Linear Algebra" />
+  <meta name="twitter:title" content="Lesson 23 Lecture Notes | Calculus and Linear Algebra" />
   
   <meta name="twitter:description" content="Course notes for MATH 114" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="the-limit-definition-of-the-derivative.html"/>
-<link rel="next" href="the-chain-rule-and-lhopitals-rule.html"/>
+<link rel="prev" href="partial-derivatives.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -466,154 +466,222 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-product-and-quotient-rules" class="section level1 hasAnchor" number="12">
-<h1><span class="header-section-number">Lesson 12</span> The Product and Quotient Rules<a href="the-product-and-quotient-rules.html#the-product-and-quotient-rules" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="lecture-content-10" class="section level2 hasAnchor" number="12.1">
-<h2><span class="header-section-number">12.1</span> Lecture Content<a href="the-product-and-quotient-rules.html#lecture-content-10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><a href="https://youtu.be/hyq3m2K10fI"><strong>Video: The Product and Quotient Rules</strong></a></p>
+<div id="lecture-notes-20" class="section level1 hasAnchor" number="23">
+<h1><span class="header-section-number">Lesson 23</span> Lecture Notes<a href="lecture-notes-20.html#lecture-notes-20" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="evaluation-of-functions-of-two-variables" class="section level3 hasAnchor" number="23.0.1">
+<h3><span class="header-section-number">23.0.1</span> Evaluation of Functions of Two Variables<a href="lecture-notes-20.html#evaluation-of-functions-of-two-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A function of two variables has the form:
+<span class="math display">\[
+f(x, y)
+\]</span>
+To evaluate the function, simply substitute values for both <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
+<p><strong>Example:</strong></p>
+<p>If <span class="math inline">\(f(x, y) = x^2 + y^2\)</span>, then:
+<span class="math display">\[
+f(2, 3) = 2^2 + 3^2 = 4 + 9 = 13
+\]</span>
+Functions of two variables are often visualized as surfaces in 3D space.</p>
 <hr />
 </div>
-<div id="lecture-notes-11" class="section level2 hasAnchor" number="12.2">
-<h2><span class="header-section-number">12.2</span> Lecture Notes<a href="the-product-and-quotient-rules.html#lecture-notes-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="product-rule-for-two-functions" class="section level3 hasAnchor" number="12.2.1">
-<h3><span class="header-section-number">12.2.1</span> Product Rule for Two Functions<a href="the-product-and-quotient-rules.html#product-rule-for-two-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> are differentiable, then the derivative of their product is:</p>
+<div id="finding-partial-derivatives" class="section level3 hasAnchor" number="23.0.2">
+<h3><span class="header-section-number">23.0.2</span> Finding Partial Derivatives<a href="lecture-notes-20.html#finding-partial-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A <strong>partial derivative</strong> measures the rate of change of a function with respect to one variable while keeping the other constant.</p>
+<div id="notation" class="section level4 hasAnchor" number="23.0.2.1">
+<h4><span class="header-section-number">23.0.2.1</span> Notation:<a href="lecture-notes-20.html#notation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ul>
+<li><p>Partial derivative with respect to <span class="math inline">\(x\)</span>:<br />
+<span class="math display">\[
+f_x(x, y) = \frac{\partial f}{\partial x}
+\]</span></p></li>
+<li><p>Partial derivative with respect to <span class="math inline">\(y\)</span>:<br />
+<span class="math display">\[
+f_y(x, y) = \frac{\partial f}{\partial y}
+\]</span></p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<p>For <span class="math inline">\(f(x, y) = x^2y + y^3\)</span>:</p>
+<ul>
+<li><span class="math inline">\(f_x = 2xy\)</span></li>
+<li><span class="math inline">\(f_y = x^2 + 3y^2\)</span></li>
+</ul>
+<p>Higher-order partial derivatives include:</p>
+<ul>
+<li><span class="math inline">\(f_{xx}, f_{yy}, f_{xy}, f_{yx}\)</span></li>
+</ul>
+<hr />
+</div>
+</div>
+<div id="clairauts-theorem-equality-of-mixed-partials" class="section level3 hasAnchor" number="23.0.3">
+<h3><span class="header-section-number">23.0.3</span> Clairaut’s Theorem (Equality of Mixed Partials)<a href="lecture-notes-20.html#clairauts-theorem-equality-of-mixed-partials" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Clairaut’s Theorem states that if the mixed partial derivatives <span class="math inline">\(f_{xy}\)</span> and <span class="math inline">\(f_{yx}\)</span> are <strong>continuous</strong> near a point, then:</p>
 <p><span class="math display">\[
-\frac{d}{dx}[f(x)g(x)] = f&#39;(x)g(x) + f(x)g&#39;(x)
+f_{xy} = f_{yx}
 \]</span></p>
-<p><strong>Mnemonic:</strong> “First times the derivative of the second, plus second times the derivative of the first.”</p>
+<p>This means the order of differentiation does <strong>not</strong> matter under reasonable conditions (i.e., if the function is sufficiently smooth).</p>
 <hr />
 </div>
-<div id="product-rule-for-three-functions" class="section level3 hasAnchor" number="12.2.2">
-<h3><span class="header-section-number">12.2.2</span> Product Rule for Three Functions<a href="the-product-and-quotient-rules.html#product-rule-for-three-functions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If <span class="math inline">\(f(x), g(x), h(x)\)</span> are differentiable, then the derivative of their product is:</p>
-<p><span class="math display">\[
-\frac{d}{dx}[f(x)g(x)h(x)] = f&#39;(x)g(x)h(x) + f(x)g&#39;(x)h(x) + f(x)g(x)h&#39;(x)
-\]</span></p>
-<p><strong>Tip:</strong> Differentiate one function at a time, keeping the other two unchanged, and sum the results.</p>
-<hr />
-</div>
-<div id="quotient-rule" class="section level3 hasAnchor" number="12.2.3">
-<h3><span class="header-section-number">12.2.3</span> Quotient Rule<a href="the-product-and-quotient-rules.html#quotient-rule" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>If <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> are differentiable and <span class="math inline">\(g(x) \ne 0\)</span>, then:</p>
-<p><span class="math display">\[
-\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right] = \frac{f&#39;(x)g(x) - f(x)g&#39;(x)}{[g(x)]^2}
-\]</span></p>
-<p><strong>Mnemonic:</strong> “Low D high minus high D low, over low squared.”</p>
-<hr />
-</div>
-</div>
-<div id="exercises" class="section level2 hasAnchor" number="12.3">
-<h2><span class="header-section-number">12.3</span> Exercises<a href="the-product-and-quotient-rules.html#exercises" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="applications-of-differentiation" class="section level3 hasAnchor" number="12.3.1">
-<h3><span class="header-section-number">12.3.1</span> Applications of Differentiation<a href="the-product-and-quotient-rules.html#applications-of-differentiation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="https://www.youtube.com/watch?v=7XOzaaMWwbM"><strong>Video: Solutions</strong></a></p>
+<div id="d-test-for-classifying-critical-points" class="section level3 hasAnchor" number="23.0.4">
+<h3><span class="header-section-number">23.0.4</span> D-Test for Classifying Critical Points<a href="lecture-notes-20.html#d-test-for-classifying-critical-points" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>To classify critical points of a function <span class="math inline">\(f(x, y)\)</span>, use the <strong>Second Derivative Test (D-test)</strong>.</p>
+<div id="steps-6" class="section level4 hasAnchor" number="23.0.4.1">
+<h4><span class="header-section-number">23.0.4.1</span> Steps:<a href="lecture-notes-20.html#steps-6" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ol style="list-style-type: decimal">
-<li><p>Suppose a product’s revenue function is given by
-<span class="math display">\[
-R(q) = -3q^{2} + 800q.
-\]</span>
-Find an expression for the marginal revenue function and simplify it.</p></li>
-<li><p>The R.C. Helliot Advertising Company finds that its profits on day <span class="math inline">\(t\)</span> of an advertising campaign is given by
-<span class="math display">\[
-P(t) = -2.53t^{2} + 65t + 37,000,
-\]</span>
-where <span class="math inline">\(P(t)\)</span> is the profit in dollars for day <span class="math inline">\(t\)</span>.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Find a simplified expression for the marginal profit function. Use the proper variable <span class="math inline">\(t\)</span>.</li>
-<li>What is the exact rate of change of profits when 44 days have passed in the campaign?</li>
-<li>What are the total profits on day 44 of the campaign?</li>
-</ol></li>
-<li><p>A simple item to be sold at a small specialty store has $200 in fixed costs and $8 per item in variable costs. The owners assume they can sell 8 items if they charge $28 each, and 5 items at a price of $55 each. (Assume that demand is a linear function.)</p></li>
+<li><strong>Find critical points</strong> by solving:</li>
 </ol>
-<p>For how many units sold/produced is the marginal profit -124 dollars per item? (Use derivatives to find your answer.)</p>
+<p><span class="math display">\[
+f_x = 0 \quad \text{and} \quad f_y = 0
+\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Compute second-order partial derivatives:</strong></li>
+</ol>
+<p><span class="math display">\[
+f_{xx}, f_{yy}, f_{xy}
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Calculate the discriminant:</strong></li>
+</ol>
+<p><span class="math display">\[
+D = f_{xx} f_{yy} - (f_{xy})^2
+\]</span></p>
 <ol start="4" style="list-style-type: decimal">
-<li>In 1997, researchers at Texas A&amp;M University estimated the operating costs of cotton gin plants of various sizes. A quadratic model of cost (in thousands of dollars) for the largest plants was found to be
-<span class="math display">\[
-C(q) = 0.021q^{2} + 21.2q + 387,
-\]</span>
-where <span class="math inline">\(q\)</span> is the annual quantity of bales (in thousands) produced by the plant. Revenue was estimated at $68 per bale of cotton.</li>
+<li><strong>Classify the critical point:</strong></li>
 </ol>
-<p>Find the following:</p>
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(MC(q)\)</span></li>
-<li>The Marginal Revenue function</li>
-<li>The Marginal Profit function</li>
-<li>The Marginal Profit for <span class="math inline">\(q = 262\)</span> thousand units</li>
-<li>What are the proper units for the answer to Part D?</li>
-</ol>
+<ul>
+<li>If <span class="math inline">\(D &gt; 0\)</span> and <span class="math inline">\(f_{xx} &gt; 0\)</span>: <strong>Local minimum</strong></li>
+<li>If <span class="math inline">\(D &gt; 0\)</span> and <span class="math inline">\(f_{xx} &lt; 0\)</span>: <strong>Local maximum</strong></li>
+<li>If <span class="math inline">\(D &lt; 0\)</span>: <strong>Saddle point</strong></li>
+<li>If <span class="math inline">\(D = 0\)</span>: <strong>Inconclusive</strong></li>
+</ul>
+<hr />
+<p><strong>Example:</strong></p>
+<p>Let <span class="math inline">\(f(x, y) = x^2 + y^2\)</span></p>
+<ul>
+<li><span class="math inline">\(f_x = 2x, f_y = 2y \Rightarrow \text{critical point at } (0, 0)\)</span></li>
+<li><span class="math inline">\(f_{xx} = 2, f_{yy} = 2, f_{xy} = 0\)</span></li>
+<li><span class="math inline">\(D = (2)(2) - 0 = 4 &gt; 0\)</span>, and <span class="math inline">\(f_{xx} = 2 &gt; 0\)</span></li>
+</ul>
+<p>→ <strong>Local minimum at (0, 0)</strong></p>
 <hr />
 </div>
-<div id="the-product-and-quotient-rules-1" class="section level3 hasAnchor" number="12.3.2">
-<h3><span class="header-section-number">12.3.2</span> The Product and Quotient Rules<a href="the-product-and-quotient-rules.html#the-product-and-quotient-rules-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><a href="https://www.youtube.com/watch?v=g9knx4EPqEc"><strong>Video: Solutions</strong></a></p>
+</div>
+<div id="example-1" class="section level2 hasAnchor" number="23.1">
+<h2><span class="header-section-number">23.1</span> Example<a href="lecture-notes-20.html#example-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="functions-of-several-variables" class="section level3 hasAnchor" number="23.1.1">
+<h3><span class="header-section-number">23.1.1</span> Functions of Several Variables<a href="lecture-notes-20.html#functions-of-several-variables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="https://www.youtube.com/watch?v=atq8i22QWIw"><strong>Video: Solutions</strong></a></p>
 <ol style="list-style-type: decimal">
-<li><p>If <span class="math inline">\(f(t) = (t^2 + 2t + 5)(6t^2 + 5)\)</span>, find <span class="math inline">\(f&#39;(t)\)</span> and <span class="math inline">\(f&#39;(4)\)</span>.</p></li>
-<li><p>Find the derivative of <span class="math inline">\(\cot(x) \cdot \frac{1}{x^3} (5x + 2)\)</span>.</p></li>
-<li><p>Find the derivative of <span class="math inline">\(f(x) = 16 \sqrt{x} \left(3x^4 - 3\right) \left(6x^8 + 7x\right)\)</span>.</p></li>
-<li><p>If <span class="math inline">\(f(x) = (3x^2 + 6x -5) \tan(x)\)</span>, find <span class="math inline">\(f&#39;(x)\)</span>.</p></li>
-<li><p>If <span class="math inline">\(f(x) = \frac{\sqrt{x} - 4}{\sqrt{x} + 4}\)</span>, find <span class="math inline">\(f&#39;(x)\)</span> and <span class="math inline">\(f&#39;(3)\)</span>.</p></li>
-<li><p>If <span class="math inline">\(f(x) = \frac{7x + 4}{7x + 5}\)</span>, find <span class="math inline">\(f&#39;(x)\)</span> and <span class="math inline">\(f&#39;(5)\)</span>.</p></li>
-<li><p>If <span class="math inline">\(f(x) = \frac{7 - x^2}{2 + x^2}\)</span>, find <span class="math inline">\(f&#39;(x)\)</span></p></li>
-<li><p>Find the first and second derivatives of <span class="math inline">\(f(x) = \frac{\sin(x)}{x^2}\)</span>.</p></li>
-</ol>
-<hr />
-</div>
-</div>
-<div id="practice-problems-11" class="section level2 hasAnchor" number="12.4">
-<h2><span class="header-section-number">12.4</span> Practice Problems<a href="the-product-and-quotient-rules.html#practice-problems-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Practice the techniques discussed in class and in the online videos by solving the following examples.</p>
-<ol style="list-style-type: decimal">
-<li><p>Differentiate:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p><span class="math inline">\(y = x^{2} \left( 4x^{3} + \frac{2}{x} - 1 \right)\)</span>.</p></li>
-<li><p><span class="math inline">\(f(x) = x \ln x\)</span>.</p></li>
-<li><p><span class="math inline">\(f(x) = (2x^{0.5} - x^{2})^{2}\)</span>.</p></li>
-</ol></li>
-<li><p>Differentiate:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p><span class="math inline">\(y = \sqrt{x} \left( 4x^{-1} - 2|x| - 10 \right)\)</span>.</p></li>
-<li><p><span class="math inline">\(f(x) = x (x^{2} - 3)(2x^{2} + 1)\)</span>.</p></li>
-<li><p><span class="math inline">\(y = \left( \frac{x^{1.2}}{7} + \frac{2}{x^{2.1}} \right) \cos(x)\)</span>.</p></li>
-</ol></li>
-<li><p>Differentiate:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p><span class="math inline">\(f(x) = \frac{2x + 4}{3x - 1}\)</span>.</p></li>
-<li><p><span class="math inline">\(y = \tan(x) = \frac{\sin(x)}{\cos(x)}\)</span>.</p></li>
-<li><p><span class="math inline">\(f(x) = \frac{e^{2x}}{\ln(2x) + 2x}\)</span>.</p></li>
-</ol></li>
-<li><p>Differentiate:</p>
-<ol style="list-style-type: lower-alpha">
-<li><p><span class="math inline">\(f(x) = \frac{(x-3)(x-2)(x-1)}{x+5}\)</span>.</p></li>
-<li><p><span class="math inline">\(y = \frac{\sqrt{x} - 1}{\sqrt{x} + 1}\)</span>.</p></li>
-<li><p><span class="math inline">\(y = \frac{(x+1)(x+2)}{(x-3)(x-2)(x-1)}\)</span>.</p></li>
-</ol></li>
-<li><p>(Applied) The monthly sales of Sunny Electronics’ new iSun walkman is given by
+<li><p>Let<br />
 <span class="math display">\[
-q(t) = 2000 t - 100 t^{2}
+f(x, y) = \sqrt{150 - 4x^2 - 2y^2}
 \]</span>
-units per month, <span class="math inline">\(t\)</span> months after its introduction. The price Sunny charges is
+Evaluate <span class="math inline">\(f(4,3)\)</span>.</p></li>
+<li><p>Given<br />
 <span class="math display">\[
-p(t) = 100 - t^{2}
+f(x, y) = 70x + 60y - 3x^2 - 5y^2 - xy
 \]</span>
-dollars per iSun, <span class="math inline">\(t\)</span> months after introduction. Find the rate of change of monthly sales, the rate of change of the price, and the rate of change of monthly revenue six months after the introduction of the iSun. Interpret your answers.</p></li>
+Evaluate <span class="math inline">\(f(2,10)\)</span>.</p></li>
+<li><p>Let<br />
+<span class="math display">\[
+f(x, y) = \sqrt{y^2 - x^2}
+\]</span> What is the domain of <span class="math inline">\(f\)</span>?</p></li>
+<li><p>Using <span class="math inline">\(x\)</span> skilled workers and <span class="math inline">\(y\)</span> unskilled workers, a manufacturer can produce <span class="math inline">\(Q(x, y) = 10x^2 y\)</span> units per day. Currently there are 10 skilled workers and 20 unskilled workers.</p>
+<ol style="list-style-type: lower-alpha">
+<li>How many units are currently being produced each day?</li>
+<li>By how many units will the daily production level change if 2 more skilled workers are added to the current workforce?</li>
+<li>By how many units will the daily production level change if 2 more unskilled workers are added to the current workforce?</li>
+<li>By how many units will the daily production level change if 1 more skilled worker and 1 more unskilled worker are added to the current workforce?</li>
+</ol></li>
+<li><p>The daily output at a factory is <span class="math inline">\(Q(K, L) = 116 K^{\frac{4}{5}} L^{\frac{2}{3}}\)</span> where:</p>
+<ul>
+<li><span class="math inline">\(K\)</span> = capital investment (in units of $1000)</li>
+<li><span class="math inline">\(L\)</span> = size of the labor force (in worker-hours)</li>
+</ul>
+<ol style="list-style-type: lower-alpha">
+<li>Compute the daily output if the capital investment is $130,000 and the size of the labor force is 1491 worker-hours.</li>
+<li>What will happen to the output in part (a) if both the level of capital investment and the size of the labor force are cut in half?</li>
+</ol></li>
 </ol>
 <hr />
 </div>
-<div id="self-assessment-11" class="section level2 hasAnchor" number="12.5">
-<h2><span class="header-section-number">12.5</span> Self Assessment<a href="the-product-and-quotient-rules.html#self-assessment-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Time yourself and try to solve the following questions within twenty minutes.</p>
+<div id="partial-derivatives-1" class="section level3 hasAnchor" number="23.1.2">
+<h3><span class="header-section-number">23.1.2</span> Partial Derivatives<a href="lecture-notes-20.html#partial-derivatives-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="https://www.youtube.com/watch?v=rwFZZDEhBJI"><strong>Video: Solutions</strong></a></p>
 <ol style="list-style-type: decimal">
-<li>Differentiate: <span class="math inline">\(f\left(x\right) = x^2\left(2x + 3\right)\left(7x + 2\right)\)</span></li>
-<li>Differentiate: <span class="math inline">\(y =\sin(x)\left(x^2 - 1\right)\)</span></li>
-<li>Differentiate: <span class="math inline">\(y =\dfrac{x}{\sqrt{x} + |x|}\)</span></li>
-<li>Differentiate: <span class="math inline">\(y =\dfrac{\frac{1}{x}-1}{\sin(x)}\)</span></li>
-<li>Thoroughbred Bus Company finds that its monthly costs for one particular year were given by <span class="math inline">\(C(t) = 100 + t^2\)</span> dollars after <span class="math inline">\(t\)</span> months. After $ t$ months, the company had <span class="math inline">\(P(t) = 1,000 + t^2\)</span> passengers per month. How fast is its cost per passenger changing after 6 months?</li>
+<li>Given <span class="math inline">\(f(x, y, z) = \sqrt{4x^2 + y^2 + 2z^2}\)</span>, find:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(f_x(x, y, z)\)</span></li>
+<li><span class="math inline">\(f_y(x, y, z)\)</span></li>
+<li><span class="math inline">\(f_z(x, y, z)\)</span></li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>Find
+<span class="math display">\[
+\frac{\partial}{\partial x} \left[ 9 e^{4x} \sin(4y) \right] = \quad\_\_\_\_\_
+\]</span></li>
+</ol>
+<p><span class="math display">\[
+\frac{\partial}{\partial y} \left[ 9 e^{4x} \sin(4y) \right] = \quad\_\_\_\_\_
+\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>If <span class="math inline">\(f(x, y) = \ln\left( \sqrt[3]{x^2 \cdot y} \right)\)</span>, find the first partials evaluated at <span class="math inline">\((5, 4)\)</span>. Give answers as reduced fractions.</p></li>
+<li><p>Find the first partials of <span class="math inline">\(f(x, y) = \cos\left( x^8 + y^9 \right)\)</span>.</p></li>
+<li><p>Find the first and second partial derivatives of <span class="math inline">\(f(x, y) = 7y e^{11xy}\)</span>.</p></li>
+<li><p>Given <span class="math inline">\(f(x, y, z) = -2 e^{5xyz}\)</span>, find:</p>
+<ul>
+<li><span class="math inline">\(f_x(x, y, z)\)</span></li>
+<li><span class="math inline">\(f_y(x, y, z)\)</span></li>
+<li><span class="math inline">\(f_z(x, y, z)\)</span></li>
+</ul></li>
 </ol>
 <hr />
 </div>
-<div id="lesson-checklist-11" class="section level2 hasAnchor" number="12.6">
-<h2><span class="header-section-number">12.6</span> Lesson Checklist<a href="the-product-and-quotient-rules.html#lesson-checklist-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="maximum-and-minimum-values-1" class="section level3 hasAnchor" number="23.1.3">
+<h3><span class="header-section-number">23.1.3</span> Maximum and Minimum Values<a href="lecture-notes-20.html#maximum-and-minimum-values-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><a href="https://www.youtube.com/watch?v=ajTNFX5TqXw"><strong>Video: Solutions</strong></a></p>
+<ol style="list-style-type: decimal">
+<li><p>Suppose that <span class="math inline">\(f(x, y) = e^{-2x^2 - 4y^2 + x + 2y}\)</span>. Find the maximum.</p></li>
+<li><p>Suppose that <span class="math inline">\(f(x, y) = x^2 - xy + y^2 - 3x + 3y\)</span> with <span class="math inline">\(-3 \leq x, y \leq 3\)</span>. Find the absolute maximum and minimum values.</p></li>
+<li><p>Suppose that <span class="math inline">\(f(x, y, z) = x + 5y + 5z\)</span> at which <span class="math inline">\(0 \leq x, y, z \leq 2\)</span>. Find the absolute maximum and minimum values.</p></li>
+<li><p>Suppose that <span class="math inline">\(f(x, y) = 2x^4 + 2y^4 - 2xy\)</span>. Find the extrema.</p></li>
+<li><p>Let <span class="math inline">\(f(x, y) = x^2 - y^2 - 30xy\)</span>. Find and classify the critical points.</p></li>
+</ol>
+<hr />
+</div>
+</div>
+<div id="practice-problems-20" class="section level2 hasAnchor" number="23.2">
+<h2><span class="header-section-number">23.2</span> Practice Problems<a href="lecture-notes-20.html#practice-problems-20" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Verify Clairaut’s Theorem:</p>
+<ul>
+<li><span class="math inline">\(f(x,y) = 1000 + 5x - 4y - 3xy\)</span></li>
+<li><span class="math inline">\(f(x,y) = x^2 + y^2\)</span></li>
+<li><span class="math inline">\(f(x,y) = \dfrac{e^{0.2x}}{1 + e^{-0.1y}}\)</span></li>
+</ul></li>
+<li><p>Classify critical points of <span class="math inline">\(f(x,y) = x^2 + y^2 + 1\)</span></p></li>
+<li><p>Classify critical points of <span class="math inline">\(f(x,y) = x^2 + xy - y^2 + 3x - y\)</span></p></li>
+<li><p>Classify critical points of <span class="math inline">\(f(x,y) = x^2 + y^2 + \dfrac{2}{xy}\)</span></p></li>
+<li><p><em>(Applied)</em> You’re charged $0.03/video and $0.04/audio clip sold by Moneydrain.com. Should you accept their offer of $10/month plus those per-unit costs, or stick with your current $40/month support + $15 hosting, given 400 videos and 600 audios expected?</p></li>
+<li><p><em>(Applied)</em> Weekly cost is <span class="math inline">\(C(x,y) = 24000 + 60x + 20y + 0.3xy\)</span>. Find marginal cost of tricycles when producing 10 bikes and 20 trikes.</p></li>
+</ol>
+<hr />
+</div>
+<div id="self-assessment-20" class="section level2 hasAnchor" number="23.3">
+<h2><span class="header-section-number">23.3</span> Self Assessment<a href="lecture-notes-20.html#self-assessment-20" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li><p>Verify Clairaut’s Theorem:</p>
+<ul>
+<li><span class="math inline">\(f(x,y) = x^4y^2 - x\)</span></li>
+<li><span class="math inline">\(f(x,y) = x e^{xy}\)</span></li>
+</ul></li>
+<li><p>Classify critical points of <span class="math inline">\(f(x,y) = x^2 + x + y^2 - y - 1\)</span></p></li>
+<li><p>Classify critical points of <span class="math inline">\(f(x,y) = e^{x^2 + y^2}\)</span></p></li>
+<li><p>For <span class="math inline">\(C(x,y) = 24000 + 60x + 20y\)</span>, calculate and interpret <span class="math inline">\(\frac{\partial C}{\partial x}\)</span> and <span class="math inline">\(\frac{\partial C}{\partial y}\)</span></p></li>
+</ol>
+<hr />
+</div>
+<div id="lesson-checklist-20" class="section level2 hasAnchor" number="23.4">
+<h2><span class="header-section-number">23.4</span> Lesson Checklist<a href="lecture-notes-20.html#lesson-checklist-20" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an <span class="math inline">\(X\)</span> in the appropriate box beside the skill below.
 </p>
 <p>
@@ -624,10 +692,10 @@ dollars per iSun, <span class="math inline">\(t\)</span> months after introducti
 \end{align*}\]</span></p>
 <table>
 <colgroup>
-<col width="81%" />
+<col width="75%" />
 <col width="5%" />
-<col width="6%" />
-<col width="6%" />
+<col width="9%" />
+<col width="9%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -639,20 +707,26 @@ dollars per iSun, <span class="math inline">\(t\)</span> months after introducti
 </thead>
 <tbody>
 <tr class="odd">
-<td>Find the derivatives using the product rule.</td>
+<td>Calculate partial derivatives of two-variable functions</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Find the derivatives using the quotient rule.</td>
+<td>Find and classify critical points</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Solve applied problems involving two-variable functions</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<hr />
+
 </div>
 </div>
             </section>
@@ -660,8 +734,8 @@ dollars per iSun, <span class="math inline">\(t\)</span> months after introducti
           </div>
         </div>
       </div>
-<a href="the-limit-definition-of-the-derivative.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="the-chain-rule-and-lhopitals-rule.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="partial-derivatives.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -7,11 +7,18 @@
 
 [**Video:  The Indefinite Integral**](https://youtu.be/noxadE3ZoJY)
 
-[**Video:  Integration by Parts**](https://youtu.be/Ovl4B0bYA5A)
-
 [**Video:  Integration by Substitution**](https://youtu.be/mUOC5tahsaA)
 
+[**Video:  Integration by Parts**](https://youtu.be/Ovl4B0bYA5A)
 
+
+
+
+---
+
+
+
+##  Lecture Notes
 
 ### Basic Antiderivatives and Rules
 
@@ -148,6 +155,80 @@ Then \( du = dx \), \( v = e^x \)
 
 
 
+## Examples
+
+### Antiderivatives
+
+[**Video:  Solutions**](https://www.youtube.com/watch?v=Sv1gz4CeAv4)
+
+1. Consider the function $f(x) = 6x^{10} + 2x^6 - 4x^4 - 4$. Find an antiderivative of \( f(x) \).
+
+2. Evaluate the definite integral $\int_5^8 \frac{1}{x^2} \, dx$.
+
+3. Find the indefinite integral $\int \left(\frac{4}{x^5} + 3x + 5 \right) \, dx$.
+
+4. Compute the indefinite integral $\int (x - 4)(x + 4) \, dx$.
+
+5. Find the indefinite integral $\int \left(-5x^4 + \frac{3}{x} - \frac{3}{x^2} - 4\sqrt{x} \right) \, dx$.
+
+6. Consider the function $f(t) = 10 \sec^2(t) - 3 t^2$. Let \( F(t) \) be the antiderivative of \( f(t) \) such that \( F(0) = 0 \). Find  $F(3)$.
+
+7. Find a function \( f(x) \) such that $f'(x) = 4 e^x + 3x$ and $f(0) = -5$.
+
+
+
+---
+
+
+
+### U-Substitution
+
+[**Video:  Solutions**](https://www.youtube.com/watch?v=3UfJA1iZ0xk)
+
+1. Evaluate the integral  $\int x^6 (x^7 - 11)^{50} \, dx$.
+
+
+2. Evaluate the indefinite integral $\int x^3 \sqrt{11 + x^4} \, dx$.
+
+3. Evaluate the indefinite integral $\int \frac{x^5}{x^6 + 2} \, dx$.
+
+4. Evaluate the indefinite integral $\int \frac{6}{x \ln(9x)} \, dx$.
+
+5. Evaluate the indefinite integral $\int 3 e^{3x} \sin\bigl(e^{3x}\bigr) \, dx$.
+
+6. Evaluate the indefinite integral $\int \frac{x + 2}{x^2 + 4x + 5} \, dx$.
+
+7. Evaluate the indefinite integral $\int x^6 e^{x^7} \, dx$.
+
+
+
+---
+
+
+
+
+### Integration by Parts
+
+[**Video:  Solutions**](https://www.youtube.com/watch?v=GT6KpNf4sfU)
+
+
+1. Use integration by parts to evaluate the definite integral $\int_1^e 3t^2 \ln t \, dt$.
+
+2. Evaluate the indefinite integral $\int 6x e^x \, dx$.
+
+3. Evaluate the indefinite integral $\int 6x e^{4x} \, dx$. 
+
+4. Use integration by parts to evaluate the integral $\int 8z \cos(4z) \, dz$.
+
+5. Use integration by parts to evaluate the integral $\int x^6 e^x \, dx$.
+
+
+
+---
+
+
+
+
 ## Practice Problems
 
 
@@ -179,6 +260,9 @@ The total cost to produce 2 boxes is \$1,000. Find the total cost function $C(x)
 $$n(t) = \frac{1}{12} \left(1.1 + 1.2 e^{-0.08 t} \right) \text{ million homes per month } (t \geq 0)$$  
 where $t$ is time in months from the start of 2006. Find an expression for the total number $N(t)$ of housing starts in the US from January 2006 to time $t$.  
 
+---
+
+
 
 ## Self Assessment
 
@@ -199,6 +283,9 @@ $$\int x \ln(2x) \, dx$$
 4. The marginal cost of producing the $x$th box of Zip disks is  
 $$10 + \frac{x^{2}}{100,000}$$  
 and the fixed cost is \$100,000. Find the cost function $C(x)$.  
+
+---
+
 
 ## Lesson Checklist 
 
@@ -233,20 +320,6 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Riemann Sums
 
 
@@ -254,6 +327,11 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 [**Video:  Riemann Sums and the Definite Integral**](https://youtu.be/zPqfFEdDXFQ)
 
+---
+
+
+
+## Lecture Notes
 
 ### Estimating Area Using \( n \) Rectangles
 
@@ -348,6 +426,20 @@ This definition captures the **exact area under the curve** as the number of rec
 ---
 
 
+## Examples
+
+[**Video:  Solutions**](https://youtu.be/6WUpRNbCM3w?si=Jz2sSDJfwhFOJU64&t=281)
+
+1. Approximate the area under the curve \( y = x^3 \) from \( x = 2 \) to \( x = 5 \) using a Right Endpoint approximation with 6 subdivisions.
+
+2. Estimate the area under the graph of $f(x) = x^2 + 6x + 12$ over the interval \([0, 2]\) using five approximating rectangles and right endpoints.
+
+3. Evaluate the Riemann sum for $f(x) = \ln(x) - 0.7$ over the interval \([1, 3]\) using four subintervals, taking the sample points to be right endpoints.
+
+
+---
+
+
 
 ## Practice Problems
 
@@ -384,7 +476,10 @@ ft/s, $t$ seconds after starting. Use a Riemann sum with $n = 10$ to estimate ho
 $$v(t) = -9.8t + 4$$  
 m/s. Use a Riemann sum with 5 subdivisions to estimate  
 $$\int_0^1 v(t) \, dt.$$  
-</div>
+
+---
+
+
 
 ## Self Assessment
 
@@ -405,6 +500,9 @@ $$\int_0^2 (4-x^{2}) \, dx$$
 5. The rate of U.S. per capita sales of bottled water for the period 2000–2008 can be approximated by  
 $$s(t) = 0.04 t^2 + 1.5 t + 17 \quad (0 \leq t \leq 8)$$  
 where $t$ is the time in years since the start of 2000. Use a Riemann sum with $n = 5$ to estimate the total U.S. per capita sales of bottled water from the start of 2003 to the start of 2008.  
+
+
+---
 
 
 ## Lesson Checklist 
@@ -433,6 +531,9 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
+---
+
+
 
 
 
@@ -452,6 +553,11 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 [**Video:  The Fundamental Theorem of Calculus**](https://youtu.be/BVOSn1Gwqhs)
 
+---
+
+
+
+## Lecture Notes
 
 ### Fundamental Theorem of Calculus – Part I
 
@@ -536,6 +642,29 @@ Let \( f(x) \), \( g(x) \) be continuous on \([a, b]\), and let \( c \) be a con
 
 
 
+### Fundamental Theorem of Calculus
+
+[**Video:  Solutions**](https://www.youtube.com/watch?v=euIHL2RSWOI)
+
+1. Evaluate the definite integral by interpreting it in terms of areas $\int_2^7 (2x - 12) \, dx$.
+
+2. Use the limit definition of the integral to evaluate $\int_2^4 (x^2 + 4x - 3) \, dx$.
+
+3. Evaluate the integral $\int_2^3 (x + 5)(x - 3) \, dx$
+
+4. If $f(x) = \int_x^{19} t^6 \, dt,$ then find $f'(x)$
+
+5. If $f(x) = \int_4^x t^3 \, dt,$ then find $f'(x)$. Also evaluate $f'(5)$.
+
+6. If $f(x) = \int_{-2}^x^3 t^2 \, dt,$ then find $f'(x)$.
+
+7. Use Part I of the Fundamental Theorem of Calculus to find the derivative of $f(x) = \int_4^x \left( \frac{1}{4} t^2 - 1 \right)^8 \, dt$.  Find $f'(x)$.
+
+
+---
+
+
+
 ## Practice Problems
 
 1. Evaluate the following integrals:
@@ -562,6 +691,9 @@ Let \( f(x) \), \( g(x) \) be continuous on \([a, b]\), and let \( c \) be a con
 
 
 
+---
+
+
 
 ## Self Assessment
 
@@ -572,6 +704,9 @@ Time yourself and try to solve the following within 20 minutes:
 3. $g(x) = \displaystyle \int_{x^3}^{\pi} e^{u^3 + 4u} du$  
 4. $g(x) = \displaystyle \int_{x}^{\pi/2} (1 + u + \cos u) du$  
 5. Given $C(x) = 246.76 + \int_{0}^x 5t dt$, find the fixed cost and marginal cost at $x=10$.  
+
+---
+
 
 
 ## Lesson Checklist 
@@ -598,11 +733,16 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
+---
 
 
 
 
 
+
+
+
+# (PART) Additional (Important) Topics {-}
 
 
 
@@ -617,6 +757,10 @@ This checklist is designed to help you keep track of what you need to work on. T
 [**Video:  Area Between Curves**](https://youtu.be/PfYcOdCgygk)
 
 
+---
+
+
+## Lecture Notes
 
 ### Definite Integrals as Net Area
 
@@ -689,6 +833,25 @@ Find the area between \( y = x^2 \) and \( y = x \):
 
 ---
 
+## Examples
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=azvfjIjyRLw)
+
+1. Find the area under the curve of $m(x) = 12 - 0.5x^2$ from $1$ until the point at which the curve hits the $x$-axis.
+
+2. Find the area bounded by $y = 4\sqrt{x}$, $y = 0$ and $x = 4$.  
+
+3. Find the area bounded by the curve $y = 11 + 6x + x^2$ and the x-axis, from $x = -3$ to $x = -1$.
+
+4. Sketch the region enclosed by $y = 5x$ and $y = 5x^2$.
+
+5. A sketch of the region enclosed by $y = x$ and $y = \frac{3.25x}{x^2 + 1}$.  Find the area.
+
+
+
+---
+
+
 
 
 ## Practice Problems
@@ -705,6 +868,11 @@ Find the area between \( y = x^2 \) and \( y = x \):
 8. **(Challenge)** Find net and true area between $y = -x^2 + 4$ and $y = x^2 - 2x$
 
 
+---
+
+
+
+
 ## Self Assessment
 
 Try to solve these in 20 minutes:
@@ -713,6 +881,11 @@ Try to solve these in 20 minutes:
 2. Area bounded by $y = x^3$ and the axes in the 4th quadrant  
 3. Area under $y = e^{-x}$ on $[0,\infty]$  
 4. Area between $y = -|x|$ and $y = x^2 - 2x$  
+
+
+---
+
+
 
 ## Lesson Checklist 
 
@@ -750,6 +923,11 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
+---
+
+
+
+
 
 
 # Constrained Optimization
@@ -760,7 +938,15 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 ## Lecture Content
 
-[**Video:  None???**]( )
+[**Video:  Constrained Optimization**](https://www.youtube.com/watch?v=KRy8ju4jG5E)
+
+
+---
+
+
+
+
+# Lecture Notes
 
 
 ### Sketching the Feasible Region
@@ -809,7 +995,7 @@ Once the feasible region is identified and corner points are known, the objectiv
 
 ---
 
-**Example:**
+## Example
 
 Maximize \( P = 3x + 5y \), subject to:
 
@@ -902,6 +1088,11 @@ Practice the techniques discussed in class and in the online videos by solving t
    \end{aligned}
    $$
 
+
+---
+
+
+
 ## Self Assessment
 
 Time yourself and try to solve the following within 20 minutes:
@@ -916,6 +1107,11 @@ Time yourself and try to solve the following within 20 minutes:
    & x_1, x_2 \geq 0
    \end{aligned}
    $$
+
+
+---
+
+
 
 ## Lesson Checklist 
 
@@ -962,11 +1158,13 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
+---
+
+
+
+
 
 # Partial Derivatives
-
-
-
 
 
 ## Lecture Content
@@ -979,6 +1177,12 @@ This checklist is designed to help you keep track of what you need to work on. T
 [**Video:  Maximums and Minimums**](https://youtu.be/OOubzDzJ2Po)
 
 
+
+---
+
+
+
+# Lecture Notes
 
 ### Evaluation of Functions of Two Variables
 
@@ -1085,6 +1289,109 @@ Let \( f(x, y) = x^2 + y^2 \)
 ---
 
 
+## Example
+
+### Functions of Several Variables
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=atq8i22QWIw)
+
+1. Let  
+\[
+f(x, y) = \sqrt{150 - 4x^2 - 2y^2}
+\]
+Evaluate \( f(4,3) \).
+
+2. Given  
+\[
+f(x, y) = 70x + 60y - 3x^2 - 5y^2 - xy
+\]
+Evaluate \( f(2,10) \).
+
+3. Let  
+\[
+f(x, y) = \sqrt{y^2 - x^2}
+\]  What is the domain of $f$?
+
+4. Using $x$ skilled workers and $y$ unskilled workers, a manufacturer can produce $Q(x, y) = 10x^2 y$ units per day. Currently there are 10 skilled workers and 20 unskilled workers.
+
+   a. How many units are currently being produced each day?
+   b. By how many units will the daily production level change if 2 more skilled workers are added to the current workforce?
+   c. By how many units will the daily production level change if 2 more unskilled workers are added to the current workforce?
+   d. By how many units will the daily production level change if 1 more skilled worker and 1 more unskilled worker are added to the current workforce?
+
+5. The daily output at a factory is $Q(K, L) = 116 K^{\frac{4}{5}} L^{\frac{2}{3}}$ where:
+
+   - $K$ = capital investment (in units of \$1000)
+   - $L$ = size of the labor force (in worker-hours)
+
+   a. Compute the daily output if the capital investment is \$130,000 and the size of the labor force is 1491 worker-hours.
+   b. What will happen to the output in part (a) if both the level of capital investment and the size of the labor force are cut in half?
+
+
+---
+
+
+
+
+### Partial Derivatives
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=rwFZZDEhBJI)
+
+1. Given $f(x, y, z) = \sqrt{4x^2 + y^2 + 2z^2}$, find:  
+
+  a. $f_x(x, y, z)$
+  b. $f_y(x, y, z)$
+  c. $f_z(x, y, z)$
+  
+2. Find
+\[
+\frac{\partial}{\partial x} \left[ 9 e^{4x} \sin(4y) \right] = \quad\_\_\_\_\_
+\]  
+
+\[
+\frac{\partial}{\partial y} \left[ 9 e^{4x} \sin(4y) \right] = \quad\_\_\_\_\_
+\]  
+
+3. If  $f(x, y) = \ln\left( \sqrt[3]{x^2 \cdot y} \right)$, find the first partials evaluated at \((5, 4)\). Give answers as reduced fractions. 
+
+4. Find the first partials of $f(x, y) = \cos\left( x^8 + y^9 \right)$.
+
+5. Find the first and second partial derivatives of $f(x, y) = 7y e^{11xy}$.
+
+6. Given $f(x, y, z) = -2 e^{5xyz}$, find:
+
+   * $f_x(x, y, z)$
+   * $f_y(x, y, z)$
+   * $f_z(x, y, z)$
+   
+
+
+---
+
+
+
+
+
+### Maximum and Minimum Values
+
+[**Video: Solutions**](https://www.youtube.com/watch?v=ajTNFX5TqXw)
+
+1. Suppose that $f(x, y) = e^{-2x^2 - 4y^2 + x + 2y}$.  Find the maximum.
+
+2. Suppose that $f(x, y) = x^2 - xy + y^2 - 3x + 3y$ with $-3 \leq x, y \leq 3$. Find the absolute maximum and minimum values.
+
+3. Suppose that $f(x, y, z) = x + 5y + 5z$ at which  $0 \leq x, y, z \leq 2$.  Find the absolute maximum and minimum values.
+
+4. Suppose that $f(x, y) = 2x^4 + 2y^4 - 2xy$.  Find the extrema.
+
+5. Let $f(x, y) = x^2 - y^2 - 30xy$.  Find and classify the critical points.
+
+
+
+---
+
+
+
 ## Practice Problems
 
 
@@ -1104,6 +1411,11 @@ Let \( f(x, y) = x^2 + y^2 \)
 6. *(Applied)* Weekly cost is \( C(x,y) = 24000 + 60x + 20y + 0.3xy \). Find marginal cost of tricycles when producing 10 bikes and 20 trikes.
 
 
+---
+
+
+
+
 ## Self Assessment
 
 
@@ -1117,6 +1429,11 @@ Let \( f(x, y) = x^2 + y^2 \)
 3. Classify critical points of \( f(x,y) = e^{x^2 + y^2} \)
 
 4. For \( C(x,y) = 24000 + 60x + 20y \), calculate and interpret \( \frac{\partial C}{\partial x} \) and \( \frac{\partial C}{\partial y} \)
+
+
+
+---
+
 
 
 ## Lesson Checklist 

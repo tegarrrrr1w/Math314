@@ -1,4 +1,4 @@
-# (PART) Linear Algebra {-}
+# (PART) Review {-}
 
 
 
@@ -13,6 +13,19 @@
 [**Video:  Common Functions**](https://www.youtube.com/watch?v=YvBfQ_VJAbo&list=PLhMAuJ_imnt6AOxSIelCyZRe05Ua2DrDY&index=2)
 
 
+[**Video:  Two Equations in Two Unknowns**](https://www.youtube.com/watch?v=ZG_Wa-7jGcU&list=PLhMAuJ_imnt575FxvbQ3nE6ZxAKVbxsMx)
+
+
+[**Video:  Supply and Demand Models**](https://www.youtube.com/watch?v=ou1Yq-w2gMQ&list=PLhMAuJ_imnt6AOxSIelCyZRe05Ua2DrDY&index=4)
+
+[**Video:  Linear Functions and Models**](https://www.youtube.com/watch?v=YvBfQ_VJAbo&list=PLhMAuJ_imnt6AOxSIelCyZRe05Ua2DrDY&index=5)
+
+
+
+---
+
+
+## Lecture Notes
 
 ### Common Functions and Their Graphs
 
@@ -148,9 +161,6 @@ All real numbers \( x \geq 2 \).
 
 ### Solving Systems Using the Elimination Method
 
-
-[**Two Equations in Two Unknowns**](https://www.youtube.com/watch?v=ZG_Wa-7jGcU&list=PLhMAuJ_imnt575FxvbQ3nE6ZxAKVbxsMx)
-
 **Steps:**
 
 1. Multiply one or both equations so that one variable has the same (or opposite) coefficient.
@@ -183,11 +193,6 @@ $$
 ---
 
 ### Revenue, Cost, and Profit Functions
-
-[**Video:  Supply and Demand Models**](https://www.youtube.com/watch?v=ou1Yq-w2gMQ&list=PLhMAuJ_imnt6AOxSIelCyZRe05Ua2DrDY&index=4)
-
-[**Video:  Linear Functions and Models**](https://www.youtube.com/watch?v=YvBfQ_VJAbo&list=PLhMAuJ_imnt6AOxSIelCyZRe05Ua2DrDY&index=5)
-
 
 
 #### Revenue Function {-}
@@ -239,6 +244,85 @@ $$
 
 ---
 
+## Examples
+
+
+
+
+
+###  Applications of Linear Equations
+[**Video:  Solutions**](https://www.youtube.com/watch?v=46bXxBQ0esI)
+
+1. Find the final amount of money in an account if \$2700is deposited at 5.5% interest compounded quarterly (every 3 months) and the money is left for 5 years.
+
+2. What present value amounts to $12,448.29 if it is invested for 2 years at 11% compounded monthly?
+
+3. Suppose a calculator manufacturer has the total cost function \[C(x) = 43x + 11,000,\] and the total revenue function \[R(x) = 55x.\]
+   a. What is the equation of the profit function
+   b. What is the profit on 2100 units? 
+
+4. Suppose a stereo receiver manufacturer has the total cost function \[C(x) = 400x + 2490,\] and the total revenue function \[R(x) = 830x.\]
+   a. What is the equation of the profit function for this commodity?  
+   b. What is the profit on 310 units? 
+
+5. Given: (q is number of items)
+   * Demand function: $P = 1040.4 - 0.4q^2$
+   * Supply function: $p = 0.5q^2
+Find the equilibrium price and quantity.
+
+6. If the demand for a pair of designer high heel shoes is given by \[4p + 5q = 825,\] and the supply function for the shoes is \[p - 6q = -35,\]
+   * The quantity demanded at $175 is? 
+   * The quantity supplied at $175 is?
+   * At $175, do we have a surplus or a shortfall?
+   
+   
+---
+
+
+
+###  Systems of Linear Equations
+[**Video:  Solutions**](https://www.youtube.com/watch?v=46bXxBQ0esI)
+
+1. Solve the system of equations by graphing:
+\begin{align*}
+y - 26 &= -6x\\
+y - 5x &= -29
+\end{align*}
+
+2. Solve the system of equations:
+\begin{align*}
+-4x - y &=14\\
+-2x + y &= 4
+\end{align*}
+
+3. Solve the system of equations by graphing:
+\begin{align*}
+3x - 9y &= -15\\
+-6x + 18y &= 30
+\end{align*}
+
+4. Solve the system of equations by graphing:
+\begin{align*}
+4x + 4y &= -4\\
+2x + y &=2
+\end{align*}
+
+5. The admission fee at an amusement park is 1.5 dollars for children and 4 dollars for adults. On a certain day, 292 people entered the park, and the admission fees collected totaled 788 dollars. How many children and how many adults were admitted?
+
+6. What quantity of 70% acid solution must be mixed with a 20% solution to produce 900 mL of a 50% solution?
+
+7. Convert the equations in the system below into slope-intercept form and then classify the system.
+\begin{align*}
+-x - y &= -2\\
+2x + 2y &= 4
+\end{align*}
+
+
+
+
+
+---
+
 ##  Practice Problems
 
 
@@ -275,6 +359,9 @@ $$
 7. **(APPLIED)** Anthony Altino is mixing food for his young daughter and wants the meal to supply 1 gram of protein and 5 milligrams of iron. He mixes cereal (0.5 g protein and 1 mg iron per ounce) and fruit (0.2 g protein and 2 mg iron per ounce). What mixture will provide the desired nutrition?
 
 <div style="page-break-after: always;"></div>
+
+---
+
 
 ##  Self-Assessment
 
@@ -317,7 +404,6 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 ---
 
-<div style="page-break-after: always;"></div>
 
 
 
@@ -341,8 +427,7 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
-
-
+# (PART) Matrix Algebra {-}
 
 
 
@@ -357,6 +442,11 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 [**Video:  Applications of Linear Systems**](https://www.youtube.com/watch?v=Blkr167IwOU&list=PLhMAuJ_imnt575FxvbQ3nE6ZxAKVbxsMx&index=3)
 
+
+---
+
+
+## Lecture Notes
 
 ### Augmented Matrix
 
@@ -429,6 +519,81 @@ Which corresponds to the solution \( x = a \), \( y = b \), etc.
 
 ---
 
+## Examples
+
+
+
+[**Video:  Solutions**](https://www.youtube.com/watch?v=Pttai87GRtA)
+
+1. When is a matrix in **Row Echelon Form**?
+
+2.  Is this matrix in row echelon form?
+\[
+\begin{bmatrix}
+5 & 6 \\
+0 & 2\\
+0&0
+\end{bmatrix}
+\]
+
+3.  Is this matrix in row echelon form?
+\[
+\begin{bmatrix}
+5 & -5 & -4 &|& 1 \\
+3 & 0 & -10 &|& -2\\
+0 & 0 & 2 &|& -3
+\end{bmatrix}
+\]
+
+4.  Find the augmented coefficient matrix corresponding to the system:
+
+\[
+\begin{align*}
+-3x + 4 &= 4y \\
+-9x - 6y &= -4 \\
+2x + 1 &= 5y
+\end{align*}
+\]
+
+5. Find the reduced row echelon form (RREF) of this augmented matrix:
+\[
+\begin{bmatrix}
+-2 & 0 & 5&|&250\\
+10 & 1 & -26&|&400\\
+3 & 0 & -8&|&150
+\end{bmatrix}
+\]
+
+
+6.  Solve the system by row reduction:
+\[
+\begin{align*}
+x_1  + 3x_2 + 3x_3 + &= -6 \\
+-x_1 - 2x_2 - 6x_3 &= -5 \\
+x_1 + 3x_2 + 4x_3 &= 5 
+\end{align*}
+\]
+
+7. Solve the system by row reduction:
+\[
+\begin{align*}
+7w - 16x + 3y + 8z &=-6\\
+w + 3x + 2y &= 4\\
+2w - 4x + y + 2 &= 1\\
+-2w + 3x - y - z &= 4
+\end{align*}
+\]
+
+8. Given the following augmented matrix, give a parameterized set of solutions for the system.
+\[
+\begin{bmatrix}
+14 & -8 & 2 &|& 128\\
+2 & -1 & 1 &|& 17
+\end{bmatrix}
+\]
+
+---
+
 
 ##  Practice Problems
 
@@ -475,15 +640,16 @@ Which corresponds to the solution \( x = a \), \( y = b \), etc.
    \end{cases}
    \]
 
-<div style="page-break-after: always;"></div>
-
 6. **(APPLIED)** You own a hamburger franchise and want to use leftover ingredients to make burgers.  
    - Plain burgers: 1 beef patty, 1 bread roll  
    - Double cheeseburgers: 2 beef patties, 1 bread roll, 2 cheese slices  
    - Regular cheeseburgers: 1 beef patty, 1 bread roll, 1 cheese slice  
 You have 13 bread rolls, 19 beef patties, and 15 cheese slices. How many of each type can you make?
 
-<div style="page-break-after: always;"></div>
+
+---
+
+
 
 ##  Self-Assessment
 
@@ -521,7 +687,6 @@ This checklist is designed to help you keep track of what you need to work on. T
 &\textbf{Competent (COM):} &&\textrm{You show mastery of the skill.} 
 \end{align*}
 
-<div style="page-break-after: always;"></div>
 
 
 
@@ -545,6 +710,7 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
+---
 
 
 
@@ -558,7 +724,11 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 [**Video:  Matrix Multiplication**](https://www.youtube.com/watch?v=Zsrhf3MEaFs&list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&index=2)
 
+---
 
+
+
+## Lecture Notes
 
 ### Matrix Notation: $A_{m \times n}$
 
@@ -570,6 +740,9 @@ This checklist is designed to help you keep track of what you need to work on. T
   $$
   A_{2 \times 3} = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{bmatrix}
   $$
+
+---
+
 
 ###  Notation for Matrix Entries: $a_{ij}$ 
 
@@ -585,6 +758,9 @@ This checklist is designed to help you keep track of what you need to work on. T
   a_{23} = 6 \;\;\;\;\; \text{and} a_{12} = 2.
   $$
   
+---
+
+
 ### Matrix Addition and Subtraction
 
 - Two matrices **can only be added or subtracted** if they have the **same dimensions**.
@@ -598,6 +774,9 @@ This checklist is designed to help you keep track of what you need to work on. T
   \begin{bmatrix} 5 & 6 \\ 7 & 8 \end{bmatrix} =
   \begin{bmatrix} 6 & 8 \\ 10 & 12 \end{bmatrix}
   $$
+---
+
+
 
 ### Scalar Multiplication
 
@@ -610,6 +789,9 @@ This checklist is designed to help you keep track of what you need to work on. T
   3 \cdot \begin{bmatrix} 2 & -1 \\ 0 & 4 \end{bmatrix} =
   \begin{bmatrix} 6 & -3 \\ 0 & 12 \end{bmatrix}
   $$
+
+---
+
 
 ### Matrix Multiplication
 
@@ -627,6 +809,9 @@ This checklist is designed to help you keep track of what you need to work on. T
   \begin{bmatrix} 6 & -18 \\ 0 & 48 \end{bmatrix}
   $$
 
+---
+
+
 ### Matrix Transpose
 
 - The **transpose** of a matrix $A$ is denoted $A^T$.
@@ -635,12 +820,215 @@ This checklist is designed to help you keep track of what you need to work on. T
   A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \quad \Rightarrow \quad A^T = \begin{bmatrix} 1 & 3 \\ 2 & 4 \end{bmatrix}
   $$
 
+---
+
+
 ### $a_{ij}$ Notation for Operations
 
 - This is used to define operations element by element:
   - Addition: $(A + B)_{ij} = a_{ij} + b_{ij}$
   - Scalar multiplication: $(cA)_{ij} = c \cdot a_{ij}$
   - Transpose: $(A^T)_{ij} = a_{ji}$
+
+
+
+---
+
+
+
+## Examples
+
+
+###  Addition and Subtraction
+
+[**Video:  Solutions**](https://www.youtube.com/watch?v=GJSIoFkdWag)
+
+1. Evaluate:
+
+$$
+\begin{bmatrix} 15 & -10 \\ 11 & -2 \end{bmatrix}
+\quad + \quad
+\begin{bmatrix} 18 & 2 \\ 5 & -4 \end{bmatrix}
+$$
+
+
+2. Given the matrices, find \( A + B \):
+
+$$
+A =
+\begin{bmatrix}
+0 & 4 \\
+4 & 0
+\end{bmatrix}
+\quad\text{and}\quad
+B =
+\begin{bmatrix}
+5 & 5 \\
+1 & 4
+\end{bmatrix}
+$$
+
+3. Add:
+
+$$
+\begin{bmatrix}
+7 & 4 & 5 \\
+-6 & -3 & 3 \\
+-1 & 8 & 3
+\end{bmatrix}
+\quad + \quad
+\begin{bmatrix}
+6 & 3 & 0 \\
+-2 & -5 & 2 \\
+-5 & 7 & 7
+\end{bmatrix}
+$$
+
+
+
+4. Evaluate:
+
+$$
+\begin{bmatrix} -7 & -4 \\ -9 & 4 \end{bmatrix}
+-
+\begin{bmatrix} x & y \\ z & w \end{bmatrix}
+=
+\begin{bmatrix} -16 & -12 \\ 1 & -2 \end{bmatrix}
+$$
+
+
+
+5. Let:
+
+$$
+D =
+\begin{bmatrix}
+3 & 1 & -7 & 2 \\
+4 & -4 & 10 & -1 \\
+-5 & -9 & 6 & -10
+\end{bmatrix}.
+$$
+
+Find \( 2D \).
+
+
+
+6. Given:
+
+$$
+A =
+\begin{bmatrix}
+-11 & -2 & -3 \\
+-5 & -1 & 0 \\
+5 & 1 & 1
+\end{bmatrix},
+$$
+
+find \( A^T \) (the transpose of \( A \)).
+
+
+---
+
+
+
+###  Multiplication
+
+[**Video:  Solutions**](https://www.youtube.com/watch?v=iHC-GgnMYRg)
+
+1. Suppose matrix $P$ is $2 \times 3$, $C$ is $2 \times 2$, and $A$ is $2 \times 3$.
+
+Which of the following may be possible to compute?
+
+   a. $P(A + C)$  
+   b. $PA$  
+   c. $AP$  
+   d. $PC$  
+   e. $A^T$  
+   f. $CA$  
+   g. $P(AC)$  
+   h. $A^{-1}$
+
+
+2. Compute:
+\[
+\begin{bmatrix}
+2 & 1 \\
+5 & 1
+\end{bmatrix}
+\begin{bmatrix}
+0 & 5 \\
+5 & -1
+\end{bmatrix}
+\]
+
+
+3. Compute:
+
+\[
+\begin{bmatrix}
+-3 & 1 & -3 \\
+-2 & -2 & 2 \\
+-5 & -3 & 1
+\end{bmatrix}
+\begin{bmatrix}
+4 & 0 & -2 \\
+3 & -1 & 2 \\
+-3 & -1 & -3
+\end{bmatrix}
+\]
+
+
+4. Find $AB$, given
+\[
+A =
+\begin{bmatrix}
+1 & -2 \\
+-5 & -2 \\
+0 & 1 \\
+-4 & -2
+\end{bmatrix},
+\quad \text{and} \quad
+B =
+\begin{bmatrix}
+-4 & -5 & 3 & 1 \\
+2 & 5 & 0 & 4
+\end{bmatrix}
+\]
+
+
+5. Find $AB$ and $BA$, given
+\[
+A =
+\begin{bmatrix}
+1 \\
+0 \\
+4 \\
+-2
+\end{bmatrix},
+\quad
+B =
+\begin{bmatrix}
+6 & -7 & -1 & 8
+\end{bmatrix}
+\]
+
+
+
+6. Let:
+\[
+M =
+\begin{bmatrix}
+4 & -3 & 0 \\
+2 & -1 & 5
+\end{bmatrix}
+\]
+
+   a. If $A = M + M^T$, then $A$ is a symmetric matrix. **Yes / No**  
+   b. If $B = M \cdot M^T$, then $B$ is a symmetric matrix. **Yes / No**  
+   c. Find $B$.
+
+
+---
 
 
 
@@ -658,8 +1046,6 @@ This checklist is designed to help you keep track of what you need to work on. T
    c. \(3A\)  
    d. \(2A + 0.5C\)  
    e. \(C^T + B^T\)
-
-<div style="page-break-after: always;"></div>
 
 2. A matrix is symmetric if it equals its transpose. Give examples of nonzero symmetric \(2 \times 2\) and \(3 \times 3\) matrices.
 
@@ -687,15 +1073,17 @@ This checklist is designed to help you keep track of what you need to work on. T
    \end{bmatrix}
    \]  
    Compute \(A^2\), \(A^3\), \(A^4\), and \(A^{100}\).
-
-<div style="page-break-after: always;"></div>
+   
 
 6. **(Applied)** Left Coast Bookstore has two stores with inventory of hardcover, softcover, and plastic books. Given starting stock, sales, and restocking monthly amounts,  
    a. Find total sales over 6 months by store and book type.  
    b. Find inventory at the end of June.  
    c. Compute total revenue if hardcover sells for \$30, softcover for \$10, plastic for \$15.
 
-<div style="page-break-after: always;"></div>
+
+---
+
+
 
 ##  Self-Assessment
 
@@ -750,7 +1138,6 @@ This checklist is designed to help you keep track of what you need to work on. T
 | Applied problems using matrices   |     |     |     |
 
 
-<div style="page-break-after: always;"></div>
 
 
 
@@ -781,6 +1168,11 @@ This checklist is designed to help you keep track of what you need to work on. T
 [**Video:  Matrix Inversion**](https://www.youtube.com/watch?v=vNviujVzWk4&list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&index=3)
 
 
+---
+
+
+
+## Lecture Notes
 
 ### Determinant of a $2 \times 2$ Matrix
 
@@ -795,6 +1187,9 @@ This checklist is designed to help you keep track of what you need to work on. T
   $$
   \text{det}(A) = ad - bc
   $$
+
+---
+
 
 ### Determinant of a $3 \times 3$ Matrix
 
@@ -811,6 +1206,9 @@ This checklist is designed to help you keep track of what you need to work on. T
   \text{det}(A) = a(ei - fh) - b(di - fg) + c(dh - eg)
   $$
 
+---
+
+
 ### Determinant of Higher-Order Matrices
 
 1. **Choose a row or column** (often the one with the most zeros).
@@ -822,6 +1220,11 @@ This checklist is designed to help you keep track of what you need to work on. T
    $$
    \text{det}(A) = \sum_{j=1}^n (-1)^{i+j} a_{ij} M_{ij}
    $$
+   
+   
+---
+
+
 
 ### Inverse of a $2 \times 2$ Matrix
 
@@ -840,6 +1243,9 @@ This checklist is designed to help you keep track of what you need to work on. T
   \end{bmatrix}
   $$
 
+---
+
+
 ### Inverse of Higher-Order Matrices (Steps)
 
 1. **Check that $\text{det}(A) \neq 0$** (only non-singular matrices have inverses).
@@ -856,6 +1262,124 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 ---
+
+
+## Examples
+
+[**Video:  Solutions**](https://www.youtube.com/watch?v=Ux6fcPHHTWU)
+
+
+1. Find the determinants, if they exist.
+
+   a.
+$$
+\begin{bmatrix}
+3 & 1 \\
+1 & 5
+\end{bmatrix}
+$$  
+   b.
+$$
+\begin{bmatrix}
+1 & -1 & 1 \\
+-4 & 5 & -2
+\end{bmatrix}
+$$  
+   c.
+$$
+\begin{bmatrix}
+-3 & 1 & 1 \\
+-2 & -5 & 1 \\
+-5 & -3 & -1
+\end{bmatrix}
+$$  
+
+2. Use the shortcut for finding the inverse of a \( 2 \times 2 \) matrix to find the inverse of:
+
+\[
+\begin{bmatrix}
+4 & 0 \\
+2 & 1
+\end{bmatrix}
+\]
+
+
+
+3. True or False:  A square matrix \( M \) is singular if and only if \( \det(M) \neq 0 \).
+
+4. Find the determinant of the matrix:
+
+\[
+\begin{bmatrix}
+2 & 0 \\
+-1 & 2
+\end{bmatrix}
+\]
+
+5. Find the determinant of the matrix:
+
+\[
+\begin{bmatrix}
+-2 & 5 \\
+-1 & 4
+\end{bmatrix}
+\]
+
+6. Find the inverse of the matrix using row operations:
+
+\[
+\begin{bmatrix}
+6 & -2 \\
+-2 & 4
+\end{bmatrix}
+\]
+
+7. Does the matrix
+
+\[
+A =
+\begin{bmatrix}
+-4 & 13 \\
+4 & -13
+\end{bmatrix}
+\]
+have an inverse?
+
+8. Find the inverse of the matrix:
+
+\[
+\begin{bmatrix}
+7 & -2 \\
+21 & -6
+\end{bmatrix}
+\]
+
+
+9. Find the determinant of the matrix:
+
+\[
+\begin{bmatrix}
+3 & 0 & 0 \\
+7 & 4 & 0 \\
+2 & -1 & 6
+\end{bmatrix}
+\]
+
+10. Find the determinant, if it exists:
+
+\[
+A =
+\begin{bmatrix}
+-3 & 0 & 1 \\
+4 & -3 & 0 \\
+4 & -3 & 0
+\end{bmatrix}
+\]
+
+
+---
+
+
 
 ## Practice Problems
 
@@ -895,6 +1419,9 @@ Time yourself and try to solve the following questions within twenty minutes.
    \end{align*}
    $$
 
+---
+
+
 ## Lesson Checklist 
 
 
@@ -931,6 +1458,8 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
+# (PART) Linear Algebra {-}
+
 
 
 
@@ -939,7 +1468,13 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 ## Lecture Content
 
-[**Video:  Vectors**](https://www.youtube.com/watch?v=k_hRTx4PEn0&list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&index=4)
+[**Video:  Vectors, Dot Products, and Projections**](https://www.youtube.com/watch?v=k_hRTx4PEn0&list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&index=4)
+
+
+---
+
+
+## Lecture Notes
 
 ### Vector Operations
 
@@ -1073,6 +1608,147 @@ The **projection** of vector **u** onto vector **v** is:
 
 ---
 
+
+
+## Examples
+
+
+
+[**Video:  Solutions**](https://www.youtube.com/watch?v=ylddiDiOVWE)
+
+
+1. Consider the following vectors:  
+\[
+\vec{v} = \langle -11, -2 \rangle, \quad
+\vec{z} = \langle 6, 5 \rangle
+\]
+
+Compute:  
+\[
+\vec{v} + \vec{z}
+\]
+
+
+2. Consider the following vector:  
+\[
+\vec{v} = \langle 8, -6 \rangle
+\]
+
+Find:
+\[
+\|\vec{v}\| = \ ?
+\]
+
+
+3. The equation \( ax + by = c \) corresponds to the vector \(\langle a, b, c \rangle\).
+
+   a. To what equation will \(\langle 3, -1, 4 \rangle\) correspond?  
+   b. To what equation will \(\langle -5, 3, -1 \rangle\) correspond?  
+   c. To what equation will \(\langle 3, -1, 4 \rangle + \langle -5, 3, -1 \rangle\) correspond?  
+   d. What should the corresponding vector be?
+
+
+4. Let:
+\[
+\vec{u} = [4, 1] \quad \vec{v} = [4, 1]
+\]
+
+   a. Draw \(\vec{u}\) in standard position (tail at the origin).  
+   b. Draw \(\vec{v}\) with its tail at the tip of \(\vec{u}\).  
+   c. Compute \(\vec{u} + \vec{v}\).  
+   d. Draw \(\vec{u} + \vec{v}\) from the tail of \(\vec{u}\) to the tip of \(\vec{v}\).
+
+
+5. Use the dot product to determine if the vectors are perpendicular/ orthogonal.
+
+  a.  
+\[
+\vec{u} =
+\begin{bmatrix}
+7 \\ 1 \\ 1
+\end{bmatrix}, \quad
+\vec{v} =
+\begin{bmatrix}
+4 \\ 2 \\ 5
+\end{bmatrix}
+\]
+
+  b.  
+\[
+\vec{u} =
+\begin{bmatrix}
+-4 \\ -4 \\ -8
+\end{bmatrix}, \quad
+\vec{v} =
+\begin{bmatrix}
+-1 \\ -1 \\ 1
+\end{bmatrix}
+\]
+\(\vec{u} \cdot \vec{v} =\) ? 
+
+
+
+6. Compute the dot product:  
+\[
+\begin{bmatrix}
+-10 \\ 4 \\ -4 \\ -2
+\end{bmatrix}
+\cdot
+\begin{bmatrix}
+5 \\ 7 \\ -3 \\ 7
+\end{bmatrix}
+\]
+
+
+
+7. Find the angle between the vectors:  
+\[
+\begin{bmatrix}
+-6 \\ 8 \\ -8
+\end{bmatrix}
+\quad \text{and} \quad
+\begin{bmatrix}
+8 \\ -9 \\ 6
+\end{bmatrix}
+\]  
+Give your answer in **radians** (rounded to two decimal places).
+
+
+
+8. Write all answers with radicals and/or fractions as needed. Do not use decimals.
+
+   a. Find the magnitude (norm) of  
+\[
+\vec{u} = [-6, 1]
+\]  
+Find a unit vector in the direction of \(\vec{u}\).
+
+
+   b. Find the magnitude (norm) of  
+\[
+\vec{v} =
+\begin{bmatrix}
+-3 \\ 4 \\ 0
+\end{bmatrix}
+\]  
+Find a unit vector in the direction of \(\vec{v}\).
+
+   c. Find the magnitude (norm) of  
+\[
+\vec{w} =
+\begin{bmatrix}
+6 \\ 1 \\ 5 \\ 3
+\end{bmatrix}
+\]  
+Find a unit vector in the direction of \(\vec{w}\).
+
+
+
+
+
+
+---
+
 ## Practice Problems
 
 1. Draw the vectors $A = \begin{bmatrix} 1 \\ 2 \end{bmatrix}$ and $B = \begin{bmatrix} -1 \\ -1 \end{bmatrix}$. Draw: 
@@ -1150,16 +1826,38 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
+---
+
+
 
 
 
 
 # Basis and Orthonormal Basis
 
+## Lecture Content
 
 
 
-##  Lecture Content
+[**Video:  Linear Combinations and Spans**](https://www.youtube.com/watch?v=Qm_OS-8COwU)
+
+
+[**Video:  Linear Independence**](https://www.youtube.com/watch?v=CrV1xCWdY-g)
+
+
+[**Video:  Orthonormal Basis**](https://www.youtube.com/watch?v=7BFx8pt2aTQ)
+
+
+[**Video:  Gram-Schmidt Process**](https://www.youtube.com/watch?v=rHonltF77zI)
+
+
+[**Video:  Change of Basis**](https://www.youtube.com/watch?v=P2LTAUO1TdA)
+
+---
+
+
+
+##  Lecture Notes
 
 
 ### Linear Independence
@@ -1222,6 +1920,9 @@ Substitute into (3):
 2(-2c_3) - (-c_3) + 3c_3 = -4c_3 + c_3 + 3c_3 = 0
 \]  
 The equation is satisfied for **any value of** \(c_3\), so the original equation has **infinitely many solutions** (not just the trivial one).  Thus, these vectors are linearly dependent. 
+
+---
+
 
 
 ### Span
@@ -1482,6 +2183,9 @@ Time yourself and try to solve the following questions within twenty minutes.
 
 
 
+---
+
+
 
 
 ## Lesson Checklist 
@@ -1529,7 +2233,23 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 
 
-##  Lecture Content
+##  Lecture Material
+
+
+
+
+
+[**Video:  Linear Transformations**](https://www.youtube.com/watch?v=kYB8IZa5AuE)
+
+
+[**Video:  Rotation Matrix**](https://www.youtube.com/watch?v=S0uzwDKqnsw)
+
+
+---
+
+
+
+##  Lecture Notes
 
 ### Rotation Matrix in \(\mathbb{R}^2\)
 
@@ -1621,6 +2341,9 @@ Common reflection matrices in \(\mathbb{R}^2\):
 | Stretch/Compression | Diagonal     | Scales components independently |
 | Reflection          | Specific matrices | Flips vectors across lines or axes |
 
+---
+
+
 
 ## Practice Problems
 
@@ -1644,6 +2367,9 @@ Common reflection matrices in \(\mathbb{R}^2\):
 5.   **Applied**: Let \( B = \left\{
    \begin{bmatrix} 1 \\ 1 \end{bmatrix}, 
    \begin{bmatrix} -1 \\ 1 \end{bmatrix} \right\} \).  Let \( s_B = \begin{bmatrix} 3 \\ -2 \end{bmatrix} \).  Express \( s_B \) in terms of the standard basis, rotate it 30 degrees counter clockwise, then express that vector in terms of basis \( B \).
+
+---
+
 
 
 ## Self-Assessment
@@ -1731,6 +2457,14 @@ This checklist is designed to help you keep track of what you need to work on. T
 
 [**Video:  Eigenvalues and Eigenvectors**](https://www.youtube.com/watch?v=4PJncWlZmQA&list=PLhMAuJ_imnt43L1iOSF8un53latpLCmjM&index=6)
 
+
+
+[**Video:  Eigenvalues and Eigenvectors**](https://www.youtube.com/watch?v=PFDu9oVAE-g)
+
+
+## Lecture Notes
+
+
 ### Eigenvalues and Eigenvectors
 
 
@@ -1793,6 +2527,91 @@ A^n = P D^n P^{-1}
 when \( A \) is diagonalizable.
 
 
+---
+
+
+##  Examples
+
+
+
+
+[**Video:  Solutions**](https://www.youtube.com/watch?v=PFDu9oVAE-g)
+
+
+
+1. Find the eigenvalues of the matrix  
+\[
+\begin{bmatrix}
+7 & 3 \\
+-2 & 2
+\end{bmatrix}
+\]  
+
+2. One of the eigenvalues of the matrix  
+\[
+\begin{bmatrix}
+21 & -80 \\
+4 & -15
+\end{bmatrix}
+\]  
+is 8. Find an associated eigenvector.
+
+
+
+3. Suppose matrix \(A\) is a \(3 \times 4\) matrix such that  
+\[
+A \cdot
+\begin{bmatrix}
+-4 \\ 6 \\ 4
+\end{bmatrix}
+=
+\begin{bmatrix}
+-2 \\ 3 \\ 2
+\end{bmatrix}.
+\]
+
+Find an eigenvalue of \(A\).
+
+
+
+4.Let  
+\[
+M = 
+\begin{bmatrix}
+1 & 2 \\
+-1 & 4
+\end{bmatrix}.
+\]  
+
+Find an eigenvalue and a corresponding eigenvector..
+
+
+5. Find a matrix \(A\) with eigenvalues 1 and \(-2\). Also find the corresponding eigenvectors.
+
+
+6. Suppose \(A\) is a matrix and  
+\[
+u = \begin{bmatrix} 5 \\ -1 \\ 1 \\ 4 \end{bmatrix}
+\]
+is an eigenvector corresponding to \(\lambda = -3\), and  
+\[
+v = \begin{bmatrix} -1 \\ 2 \\ 1 \\ 4 \end{bmatrix}
+\]
+is an eigenvector corresponding to \(\lambda = 2\).
+
+Find the following:
+
+\[
+A u, \quad
+A v, \quad
+A (u + v)
+\]
+
+
+---
+
+
+
 ##  Practice Problems
 Practice the techniques discussed in class and in the online videos by solving the following examples. 
 
@@ -1831,6 +2650,9 @@ A = \begin{bmatrix}3 & 0 \\ 0 & -2\end{bmatrix}.
 \[
 A = \begin{bmatrix}-1 &4 \\ 0 & 3\end{bmatrix}.
 \] Compute $A^3$.
+
+---
+
 
 
 ##  Self-Assessment

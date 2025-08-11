@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Lesson 1 Introduction | Calculus and Linear Algebra</title>
+  <title>Lesson 4 Matrix Operations | Calculus and Linear Algebra</title>
   <meta name="description" content="Course notes for MATH 114" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Lesson 1 Introduction | Calculus and Linear Algebra" />
+  <meta property="og:title" content="Lesson 4 Matrix Operations | Calculus and Linear Algebra" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Course notes for MATH 114" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Lesson 1 Introduction | Calculus and Linear Algebra" />
+  <meta name="twitter:title" content="Lesson 4 Matrix Operations | Calculus and Linear Algebra" />
   
   <meta name="twitter:description" content="Course notes for MATH 114" />
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="functions-and-linear-equations.html"/>
+<link rel="prev" href="matrix-operations.html"/>
+<link rel="next" href="inverses-and-determinants.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -82,53 +82,59 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#a-final-word"><i class="fa fa-check"></i>A Final Word</a></li>
 </ul></li>
 <li class="part"><span><b>I Review</b></span></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="part"><span><b>II Linear Algebra</b></span></li>
-<li class="chapter" data-level="2" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html"><i class="fa fa-check"></i><b>2</b> Functions and Linear Equations</a>
+<li class="chapter" data-level="1" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html"><i class="fa fa-check"></i><b>1</b> Functions and Linear Equations</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#lecture-content"><i class="fa fa-check"></i><b>2.1</b> Lecture Content</a>
+<li class="chapter" data-level="1.1" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#lecture-content"><i class="fa fa-check"></i><b>1.1</b> Lecture Content</a></li>
+<li class="chapter" data-level="1.2" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#lecture-notes"><i class="fa fa-check"></i><b>1.2</b> Lecture Notes</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#common-functions-and-their-graphs"><i class="fa fa-check"></i><b>2.1.1</b> Common Functions and Their Graphs</a></li>
-<li class="chapter" data-level="2.1.2" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#finding-the-domain-of-a-function"><i class="fa fa-check"></i><b>2.1.2</b> Finding the Domain of a Function</a></li>
-<li class="chapter" data-level="2.1.3" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#solving-systems-using-the-elimination-method"><i class="fa fa-check"></i><b>2.1.3</b> Solving Systems Using the Elimination Method</a></li>
-<li class="chapter" data-level="2.1.4" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#revenue-cost-and-profit-functions"><i class="fa fa-check"></i><b>2.1.4</b> Revenue, Cost, and Profit Functions</a></li>
+<li class="chapter" data-level="1.2.1" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#common-functions-and-their-graphs"><i class="fa fa-check"></i><b>1.2.1</b> Common Functions and Their Graphs</a></li>
+<li class="chapter" data-level="1.2.2" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#finding-the-domain-of-a-function"><i class="fa fa-check"></i><b>1.2.2</b> Finding the Domain of a Function</a></li>
+<li class="chapter" data-level="1.2.3" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#solving-systems-using-the-elimination-method"><i class="fa fa-check"></i><b>1.2.3</b> Solving Systems Using the Elimination Method</a></li>
+<li class="chapter" data-level="1.2.4" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#revenue-cost-and-profit-functions"><i class="fa fa-check"></i><b>1.2.4</b> Revenue, Cost, and Profit Functions</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#examples"><i class="fa fa-check"></i><b>2.2</b> Examples</a>
+<li class="chapter" data-level="1.3" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#examples"><i class="fa fa-check"></i><b>1.3</b> Examples</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#systems-of-linear-equations"><i class="fa fa-check"></i><b>2.2.1</b> Systems of Linear Equations</a></li>
-<li class="chapter" data-level="2.2.2" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#systems-of-linear-equations-1"><i class="fa fa-check"></i><b>2.2.2</b> Systems of Linear Equations</a></li>
+<li class="chapter" data-level="1.3.1" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#applications-of-linear-equations"><i class="fa fa-check"></i><b>1.3.1</b> Applications of Linear Equations</a></li>
+<li class="chapter" data-level="1.3.2" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#systems-of-linear-equations"><i class="fa fa-check"></i><b>1.3.2</b> Systems of Linear Equations</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#practice-problems"><i class="fa fa-check"></i><b>2.3</b> Practice Problems</a></li>
-<li class="chapter" data-level="2.4" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#self-assessment"><i class="fa fa-check"></i><b>2.4</b> Self-Assessment</a></li>
-<li class="chapter" data-level="2.5" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#lesson-checklist"><i class="fa fa-check"></i><b>2.5</b> Lesson Checklist</a></li>
+<li class="chapter" data-level="1.4" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#practice-problems"><i class="fa fa-check"></i><b>1.4</b> Practice Problems</a></li>
+<li class="chapter" data-level="1.5" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#self-assessment"><i class="fa fa-check"></i><b>1.5</b> Self-Assessment</a></li>
+<li class="chapter" data-level="1.6" data-path="functions-and-linear-equations.html"><a href="functions-and-linear-equations.html#lesson-checklist"><i class="fa fa-check"></i><b>1.6</b> Lesson Checklist</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html"><i class="fa fa-check"></i><b>3</b> Introduction to Matrices</a>
+<li class="part"><span><b>II Matrix Algebra</b></span></li>
+<li class="chapter" data-level="2" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html"><i class="fa fa-check"></i><b>2</b> Introduction to Matrices</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#lecture-content-1"><i class="fa fa-check"></i><b>3.1</b> Lecture Content</a>
+<li class="chapter" data-level="2.1" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#lecture-content-1"><i class="fa fa-check"></i><b>2.1</b> Lecture Content</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#lecture-notes-1"><i class="fa fa-check"></i><b>2.2</b> Lecture Notes</a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#augmented-matrix"><i class="fa fa-check"></i><b>3.1.1</b> Augmented Matrix</a></li>
-<li class="chapter" data-level="3.1.2" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#elementary-row-operations"><i class="fa fa-check"></i><b>3.1.2</b> Elementary Row Operations</a></li>
-<li class="chapter" data-level="3.1.3" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#gauss-jordan-elimination-steps"><i class="fa fa-check"></i><b>3.1.3</b> Gauss-Jordan Elimination Steps</a></li>
+<li class="chapter" data-level="2.2.1" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#augmented-matrix"><i class="fa fa-check"></i><b>2.2.1</b> Augmented Matrix</a></li>
+<li class="chapter" data-level="2.2.2" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#elementary-row-operations"><i class="fa fa-check"></i><b>2.2.2</b> Elementary Row Operations</a></li>
+<li class="chapter" data-level="2.2.3" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#gauss-jordan-elimination-steps"><i class="fa fa-check"></i><b>2.2.3</b> Gauss-Jordan Elimination Steps</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#practice-problems-1"><i class="fa fa-check"></i><b>3.2</b> Practice Problems</a></li>
-<li class="chapter" data-level="3.3" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#self-assessment-1"><i class="fa fa-check"></i><b>3.3</b> Self-Assessment</a></li>
-<li class="chapter" data-level="3.4" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#lesson-checklist-1"><i class="fa fa-check"></i><b>3.4</b> Lesson Checklist</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#examples-1"><i class="fa fa-check"></i><b>2.3</b> Examples</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#practice-problems-1"><i class="fa fa-check"></i><b>2.4</b> Practice Problems</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#self-assessment-1"><i class="fa fa-check"></i><b>2.5</b> Self-Assessment</a></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-matrices.html"><a href="introduction-to-matrices.html#lesson-checklist-1"><i class="fa fa-check"></i><b>2.6</b> Lesson Checklist</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="matrix-operations.html"><a href="matrix-operations.html"><i class="fa fa-check"></i><b>4</b> Matrix Operations</a>
+<li class="chapter" data-level="3" data-path="matrix-operations.html"><a href="matrix-operations.html"><i class="fa fa-check"></i><b>3</b> Matrix Operations</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="matrix-operations.html"><a href="matrix-operations.html#lecture-content-2"><i class="fa fa-check"></i><b>4.1</b> Lecture Content</a>
+<li class="chapter" data-level="3.1" data-path="matrix-operations.html"><a href="matrix-operations.html#lecture-content-2"><i class="fa fa-check"></i><b>3.1</b> Lecture Content</a></li>
+<li class="chapter" data-level="3.2" data-path="matrix-operations.html"><a href="matrix-operations.html#lecture-notes-2"><i class="fa fa-check"></i><b>3.2</b> Lecture Notes</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="matrix-operations.html"><a href="matrix-operations.html#matrix-notation-a_m-times-n"><i class="fa fa-check"></i><b>4.1.1</b> Matrix Notation: <span class="math inline">\(A_{m \times n}\)</span></a></li>
-<li class="chapter" data-level="4.1.2" data-path="matrix-operations.html"><a href="matrix-operations.html#notation-for-matrix-entries-a_ij"><i class="fa fa-check"></i><b>4.1.2</b> Notation for Matrix Entries: <span class="math inline">\(a_{ij}\)</span></a></li>
-<li class="chapter" data-level="4.1.3" data-path="matrix-operations.html"><a href="matrix-operations.html#matrix-addition-and-subtraction"><i class="fa fa-check"></i><b>4.1.3</b> Matrix Addition and Subtraction</a></li>
-<li class="chapter" data-level="4.1.4" data-path="matrix-operations.html"><a href="matrix-operations.html#scalar-multiplication"><i class="fa fa-check"></i><b>4.1.4</b> Scalar Multiplication</a></li>
-<li class="chapter" data-level="4.1.5" data-path="matrix-operations.html"><a href="matrix-operations.html#matrix-multiplication"><i class="fa fa-check"></i><b>4.1.5</b> Matrix Multiplication</a></li>
-<li class="chapter" data-level="4.1.6" data-path="matrix-operations.html"><a href="matrix-operations.html#matrix-transpose"><i class="fa fa-check"></i><b>4.1.6</b> Matrix Transpose</a></li>
-<li class="chapter" data-level="4.1.7" data-path="matrix-operations.html"><a href="matrix-operations.html#a_ij-notation-for-operations"><i class="fa fa-check"></i><b>4.1.7</b> <span class="math inline">\(a_{ij}\)</span> Notation for Operations</a></li>
+<li class="chapter" data-level="3.2.1" data-path="matrix-operations.html"><a href="matrix-operations.html#matrix-notation-a_m-times-n"><i class="fa fa-check"></i><b>3.2.1</b> Matrix Notation: <span class="math inline">\(A_{m \times n}\)</span></a></li>
+<li class="chapter" data-level="3.2.2" data-path="matrix-operations.html"><a href="matrix-operations.html#notation-for-matrix-entries-a_ij"><i class="fa fa-check"></i><b>3.2.2</b> Notation for Matrix Entries: <span class="math inline">\(a_{ij}\)</span></a></li>
+<li class="chapter" data-level="3.2.3" data-path="matrix-operations.html"><a href="matrix-operations.html#matrix-addition-and-subtraction"><i class="fa fa-check"></i><b>3.2.3</b> Matrix Addition and Subtraction</a></li>
+<li class="chapter" data-level="3.2.4" data-path="matrix-operations.html"><a href="matrix-operations.html#scalar-multiplication"><i class="fa fa-check"></i><b>3.2.4</b> Scalar Multiplication</a></li>
+<li class="chapter" data-level="3.2.5" data-path="matrix-operations.html"><a href="matrix-operations.html#matrix-multiplication"><i class="fa fa-check"></i><b>3.2.5</b> Matrix Multiplication</a></li>
+<li class="chapter" data-level="3.2.6" data-path="matrix-operations.html"><a href="matrix-operations.html#matrix-transpose"><i class="fa fa-check"></i><b>3.2.6</b> Matrix Transpose</a></li>
+<li class="chapter" data-level="3.2.7" data-path="matrix-operations.html"><a href="matrix-operations.html#a_ij-notation-for-operations"><i class="fa fa-check"></i><b>3.2.7</b> <span class="math inline">\(a_{ij}\)</span> Notation for Operations</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="matrix-operations.html"><a href="matrix-operations.html#practice-problems-2"><i class="fa fa-check"></i><b>4.2</b> Practice Problems</a></li>
-<li class="chapter" data-level="4.3" data-path="matrix-operations.html"><a href="matrix-operations.html#self-assessment-2"><i class="fa fa-check"></i><b>4.3</b> Self-Assessment</a></li>
-<li class="chapter" data-level="4.4" data-path="matrix-operations.html"><a href="matrix-operations.html#lesson-checklist-2"><i class="fa fa-check"></i><b>4.4</b> Lesson Checklist</a></li>
+<li class="chapter" data-level="3.3" data-path="matrix-operations.html"><a href="matrix-operations.html#examples-2"><i class="fa fa-check"></i><b>3.3</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="matrix-operations-1.html"><a href="matrix-operations-1.html"><i class="fa fa-check"></i><b>4</b> Matrix Operations</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="matrix-operations-1.html"><a href="matrix-operations-1.html#self-assessment-2"><i class="fa fa-check"></i><b>4.1</b> Self-Assessment</a></li>
+<li class="chapter" data-level="4.2" data-path="matrix-operations-1.html"><a href="matrix-operations-1.html#lesson-checklist-2"><i class="fa fa-check"></i><b>4.2</b> Lesson Checklist</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="inverses-and-determinants.html"><a href="inverses-and-determinants.html"><i class="fa fa-check"></i><b>5</b> Inverses and Determinants</a>
 <ul>
@@ -140,10 +146,11 @@
 <li class="chapter" data-level="5.1.4" data-path="inverses-and-determinants.html"><a href="inverses-and-determinants.html#inverse-of-a-2-times-2-matrix"><i class="fa fa-check"></i><b>5.1.4</b> Inverse of a <span class="math inline">\(2 \times 2\)</span> Matrix</a></li>
 <li class="chapter" data-level="5.1.5" data-path="inverses-and-determinants.html"><a href="inverses-and-determinants.html#inverse-of-higher-order-matrices-steps"><i class="fa fa-check"></i><b>5.1.5</b> Inverse of Higher-Order Matrices (Steps)</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="inverses-and-determinants.html"><a href="inverses-and-determinants.html#practice-problems-3"><i class="fa fa-check"></i><b>5.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="5.2" data-path="inverses-and-determinants.html"><a href="inverses-and-determinants.html#practice-problems-2"><i class="fa fa-check"></i><b>5.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="5.3" data-path="inverses-and-determinants.html"><a href="inverses-and-determinants.html#self-assessment-3"><i class="fa fa-check"></i><b>5.3</b> Self-Assessment</a></li>
 <li class="chapter" data-level="5.4" data-path="inverses-and-determinants.html"><a href="inverses-and-determinants.html#lesson-checklist-3"><i class="fa fa-check"></i><b>5.4</b> Lesson Checklist</a></li>
 </ul></li>
+<li class="part"><span><b>III Linear Algebra</b></span></li>
 <li class="chapter" data-level="6" data-path="vector-projections.html"><a href="vector-projections.html"><i class="fa fa-check"></i><b>6</b> Vector Projections</a>
 <ul>
 <li class="chapter" data-level="6.1" data-path="vector-projections.html"><a href="vector-projections.html#lecture-content-4"><i class="fa fa-check"></i><b>6.1</b> Lecture Content</a>
@@ -155,7 +162,7 @@
 <li class="chapter" data-level="6.1.5" data-path="vector-projections.html"><a href="vector-projections.html#vector-projection-formula"><i class="fa fa-check"></i><b>6.1.5</b> Vector Projection Formula</a></li>
 <li class="chapter" data-level="6.1.6" data-path="vector-projections.html"><a href="vector-projections.html#geometric-interpretations"><i class="fa fa-check"></i><b>6.1.6</b> Geometric Interpretations</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="vector-projections.html"><a href="vector-projections.html#practice-problems-4"><i class="fa fa-check"></i><b>6.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="6.2" data-path="vector-projections.html"><a href="vector-projections.html#practice-problems-3"><i class="fa fa-check"></i><b>6.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="6.3" data-path="vector-projections.html"><a href="vector-projections.html#self-assessment-4"><i class="fa fa-check"></i><b>6.3</b> Self-Assessment</a></li>
 <li class="chapter" data-level="6.4" data-path="vector-projections.html"><a href="vector-projections.html#lesson-checklist-4"><i class="fa fa-check"></i><b>6.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -170,7 +177,7 @@
 <li class="chapter" data-level="7.1.5" data-path="basis-and-orthonormal-basis.html"><a href="basis-and-orthonormal-basis.html#coordinates-relative-to-an-ordered-basis"><i class="fa fa-check"></i><b>7.1.5</b> Coordinates Relative to an Ordered Basis</a></li>
 <li class="chapter" data-level="7.1.6" data-path="basis-and-orthonormal-basis.html"><a href="basis-and-orthonormal-basis.html#change-of-basis-matrix-in-mathbbr2"><i class="fa fa-check"></i><b>7.1.6</b> Change of Basis Matrix in <span class="math inline">\(\mathbb{R}^2\)</span></a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="basis-and-orthonormal-basis.html"><a href="basis-and-orthonormal-basis.html#practice-problems-5"><i class="fa fa-check"></i><b>7.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="7.2" data-path="basis-and-orthonormal-basis.html"><a href="basis-and-orthonormal-basis.html#practice-problems-4"><i class="fa fa-check"></i><b>7.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="7.3" data-path="basis-and-orthonormal-basis.html"><a href="basis-and-orthonormal-basis.html#self-assessment-5"><i class="fa fa-check"></i><b>7.3</b> Self-Assessment</a></li>
 <li class="chapter" data-level="7.4" data-path="basis-and-orthonormal-basis.html"><a href="basis-and-orthonormal-basis.html#lesson-checklist-5"><i class="fa fa-check"></i><b>7.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -184,7 +191,7 @@
 <li class="chapter" data-level="8.1.4" data-path="the-rotation-matrix.html"><a href="the-rotation-matrix.html#reflection-matrices"><i class="fa fa-check"></i><b>8.1.4</b> Reflection Matrices</a></li>
 <li class="chapter" data-level="8.1.5" data-path="the-rotation-matrix.html"><a href="the-rotation-matrix.html#summary"><i class="fa fa-check"></i><b>8.1.5</b> Summary</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="the-rotation-matrix.html"><a href="the-rotation-matrix.html#practice-problems-6"><i class="fa fa-check"></i><b>8.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="8.2" data-path="the-rotation-matrix.html"><a href="the-rotation-matrix.html#practice-problems-5"><i class="fa fa-check"></i><b>8.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="8.3" data-path="the-rotation-matrix.html"><a href="the-rotation-matrix.html#self-assessment-6"><i class="fa fa-check"></i><b>8.3</b> Self-Assessment</a></li>
 <li class="chapter" data-level="8.4" data-path="the-rotation-matrix.html"><a href="the-rotation-matrix.html#lesson-checklist-6"><i class="fa fa-check"></i><b>8.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -197,11 +204,11 @@
 <li class="chapter" data-level="9.1.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#finding-eigenvectors"><i class="fa fa-check"></i><b>9.1.3</b> Finding Eigenvectors</a></li>
 <li class="chapter" data-level="9.1.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#diagonalization-for-2-times-2-matrices-with-two-distinct-eigenvalues"><i class="fa fa-check"></i><b>9.1.4</b> Diagonalization (for <span class="math inline">\(2 \times 2\)</span> matrices with two distinct eigenvalues)</a></li>
 </ul></li>
-<li class="chapter" data-level="9.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#practice-problems-7"><i class="fa fa-check"></i><b>9.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="9.2" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#practice-problems-6"><i class="fa fa-check"></i><b>9.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="9.3" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#self-assessment-7"><i class="fa fa-check"></i><b>9.3</b> Self-Assessment</a></li>
 <li class="chapter" data-level="9.4" data-path="eigenvalues-and-eigenvectors.html"><a href="eigenvalues-and-eigenvectors.html#lesson-checklist-7"><i class="fa fa-check"></i><b>9.4</b> Lesson Checklist</a></li>
 </ul></li>
-<li class="part"><span><b>III Differential Calculus</b></span></li>
+<li class="part"><span><b>IV Differential Calculus</b></span></li>
 <li class="chapter" data-level="10" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>10</b> Exponential and Logarithmic Functions</a>
 <ul>
 <li class="chapter" data-level="10.1" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html#lecture-content-8"><i class="fa fa-check"></i><b>10.1</b> Lecture Content</a>
@@ -212,7 +219,7 @@
 <li class="chapter" data-level="10.1.4" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html#solving-exponential-and-logarithmic-equations"><i class="fa fa-check"></i><b>10.1.4</b> Solving Exponential and Logarithmic Equations</a></li>
 <li class="chapter" data-level="10.1.5" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html#applications-and-formulas"><i class="fa fa-check"></i><b>10.1.5</b> Applications and Formulas</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html#practice-problems-8"><i class="fa fa-check"></i><b>10.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="10.2" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html#practice-problems-7"><i class="fa fa-check"></i><b>10.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="10.3" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html#self-assessment-8"><i class="fa fa-check"></i><b>10.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="10.4" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html#lesson-checklist-8"><i class="fa fa-check"></i><b>10.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -226,7 +233,7 @@
 <li class="chapter" data-level="11.1.4" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#dominant-term-analysis-for-limits-at-infinity"><i class="fa fa-check"></i><b>11.1.4</b> Dominant Term Analysis for Limits at Infinity</a></li>
 <li class="chapter" data-level="11.1.5" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#continuity-of-piecewise-functions"><i class="fa fa-check"></i><b>11.1.5</b> Continuity of Piecewise Functions</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#practice-problems-9"><i class="fa fa-check"></i><b>11.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="11.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#practice-problems-8"><i class="fa fa-check"></i><b>11.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="11.3" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#self-assessment-9"><i class="fa fa-check"></i><b>11.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="11.4" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html#lesson-checklist-9"><i class="fa fa-check"></i><b>11.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -239,10 +246,11 @@
 <li class="chapter" data-level="12.1.3" data-path="the-limit-definition-of-the-derivative.html"><a href="the-limit-definition-of-the-derivative.html#sum-difference-and-constant-multiple-rules"><i class="fa fa-check"></i><b>12.1.3</b> Sum, Difference, and Constant Multiple Rules</a></li>
 <li class="chapter" data-level="12.1.4" data-path="the-limit-definition-of-the-derivative.html"><a href="the-limit-definition-of-the-derivative.html#tangent-line-to-a-function-at-a-point"><i class="fa fa-check"></i><b>12.1.4</b> Tangent Line to a Function at a Point</a></li>
 </ul></li>
-<li class="chapter" data-level="12.2" data-path="the-limit-definition-of-the-derivative.html"><a href="the-limit-definition-of-the-derivative.html#practice-problems-10"><i class="fa fa-check"></i><b>12.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="12.2" data-path="the-limit-definition-of-the-derivative.html"><a href="the-limit-definition-of-the-derivative.html#practice-problems-9"><i class="fa fa-check"></i><b>12.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="12.3" data-path="the-limit-definition-of-the-derivative.html"><a href="the-limit-definition-of-the-derivative.html#self-assessment-10"><i class="fa fa-check"></i><b>12.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="12.4" data-path="the-limit-definition-of-the-derivative.html"><a href="the-limit-definition-of-the-derivative.html#lesson-checklist-10"><i class="fa fa-check"></i><b>12.4</b> Lesson Checklist</a></li>
 </ul></li>
+<li class="part"><span><b>V Derivative Formulas and Applications</b></span></li>
 <li class="chapter" data-level="13" data-path="the-product-and-quotient-rules.html"><a href="the-product-and-quotient-rules.html"><i class="fa fa-check"></i><b>13</b> The Product and Quotient Rules</a>
 <ul>
 <li class="chapter" data-level="13.1" data-path="the-product-and-quotient-rules.html"><a href="the-product-and-quotient-rules.html#lecture-content-11"><i class="fa fa-check"></i><b>13.1</b> Lecture Content</a>
@@ -251,7 +259,7 @@
 <li class="chapter" data-level="13.1.2" data-path="the-product-and-quotient-rules.html"><a href="the-product-and-quotient-rules.html#product-rule-for-three-functions"><i class="fa fa-check"></i><b>13.1.2</b> Product Rule for Three Functions</a></li>
 <li class="chapter" data-level="13.1.3" data-path="the-product-and-quotient-rules.html"><a href="the-product-and-quotient-rules.html#quotient-rule"><i class="fa fa-check"></i><b>13.1.3</b> Quotient Rule</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="the-product-and-quotient-rules.html"><a href="the-product-and-quotient-rules.html#practice-problems-11"><i class="fa fa-check"></i><b>13.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="13.2" data-path="the-product-and-quotient-rules.html"><a href="the-product-and-quotient-rules.html#practice-problems-10"><i class="fa fa-check"></i><b>13.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="13.3" data-path="the-product-and-quotient-rules.html"><a href="the-product-and-quotient-rules.html#self-assessment-11"><i class="fa fa-check"></i><b>13.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="13.4" data-path="the-product-and-quotient-rules.html"><a href="the-product-and-quotient-rules.html#lesson-checklist-11"><i class="fa fa-check"></i><b>13.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -262,7 +270,7 @@
 <li class="chapter" data-level="14.1.1" data-path="the-chain-rule-and-lhopitals-rule.html"><a href="the-chain-rule-and-lhopitals-rule.html#derivative-of-a-composition-of-functions-chain-rule"><i class="fa fa-check"></i><b>14.1.1</b> Derivative of a Composition of Functions (Chain Rule)</a></li>
 <li class="chapter" data-level="14.1.2" data-path="the-chain-rule-and-lhopitals-rule.html"><a href="the-chain-rule-and-lhopitals-rule.html#lhôpitals-rule"><i class="fa fa-check"></i><b>14.1.2</b> L’Hôpital’s Rule</a></li>
 </ul></li>
-<li class="chapter" data-level="14.2" data-path="the-chain-rule-and-lhopitals-rule.html"><a href="the-chain-rule-and-lhopitals-rule.html#practice-problems-12"><i class="fa fa-check"></i><b>14.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="14.2" data-path="the-chain-rule-and-lhopitals-rule.html"><a href="the-chain-rule-and-lhopitals-rule.html#practice-problems-11"><i class="fa fa-check"></i><b>14.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="14.3" data-path="the-chain-rule-and-lhopitals-rule.html"><a href="the-chain-rule-and-lhopitals-rule.html#self-assessment-12"><i class="fa fa-check"></i><b>14.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="14.4" data-path="the-chain-rule-and-lhopitals-rule.html"><a href="the-chain-rule-and-lhopitals-rule.html#lesson-checklist-12"><i class="fa fa-check"></i><b>14.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -273,7 +281,7 @@
 <li class="chapter" data-level="15.1.1" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#higher-order-derivatives"><i class="fa fa-check"></i><b>15.1.1</b> Higher-Order Derivatives</a></li>
 <li class="chapter" data-level="15.1.2" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#implicit-differentiation-1"><i class="fa fa-check"></i><b>15.1.2</b> Implicit Differentiation</a></li>
 </ul></li>
-<li class="chapter" data-level="15.2" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#practice-problems-13"><i class="fa fa-check"></i><b>15.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="15.2" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#practice-problems-12"><i class="fa fa-check"></i><b>15.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="15.3" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#self-assessment-13"><i class="fa fa-check"></i><b>15.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="15.4" data-path="implicit-differentiation.html"><a href="implicit-differentiation.html#lesson-checklist-13"><i class="fa fa-check"></i><b>15.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -286,11 +294,11 @@
 <li class="chapter" data-level="16.1.3" data-path="graphical-analysis.html"><a href="graphical-analysis.html#extreme-value-theorem-evt"><i class="fa fa-check"></i><b>16.1.3</b> Extreme Value Theorem (EVT)</a></li>
 <li class="chapter" data-level="16.1.4" data-path="graphical-analysis.html"><a href="graphical-analysis.html#intervals-of-increase-decrease-and-concavity"><i class="fa fa-check"></i><b>16.1.4</b> Intervals of Increase, Decrease, and Concavity</a></li>
 </ul></li>
-<li class="chapter" data-level="16.2" data-path="graphical-analysis.html"><a href="graphical-analysis.html#practice-problems-14"><i class="fa fa-check"></i><b>16.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="16.2" data-path="graphical-analysis.html"><a href="graphical-analysis.html#practice-problems-13"><i class="fa fa-check"></i><b>16.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="16.3" data-path="graphical-analysis.html"><a href="graphical-analysis.html#self-assessment-14"><i class="fa fa-check"></i><b>16.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="16.4" data-path="graphical-analysis.html"><a href="graphical-analysis.html#lesson-checklist-14"><i class="fa fa-check"></i><b>16.4</b> Lesson Checklist</a></li>
 </ul></li>
-<li class="part"><span><b>IV Integral Calculus</b></span></li>
+<li class="part"><span><b>VI Integral Calculus</b></span></li>
 <li class="chapter" data-level="17" data-path="antiderivatives.html"><a href="antiderivatives.html"><i class="fa fa-check"></i><b>17</b> Antiderivatives</a>
 <ul>
 <li class="chapter" data-level="17.1" data-path="antiderivatives.html"><a href="antiderivatives.html#lecture-content-15"><i class="fa fa-check"></i><b>17.1</b> Lecture Content</a>
@@ -299,7 +307,7 @@
 <li class="chapter" data-level="17.1.2" data-path="antiderivatives.html"><a href="antiderivatives.html#integration-by-substitution"><i class="fa fa-check"></i><b>17.1.2</b> Integration by Substitution</a></li>
 <li class="chapter" data-level="17.1.3" data-path="antiderivatives.html"><a href="antiderivatives.html#integration-by-parts"><i class="fa fa-check"></i><b>17.1.3</b> Integration by Parts</a></li>
 </ul></li>
-<li class="chapter" data-level="17.2" data-path="antiderivatives.html"><a href="antiderivatives.html#practice-problems-15"><i class="fa fa-check"></i><b>17.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="17.2" data-path="antiderivatives.html"><a href="antiderivatives.html#practice-problems-14"><i class="fa fa-check"></i><b>17.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="17.3" data-path="antiderivatives.html"><a href="antiderivatives.html#self-assessment-15"><i class="fa fa-check"></i><b>17.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="17.4" data-path="antiderivatives.html"><a href="antiderivatives.html#lesson-checklist-15"><i class="fa fa-check"></i><b>17.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -312,7 +320,7 @@
 <li class="chapter" data-level="18.1.3" data-path="riemann-sums.html"><a href="riemann-sums.html#summation-formulas"><i class="fa fa-check"></i><b>18.1.3</b> Summation Formulas</a></li>
 <li class="chapter" data-level="18.1.4" data-path="riemann-sums.html"><a href="riemann-sums.html#limit-definition-of-the-definite-integral"><i class="fa fa-check"></i><b>18.1.4</b> Limit Definition of the Definite Integral</a></li>
 </ul></li>
-<li class="chapter" data-level="18.2" data-path="riemann-sums.html"><a href="riemann-sums.html#practice-problems-16"><i class="fa fa-check"></i><b>18.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="18.2" data-path="riemann-sums.html"><a href="riemann-sums.html#practice-problems-15"><i class="fa fa-check"></i><b>18.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="18.3" data-path="riemann-sums.html"><a href="riemann-sums.html#self-assessment-16"><i class="fa fa-check"></i><b>18.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="18.4" data-path="riemann-sums.html"><a href="riemann-sums.html#lesson-checklist-16"><i class="fa fa-check"></i><b>18.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -324,10 +332,11 @@
 <li class="chapter" data-level="19.1.2" data-path="the-fundamental-theorem-of-calculus.html"><a href="the-fundamental-theorem-of-calculus.html#fundamental-theorem-of-calculus-part-ii"><i class="fa fa-check"></i><b>19.1.2</b> Fundamental Theorem of Calculus – Part II</a></li>
 <li class="chapter" data-level="19.1.3" data-path="the-fundamental-theorem-of-calculus.html"><a href="the-fundamental-theorem-of-calculus.html#properties-of-definite-integrals"><i class="fa fa-check"></i><b>19.1.3</b> Properties of Definite Integrals</a></li>
 </ul></li>
-<li class="chapter" data-level="19.2" data-path="the-fundamental-theorem-of-calculus.html"><a href="the-fundamental-theorem-of-calculus.html#practice-problems-17"><i class="fa fa-check"></i><b>19.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="19.2" data-path="the-fundamental-theorem-of-calculus.html"><a href="the-fundamental-theorem-of-calculus.html#practice-problems-16"><i class="fa fa-check"></i><b>19.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="19.3" data-path="the-fundamental-theorem-of-calculus.html"><a href="the-fundamental-theorem-of-calculus.html#self-assessment-17"><i class="fa fa-check"></i><b>19.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="19.4" data-path="the-fundamental-theorem-of-calculus.html"><a href="the-fundamental-theorem-of-calculus.html#lesson-checklist-17"><i class="fa fa-check"></i><b>19.4</b> Lesson Checklist</a></li>
 </ul></li>
+<li class="part"><span><b>VII Additional (Important) Topics</b></span></li>
 <li class="chapter" data-level="20" data-path="area-between-curves.html"><a href="area-between-curves.html"><i class="fa fa-check"></i><b>20</b> Area between Curves</a>
 <ul>
 <li class="chapter" data-level="20.1" data-path="area-between-curves.html"><a href="area-between-curves.html#lecture-content-18"><i class="fa fa-check"></i><b>20.1</b> Lecture Content</a>
@@ -336,7 +345,7 @@
 <li class="chapter" data-level="20.1.2" data-path="area-between-curves.html"><a href="area-between-curves.html#simple-improper-integrals"><i class="fa fa-check"></i><b>20.1.2</b> Simple Improper Integrals</a></li>
 <li class="chapter" data-level="20.1.3" data-path="area-between-curves.html"><a href="area-between-curves.html#area-between-two-curves"><i class="fa fa-check"></i><b>20.1.3</b> Area Between Two Curves</a></li>
 </ul></li>
-<li class="chapter" data-level="20.2" data-path="area-between-curves.html"><a href="area-between-curves.html#practice-problems-18"><i class="fa fa-check"></i><b>20.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="20.2" data-path="area-between-curves.html"><a href="area-between-curves.html#practice-problems-17"><i class="fa fa-check"></i><b>20.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="20.3" data-path="area-between-curves.html"><a href="area-between-curves.html#self-assessment-18"><i class="fa fa-check"></i><b>20.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="20.4" data-path="area-between-curves.html"><a href="area-between-curves.html#lesson-checklist-18"><i class="fa fa-check"></i><b>20.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -347,7 +356,7 @@
 <li class="chapter" data-level="21.1.1" data-path="constrained-optimization.html"><a href="constrained-optimization.html#sketching-the-feasible-region"><i class="fa fa-check"></i><b>21.1.1</b> Sketching the Feasible Region</a></li>
 <li class="chapter" data-level="21.1.2" data-path="constrained-optimization.html"><a href="constrained-optimization.html#maximizing-the-objective-function"><i class="fa fa-check"></i><b>21.1.2</b> Maximizing the Objective Function</a></li>
 </ul></li>
-<li class="chapter" data-level="21.2" data-path="constrained-optimization.html"><a href="constrained-optimization.html#practice-problems-19"><i class="fa fa-check"></i><b>21.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="21.2" data-path="constrained-optimization.html"><a href="constrained-optimization.html#practice-problems-18"><i class="fa fa-check"></i><b>21.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="21.3" data-path="constrained-optimization.html"><a href="constrained-optimization.html#self-assessment-19"><i class="fa fa-check"></i><b>21.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="21.4" data-path="constrained-optimization.html"><a href="constrained-optimization.html#lesson-checklist-19"><i class="fa fa-check"></i><b>21.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -360,7 +369,7 @@
 <li class="chapter" data-level="22.1.3" data-path="partial-derivatives.html"><a href="partial-derivatives.html#clairauts-theorem-equality-of-mixed-partials"><i class="fa fa-check"></i><b>22.1.3</b> Clairaut’s Theorem (Equality of Mixed Partials)</a></li>
 <li class="chapter" data-level="22.1.4" data-path="partial-derivatives.html"><a href="partial-derivatives.html#d-test-for-classifying-critical-points"><i class="fa fa-check"></i><b>22.1.4</b> D-Test for Classifying Critical Points</a></li>
 </ul></li>
-<li class="chapter" data-level="22.2" data-path="partial-derivatives.html"><a href="partial-derivatives.html#practice-problems-20"><i class="fa fa-check"></i><b>22.2</b> Practice Problems</a></li>
+<li class="chapter" data-level="22.2" data-path="partial-derivatives.html"><a href="partial-derivatives.html#practice-problems-19"><i class="fa fa-check"></i><b>22.2</b> Practice Problems</a></li>
 <li class="chapter" data-level="22.3" data-path="partial-derivatives.html"><a href="partial-derivatives.html#self-assessment-20"><i class="fa fa-check"></i><b>22.3</b> Self Assessment</a></li>
 <li class="chapter" data-level="22.4" data-path="partial-derivatives.html"><a href="partial-derivatives.html#lesson-checklist-20"><i class="fa fa-check"></i><b>22.4</b> Lesson Checklist</a></li>
 </ul></li>
@@ -381,19 +390,221 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1 hasAnchor" number="1">
-<h1><span class="header-section-number">Lesson 1</span> Introduction<a href="introduction.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="matrix-operations-1" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Lesson 4</span> Matrix Operations<a href="matrix-operations-1.html#matrix-operations-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<ol style="list-style-type: decimal">
+<li><strong>Evaluate:</strong></li>
+</ol>
+<p><span class="math display">\[
+\begin{bmatrix} 15 &amp; -10 \\ 11 &amp; -2 \end{bmatrix}
+\quad + \quad
+\begin{bmatrix} 18 &amp; 2 \\ 5 &amp; -4 \end{bmatrix}
+\]</span></p>
+<hr />
+<ol start="2" style="list-style-type: decimal">
+<li><strong>Given the matrices, find</strong> <span class="math inline">\(A + B\)</span>:</li>
+</ol>
+<p><span class="math display">\[
+A =
+\begin{bmatrix}
+0 &amp; 4 \\
+4 &amp; 0
+\end{bmatrix}
+\quad\text{and}\quad
+B =
+\begin{bmatrix}
+5 &amp; 5 \\
+1 &amp; 4
+\end{bmatrix}
+\]</span></p>
+<hr />
+<ol start="3" style="list-style-type: decimal">
+<li><strong>Add:</strong></li>
+</ol>
+<p><span class="math display">\[
+\begin{bmatrix}
+7 &amp; 4 &amp; 5 \\
+-6 &amp; -3 &amp; 3 \\
+-1 &amp; 8 &amp; 3
+\end{bmatrix}
+\quad + \quad
+\begin{bmatrix}
+6 &amp; 3 &amp; 0 \\
+-2 &amp; -5 &amp; 2 \\
+-5 &amp; 7 &amp; 7
+\end{bmatrix}
+\]</span></p>
+<hr />
+<ol start="4" style="list-style-type: decimal">
+<li><strong>Evaluate:</strong></li>
+</ol>
+<p><span class="math display">\[
+\begin{bmatrix} -7 &amp; -4 \\ -9 &amp; 4 \end{bmatrix}
+-
+\begin{bmatrix} x &amp; y \\ z &amp; w \end{bmatrix}
+=
+\begin{bmatrix} -16 &amp; -12 \\ 1 &amp; -2 \end{bmatrix}
+\]</span></p>
+<hr />
+<ol start="5" style="list-style-type: decimal">
+<li><strong>Let:</strong></li>
+</ol>
+$$
+D =
+<span class="math display">\[\begin{bmatrix}
+3 &amp; 1 &amp; -7 &amp; 2 \\
+4 &amp; -4
+
+
+
+
+##  Practice Problems
+
+1. Let  
+   \[
+   A = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \\ -1 &amp; 2 \end{bmatrix}\]</span>
+,
+B =
+<span class="math display">\[\begin{bmatrix} 0.25 &amp; -1 \\ 0 &amp; 0.5 \\ -1 &amp; 3 \end{bmatrix}\]</span>
+,
+C =
+<span class="math display">\[\begin{bmatrix} 1 &amp; -1 \\ 1 &amp; 1 \\ -1 &amp; -1 \end{bmatrix}\]</span>
+<p>]
+Calculate:<br />
+a. <span class="math inline">\(A + B\)</span><br />
+b. <span class="math inline">\(A - C\)</span><br />
+c. <span class="math inline">\(3A\)</span><br />
+d. <span class="math inline">\(2A + 0.5C\)</span><br />
+e. <span class="math inline">\(C^T + B^T\)</span></p>
+<div style="page-break-after: always;">
+
 </div>
+<ol start="2" style="list-style-type: decimal">
+<li><p>A matrix is symmetric if it equals its transpose. Give examples of nonzero symmetric <span class="math inline">\(2 \times 2\)</span> and <span class="math inline">\(3 \times 3\)</span> matrices.</p></li>
+<li><p>Compute (if possible):<br />
+<span class="math display">\[
+\begin{bmatrix} 0 &amp; 1 &amp; -1 \\ 3 &amp; 1 &amp; -1 \end{bmatrix}
+\times
+\begin{bmatrix} 1 &amp; 1 \\ 4 &amp; 2 \\ 0 &amp; 1 \end{bmatrix}
+\]</span></p></li>
+<li><p>Compute (if possible):<br />
+<span class="math display">\[
+\begin{bmatrix} 0 &amp; 1 &amp; -1 &amp; 2 \end{bmatrix}
+\times
+\begin{bmatrix} 1 &amp; -2 &amp; 1 \\ 0 &amp; 1 &amp; 3 \\ 6 &amp; 0 &amp; 2 \\ -1 &amp; -2 &amp; 11 \end{bmatrix}
+\]</span></p></li>
+<li><p>Let<br />
+<span class="math display">\[
+A = \begin{bmatrix}
+0 &amp; 1 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 0
+\end{bmatrix}
+\]</span><br />
+Compute <span class="math inline">\(A^2\)</span>, <span class="math inline">\(A^3\)</span>, <span class="math inline">\(A^4\)</span>, and <span class="math inline">\(A^{100}\)</span>.</p></li>
+</ol>
+<div style="page-break-after: always;">
 
+</div>
+<ol start="6" style="list-style-type: decimal">
+<li><strong>(Applied)</strong> Left Coast Bookstore has two stores with inventory of hardcover, softcover, and plastic books. Given starting stock, sales, and restocking monthly amounts,
+<ol style="list-style-type: lower-alpha">
+<li>Find total sales over 6 months by store and book type.<br />
+</li>
+<li>Find inventory at the end of June.<br />
+</li>
+<li>Compute total revenue if hardcover sells for $30, softcover for $10, plastic for $15.</li>
+</ol></li>
+</ol>
+<div style="page-break-after: always;">
 
+</div>
+<div id="self-assessment-2" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Self-Assessment<a href="matrix-operations-1.html#self-assessment-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Time yourself and solve within 20 minutes:</p>
+<ol style="list-style-type: decimal">
+<li><p>Given matrices <span class="math inline">\(A, B, C\)</span> from earlier, calculate:</p>
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(A + B - C\)</span><br />
+</li>
+<li><span class="math inline">\(3B^T\)</span><br />
+</li>
+<li><span class="math inline">\(A^T + C^T\)</span><br />
+</li>
+<li><span class="math inline">\(3A^T - 2C^T\)</span><br />
+</li>
+<li><span class="math inline">\(2A + 3B\)</span></li>
+</ol></li>
+<li><p>A matrix is skew-symmetric if it equals the negative of its transpose. Give examples of nonzero skew-symmetric <span class="math inline">\(2 \times 2\)</span> and <span class="math inline">\(3 \times 3\)</span> matrices.</p></li>
+<li><p>Explain why this product is impossible:<br />
+<span class="math display">\[
+\begin{bmatrix} 0 &amp; 2 &amp; -1 \end{bmatrix}
+\times
+\begin{bmatrix} 1 &amp; -2 &amp; 1 \\ -1 &amp; -2 &amp; 11 \end{bmatrix}
+\]</span></p></li>
+<li><p>Compute the product:<br />
+<span class="math display">\[
+\begin{bmatrix} 1 &amp; 1 &amp; -7 &amp; 0 \\ -1 &amp; 0 &amp; -2 &amp; 1 \\ 1 &amp; -1 &amp; 1 &amp; 1 \end{bmatrix}
+\times
+\begin{bmatrix} 1 \\ -3 \\ 2 \\ 1 \end{bmatrix}
+\]</span></p></li>
+<li><p>Karen Sandberg sold various T-shirts. Use matrix operations to compute her total revenue.</p></li>
+</ol>
+<hr />
+</div>
+<div id="lesson-checklist-2" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Lesson Checklist<a href="matrix-operations-1.html#lesson-checklist-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This checklist is designed to help you keep track of what you need to work on. The main goal is to be aware of what you need to focus more attention on. Place an <span class="math inline">\(X\)</span> in the appropriate box beside the skill below.
+</p>
+<p>
+<span class="math display">\[\begin{align*}
+&amp;\textbf{Developing (D):} &amp;&amp;\textrm{You still need to work on this skill.}\\
+&amp;\textbf{Consistent (CON):} &amp;&amp;\textrm{You use the skill correctly most of the time.}\\
+&amp;\textbf{Competent (COM):} &amp;&amp;\textrm{You show mastery of the skill.}
+\end{align*}\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>Skill</th>
+<th>D</th>
+<th>CON</th>
+<th>COM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Addition, subtraction, scalar multiplication</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Matrix multiplication</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Applied problems using matrices</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;">
 
+</div>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="functions-and-linear-equations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="matrix-operations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inverses-and-determinants.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
